@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modulor Studios — Handbook</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    /* ── Fonts ── */
+    @font-face { font-family: 'Untitled Sans'; src: url('fonts/UntitledSans-Light.ttf') format('truetype'); font-weight: 300; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Untitled Sans'; src: url('fonts/UntitledSans-LightItalic.ttf') format('truetype'); font-weight: 300; font-style: italic; font-display: swap; }
+    @font-face { font-family: 'Untitled Sans'; src: url('fonts/UntitledSans-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Untitled Sans'; src: url('fonts/UntitledSans-RegularItalic.ttf') format('truetype'); font-weight: 400; font-style: italic; font-display: swap; }
+    @font-face { font-family: 'Untitled Sans'; src: url('fonts/UntitledSans-Medium.ttf') format('truetype'); font-weight: 500; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Untitled Sans'; src: url('fonts/UntitledSans-MediumItalic.ttf') format('truetype'); font-weight: 500; font-style: italic; font-display: swap; }
+    @font-face { font-family: 'Untitled Sans'; src: url('fonts/UntitledSans-Bold.ttf') format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Untitled Sans'; src: url('fonts/UntitledSans-BoldItalic.ttf') format('truetype'); font-weight: 700; font-style: italic; font-display: swap; }
+    @font-face { font-family: 'Untitled Sans'; src: url('fonts/UntitledSans-Black.ttf') format('truetype'); font-weight: 900; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Untitled Sans'; src: url('fonts/UntitledSans-BlackItalic.ttf') format('truetype'); font-weight: 900; font-style: italic; font-display: swap; }
+
+    :root {
+      --bg: #FFFFFF;
+      --bg-secondary: #F5F5F3;
+      --bg-dark: #1A1A1A;
+      --text: rgba(0, 0, 0, 1);
+      --text-secondary: rgba(0, 0, 0, 0.5);
+      --text-muted: rgba(0, 0, 0, 0.25);
+      --text-faint: rgba(0, 0, 0, 0.15);
+      --text-on-dark: rgba(255, 255, 255, 0.85);
+      --text-on-dark-muted: rgba(255, 255, 255, 0.4);
+      --border: rgba(0, 0, 0, 0.08);
+      --border-hover: rgba(0, 0, 0, 0.3);
+      --font: 'Untitled Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --tracking: -0.04375rem;
+      --ease: cubic-bezier(0.165, 0.84, 0.44, 1);
+      --sidebar-w: 260px;
+      --content-max: 46rem;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font);
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--bg);
+      letter-spacing: var(--tracking);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ── Sidebar ── */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: var(--sidebar-w);
+      height: 100vh;
+      background: var(--bg);
+      overflow-y: auto;
+      z-index: 100;
+      display: flex;
+      flex-direction: column;
+      padding: 2.5rem 0;
+      transition: transform 0.5s var(--ease);
+    }
+
+    .sidebar-brand {
+      padding: 0 1.75rem;
+      margin-bottom: 3rem;
+    }
+
+    .sidebar-brand a {
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+      font-size: 0.75rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .sidebar-brand a:hover { opacity: 0.5; }
+
+    .sidebar-brand-logo {
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 0.25rem;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .sidebar-brand-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .sidebar-section-label {
+      font-size: 0.6875rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      padding: 0 1.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .sidebar-nav { flex: 1; }
+
+    .sidebar-nav a {
+      display: block;
+      padding: 0.5rem 1.75rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.8125rem;
+      font-weight: 400;
+      line-height: 1.5;
+      transition: color 0.5s var(--ease);
+    }
+
+    .sidebar-nav a:hover {
+      color: var(--text-secondary);
+    }
+
+    .sidebar-nav a.active {
+      color: var(--text);
+    }
+
+    .sidebar-nav .nav-label {
+      display: block;
+      font-size: 0.625rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-faint);
+      margin-bottom: 0.125rem;
+      transition: color 0.5s var(--ease);
+    }
+
+    .sidebar-nav a.active .nav-label {
+      color: var(--text-muted);
+    }
+
+    .sidebar-nav .nav-title {
+      display: block;
+    }
+
+    /* ── Main ── */
+    .main {
+      margin-left: var(--sidebar-w);
+      min-height: 100vh;
+    }
+
+    /* ── Section ── */
+    .section {
+      padding: 6rem clamp(2rem, 6vw, 6rem) 8rem;
+    }
+
+    .section-content {
+      max-width: var(--content-max);
+    }
+
+    /* ── Chapter header with logo ── */
+    .chapter-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .chapter-logo {
+      width: 2rem;
+      height: 2rem;
+      flex-shrink: 0;
+      border-radius: 0.375rem;
+      overflow: hidden;
+    }
+
+    .chapter-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .chapter-label {
+      display: block;
+      font-size: 0.6875rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+    }
+
+    /* ── Typography ── */
+    .section h1 {
+      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin-bottom: 2.5rem;
+    }
+
+    .section h2 {
+      font-size: clamp(1.25rem, 2vw, 1.5rem);
+      font-weight: 400;
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+      color: var(--text);
+      margin-top: 4rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .section h3 {
+      font-size: 1.0625rem;
+      font-weight: 400;
+      line-height: 1.4;
+      color: var(--text);
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .section h4 {
+      font-size: 0.9375rem;
+      font-weight: 500;
+      line-height: 1.4;
+      color: var(--text);
+      margin-top: 1.75rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .section p {
+      margin-bottom: 1.25rem;
+      line-height: 1.8;
+      max-width: var(--content-max);
+    }
+
+    .section > :first-child { margin-top: 0; }
+
+    .section blockquote {
+      background: var(--bg-secondary);
+      border-radius: 0.75rem;
+      padding: 2rem;
+      margin: 2.5rem 0;
+      max-width: var(--content-max);
+    }
+
+    .section blockquote p {
+      margin-bottom: 0;
+      font-style: italic;
+      font-weight: 300;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .section ul, .section ol {
+      margin: 1.25rem 0;
+      padding-left: 1.25rem;
+      max-width: var(--content-max);
+    }
+
+    .section ul { list-style-type: disc; }
+
+    .section li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+
+    .section li ul, .section li ol {
+      margin-top: 0.5rem;
+    }
+
+    .section strong {
+      font-weight: 500;
+    }
+
+    .section em {
+      font-style: italic;
+      opacity: 0.6;
+    }
+
+    .section a {
+      color: var(--text);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      text-decoration-thickness: 1px;
+      text-decoration-color: var(--text-faint);
+      transition: text-decoration-color 0.3s var(--ease);
+    }
+
+    .section a:hover {
+      text-decoration-color: var(--text);
+    }
+
+    .section hr {
+      border: none;
+      height: 0;
+      margin: 4rem 0;
+    }
+
+    /* ── Tables ── */
+    .section table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.875rem;
+      line-height: 1.6;
+    }
+
+    .section thead th {
+      text-align: left;
+      font-weight: 400;
+      font-size: 0.6875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      padding: 0 1rem 0.75rem 0;
+      border-bottom: 1px solid var(--text-faint);
+    }
+
+    .section tbody td {
+      padding: 0.625rem 1rem 0.625rem 0;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    .section tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .section code {
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 0.85em;
+      background: var(--bg-secondary);
+      padding: 0.15em 0.4em;
+      border-radius: 0.25rem;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      background: var(--bg-dark);
+      padding: 5rem clamp(2rem, 6vw, 6rem);
+    }
+
+    .footer-inner {
+      max-width: var(--content-max);
+    }
+
+    .footer-brand {
+      font-size: 0.75rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-on-dark);
+      margin-bottom: 1rem;
+    }
+
+    .footer-sub {
+      font-size: 0.8125rem;
+      font-weight: 300;
+      color: var(--text-on-dark-muted);
+      line-height: 1.6;
+    }
+
+    .footer-logos {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      margin-top: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-logo {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 0.375rem;
+      overflow: hidden;
+      opacity: 0.5;
+      transition: opacity 0.3s var(--ease);
+    }
+
+    .footer-logo:hover {
+      opacity: 0.85;
+    }
+
+    .footer-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ── Hamburger ── */
+    .hamburger {
+      display: none;
+      position: fixed;
+      top: 1.25rem;
+      left: 1.25rem;
+      z-index: 300;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 0.5rem;
+      padding: 0.625rem 0.75rem;
+      cursor: pointer;
+      color: var(--text);
+      line-height: 0;
+    }
+
+    .hamburger svg { width: 18px; height: 18px; fill: currentColor; }
+
+    .overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(0.5rem);
+      -webkit-backdrop-filter: blur(0.5rem);
+      z-index: 90;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 991px) {
+      .sidebar { transform: translateX(-100%); }
+      .sidebar.open { transform: translateX(0); }
+      .overlay.open { display: block; }
+      .main { margin-left: 0; }
+      .hamburger { display: block; }
+    }
+
+    @media (max-width: 479px) {
+      .section { padding: 3.5rem 1.25rem 4.5rem; }
+      .section h1 { font-size: 1.5rem; }
+    }
+
+    /* ── Scrollbar ── */
+    ::-webkit-scrollbar { width: 0; background: transparent; }
+
+    /* ── Loading ── */
+    .loading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-size: 0.75rem;
+      font-weight: 400;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    /* ── Fade in ── */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .section { animation: fadeIn 0.5s var(--ease) both; }
+    .section:nth-child(2) { animation-delay: 0.06s; }
+    .section:nth-child(3) { animation-delay: 0.12s; }
+    .section:nth-child(4) { animation-delay: 0.18s; }
+    .section:nth-child(5) { animation-delay: 0.24s; }
+    .section:nth-child(6) { animation-delay: 0.3s; }
+  </style>
+</head>
+<body>
+
+  <button class="hamburger" onclick="toggleSidebar()" aria-label="Menu">
+    <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+  </button>
+  <div class="overlay" onclick="toggleSidebar()"></div>
+
+  <nav class="sidebar">
+    <div class="sidebar-brand">
+      <a href="#">
+        <span class="sidebar-brand-logo"><img src="logos/Modulor.svg" alt="Modulor"></span>
+        Modulor Studios
+      </a>
+    </div>
+    <div class="sidebar-section-label">Capítulos</div>
+    <div class="sidebar-nav" id="nav">
+      <a href="#core" data-section="core">
+        <span class="nav-label">Capítulo 00</span>
+        <span class="nav-title">Core Modulor</span>
+      </a>
+      <a href="#mendesaltaren" data-section="mendesaltaren">
+        <span class="nav-label">Capítulo 01</span>
+        <span class="nav-title">mendesaltaren</span>
+      </a>
+      <a href="#tailorhub" data-section="tailorhub">
+        <span class="nav-label">Capítulo 02</span>
+        <span class="nav-title">Tailor Hub</span>
+      </a>
+      <a href="#sstil" data-section="sstil">
+        <span class="nav-label">Capítulo 03</span>
+        <span class="nav-title">SSTIL</span>
+      </a>
+      <a href="#nocodehackers" data-section="nocodehackers">
+        <span class="nav-label">Capítulo 04</span>
+        <span class="nav-title">Nocodehackers</span>
+      </a>
+      <a href="#fik" data-section="fik">
+        <span class="nav-label">Capítulo 05</span>
+        <span class="nav-title">FIK</span>
+      </a>
+    </div>
+  </nav>
+
+  <main class="main" id="content">
+    <div class="loading">Cargando...</div>
+  </main>
+
+  <script>
+    const chapters = [
+      { id: 'core', num: '00', file: '00_Core_Modulor.md', logo: 'logos/Modulor.svg' },
+      { id: 'mendesaltaren', num: '01', file: '01_mendesaltaren.md', logo: 'logos/mendesaltaren.svg' },
+      { id: 'tailorhub', num: '02', file: '02_Tailor_Hub.md', logo: 'logos/Tailor.svg' },
+      { id: 'sstil', num: '03', file: '03_SSTIL.md', logo: 'logos/SSTIL.svg' },
+      { id: 'nocodehackers', num: '04', file: '04_Nocodehackers.md', logo: 'logos/NCH.svg' },
+      { id: 'fik', num: '05', file: '05_FIK.md', logo: 'logos/Fik.svg' },
+    ];
+
+    async function loadContent() {
+      const content = document.getElementById('content');
+      content.innerHTML = '';
+
+      for (const ch of chapters) {
+        try {
+          const res = await fetch(`content/${ch.file}`);
+          const md = await res.text();
+          const div = document.createElement('div');
+          div.className = 'section';
+          div.id = ch.id;
+
+          // Parse markdown
+          let html = marked.parse(md);
+
+          // Inject chapter header with logo before the first h1
+          html = html.replace(
+            /^(<h1[^>]*>)/,
+            `<div class="chapter-header"><span class="chapter-logo"><img src="${ch.logo}" alt=""></span><span class="chapter-label">Capítulo ${ch.num}</span></div>$1`
+          );
+
+          div.innerHTML = html;
+          content.appendChild(div);
+        } catch (e) {
+          console.error(`Error loading ${ch.file}:`, e);
+        }
+      }
+
+      // Footer
+      const footer = document.createElement('div');
+      footer.className = 'footer';
+      const logoRow = chapters.map(ch =>
+        `<span class="footer-logo"><img src="${ch.logo}" alt=""></span>`
+      ).join('');
+
+      footer.innerHTML = `
+        <div class="footer-inner">
+          <p class="footer-brand">Modulor Studios</p>
+          <p class="footer-sub">Handbook es una iniciativa de Modulor Studios.<br>Madrid, Febrero 2026.</p>
+          <div class="footer-logos">${logoRow}</div>
+        </div>`;
+      content.appendChild(footer);
+
+      setupScrollSpy();
+
+      if (window.location.hash) {
+        const el = document.querySelector(window.location.hash);
+        if (el) el.scrollIntoView();
+      }
+    }
+
+    function setupScrollSpy() {
+      const links = document.querySelectorAll('.sidebar-nav a');
+      const sects = document.querySelectorAll('.section');
+
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            links.forEach(l => l.classList.remove('active'));
+            const a = document.querySelector(`.sidebar-nav a[data-section="${entry.target.id}"]`);
+            if (a) a.classList.add('active');
+          }
+        });
+      }, { rootMargin: '-20% 0px -70% 0px' });
+
+      sects.forEach(s => obs.observe(s));
+    }
+
+    function toggleSidebar() {
+      document.querySelector('.sidebar').classList.toggle('open');
+      document.querySelector('.overlay').classList.toggle('open');
+    }
+
+    document.querySelectorAll('.sidebar-nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelector('.sidebar').classList.remove('open');
+        document.querySelector('.overlay').classList.remove('open');
+      });
+    });
+
+    loadContent();
+  </script>
+</body>
+</html>

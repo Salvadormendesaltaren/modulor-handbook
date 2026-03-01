@@ -747,7 +747,7 @@
       <a href="#mendesaltaren" data-section="mendesaltaren">
         <span class="nav-label">01</span>
         <span class="nav-title">mendesaltaren</span>
-        <span class="nav-subtitle">Diseño y desarrollo digital</span>
+        <span class="nav-subtitle">Diseño digital y branding</span>
       </a>
       <a href="#tailorhub" data-section="tailorhub">
         <span class="nav-label">02</span>
@@ -757,7 +757,7 @@
       <a href="#sstil" data-section="sstil">
         <span class="nav-label">03</span>
         <span class="nav-title">SSTIL</span>
-        <span class="nav-subtitle">Diseño e identidad visual</span>
+        <span class="nav-subtitle">Marketing y comunicación</span>
       </a>
       <a href="#nocodehackers" data-section="nocodehackers">
         <span class="nav-label">04</span>
@@ -767,7 +767,7 @@
       <a href="#fik" data-section="fik">
         <span class="nav-label">05</span>
         <span class="nav-title">FIK</span>
-        <span class="nav-subtitle">Marketing y growth</span>
+        <span class="nav-subtitle">E-commerce Shopify</span>
       </a>
       <a href="#repositorio" data-section="repositorio">
         <span class="nav-label">06</span>
@@ -854,9 +854,9 @@
     function buildRepositorio() {
       const fileDescriptions = {
         '00_Core_Modulor.md': 'Identidad, estructura, financieros y operaciones del grupo',
-        '01_mendesaltaren.md': 'Boutique de diseno digital y branding premium',
+        '01_mendesaltaren.md': 'Boutique de diseño digital y branding premium',
         '02_Tailor_Hub.md': 'Boutique de desarrollo software e IA',
-        '03_SSTIL.md': 'Agencia de marketing, comunicacion y growth (incluye Minimum)',
+        '03_SSTIL.md': 'Agencia de marketing, comunicación y growth (incluye Minimum)',
         '04_Nocodehackers.md': 'Academia no-code/IA y agencia de soluciones',
         '05_FIK.md': 'Shopify Premier Partner, e-commerce',
       };
@@ -974,7 +974,7 @@
         URL.revokeObjectURL(url);
       } catch (e) {
         console.error('Error generating zip:', e);
-        alert('Error al generar el archivo. Intentalo de nuevo.');
+        alert('Error al generar el archivo. Inténtalo de nuevo.');
       }
 
       btn.innerHTML = originalText;
@@ -996,7 +996,7 @@
 
     // Hash-based router
     function onHashChange() {
-      const id = window.location.hash.replace('#', '') || 'repositorio';
+      const id = window.location.hash.replace('#', '') || 'core';
       navigate(id);
     }
 

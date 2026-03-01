@@ -352,8 +352,13 @@
 
     /* ── Footer ── */
     .footer {
-      background: var(--bg-dark);
-      padding: 5rem clamp(2rem, 6vw, 6rem);
+      padding: 0 clamp(2rem, 6vw, 6rem) clamp(2rem, 4vw, 3rem);
+    }
+
+    .footer-card {
+      background: var(--bg-secondary);
+      border-radius: 1.25rem;
+      padding: clamp(2.5rem, 5vw, 4rem);
     }
 
     .footer-inner {
@@ -361,46 +366,49 @@
     }
 
     .footer-brand {
-      font-size: 0.75rem;
+      font-size: 0.6875rem;
       font-weight: 400;
       text-transform: uppercase;
       letter-spacing: 0.1em;
-      color: var(--text-on-dark);
-      margin-bottom: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
     }
 
     .footer-sub {
       font-size: 0.8125rem;
       font-weight: 300;
-      color: var(--text-on-dark-muted);
+      color: var(--text-secondary);
       line-height: 1.6;
     }
 
     .footer-logos {
       display: flex;
       align-items: center;
-      gap: 1.25rem;
-      margin-top: 2.5rem;
+      gap: 0.5rem;
+      margin-bottom: 2.5rem;
       flex-wrap: wrap;
     }
 
     .footer-logo {
-      width: 2rem;
-      height: 2rem;
-      border-radius: 0.75rem;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 0.375rem;
       overflow: hidden;
-      opacity: 0.5;
-      transition: opacity 1s var(--ease);
+      background: var(--bg-tertiary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.6s var(--ease);
     }
 
     .footer-logo:hover {
-      opacity: 0.85;
+      background: var(--bg-active);
     }
 
     .footer-logo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      width: 60%;
+      height: 60%;
+      object-fit: contain;
     }
 
     /* ── Hamburger ── */
@@ -730,10 +738,12 @@
       ).join('');
       return `
         <div class="footer">
-          <div class="footer-inner">
-            <p class="footer-brand">Modulor Studios</p>
-            <p class="footer-sub">Handbook es una iniciativa de Modulor Studios.<br>Madrid, Febrero 2026.</p>
-            <div class="footer-logos">${logoRow}</div>
+          <div class="footer-card">
+            <div class="footer-inner">
+              <div class="footer-logos">${logoRow}</div>
+              <p class="footer-brand">Modulor Studios</p>
+              <p class="footer-sub">Handbook es una iniciativa de Modulor Studios.<br>Madrid, 2026.</p>
+            </div>
           </div>
         </div>`;
     }

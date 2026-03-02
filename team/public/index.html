@@ -367,6 +367,21 @@
     ::-webkit-scrollbar { width: 0; background: transparent; }
 
     /* ── Loading ── */
+    /* ── Site switcher ── */
+    .site-switcher { position: relative; margin: 0.5rem 0; }
+    .site-switcher-btn { display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 0.5rem 0.75rem; background: none; border: 1px solid var(--border); border-radius: 0.625rem; font-family: var(--font); font-size: 0.75rem; font-weight: 400; color: var(--text-secondary); letter-spacing: var(--tracking); cursor: pointer; transition: background 0.3s var(--ease), color 0.3s var(--ease); }
+    .site-switcher-btn:hover { background: var(--bg-hover); color: var(--text); }
+    .site-switcher-btn svg { width: 0.75rem; height: 0.75rem; fill: currentColor; transition: transform 0.3s var(--ease); }
+    .site-switcher.open .site-switcher-btn svg { transform: rotate(180deg); }
+    .site-switcher-menu { display: none; position: absolute; bottom: calc(100% + 0.375rem); left: 0; right: 0; background: var(--bg); border: 1px solid var(--border); border-radius: 0.625rem; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); z-index: 200; }
+    .site-switcher.open .site-switcher-menu { display: block; }
+    .site-switcher-option { display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0.75rem; font-size: 0.75rem; color: var(--text-secondary); text-decoration: none; transition: background 0.2s var(--ease), color 0.2s var(--ease); }
+    .site-switcher-option:hover { background: var(--bg-hover); color: var(--text); }
+    .site-switcher-option.current { color: var(--text); font-weight: 500; }
+    .site-switcher-dot { width: 0.375rem; height: 0.375rem; border-radius: 999px; flex-shrink: 0; }
+    .site-switcher-dot.green { background: #22C55E; }
+    .site-switcher-dot.gray { background: var(--text-muted); }
+
     .loading { display: flex; align-items: center; justify-content: center; height: 100vh; font-size: 0.75rem; font-weight: 400; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; }
 
     /* ── Fade in ── */
@@ -485,6 +500,20 @@
           <span class="sidebar-user-avatar" id="userAvatar"></span>
           <span class="sidebar-user-name" id="userName"></span>
         </div>
+        <div class="site-switcher" id="siteSwitcher" style="display:none;">
+          <button class="site-switcher-btn" onclick="toggleSiteSwitcher()">
+            <span>Team</span>
+            <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+          </button>
+          <div class="site-switcher-menu">
+            <a href="#" class="site-switcher-option current" onclick="return false;">
+              <span class="site-switcher-dot green"></span> Team
+            </a>
+            <a href="" class="site-switcher-option" id="switchToLeadership">
+              <span class="site-switcher-dot gray"></span> Leadership
+            </a>
+          </div>
+        </div>
         <button class="sidebar-logout" onclick="signOut()">Cerrar sesión</button>
       </div>
     </nav>
@@ -507,7 +536,10 @@
       'sstilagency.com', 'minimum.run'
     ];
 
+    const LEADERSHIP_URL = 'https://modulor-handbook-leadership.vercel.app';
+
     let currentUser = null;
+    let userRole = 'team';
     let lastValidatedId = null;
 
     // ── Auth helpers ──
@@ -540,8 +572,23 @@
       lastValidatedId = session.user.id;
       setAccessTokenCookie(session);
       currentUser = session.user;
+      await loadUserRole();
       showApp();
       upsertProfile(session.user);
+    }
+
+    async function loadUserRole() {
+      const { data } = await sb
+        .from('user_profiles')
+        .select('role')
+        .eq('id', currentUser.id)
+        .single();
+      userRole = data?.role || 'team';
+      if (userRole === 'admin') {
+        const switcher = document.getElementById('siteSwitcher');
+        switcher.style.display = 'block';
+        document.getElementById('switchToLeadership').href = LEADERSHIP_URL;
+      }
     }
 
     async function signIn() {
@@ -803,6 +850,14 @@
       document.querySelector('.sidebar').classList.toggle('open');
       document.querySelector('.overlay').classList.toggle('open');
     }
+
+    function toggleSiteSwitcher() {
+      document.getElementById('siteSwitcher').classList.toggle('open');
+    }
+    document.addEventListener('click', (e) => {
+      const sw = document.getElementById('siteSwitcher');
+      if (sw && !sw.contains(e.target)) sw.classList.remove('open');
+    });
 
     // Close sidebar on mobile when navigating
     document.querySelectorAll('.sidebar-nav a').forEach(link => {

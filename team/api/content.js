@@ -43,9 +43,11 @@ export default async function handler(req, res) {
     }
   );
 
-  const domains = await domainRes.json();
+  const domainsText = await domainRes.text();
+  let domains;
+  try { domains = JSON.parse(domainsText); } catch { domains = null; }
   if (!Array.isArray(domains) || domains.length === 0) {
-    return res.status(403).send('Forbidden');
+    return res.status(403).send(`Forbidden. domain=${domain}, status=${domainRes.status}, body=${domainsText}`);
   }
 
   // Validate and serve the file

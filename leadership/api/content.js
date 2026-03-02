@@ -1,5 +1,20 @@
 import { readFileSync, existsSync } from 'node:fs';
-import { join } from 'node:path';
+import { join, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+function findContent(file) {
+  const candidates = [
+    join(__dirname, '..', '_content', file),
+    join(process.cwd(), '_content', file),
+    join('/var/task', '_content', file),
+  ];
+  for (const p of candidates) {
+    if (existsSync(p)) return p;
+  }
+  return null;
+}
 
 export default async function handler(req, res) {
   if (req.method !== 'GET') {
@@ -70,8 +85,8 @@ export default async function handler(req, res) {
     return res.status(400).send('Invalid file path');
   }
 
-  const fullPath = join(process.cwd(), '_content', file);
-  if (!existsSync(fullPath)) {
+  const fullPath = findContent(file);
+  if (!fullPath) {
     return res.status(404).send('Not found');
   }
 

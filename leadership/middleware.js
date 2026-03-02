@@ -1,24 +1,23 @@
 import { createServerClient } from '@supabase/ssr';
-import { NextResponse } from 'next/server';
 
 export const config = {
   matcher: '/content/:path*',
 };
 
-export async function middleware(request) {
-  const response = NextResponse.next();
-
+export default async function middleware(request) {
   const supabase = createServerClient(
     process.env.SUPABASE_URL,
     process.env.SUPABASE_ANON_KEY,
     {
       cookies: {
-        getAll: () => request.cookies.getAll(),
-        setAll: (cookiesToSet) => {
-          cookiesToSet.forEach(({ name, value, options }) => {
-            response.cookies.set(name, value, options);
-          });
+        getAll: () => {
+          const cookie = request.headers.get('cookie') || '';
+          return cookie.split(';').map(c => {
+            const [name, ...rest] = c.trim().split('=');
+            return { name, value: rest.join('=') };
+          }).filter(c => c.name);
         },
+        setAll: () => {},
       },
     }
   );
@@ -26,7 +25,7 @@ export async function middleware(request) {
   // Verify JWT server-side (not forgeable)
   const { data: { user }, error } = await supabase.auth.getUser();
   if (!user || error) {
-    return new NextResponse('Unauthorized', { status: 401 });
+    return new Response('Unauthorized', { status: 401 });
   }
 
   // Verify approved domain
@@ -38,7 +37,7 @@ export async function middleware(request) {
     .single();
 
   if (!approved) {
-    return new NextResponse('Forbidden', { status: 403 });
+    return new Response('Forbidden', { status: 403 });
   }
 
   // Verify Leadership invitation
@@ -49,8 +48,8 @@ export async function middleware(request) {
     .single();
 
   if (!invited) {
-    return new NextResponse('Forbidden – Leadership access required', { status: 403 });
+    return new Response('Forbidden – Leadership access required', { status: 403 });
   }
 
-  return response;
+  // Allow request to continue
 }

@@ -40,7 +40,7 @@ Todo lo que hacemos conecta estos tres elementos.
 | Crecimiento 2020-2025 | EUR1M a EUR9M (54% CAGR) |
 | Revenue recurrente | 60%+ |
 | EBITDA | 10-12% |
-| Cash disponible | EUR2M+ |
+| Presupuesto de inversión | Autofinanciado |
 | Presencia internacional | 10+ paises |
 | Relaciones corporativas long-term | 8+ |
 
@@ -405,13 +405,6 @@ McKinsey & Company, El Corte Ingles, Iberia, Cargill, Inditex, Zara, Mondelez, W
 5. Expansion geografica
 6. Red de clientes
 7. Red de talento
-
-**Case Study — Adquisicion Tailor Hub:**
-- Pre-adquisicion: EUR650k
-- Ano 1: EUR2M
-- Ano 2: EUR3M
-- CAGR: 132%
-- Clave: Sinergias con red de clientes Modulor + servicios compartidos
 
 ---
 

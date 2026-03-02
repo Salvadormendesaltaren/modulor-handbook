@@ -46,7 +46,7 @@ Este Handbook en versión Full contiene información confidencial del grupo, inc
 - Objetivos financieros y roadmap de crecimiento
 - Pricing detallado de servicios
 - Estructura de equipos y costes de contratación
-- Estrategia de M&A y casos de adquisición
+- Estrategia de M&A
 - Pipeline comercial y clientes en negociación
 - Análisis competitivo y posicionamiento interno
 

@@ -174,7 +174,7 @@ Modulor Tech es la iniciativa para integrar IA de forma estructural en las opera
 **Dificultades/Retos:**
 - Escalar sin aumentar costes operativos y aumentar márgenes
 - Negocios más predecibles (↑ MRR) - Mínimo 70% en cada boutique
-- Asegurar cashflow 3 meses por boutique (Reto: FIK y TH)
+- Asegurar estabilidad financiera por boutique (Reto: FIK y TH)
 - Compliance: Homologaciones IA Ethics, Cybersecurity, ISOs
 
 **Próximos pasos:**
@@ -242,7 +242,7 @@ Modulor Tech es la iniciativa para integrar IA de forma estructural en las opera
 | Crecimiento 2020-2025 | €1M → €9M (54% CAGR) |
 | Revenue recurrente | 60%+ |
 | EBITDA | 10-12% |
-| Cash disponible | €2M+ |
+| Presupuesto de inversión | Autofinanciado |
 | Presencia internacional | 10+ países |
 
 ### Objetivos Financieros

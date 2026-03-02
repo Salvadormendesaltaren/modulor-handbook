@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modulor Studios — Handbook</title>
+  <link rel="icon" type="image/svg+xml" href="logos/Modulor.svg">
+  <script src="https://cdn.jsdelivr.net/npm/markdown-it/dist/markdown-it.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jszip/dist/jszip.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <style>
+    /* ── Fonts ── */
+    @font-face { font-family: 'Untitled Sans'; src: url('fonts/UntitledSans-Light.ttf') format('truetype'); font-weight: 300; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Untitled Sans'; src: url('fonts/UntitledSans-LightItalic.ttf') format('truetype'); font-weight: 300; font-style: italic; font-display: swap; }
+    @font-face { font-family: 'Untitled Sans'; src: url('fonts/UntitledSans-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Untitled Sans'; src: url('fonts/UntitledSans-RegularItalic.ttf') format('truetype'); font-weight: 400; font-style: italic; font-display: swap; }
+    @font-face { font-family: 'Untitled Sans'; src: url('fonts/UntitledSans-Medium.ttf') format('truetype'); font-weight: 500; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Untitled Sans'; src: url('fonts/UntitledSans-MediumItalic.ttf') format('truetype'); font-weight: 500; font-style: italic; font-display: swap; }
+    @font-face { font-family: 'Untitled Sans'; src: url('fonts/UntitledSans-Bold.ttf') format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Untitled Sans'; src: url('fonts/UntitledSans-BoldItalic.ttf') format('truetype'); font-weight: 700; font-style: italic; font-display: swap; }
+    @font-face { font-family: 'Untitled Sans'; src: url('fonts/UntitledSans-Black.ttf') format('truetype'); font-weight: 900; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Untitled Sans'; src: url('fonts/UntitledSans-BlackItalic.ttf') format('truetype'); font-weight: 900; font-style: italic; font-display: swap; }
+
+    :root {
+      --bg: white;
+      --bg-secondary: #F5F5F5;
+      --bg-tertiary: #e9e9e9;
+      --bg-hover: rgba(0, 0, 0, 0.06);
+      --bg-active: rgba(0, 0, 0, 0.08);
+      --bg-dark: black;
+      --text: #000;
+      --text-secondary: rgba(0, 0, 0, 0.4);
+      --text-muted: rgba(0, 0, 0, 0.25);
+      --text-faint: rgba(0, 0, 0, 0.16);
+      --text-on-dark: #fff;
+      --text-on-dark-muted: rgba(255, 255, 255, 0.4);
+      --border: rgba(0, 0, 0, 0.1);
+      --border-subtle: rgba(0, 0, 0, 0.16);
+      --font: 'Untitled Sans', system-ui, sans-serif;
+      --tracking: -0.04375rem;
+      --ease: cubic-bezier(0.165, 0.84, 0.44, 1);
+      --sidebar-w: 260px;
+      --content-max: 46rem;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font);
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      color: var(--text);
+      background: var(--bg);
+      letter-spacing: var(--tracking);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ── Login ── */
+    .login-screen { display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 2rem; }
+    .login-card { text-align: center; max-width: 360px; width: 100%; }
+    .login-logo { width: 3.5rem; height: 3.5rem; border-radius: 0.75rem; overflow: hidden; margin: 0 auto 1.5rem; }
+    .login-logo img { width: 100%; height: 100%; object-fit: cover; }
+    .login-title { font-size: 1.5rem; font-weight: 400; letter-spacing: -0.075rem; margin-bottom: 0.5rem; }
+    .login-subtitle { font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.5; }
+    .login-btn { display: inline-flex; align-items: center; gap: 0.625rem; background: var(--bg-dark); color: var(--text-on-dark); border: none; border-radius: 999px; padding: 0.875rem 2rem; font-family: var(--font); font-size: 0.875rem; font-weight: 400; letter-spacing: var(--tracking); cursor: pointer; transition: opacity 0.3s var(--ease); }
+    .login-btn:hover { opacity: 0.7; }
+    .login-btn svg { width: 1.125rem; height: 1.125rem; }
+    .login-error { margin-top: 1.5rem; padding: 0.875rem 1.25rem; background: #FEF2F2; border-radius: 0.75rem; font-size: 0.8125rem; color: #991B1B; line-height: 1.5; }
+    .login-error:empty { display: none; }
+
+    /* ── App container ── */
+    .app { display: none; }
+    .app.visible { display: block; }
+
+    /* ── Sidebar ── */
+    .sidebar { position: fixed; top: 0; left: 0; width: var(--sidebar-w); height: 100vh; background: var(--bg-secondary); overflow-y: auto; z-index: 100; display: flex; flex-direction: column; padding: 1.5rem 0.75rem; transition: transform 1s var(--ease); }
+    .sidebar-brand { padding: 0; margin-bottom: 1.5rem; }
+    .sidebar-brand a { display: flex; align-items: center; gap: 0.5rem; font-size: 1.2rem; font-weight: 400; line-height: 1.05; text-transform: none; letter-spacing: -0.04em; color: var(--text); text-decoration: none; }
+    .sidebar-brand a:hover { opacity: 0.5; }
+    .sidebar-brand-logo { width: 2.5rem; height: 2.5rem; border-radius: 0.5rem; overflow: hidden; flex-shrink: 0; }
+    .sidebar-brand-logo img { width: 100%; height: 100%; object-fit: cover; }
+    .sidebar-badge { display: inline-block; font-size: 0.5625rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-secondary); background: var(--bg-tertiary); padding: 0.125rem 0.5rem; border-radius: 999px; margin-left: 0.25rem; vertical-align: middle; }
+    .sidebar-section-label { font-size: 0.6875rem; font-weight: 400; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); padding: 0 1rem; margin-bottom: 0.5rem; }
+    .sidebar-nav { flex: 1; display: flex; flex-direction: column; gap: 0.25rem; }
+    .sidebar-nav a { display: block; padding: 0.5rem 0.75rem; color: var(--text-secondary); text-decoration: none; font-size: 0.8125rem; font-weight: 400; line-height: 1.5; border-radius: 0.625rem; transition: background 0.3s var(--ease), color 0.3s var(--ease); }
+    .sidebar-nav a:hover { background: var(--bg-hover); color: var(--text); }
+    .sidebar-nav a.active { background: var(--bg-active); color: var(--text); }
+    .sidebar-nav .nav-label { display: block; font-size: 0.625rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 0; transition: color 0.3s var(--ease); }
+    .sidebar-nav a.active .nav-label { color: var(--text-secondary); }
+    .sidebar-nav .nav-title { display: block; font-size: 1.1rem; font-weight: 400; line-height: 1.3; }
+    .sidebar-nav .nav-subtitle { display: none; font-size: 0.8125rem; color: var(--text-secondary); margin-top: 0.125rem; }
+    .sidebar-nav a.active .nav-subtitle { display: block; }
+
+    .sidebar-nav .nav-label-recursos { display: block; font-size: 0.625rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 0.125rem; transition: color 0.3s var(--ease); }
+    .sidebar-nav a.active .nav-label-recursos { color: var(--text-secondary); }
+
+    /* ── Sidebar footer ── */
+    .sidebar-footer { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+    .sidebar-user { display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0.75rem; font-size: 0.75rem; color: var(--text-secondary); line-height: 1.3; }
+    .sidebar-user-avatar { width: 1.75rem; height: 1.75rem; border-radius: 999px; overflow: hidden; flex-shrink: 0; background: var(--bg-tertiary); }
+    .sidebar-user-avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .sidebar-user-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .sidebar-logout { display: block; width: 100%; padding: 0.5rem 0.75rem; background: none; border: none; border-radius: 0.625rem; font-family: var(--font); font-size: 0.8125rem; font-weight: 400; color: var(--text-secondary); letter-spacing: var(--tracking); cursor: pointer; text-align: left; transition: background 0.3s var(--ease), color 0.3s var(--ease); }
+    .sidebar-logout:hover { background: var(--bg-hover); color: var(--text); }
+
+    /* ── Main ── */
+    .main { margin-left: var(--sidebar-w); min-height: 100vh; }
+
+    /* ── Section ── */
+    .section { padding: 2.25rem clamp(2rem, 6vw, 6rem) 8rem; }
+    .section-content { max-width: var(--content-max); }
+
+    /* ── Chapter header ── */
+    .chapter-header { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem; }
+    .chapter-logo { width: 2rem; height: 2rem; flex-shrink: 0; border-radius: 0.75rem; overflow: hidden; }
+    .chapter-logo img { width: 100%; height: 100%; object-fit: cover; }
+    .chapter-label { display: block; font-size: 0.6875rem; font-weight: 400; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); }
+
+    /* ── Typography ── */
+    .section h1 { font-size: 2.25rem; font-weight: 400; line-height: 2.375rem; letter-spacing: -0.125rem; color: var(--text); margin-top: 0.25rem; margin-bottom: 0.25rem; }
+    .section h2 { font-size: 1.875rem; font-weight: 400; line-height: 2.125rem; letter-spacing: -0.1rem; color: var(--text); margin-top: 4rem; margin-bottom: 1.5rem; }
+    .section h3 { font-size: 1.5rem; font-weight: 400; line-height: 1.75rem; letter-spacing: -0.075rem; color: var(--text); margin-top: 2.5rem; margin-bottom: 1rem; }
+    .section h4 { font-size: 1rem; font-weight: 400; line-height: 1.5rem; letter-spacing: var(--tracking); color: var(--text); margin-top: 1.75rem; margin-bottom: 0.5rem; }
+    .section p { margin-bottom: 1.25rem; line-height: 1.5rem; max-width: var(--content-max); }
+    .section > :first-child { margin-top: 0; }
+    .section blockquote { background: none; border-radius: 0; padding: 0; margin: 0 0 1.25rem; max-width: var(--content-max); }
+    .section blockquote p { margin-bottom: 0; font-style: normal; font-weight: 400; color: var(--text-secondary); line-height: 1.5rem; }
+    .section ul, .section ol { margin: 1.25rem 0; padding-left: 1.25rem; max-width: var(--content-max); }
+    .section ul { list-style-type: disc; }
+    .section li { margin-bottom: 0.5rem; line-height: 1.5rem; }
+    .section li ul, .section li ol { margin-top: 0.5rem; }
+    .section strong { font-weight: 400; color: var(--text); }
+    .section em { font-style: italic; opacity: 0.4; }
+    .section a { color: var(--text); text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; text-decoration-color: var(--text-faint); transition: text-decoration-color 1s var(--ease); }
+    .section a:hover { text-decoration-color: var(--text); }
+    .section hr { border: none; height: 0; margin: 4rem 0; }
+
+    /* ── Tables ── */
+    .section table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.875rem; line-height: 1rem; }
+    .section thead th { text-align: left; font-weight: 400; font-size: 0.875rem; letter-spacing: var(--tracking); color: var(--text-secondary); padding: 0 1rem 0.75rem 0; border-bottom: 1px solid var(--text-faint); }
+    .section tbody td { padding: 0.625rem 1rem 0.625rem 0; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .section tbody tr:last-child td { border-bottom: none; }
+    .section .table-wrapper { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .section code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.85em; background: var(--bg-secondary); padding: 0.15em 0.4em; border-radius: 0.25rem; }
+
+    /* ── Footer ── */
+    .footer { padding: 0 clamp(2rem, 6vw, 6rem) clamp(2rem, 4vw, 3rem); }
+    .footer-card { background: var(--bg-secondary); border-radius: 1.25rem; padding: clamp(2.5rem, 5vw, 4rem); }
+    .footer-inner { max-width: var(--content-max); }
+    .footer-brand { font-size: 0.6875rem; font-weight: 400; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 0.75rem; }
+    .footer-sub { font-size: 0.8125rem; font-weight: 300; color: var(--text-secondary); line-height: 1.6; }
+    .footer-logos { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
+    .footer-logo { width: 3rem; height: 3rem; border-radius: 0.375rem; overflow: hidden; background: var(--bg-tertiary); display: flex; align-items: center; justify-content: center; transition: background 0.6s var(--ease); }
+    .footer-logo:hover { background: var(--bg-active); }
+    .footer-logo img { width: 60%; height: 60%; object-fit: contain; }
+
+    /* ── Hamburger ── */
+    .hamburger { display: none; position: fixed; top: 1.25rem; left: 1.25rem; z-index: 300; background: var(--bg); border: 1px solid var(--border); border-radius: 999px; padding: 0.625rem 0.75rem; cursor: pointer; color: var(--text); line-height: 0; }
+    .hamburger svg { width: 18px; height: 18px; fill: currentColor; }
+    .overlay { display: none; position: fixed; inset: 0; background: rgba(0, 0, 0, 0.4); backdrop-filter: blur(0.5rem); -webkit-backdrop-filter: blur(0.5rem); z-index: 90; }
+
+    /* ── Responsive ── */
+    @media (max-width: 991px) {
+      .sidebar { transform: translateX(-100%); }
+      .sidebar.open { transform: translateX(0); }
+      .overlay.open { display: block; }
+      .main { margin-left: 0; }
+      .hamburger { display: block; }
+    }
+
+    @media (max-width: 479px) {
+      .section { padding: 3.5rem 1.25rem 4.5rem; }
+      .section h1 { font-size: 1.75rem; line-height: 2rem; }
+    }
+
+    ::-webkit-scrollbar { width: 0; background: transparent; }
+
+    /* ── View switcher ── */
+    .view-switcher { position: relative; margin: 0.5rem 0; }
+    .view-switcher-btn { display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 0.5rem 0.75rem; background: none; border: 1px solid var(--border); border-radius: 0.625rem; font-family: var(--font); font-size: 0.75rem; font-weight: 400; color: var(--text-secondary); letter-spacing: var(--tracking); cursor: pointer; transition: background 0.3s var(--ease), color 0.3s var(--ease); }
+    .view-switcher-btn:hover { background: var(--bg-hover); color: var(--text); }
+    .view-switcher-btn svg { width: 0.75rem; height: 0.75rem; fill: currentColor; transition: transform 0.3s var(--ease); }
+    .view-switcher.open .view-switcher-btn svg { transform: rotate(180deg); }
+    .view-switcher-menu { display: none; position: absolute; bottom: calc(100% + 0.375rem); left: 0; right: 0; background: var(--bg); border: 1px solid var(--border); border-radius: 0.625rem; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); z-index: 200; }
+    .view-switcher.open .view-switcher-menu { display: block; }
+    .view-switcher-option { display: flex; align-items: center; gap: 0.5rem; width: 100%; padding: 0.5rem 0.75rem; font-family: var(--font); font-size: 0.75rem; color: var(--text-secondary); background: none; border: none; cursor: pointer; transition: background 0.2s var(--ease), color 0.2s var(--ease); }
+    .view-switcher-option:hover { background: var(--bg-hover); color: var(--text); }
+    .view-switcher-option.current { color: var(--text); font-weight: 500; }
+    .view-switcher-dot { width: 0.375rem; height: 0.375rem; border-radius: 999px; flex-shrink: 0; }
+    .view-switcher-dot.green { background: #22C55E; }
+    .view-switcher-dot.gray { background: var(--text-muted); }
+
+    .loading { display: flex; align-items: center; justify-content: center; height: 100vh; font-size: 0.75rem; font-weight: 400; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; }
+
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+    .section { animation: fadeIn 1s var(--ease) both; }
+
+    /* ── Download buttons ── */
+    .btn-download { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--bg-dark); color: var(--text-on-dark); border: none; border-radius: 999px; padding: 0.75rem 1.75rem; font-family: var(--font); font-size: 0.8125rem; font-weight: 400; letter-spacing: var(--tracking); cursor: pointer; transition: opacity 0.3s var(--ease); }
+    .btn-download:hover { opacity: 0.7; }
+    .btn-download svg { width: 1rem; height: 1rem; fill: currentColor; }
+    .btn-download-secondary { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--bg); color: var(--text); border: 1px solid var(--border-subtle); border-radius: 999px; padding: 0.75rem 1.75rem; font-family: var(--font); font-size: 0.8125rem; font-weight: 400; letter-spacing: var(--tracking); cursor: pointer; transition: opacity 0.3s var(--ease); }
+    .btn-download-secondary:hover { opacity: 0.7; }
+    .btn-download-secondary svg { width: 1rem; height: 1rem; fill: currentColor; }
+    .btn-download-group { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+
+    /* ── Repo section ── */
+    .repo-block { margin-bottom: 3.5rem; }
+    .repo-block-title { font-size: 1.5rem; font-weight: 400; line-height: 1.75rem; letter-spacing: -0.075rem; color: var(--text); margin-bottom: 1.25rem; }
+    .repo-block p { margin-bottom: 1rem; line-height: 1.625; max-width: var(--content-max); }
+    .repo-files { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 0.75rem; margin-bottom: 1.5rem; max-width: var(--content-max); }
+    .repo-file-card { background: var(--bg-secondary); border-radius: 0.75rem; padding: 1rem 1.25rem; display: flex; align-items: center; gap: 0.75rem; }
+    .repo-file-icon { width: 2rem; height: 2rem; flex-shrink: 0; background: var(--bg-tertiary); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; }
+    .repo-file-icon svg { width: 1rem; height: 1rem; fill: var(--text-secondary); }
+    .repo-file-name { font-size: 0.8125rem; font-weight: 400; color: var(--text); line-height: 1.3; }
+    .repo-file-desc { font-size: 0.6875rem; color: var(--text-secondary); margin-top: 0.125rem; }
+    .repo-howto-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 0.75rem; max-width: var(--content-max); }
+    .repo-howto-card { background: var(--bg-secondary); border-radius: 0.75rem; padding: 1.5rem; }
+    .repo-howto-card h4 { font-size: 1rem; font-weight: 400; margin-bottom: 0.75rem; color: var(--text); }
+    .repo-howto-card ul { padding-left: 1.25rem; margin: 0; }
+    .repo-howto-card li { font-size: 0.875rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 0.25rem; }
+    .repo-changelog { max-width: var(--content-max); }
+    .repo-changelog-entry { display: flex; gap: 1rem; padding: 0.75rem 0; border-bottom: 1px solid var(--border); font-size: 0.875rem; line-height: 1.5; }
+    .repo-changelog-entry:last-child { border-bottom: none; }
+    .repo-changelog-date { flex-shrink: 0; width: 6.5rem; color: var(--text-muted); font-size: 0.8125rem; }
+    .repo-changelog-text { color: var(--text-secondary); }
+
+    /* ── Admin panel ── */
+    .admin-section { max-width: var(--content-max); }
+    .admin-table-wrap { overflow-x: auto; margin-bottom: 2rem; }
+    .admin-table { width: 100%; border-collapse: collapse; font-size: 0.8125rem; }
+    .admin-table th { text-align: left; font-weight: 400; color: var(--text-secondary); padding: 0.5rem 1rem 0.5rem 0; border-bottom: 1px solid var(--text-faint); }
+    .admin-table td { padding: 0.5rem 1rem 0.5rem 0; border-bottom: 1px solid var(--border); vertical-align: middle; }
+    .admin-table tr:last-child td { border-bottom: none; }
+    .admin-input { font-family: var(--font); font-size: 0.8125rem; padding: 0.5rem 0.75rem; border: 1px solid var(--border-subtle); border-radius: 0.5rem; background: var(--bg); color: var(--text); letter-spacing: var(--tracking); outline: none; width: 100%; }
+    .admin-input:focus { border-color: var(--text-secondary); }
+    .admin-input-row { display: flex; gap: 0.5rem; margin-bottom: 1rem; max-width: 28rem; }
+    .admin-btn { display: inline-flex; align-items: center; gap: 0.375rem; padding: 0.5rem 1rem; border-radius: 0.5rem; font-family: var(--font); font-size: 0.75rem; font-weight: 400; letter-spacing: var(--tracking); cursor: pointer; transition: opacity 0.3s var(--ease); border: none; }
+    .admin-btn:hover { opacity: 0.7; }
+    .admin-btn-primary { background: var(--bg-dark); color: var(--text-on-dark); }
+    .admin-btn-danger { background: none; color: #991B1B; border: 1px solid #FECACA; }
+    .admin-btn-danger:hover { background: #FEF2F2; }
+    .admin-select { font-family: var(--font); font-size: 0.75rem; padding: 0.375rem 0.5rem; border: 1px solid var(--border-subtle); border-radius: 0.375rem; background: var(--bg); color: var(--text); cursor: pointer; }
+    .admin-tabs { display: flex; gap: 0.25rem; margin-bottom: 2rem; }
+    .admin-tab { padding: 0.5rem 1rem; border-radius: 0.625rem; background: none; border: none; font-family: var(--font); font-size: 0.8125rem; color: var(--text-secondary); cursor: pointer; transition: background 0.3s var(--ease), color 0.3s var(--ease); }
+    .admin-tab:hover { background: var(--bg-hover); color: var(--text); }
+    .admin-tab.active { background: var(--bg-active); color: var(--text); }
+    .admin-empty { font-size: 0.8125rem; color: var(--text-muted); padding: 2rem 0; }
+  </style>
+</head>
+<body>
+
+  <!-- ── Login Screen ── -->
+  <div class="login-screen" id="loginScreen">
+    <div class="login-card">
+      <div class="login-logo"><img src="logos/Modulor.svg" alt="Modulor"></div>
+      <h1 class="login-title">Handbook</h1>
+      <p class="login-subtitle">Accede con tu cuenta de Google corporativa para consultar el handbook del grupo.</p>
+      <button class="login-btn" onclick="signIn()">
+        <svg viewBox="0 0 24 24" fill="white"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+        Iniciar sesión con Google
+      </button>
+      <div class="login-error" id="loginError"></div>
+    </div>
+  </div>
+
+  <!-- ── App ── -->
+  <div class="app" id="app">
+    <button class="hamburger" onclick="toggleSidebar()" aria-label="Menu">
+      <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+    </button>
+    <div class="overlay" onclick="toggleSidebar()"></div>
+
+    <nav class="sidebar">
+      <div class="sidebar-brand">
+        <a href="#">
+          <span class="sidebar-brand-logo"><img src="logos/Modulor.svg" alt="Modulor"></span>
+          <span id="sidebarBrandText">Modulor Studios</span>
+        </a>
+      </div>
+      <div class="sidebar-nav" id="nav">
+        <a href="#intro" data-section="intro">
+          <span class="nav-label">Intro</span>
+          <span class="nav-title">Introducción</span>
+          <span class="nav-subtitle">Por qué y para qué</span>
+        </a>
+        <a href="#core" data-section="core">
+          <span class="nav-label">00</span>
+          <span class="nav-title">Core Modulor</span>
+          <span class="nav-subtitle">Identidad y visión del grupo</span>
+        </a>
+        <a href="#mendesaltaren" data-section="mendesaltaren">
+          <span class="nav-label">01</span>
+          <span class="nav-title">mendesaltaren</span>
+          <span class="nav-subtitle">Diseño digital y branding</span>
+        </a>
+        <a href="#tailorhub" data-section="tailorhub">
+          <span class="nav-label">02</span>
+          <span class="nav-title">Tailor Hub</span>
+          <span class="nav-subtitle">Desarrollo a medida</span>
+        </a>
+        <a href="#sstil" data-section="sstil">
+          <span class="nav-label">03</span>
+          <span class="nav-title">SSTIL</span>
+          <span class="nav-subtitle">Marketing y comunicación</span>
+        </a>
+        <a href="#nocodehackers" data-section="nocodehackers">
+          <span class="nav-label">04</span>
+          <span class="nav-title">Nocodehackers</span>
+          <span class="nav-subtitle">Soluciones no-code</span>
+        </a>
+        <a href="#fik" data-section="fik">
+          <span class="nav-label">05</span>
+          <span class="nav-title">FIK</span>
+          <span class="nav-subtitle">E-commerce Shopify</span>
+        </a>
+        <a href="#repositorio" data-section="repositorio">
+          <span class="nav-label">06</span>
+          <span class="nav-title">Repositorio</span>
+          <span class="nav-subtitle">Archivos y recursos</span>
+        </a>
+        <a href="#admin" data-section="admin" id="adminNavLink" style="display:none;">
+          <span class="nav-label-recursos">Admin</span>
+          <span class="nav-title">Panel de gestión</span>
+          <span class="nav-subtitle">Dominios, accesos, usuarios</span>
+        </a>
+      </div>
+      <div class="sidebar-footer">
+        <div class="sidebar-user" id="sidebarUser">
+          <span class="sidebar-user-avatar" id="userAvatar"></span>
+          <span class="sidebar-user-name" id="userName"></span>
+        </div>
+        <div class="view-switcher" id="viewSwitcher" style="display:none;">
+          <button class="view-switcher-btn" onclick="toggleViewSwitcher()">
+            <span id="viewSwitcherLabel">Team</span>
+            <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+          </button>
+          <div class="view-switcher-menu">
+            <button class="view-switcher-option" id="viewOptTeam" onclick="switchViewMode('team')">
+              <span class="view-switcher-dot" id="viewDotTeam"></span> Team
+            </button>
+            <button class="view-switcher-option" id="viewOptLeadership" onclick="switchViewMode('leadership')">
+              <span class="view-switcher-dot" id="viewDotLeadership"></span> Leadership
+            </button>
+          </div>
+        </div>
+        <button class="sidebar-logout" onclick="signOut()">Cerrar sesión</button>
+      </div>
+    </nav>
+
+    <main class="main" id="content">
+      <div class="loading">Cargando...</div>
+    </main>
+  </div>
+
+  <script>
+    // ── Supabase config ──
+    const SUPABASE_URL = 'https://lltnuncagboweayhpjkt.supabase.co';
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxsdG51bmNhZ2Jvd2VheWhwamt0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI0MzAxMjEsImV4cCI6MjA4ODAwNjEyMX0.fkQ2W4xOY-IrrEtl6ExRXmON1hZu3alEDS_tA7v1MmE';
+    const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+    const APPROVED_DOMAINS = [
+      'modulorstudios.com', 'modulor.ventures', 'mendesaltaren.com',
+      'tailor-hub.com', 'fik.life', 'nocodehackers.es',
+      'sstilagency.com', 'minimum.run'
+    ];
+
+    let currentUser = null;
+    let userRole = 'team';
+    let lastValidatedId = null;
+    let isLeadershipUser = false;
+    let viewMode = 'team';
+
+    // ── Chapter definitions ──
+    const teamChapters = [
+      { id: 'intro', num: 'Intro', file: 'redux/intro.md', logo: 'logos/Modulor.svg' },
+      { id: 'core', num: '00', file: 'redux/00_Core_Modulor.md', logo: 'logos/Modulor.svg' },
+      { id: 'mendesaltaren', num: '01', file: 'redux/01_mendesaltaren.md', logo: 'logos/mendesaltaren.svg' },
+      { id: 'tailorhub', num: '02', file: 'redux/02_Tailor_Hub.md', logo: 'logos/Tailor.svg' },
+      { id: 'sstil', num: '03', file: 'redux/03_SSTIL.md', logo: 'logos/SSTIL.svg' },
+      { id: 'nocodehackers', num: '04', file: 'redux/04_Nocodehackers.md', logo: 'logos/NCH.svg' },
+      { id: 'fik', num: '05', file: 'redux/05_FIK.md', logo: 'logos/Fik.svg' },
+    ];
+
+    const leadershipChapters = [
+      { id: 'intro', num: 'Intro', file: 'full/intro.md', liteFile: 'lite/intro.md', logo: 'logos/Modulor.svg' },
+      { id: 'core', num: '00', file: 'full/00_Core_Modulor.md', liteFile: 'lite/00_Core_Modulor.md', logo: 'logos/Modulor.svg' },
+      { id: 'mendesaltaren', num: '01', file: 'full/01_mendesaltaren.md', liteFile: 'lite/01_mendesaltaren.md', logo: 'logos/mendesaltaren.svg' },
+      { id: 'tailorhub', num: '02', file: 'full/02_Tailor_Hub.md', liteFile: 'lite/02_Tailor_Hub.md', logo: 'logos/Tailor.svg' },
+      { id: 'sstil', num: '03', file: 'full/03_SSTIL.md', liteFile: 'lite/03_SSTIL.md', logo: 'logos/SSTIL.svg' },
+      { id: 'nocodehackers', num: '04', file: 'full/04_Nocodehackers.md', liteFile: 'lite/04_Nocodehackers.md', logo: 'logos/NCH.svg' },
+      { id: 'fik', num: '05', file: 'full/05_FIK.md', liteFile: 'lite/05_FIK.md', logo: 'logos/Fik.svg' },
+    ];
+
+    function getChapters() {
+      return viewMode === 'leadership' ? leadershipChapters : teamChapters;
+    }
+
+    // ── Auth helpers ──
+    function setAccessTokenCookie(session) {
+      if (session?.access_token) {
+        document.cookie = `sb-access-token=${session.access_token}; path=/; secure; samesite=lax; max-age=${session.expires_in || 3600}`;
+      }
+    }
+
+    function clearAccessTokenCookie() {
+      document.cookie = 'sb-access-token=; path=/; secure; samesite=lax; max-age=0';
+    }
+
+    function isDomainApproved(email) {
+      return APPROVED_DOMAINS.includes(email.split('@')[1]);
+    }
+
+    // Central session handler — no longer rejects non-leadership users
+    async function handleSession(session) {
+      if (!session) return;
+      if (session.user.id === lastValidatedId) return;
+
+      if (!isDomainApproved(session.user.email)) {
+        clearAccessTokenCookie();
+        showLoginError('Acceso restringido a dominios autorizados del grupo Modulor.');
+        await sb.auth.signOut();
+        return;
+      }
+
+      // Check leadership invitation — non-blocking, just determines access level
+      const { data: invited } = await sb
+        .from('leadership_users')
+        .select('email')
+        .eq('email', session.user.email)
+        .single();
+
+      isLeadershipUser = !!invited;
+      viewMode = isLeadershipUser ? 'leadership' : 'team';
+
+      lastValidatedId = session.user.id;
+      setAccessTokenCookie(session);
+      currentUser = session.user;
+      await loadUserRole();
+      updateViewUI();
+      showApp();
+      upsertProfile(session.user);
+    }
+
+    async function loadUserRole() {
+      const { data } = await sb
+        .from('user_profiles')
+        .select('role')
+        .eq('id', currentUser.id)
+        .single();
+      userRole = data?.role || 'team';
+
+      // Admin nav visible only for admins in leadership view
+      if (userRole === 'admin') {
+        document.getElementById('adminNavLink').style.display = 'block';
+      }
+
+      // View switcher visible for all leadership users
+      if (isLeadershipUser) {
+        document.getElementById('viewSwitcher').style.display = 'block';
+      }
+    }
+
+    function updateViewUI() {
+      // Update sidebar badge
+      const brandText = document.getElementById('sidebarBrandText');
+      if (viewMode === 'leadership') {
+        brandText.innerHTML = 'Modulor Studios <span class="sidebar-badge">Leadership</span>';
+      } else {
+        brandText.textContent = 'Modulor Studios';
+      }
+
+      // Update view switcher state
+      const label = document.getElementById('viewSwitcherLabel');
+      const dotTeam = document.getElementById('viewDotTeam');
+      const dotLeadership = document.getElementById('viewDotLeadership');
+      const optTeam = document.getElementById('viewOptTeam');
+      const optLeadership = document.getElementById('viewOptLeadership');
+
+      if (viewMode === 'leadership') {
+        label.textContent = 'Leadership';
+        dotLeadership.className = 'view-switcher-dot green';
+        dotTeam.className = 'view-switcher-dot gray';
+        optLeadership.classList.add('current');
+        optTeam.classList.remove('current');
+      } else {
+        label.textContent = 'Team';
+        dotTeam.className = 'view-switcher-dot green';
+        dotLeadership.className = 'view-switcher-dot gray';
+        optTeam.classList.add('current');
+        optLeadership.classList.remove('current');
+      }
+
+      // Admin link only visible for admins
+      const adminLink = document.getElementById('adminNavLink');
+      if (userRole === 'admin') {
+        adminLink.style.display = 'block';
+      } else {
+        adminLink.style.display = 'none';
+      }
+    }
+
+    function switchViewMode(mode) {
+      if (mode === viewMode) return;
+      viewMode = mode;
+      updateViewUI();
+      // Close the switcher dropdown
+      document.getElementById('viewSwitcher').classList.remove('open');
+      // Re-navigate to current section with new content
+      const id = window.location.hash.replace('#', '') || 'intro';
+      // If switching to team and currently on admin, redirect to intro
+      if (viewMode === 'team' && id === 'admin') {
+        window.location.hash = '#intro';
+      } else {
+        navigate(id);
+      }
+    }
+
+    async function signIn() {
+      const { error } = await sb.auth.signInWithOAuth({
+        provider: 'google',
+        options: { redirectTo: window.location.origin },
+      });
+      if (error) showLoginError(error.message);
+    }
+
+    async function signOut() {
+      clearAccessTokenCookie();
+      await sb.auth.signOut();
+      currentUser = null;
+      userRole = 'team';
+      lastValidatedId = null;
+      isLeadershipUser = false;
+      viewMode = 'team';
+      document.getElementById('app').classList.remove('visible');
+      document.getElementById('loginScreen').style.display = 'flex';
+      document.getElementById('adminNavLink').style.display = 'none';
+      document.getElementById('viewSwitcher').style.display = 'none';
+    }
+
+    function showLoginError(msg) {
+      document.getElementById('loginError').textContent = msg;
+    }
+
+    function showApp() {
+      document.getElementById('loginScreen').style.display = 'none';
+      document.getElementById('app').classList.add('visible');
+      const meta = currentUser.user_metadata;
+      const avatarEl = document.getElementById('userAvatar');
+      const nameEl = document.getElementById('userName');
+      if (meta.avatar_url) avatarEl.innerHTML = `<img src="${meta.avatar_url}" alt="">`;
+      nameEl.textContent = meta.full_name || currentUser.email;
+      onHashChange();
+    }
+
+    async function upsertProfile(user) {
+      const meta = user.user_metadata;
+      await sb.from('user_profiles').upsert({
+        id: user.id,
+        email: user.email,
+        full_name: meta.full_name || null,
+        avatar_url: meta.avatar_url || null,
+        last_login: new Date().toISOString(),
+      }, { onConflict: 'id', ignoreDuplicates: false });
+    }
+
+    // Single auth listener
+    sb.auth.onAuthStateChange(async (event, session) => {
+      if (event === 'INITIAL_SESSION' || event === 'SIGNED_IN') {
+        await handleSession(session);
+      }
+      if (event === 'TOKEN_REFRESHED' && session) {
+        setAccessTokenCookie(session);
+      }
+      if (event === 'SIGNED_OUT') {
+        clearAccessTokenCookie();
+        currentUser = null;
+        lastValidatedId = null;
+      }
+    });
+
+    // ── Markdown & Content ──
+    const md_renderer = window.markdownit({ html: false, linkify: true, breaks: false });
+
+    function buildFooter() {
+      const chapters = getChapters();
+      const logoRow = chapters.filter(c => c.id !== 'intro').map(ch =>
+        `<span class="footer-logo"><img src="${ch.logo}" alt=""></span>`
+      ).join('');
+      return `
+        <div class="footer">
+          <div class="footer-card">
+            <div class="footer-inner">
+              <div class="footer-logos">${logoRow}</div>
+              <p class="footer-brand">Modulor Studios</p>
+              <p class="footer-sub">Handbook es una iniciativa de Modulor Studios.<br>Madrid, 2026.</p>
+            </div>
+          </div>
+        </div>`;
+    }
+
+    function updateSidebarActive(id) {
+      document.querySelectorAll('.sidebar-nav a').forEach(l => l.classList.remove('active'));
+      const active = document.querySelector(`.sidebar-nav a[data-section="${id}"]`);
+      if (active) active.classList.add('active');
+    }
+
+    async function navigate(id) {
+      const content = document.getElementById('content');
+      const chapters = getChapters();
+
+      if (id === 'admin') {
+        if (userRole !== 'admin') { navigate('core'); return; }
+        content.innerHTML = `<div class="section" id="admin"><div class="admin-section">${buildAdmin()}</div></div>`;
+        updateSidebarActive('admin');
+        window.scrollTo(0, 0);
+        initAdmin();
+        return;
+      }
+
+      if (id === 'repositorio') {
+        content.innerHTML = buildRepositorio() + buildFooter();
+        updateSidebarActive('repositorio');
+        window.scrollTo(0, 0);
+        return;
+      }
+
+      const ch = chapters.find(c => c.id === id);
+      if (!ch) { navigate('repositorio'); return; }
+
+      try {
+        const res = await fetch(`content/${ch.file}`);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const md = await res.text();
+        let html = md_renderer.render(md);
+        html = html.replace(/<table>/g, '<div class="table-wrapper"><table>').replace(/<\/table>/g, '</table></div>');
+        html = html.replace(
+          /^(<h1[^>]*>)/,
+          `<div class="chapter-header"><span class="chapter-logo"><img src="${ch.logo}" alt=""></span><span class="chapter-label">Capítulo ${ch.num}</span></div>$1`
+        );
+        content.innerHTML = `<div class="section" id="${ch.id}">${html}</div>` + buildFooter();
+        updateSidebarActive(ch.id);
+        window.scrollTo(0, 0);
+      } catch (e) {
+        console.error(`Error loading ${ch.file}:`, e);
+      }
+    }
+
+    function buildRepositorio() {
+      const chapters = getChapters();
+
+      if (viewMode === 'leadership') {
+        return buildRepositorioLeadership(chapters);
+      }
+      return buildRepositorioTeam(chapters);
+    }
+
+    function buildRepositorioTeam(chapters) {
+      const fileDescriptions = {
+        '00_Core_Modulor.md': 'Identidad, estructura y operaciones del grupo',
+        '01_mendesaltaren.md': 'Boutique de diseño digital y branding premium',
+        '02_Tailor_Hub.md': 'Boutique de desarrollo software e IA',
+        '03_SSTIL.md': 'Agencia de marketing, comunicación y growth (incluye Minimum)',
+        '04_Nocodehackers.md': 'Academia no-code/IA y agencia de soluciones',
+        '05_FIK.md': 'Shopify Premier Partner, e-commerce',
+      };
+
+      const fileCards = chapters.filter(ch => ch.id !== 'intro').map(ch => {
+        const fname = ch.file.replace('redux/', '');
+        return `
+        <div class="repo-file-card">
+          <div class="repo-file-icon">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm-1 2l5 5h-5V4zM6 20V4h5v7h7v9H6z"/></svg>
+          </div>
+          <div>
+            <div class="repo-file-name">${fname}</div>
+            <div class="repo-file-desc">${fileDescriptions[fname]}</div>
+          </div>
+        </div>`;
+      }).join('');
+
+      const changelogHTML = buildChangelog();
+
+      return `
+        <div class="section" id="repositorio">
+          <div class="section-content">
+            <div class="chapter-header">
+              <span class="chapter-logo"><img src="logos/Modulor.svg" alt=""></span>
+              <span class="chapter-label">Recursos</span>
+            </div>
+            <h1>Repositorio</h1>
+
+            <div class="repo-block">
+              <h3 class="repo-block-title">Para qué sirve esta documentación</h3>
+              <p>Estos archivos contienen el contexto de Modulor Studios y sus boutiques: identidad, servicios, criterios de derivación, tono de comunicación y más.</p>
+              <p>Su objetivo principal es servir como <strong>contexto para IAs</strong> (ChatGPT, Claude, etc.) en cualquier acción que implique conocimiento de una o varias boutiques. Carga los archivos en tu herramienta de IA favorita y tendrá todo lo necesario para responder con criterio sobre el grupo.</p>
+            </div>
+
+            <div class="repo-block">
+              <h3 class="repo-block-title">Archivos descargables</h3>
+              <div class="repo-files">${fileCards}</div>
+              <p style="font-size:0.875rem;color:var(--text-secondary);margin-bottom:1.25rem;">Versión <strong>Redux</strong> — resumen ejecutivo por boutique, sin información financiera ni estratégica sensible.</p>
+              <div class="btn-download-group">
+                <button class="btn-download" onclick="downloadZip('redux')">
+                  <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                  Handbook Redux (.zip)
+                </button>
+              </div>
+            </div>
+
+            <div class="repo-block">
+              <h3 class="repo-block-title">Cómo usar en ChatGPT y Claude</h3>
+              <div class="repo-howto-grid">
+                <div class="repo-howto-card">
+                  <h4>ChatGPT</h4>
+                  <ul>
+                    <li>Sube los archivos .md como adjuntos en cualquier conversación</li>
+                    <li>O crea un <strong>GPT personalizado</strong> y añade los archivos en la sección "Knowledge" para tenerlos siempre disponibles</li>
+                  </ul>
+                </div>
+                <div class="repo-howto-card">
+                  <h4>Claude</h4>
+                  <ul>
+                    <li>Sube los archivos .md como adjuntos en cualquier conversación</li>
+                    <li>O crea un <strong>Project</strong> y añade los archivos como contexto del proyecto para que estén disponibles en cada chat</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="repo-block">
+              <h3 class="repo-block-title">Log de cambios</h3>
+              <div class="repo-changelog">${changelogHTML}</div>
+            </div>
+          </div>
+        </div>`;
+    }
+
+    function buildRepositorioLeadership(chapters) {
+      const fileDescriptions = {
+        '00_Core_Modulor.md': 'Identidad, estructura, financieros y operaciones del grupo',
+        '01_mendesaltaren.md': 'Boutique de diseño digital y branding premium',
+        '02_Tailor_Hub.md': 'Boutique de desarrollo software e IA',
+        '03_SSTIL.md': 'Agencia de marketing, comunicación y growth (incluye Minimum)',
+        '04_Nocodehackers.md': 'Academia no-code/IA y agencia de soluciones',
+        '05_FIK.md': 'Shopify Premier Partner, e-commerce',
+      };
+
+      const fileCards = chapters.filter(ch => ch.id !== 'intro').map(ch => {
+        const fname = ch.file.replace('full/', '');
+        return `
+        <div class="repo-file-card">
+          <div class="repo-file-icon">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm-1 2l5 5h-5V4zM6 20V4h5v7h7v9H6z"/></svg>
+          </div>
+          <div>
+            <div class="repo-file-name">${fname}</div>
+            <div class="repo-file-desc">${fileDescriptions[fname]}</div>
+          </div>
+        </div>`;
+      }).join('');
+
+      const changelogHTML = buildChangelog();
+
+      return `
+        <div class="section" id="repositorio">
+          <div class="section-content">
+            <div class="chapter-header">
+              <span class="chapter-logo"><img src="logos/Modulor.svg" alt=""></span>
+              <span class="chapter-label">Recursos</span>
+            </div>
+            <h1>Repositorio</h1>
+
+            <div class="repo-block">
+              <h3 class="repo-block-title">Para qué sirve esta documentación</h3>
+              <p>Estos archivos contienen el contexto completo de Modulor Studios y sus boutiques: identidad, servicios, criterios de derivación, tono de comunicación y más.</p>
+              <p>Su objetivo principal es servir como <strong>contexto para IAs</strong> (ChatGPT, Claude, etc.) en cualquier acción que implique conocimiento de una o varias boutiques.</p>
+            </div>
+
+            <div class="repo-block">
+              <h3 class="repo-block-title">Archivos descargables</h3>
+              <div class="repo-files">${fileCards}</div>
+              <p style="font-size:0.875rem;color:var(--text-secondary);margin-bottom:1.25rem;">Dos versiones disponibles: <strong>Full</strong> (contenido completo con pricing, equipos, financieros y cross-selling) y <strong>Lite</strong> (resumen ejecutivo por boutique).</p>
+              <div class="btn-download-group">
+                <button class="btn-download" onclick="downloadZip('full')">
+                  <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                  Handbook Full (.zip)
+                </button>
+                <button class="btn-download-secondary" onclick="downloadZip('lite')">
+                  <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                  Handbook Lite (.zip)
+                </button>
+              </div>
+            </div>
+
+            <div class="repo-block">
+              <h3 class="repo-block-title">Cómo usar en ChatGPT y Claude</h3>
+              <div class="repo-howto-grid">
+                <div class="repo-howto-card">
+                  <h4>ChatGPT</h4>
+                  <ul>
+                    <li>Sube los archivos .md como adjuntos en cualquier conversación</li>
+                    <li>O crea un <strong>GPT personalizado</strong> y añade los archivos en "Knowledge"</li>
+                  </ul>
+                </div>
+                <div class="repo-howto-card">
+                  <h4>Claude</h4>
+                  <ul>
+                    <li>Sube los archivos .md como adjuntos en cualquier conversación</li>
+                    <li>O crea un <strong>Project</strong> y añade los archivos como contexto</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="repo-block">
+              <h3 class="repo-block-title">Ciberseguridad y tratamiento de información</h3>
+              <p>El Handbook contiene información confidencial del grupo. A continuación se detallan los tipos de información sensible y las mejores prácticas para su manejo.</p>
+
+              <h4 style="margin-top:1.5rem;margin-bottom:0.75rem;">Qué información sensible contiene</h4>
+              <div class="admin-table-wrap">
+                <table class="admin-table" style="font-size:0.8125rem;">
+                  <thead><tr><th>Categoría</th><th>Ejemplos</th><th>Nivel</th></tr></thead>
+                  <tbody>
+                    <tr><td>Financieros</td><td>Facturación por boutique, márgenes, EBITDA, cash position, objetivos de revenue</td><td style="color:#991B1B;font-weight:500;">Alto</td></tr>
+                    <tr><td>Pricing</td><td>Tarifas por servicio, rangos de precio, modelos de retainer</td><td style="color:#991B1B;font-weight:500;">Alto</td></tr>
+                    <tr><td>Estrategia</td><td>Roadmap de crecimiento, planes M&A, caso de adquisición Tailor Hub</td><td style="color:#991B1B;font-weight:500;">Alto</td></tr>
+                    <tr><td>Equipos</td><td>Estructura completa, headcount, costes de contratación, salarios de referencia</td><td style="color:#B45309;font-weight:500;">Medio-Alto</td></tr>
+                    <tr><td>Pipeline comercial</td><td>Revenue reservado, clientes en negociación, presupuesto de ads</td><td style="color:#B45309;font-weight:500;">Medio-Alto</td></tr>
+                    <tr><td>Clientes</td><td>Lista de cuentas clave, volumen de negocio por cliente</td><td style="color:#B45309;font-weight:500;">Medio</td></tr>
+                    <tr><td>Competitivo</td><td>Posicionamiento frente a competidores, debilidades internas</td><td style="color:#B45309;font-weight:500;">Medio</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h4 style="margin-top:2rem;margin-bottom:0.75rem;">Buenas prácticas con los archivos .md</h4>
+              <div class="repo-howto-grid">
+                <div class="repo-howto-card">
+                  <h4>Al usar con IAs (ChatGPT, Claude, etc.)</h4>
+                  <ul>
+                    <li>Usa la <strong>versión Lite o Team</strong> siempre que el contexto completo no sea necesario</li>
+                    <li>No subas archivos Full a GPTs públicos o compartidos con personas externas</li>
+                    <li>Prefiere <strong>Projects de Claude</strong> o <strong>GPTs privados</strong> sobre conversaciones sueltas — el contexto se mantiene aislado</li>
+                    <li>Revisa el output de la IA antes de compartirlo: puede incluir datos sensibles del contexto</li>
+                    <li>Desactiva el entrenamiento con tus datos cuando esté disponible (ChatGPT: Settings > Data Controls)</li>
+                  </ul>
+                </div>
+                <div class="repo-howto-card">
+                  <h4>Almacenamiento y distribución</h4>
+                  <ul>
+                    <li><strong>No almacenes</strong> los .md Full en carpetas compartidas públicas (Google Drive público, Dropbox links, etc.)</li>
+                    <li><strong>No reenvíes</strong> los archivos por email o mensajería a personas fuera del equipo de liderazgo</li>
+                    <li>Si necesitas compartir información con un cliente o partner, usa la versión Team (sin datos sensibles)</li>
+                    <li>Elimina copias locales cuando ya no las necesites</li>
+                  </ul>
+                </div>
+                <div class="repo-howto-card">
+                  <h4>En presentaciones y documentos</h4>
+                  <ul>
+                    <li>No copies datos financieros exactos en slides compartidas con externos</li>
+                    <li>Usa rangos en lugar de cifras exactas cuando sea posible ("varios millones" vs "EUR9M")</li>
+                    <li>El pricing es confidencial — no lo incluyas en propuestas genéricas ni en materiales de marketing</li>
+                    <li>Los casos de M&A (adquisición Tailor Hub) son información interna exclusivamente</li>
+                  </ul>
+                </div>
+                <div class="repo-howto-card">
+                  <h4>Criterio general</h4>
+                  <ul>
+                    <li>Pregúntate: "¿esta información daría ventaja a un competidor?" — si sí, no la compartas fuera</li>
+                    <li>El contenido Team/Redux está diseñado para ser seguro de compartir internamente con todo el grupo</li>
+                    <li>El contenido Full y Lite es exclusivo del equipo de liderazgo</li>
+                    <li>Ante la duda, consulta con un administrador antes de compartir</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="repo-block">
+              <h3 class="repo-block-title">Log de cambios</h3>
+              <div class="repo-changelog">${changelogHTML}</div>
+            </div>
+          </div>
+        </div>`;
+    }
+
+    function buildChangelog() {
+      const changelogEntries = [
+        { date: '2 mar 2026', text: 'Handbook unificado — una sola URL, auto-redirect según nivel de acceso' },
+        { date: '2 mar 2026', text: 'Capítulo de introducción, recomendaciones de ciberseguridad en Repositorio' },
+        { date: '2 mar 2026', text: 'Handbook v2 — Autenticación, contenido diferenciado Team/Leadership' },
+        { date: '1 mar 2026', text: 'Contenido full desde Notion, doble descarga (Full + Lite)' },
+        { date: '27 feb 2026', text: 'Sección Repositorio — archivos descargables y guía de uso con IAs' },
+        { date: '26 feb 2026', text: 'Primera versión del handbook con los 6 capítulos' },
+      ];
+
+      return changelogEntries.map(e => `
+        <div class="repo-changelog-entry">
+          <span class="repo-changelog-date">${e.date}</span>
+          <span class="repo-changelog-text">${e.text}</span>
+        </div>
+      `).join('');
+    }
+
+    async function downloadZip(variant) {
+      const chapters = getChapters();
+      const isSecondary = variant === 'lite';
+      const btnSelector = isSecondary ? '.btn-download-secondary' : '.btn-download';
+      const btn = document.querySelector(btnSelector);
+      if (!btn) return;
+      const originalText = btn.innerHTML;
+      btn.innerHTML = `<svg viewBox="0 0 24 24" style="width:1rem;height:1rem;fill:currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg> Generando...`;
+      btn.disabled = true;
+
+      try {
+        const zip = new JSZip();
+        for (const ch of chapters.filter(c => c.id !== 'intro')) {
+          let src;
+          if (variant === 'redux') {
+            src = ch.file;
+          } else if (variant === 'lite') {
+            src = ch.liteFile;
+          } else {
+            src = ch.file;
+          }
+          const res = await fetch(`content/${src}`);
+          const text = await res.text();
+          const fname = src.replace(/^(redux|full|lite)\//, '');
+          zip.file(fname, text);
+        }
+        const blob = await zip.generateAsync({ type: 'blob' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `modulor-handbook-${variant}.zip`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      } catch (e) {
+        console.error('Error generating zip:', e);
+        alert('Error al generar el archivo. Inténtalo de nuevo.');
+      }
+
+      btn.innerHTML = originalText;
+      btn.disabled = false;
+    }
+
+    // ── Admin Panel ──
+    function buildAdmin() {
+      return `
+        <div class="chapter-header">
+          <span class="chapter-logo"><img src="logos/Modulor.svg" alt=""></span>
+          <span class="chapter-label">Administración</span>
+        </div>
+        <h1>Panel Admin</h1>
+
+        <div class="admin-tabs">
+          <button class="admin-tab active" onclick="switchAdminTab('domains')">Dominios</button>
+          <button class="admin-tab" onclick="switchAdminTab('leadership')">Leadership</button>
+          <button class="admin-tab" onclick="switchAdminTab('users')">Usuarios</button>
+        </div>
+
+        <div id="adminTabContent"></div>
+      `;
+    }
+
+    let adminTab = 'domains';
+
+    function switchAdminTab(tab) {
+      adminTab = tab;
+      document.querySelectorAll('.admin-tab').forEach(t => t.classList.remove('active'));
+      document.querySelector(`.admin-tab[onclick="switchAdminTab('${tab}')"]`).classList.add('active');
+      loadAdminTab();
+    }
+
+    function initAdmin() {
+      loadAdminTab();
+    }
+
+    async function loadAdminTab() {
+      const container = document.getElementById('adminTabContent');
+      if (!container) return;
+
+      if (adminTab === 'domains') {
+        const { data: domains } = await sb.from('approved_domains').select('*').order('domain');
+        container.innerHTML = `
+          <h3>Dominios aprobados</h3>
+          <p style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:1.5rem;">Dominios de email que pueden acceder al Handbook.</p>
+          <div class="admin-input-row">
+            <input class="admin-input" id="newDomain" placeholder="ejemplo.com" />
+            <button class="admin-btn admin-btn-primary" onclick="addDomain()">Añadir</button>
+          </div>
+          <div class="admin-table-wrap">
+            <table class="admin-table">
+              <thead><tr><th>Dominio</th><th>Fecha</th><th></th></tr></thead>
+              <tbody>
+                ${(domains || []).map(d => `
+                  <tr>
+                    <td>${escapeHtml(d.domain)}</td>
+                    <td style="color:var(--text-muted)">${new Date(d.created_at).toLocaleDateString('es-ES')}</td>
+                    <td><button class="admin-btn admin-btn-danger" onclick="removeDomain('${d.id}')">Eliminar</button></td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+          </div>
+          ${(!domains || domains.length === 0) ? '<p class="admin-empty">No hay dominios configurados.</p>' : ''}
+        `;
+      }
+
+      if (adminTab === 'leadership') {
+        const { data: users } = await sb.from('leadership_users').select('*').order('email');
+        container.innerHTML = `
+          <h3>Acceso Leadership</h3>
+          <p style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:1.5rem;">Emails con acceso a la vista Leadership. Solo usuarios invitados pueden ver contenido Full y Lite.</p>
+          <div class="admin-input-row">
+            <input class="admin-input" id="newLeadershipEmail" placeholder="nombre@dominio.com" />
+            <button class="admin-btn admin-btn-primary" onclick="addLeadership()">Invitar</button>
+          </div>
+          <div class="admin-table-wrap">
+            <table class="admin-table">
+              <thead><tr><th>Email</th><th>Invitado por</th><th>Fecha</th><th></th></tr></thead>
+              <tbody>
+                ${(users || []).map(u => `
+                  <tr>
+                    <td>${escapeHtml(u.email)}</td>
+                    <td style="color:var(--text-muted)">${escapeHtml(u.invited_by || '—')}</td>
+                    <td style="color:var(--text-muted)">${new Date(u.created_at).toLocaleDateString('es-ES')}</td>
+                    <td><button class="admin-btn admin-btn-danger" onclick="removeLeadership('${u.id}')">Eliminar</button></td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+          </div>
+          ${(!users || users.length === 0) ? '<p class="admin-empty">No hay invitaciones.</p>' : ''}
+        `;
+      }
+
+      if (adminTab === 'users') {
+        const { data: profiles } = await sb.from('user_profiles').select('*').order('email');
+        container.innerHTML = `
+          <h3>Usuarios</h3>
+          <p style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:1.5rem;">Usuarios que han iniciado sesión al menos una vez. Puedes cambiar su rol.</p>
+          <div class="admin-table-wrap">
+            <table class="admin-table">
+              <thead><tr><th>Email</th><th>Nombre</th><th>Rol</th><th>Último login</th></tr></thead>
+              <tbody>
+                ${(profiles || []).map(p => `
+                  <tr>
+                    <td>${escapeHtml(p.email)}</td>
+                    <td>${escapeHtml(p.full_name || '—')}</td>
+                    <td>
+                      <select class="admin-select" onchange="changeRole('${p.id}', this.value)" ${p.id === currentUser.id ? 'disabled' : ''}>
+                        <option value="team" ${p.role === 'team' ? 'selected' : ''}>team</option>
+                        <option value="leadership" ${p.role === 'leadership' ? 'selected' : ''}>leadership</option>
+                        <option value="admin" ${p.role === 'admin' ? 'selected' : ''}>admin</option>
+                      </select>
+                    </td>
+                    <td style="color:var(--text-muted)">${p.last_login ? new Date(p.last_login).toLocaleDateString('es-ES') : '—'}</td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+          </div>
+          ${(!profiles || profiles.length === 0) ? '<p class="admin-empty">No hay usuarios registrados.</p>' : ''}
+        `;
+      }
+    }
+
+    async function addDomain() {
+      const input = document.getElementById('newDomain');
+      const domain = input.value.trim().toLowerCase();
+      if (!domain) return;
+      await sb.from('approved_domains').insert({ domain });
+      input.value = '';
+      loadAdminTab();
+    }
+
+    async function removeDomain(id) {
+      if (!confirm('¿Eliminar este dominio?')) return;
+      await sb.from('approved_domains').delete().eq('id', id);
+      loadAdminTab();
+    }
+
+    async function addLeadership() {
+      const input = document.getElementById('newLeadershipEmail');
+      const email = input.value.trim().toLowerCase();
+      if (!email) return;
+      await sb.from('leadership_users').insert({
+        email,
+        invited_by: currentUser.email,
+      });
+      input.value = '';
+      loadAdminTab();
+    }
+
+    async function removeLeadership(id) {
+      if (!confirm('¿Eliminar esta invitación?')) return;
+      await sb.from('leadership_users').delete().eq('id', id);
+      loadAdminTab();
+    }
+
+    async function changeRole(userId, newRole) {
+      await sb.from('user_profiles').update({ role: newRole }).eq('id', userId);
+      loadAdminTab();
+    }
+
+    function escapeHtml(str) {
+      const div = document.createElement('div');
+      div.textContent = str;
+      return div.innerHTML;
+    }
+
+    // ── UI ──
+    function toggleSidebar() {
+      document.querySelector('.sidebar').classList.toggle('open');
+      document.querySelector('.overlay').classList.toggle('open');
+    }
+
+    function toggleViewSwitcher() {
+      document.getElementById('viewSwitcher').classList.toggle('open');
+    }
+    document.addEventListener('click', (e) => {
+      const sw = document.getElementById('viewSwitcher');
+      if (sw && !sw.contains(e.target)) sw.classList.remove('open');
+    });
+
+    document.querySelectorAll('.sidebar-nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelector('.sidebar').classList.remove('open');
+        document.querySelector('.overlay').classList.remove('open');
+      });
+    });
+
+    function onHashChange() {
+      if (!currentUser) return;
+      const id = window.location.hash.replace('#', '') || 'intro';
+      navigate(id);
+    }
+
+    window.addEventListener('hashchange', onHashChange);
+    // Auth handled by onAuthStateChange (INITIAL_SESSION event)
+  </script>
+</body>
+</html>

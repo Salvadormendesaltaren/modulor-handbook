@@ -36,6 +36,7 @@
       --text-on-dark-muted: rgba(255, 255, 255, 0.4);
       --border: rgba(0, 0, 0, 0.1);
       --border-subtle: rgba(0, 0, 0, 0.16);
+      --accent: #baecb7;
       --font: 'Untitled Sans', system-ui, sans-serif;
       --tracking: -0.04375rem;
       --ease: cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -87,7 +88,7 @@
     .sidebar-nav { flex: 1; display: flex; flex-direction: column; gap: 0.25rem; }
     .sidebar-nav a { display: block; padding: 0.5rem 0.75rem; color: var(--text-secondary); text-decoration: none; font-size: 0.8125rem; font-weight: 400; line-height: 1.5; border-radius: 0.625rem; transition: background 0.3s var(--ease), color 0.3s var(--ease); }
     .sidebar-nav a:hover { background: var(--bg-hover); color: var(--text); }
-    .sidebar-nav a.active { background: var(--bg-active); color: var(--text); }
+    .sidebar-nav a.active { background: var(--bg-active); color: var(--text); border-left: 2px solid var(--accent); }
     .sidebar-nav .nav-label { display: block; font-size: 0.625rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 0; transition: color 0.3s var(--ease); }
     .sidebar-nav a.active .nav-label { color: var(--text-secondary); }
     .sidebar-nav .nav-title { display: block; font-size: 1.1rem; font-weight: 400; line-height: 1.3; }
@@ -120,28 +121,29 @@
     .chapter-label { display: block; font-size: 0.6875rem; font-weight: 400; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); }
 
     /* ── Typography ── */
-    .section h1 { font-size: 2.25rem; font-weight: 400; line-height: 2.375rem; letter-spacing: -0.125rem; color: var(--text); margin-top: 0.25rem; margin-bottom: 0.25rem; }
+    .section h1 { font-size: 2.75rem; font-weight: 400; line-height: 2.875rem; letter-spacing: -0.15rem; color: var(--text); margin-top: 0.25rem; margin-bottom: 0.25rem; }
     .section h2 { font-size: 1.875rem; font-weight: 400; line-height: 2.125rem; letter-spacing: -0.1rem; color: var(--text); margin-top: 4rem; margin-bottom: 1.5rem; }
-    .section h3 { font-size: 1.5rem; font-weight: 400; line-height: 1.75rem; letter-spacing: -0.075rem; color: var(--text); margin-top: 2.5rem; margin-bottom: 1rem; }
-    .section h4 { font-size: 1rem; font-weight: 400; line-height: 1.5rem; letter-spacing: var(--tracking); color: var(--text); margin-top: 1.75rem; margin-bottom: 0.5rem; }
-    .section p { margin-bottom: 1.25rem; line-height: 1.5rem; max-width: var(--content-max); }
+    .section h3 { font-size: 1.5rem; font-weight: 400; line-height: 1.75rem; letter-spacing: -0.075rem; color: var(--text-secondary); margin-top: 2.5rem; margin-bottom: 1rem; }
+    .section h4 { font-size: 1rem; font-weight: 400; line-height: 1.5rem; letter-spacing: var(--tracking); color: var(--text-secondary); margin-top: 1.75rem; margin-bottom: 0.5rem; }
+    .section p { margin-bottom: 1.25rem; line-height: 1.625; max-width: var(--content-max); }
     .section > :first-child { margin-top: 0; }
-    .section blockquote { background: none; border-radius: 0; padding: 0; margin: 0 0 1.25rem; max-width: var(--content-max); }
-    .section blockquote p { margin-bottom: 0; font-style: normal; font-weight: 400; color: var(--text-secondary); line-height: 1.5rem; }
+    .section blockquote { background: none; border-radius: 0; border-left: 2px solid var(--border); padding: 0 0 0 1.25rem; margin: 0 0 1.25rem; max-width: var(--content-max); }
+    .section blockquote p { margin-bottom: 0; font-style: normal; font-weight: 400; color: var(--text-secondary); line-height: 1.625; }
     .section ul, .section ol { margin: 1.25rem 0; padding-left: 1.25rem; max-width: var(--content-max); }
     .section ul { list-style-type: disc; }
-    .section li { margin-bottom: 0.5rem; line-height: 1.5rem; }
+    .section li { margin-bottom: 0.5rem; line-height: 1.625; }
     .section li ul, .section li ol { margin-top: 0.5rem; }
     .section strong { font-weight: 400; color: var(--text); }
-    .section em { font-style: italic; opacity: 0.4; }
+    .section em { font-style: italic; opacity: 0.55; }
     .section a { color: var(--text); text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; text-decoration-color: var(--text-faint); transition: text-decoration-color 1s var(--ease); }
-    .section a:hover { text-decoration-color: var(--text); }
+    .section a:hover { text-decoration-color: var(--accent); }
     .section hr { border: none; height: 0; margin: 4rem 0; }
 
     /* ── Tables ── */
-    .section table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.875rem; line-height: 1rem; }
-    .section thead th { text-align: left; font-weight: 400; font-size: 0.875rem; letter-spacing: var(--tracking); color: var(--text-secondary); padding: 0 1rem 0.75rem 0; border-bottom: 1px solid var(--text-faint); }
-    .section tbody td { padding: 0.625rem 1rem 0.625rem 0; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .section table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.875rem; line-height: 1.375; }
+    .section thead th { text-align: left; font-weight: 400; font-size: 0.875rem; letter-spacing: var(--tracking); color: var(--text-secondary); padding: 0.5rem 1rem 0.75rem 0; border-bottom: 1px solid var(--text-faint); }
+    .section tbody td { padding: 0.75rem 1rem 0.75rem 0; border-bottom: 1px solid var(--border); vertical-align: top; transition: background 0.3s var(--ease); }
+    .section tbody tr:hover td { background: var(--bg-secondary); }
     .section tbody tr:last-child td { border-bottom: none; }
     .section .table-wrapper { overflow-x: auto; -webkit-overflow-scrolling: touch; }
     .section code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.85em; background: var(--bg-secondary); padding: 0.15em 0.4em; border-radius: 0.25rem; }
@@ -173,7 +175,7 @@
 
     @media (max-width: 479px) {
       .section { padding: 3.5rem 1.25rem 4.5rem; }
-      .section h1 { font-size: 1.75rem; line-height: 2rem; }
+      .section h1 { font-size: 2rem; line-height: 2.25rem; }
     }
 
     ::-webkit-scrollbar { width: 0; background: transparent; }
@@ -190,7 +192,7 @@
     .view-switcher-option:hover { background: var(--bg-hover); color: var(--text); }
     .view-switcher-option.current { color: var(--text); font-weight: 500; }
     .view-switcher-dot { width: 0.375rem; height: 0.375rem; border-radius: 999px; flex-shrink: 0; }
-    .view-switcher-dot.green { background: #22C55E; }
+    .view-switcher-dot.green { background: var(--accent); }
     .view-switcher-dot.gray { background: var(--text-muted); }
 
     .loading { display: flex; align-items: center; justify-content: center; height: 100vh; font-size: 0.75rem; font-weight: 400; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; }

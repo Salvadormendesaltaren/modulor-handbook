@@ -591,11 +591,7 @@
     const authTimeout = setTimeout(showLogin, 4000);
 
     // Single auth listener
-    console.log('[AUTH] Registering listener. localStorage keys:', Object.keys(localStorage).filter(k => k.startsWith('sb-')));
-
     sb.auth.onAuthStateChange(async (event, session) => {
-      console.log('[AUTH] Event:', event, 'Session:', session ? 'YES (user: ' + session.user.email + ')' : 'NULL');
-
       if (event === 'INITIAL_SESSION') {
         clearTimeout(authTimeout);
         document.getElementById('globalLoading').style.display = 'none';
@@ -603,27 +599,19 @@
           try {
             await handleSession(session);
           } catch (e) {
-            console.error('[AUTH] handleSession error:', e);
             showLogin();
           }
         } else {
-          console.log('[AUTH] No session, showing login');
           showLogin();
         }
       }
       if (event === 'SIGNED_IN') {
-        try {
-          await handleSession(session);
-        } catch (e) {
-          console.error('[AUTH] handleSession error:', e);
-        }
+        try { await handleSession(session); } catch (e) {}
       }
       if (event === 'TOKEN_REFRESHED' && session) {
-        console.log('[AUTH] Token refreshed');
         setAccessTokenCookie(session);
       }
       if (event === 'SIGNED_OUT') {
-        console.log('[AUTH] Signed out');
         clearAccessTokenCookie();
         currentUser = null;
         lastValidatedId = null;

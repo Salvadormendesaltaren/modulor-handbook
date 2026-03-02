@@ -439,6 +439,11 @@
         </a>
       </div>
       <div class="sidebar-nav" id="nav">
+        <a href="#intro" data-section="intro">
+          <span class="nav-label">Intro</span>
+          <span class="nav-title">Introducción</span>
+          <span class="nav-subtitle">Por qué y para qué</span>
+        </a>
         <a href="#core" data-section="core">
           <span class="nav-label">00</span>
           <span class="nav-title">Core Modulor</span>
@@ -601,6 +606,7 @@
     const md_renderer = window.markdownit({ html: false, linkify: true, breaks: false });
 
     const chapters = [
+      { id: 'intro', num: 'Intro', file: 'redux/intro.md', logo: 'logos/Modulor.svg' },
       { id: 'core', num: '00', file: 'redux/00_Core_Modulor.md', logo: 'logos/Modulor.svg' },
       { id: 'mendesaltaren', num: '01', file: 'redux/01_mendesaltaren.md', logo: 'logos/mendesaltaren.svg' },
       { id: 'tailorhub', num: '02', file: 'redux/02_Tailor_Hub.md', logo: 'logos/Tailor.svg' },
@@ -610,7 +616,7 @@
     ];
 
     function buildFooter() {
-      const logoRow = chapters.map(ch =>
+      const logoRow = chapters.filter(c => c.id !== 'intro').map(ch =>
         `<span class="footer-logo"><img src="${ch.logo}" alt=""></span>`
       ).join('');
       return `
@@ -677,7 +683,7 @@
         '05_FIK.md': 'Shopify Premier Partner, e-commerce',
       };
 
-      const fileCards = chapters.map(ch => {
+      const fileCards = chapters.filter(ch => ch.id !== 'intro').map(ch => {
         const fname = ch.file.replace('redux/', '');
         return `
         <div class="repo-file-card">
@@ -692,6 +698,7 @@
       }).join('');
 
       const changelogEntries = [
+        { date: '2 mar 2026', text: 'Capítulo de introducción al Handbook' },
         { date: '2 mar 2026', text: 'Handbook v2 — Autenticación, contenido Redux para Team' },
         { date: '1 mar 2026', text: 'Contenido full desde Notion, doble descarga (Full + Lite), mejor renderizado de tablas' },
         { date: '27 feb 2026', text: 'Sección Repositorio — archivos descargables y guía de uso con IAs' },
@@ -768,7 +775,7 @@
 
       try {
         const zip = new JSZip();
-        for (const ch of chapters) {
+        for (const ch of chapters.filter(c => c.id !== 'intro')) {
           const res = await fetch(`content/${ch.file}`);
           const text = await res.text();
           const fname = ch.file.replace('redux/', '');
@@ -808,7 +815,7 @@
     // Hash-based router
     function onHashChange() {
       if (!currentUser) return;
-      const id = window.location.hash.replace('#', '') || 'core';
+      const id = window.location.hash.replace('#', '') || 'intro';
       navigate(id);
     }
 

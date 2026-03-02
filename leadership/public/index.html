@@ -269,6 +269,11 @@
         </a>
       </div>
       <div class="sidebar-nav" id="nav">
+        <a href="#intro" data-section="intro">
+          <span class="nav-label">Intro</span>
+          <span class="nav-title">Introducción</span>
+          <span class="nav-subtitle">Por qué y para qué</span>
+        </a>
         <a href="#core" data-section="core">
           <span class="nav-label">00</span>
           <span class="nav-title">Core Modulor</span>
@@ -466,6 +471,7 @@
     const md_renderer = window.markdownit({ html: false, linkify: true, breaks: false });
 
     const chapters = [
+      { id: 'intro', num: 'Intro', file: 'full/intro.md', liteFile: 'lite/intro.md', logo: 'logos/Modulor.svg' },
       { id: 'core', num: '00', file: 'full/00_Core_Modulor.md', liteFile: 'lite/00_Core_Modulor.md', logo: 'logos/Modulor.svg' },
       { id: 'mendesaltaren', num: '01', file: 'full/01_mendesaltaren.md', liteFile: 'lite/01_mendesaltaren.md', logo: 'logos/mendesaltaren.svg' },
       { id: 'tailorhub', num: '02', file: 'full/02_Tailor_Hub.md', liteFile: 'lite/02_Tailor_Hub.md', logo: 'logos/Tailor.svg' },
@@ -475,7 +481,7 @@
     ];
 
     function buildFooter() {
-      const logoRow = chapters.map(ch =>
+      const logoRow = chapters.filter(c => c.id !== 'intro').map(ch =>
         `<span class="footer-logo"><img src="${ch.logo}" alt=""></span>`
       ).join('');
       return `
@@ -546,7 +552,7 @@
         '05_FIK.md': 'Shopify Premier Partner, e-commerce',
       };
 
-      const fileCards = chapters.map(ch => {
+      const fileCards = chapters.filter(ch => ch.id !== 'intro').map(ch => {
         const fname = ch.file.replace('full/', '');
         return `
         <div class="repo-file-card">
@@ -561,6 +567,7 @@
       }).join('');
 
       const changelogEntries = [
+        { date: '2 mar 2026', text: 'Capítulo de introducción, recomendaciones de ciberseguridad en Repositorio' },
         { date: '2 mar 2026', text: 'Handbook v2 — Autenticación, Leadership con contenido Full' },
         { date: '1 mar 2026', text: 'Contenido full desde Notion, doble descarga (Full + Lite)' },
         { date: '27 feb 2026', text: 'Sección Repositorio — archivos descargables y guía de uso con IAs' },
@@ -626,6 +633,68 @@
             </div>
 
             <div class="repo-block">
+              <h3 class="repo-block-title">Ciberseguridad y tratamiento de información</h3>
+              <p>El Handbook contiene información confidencial del grupo. A continuación se detallan los tipos de información sensible y las mejores prácticas para su manejo.</p>
+
+              <h4 style="margin-top:1.5rem;margin-bottom:0.75rem;">Qué información sensible contiene</h4>
+              <div class="admin-table-wrap">
+                <table class="admin-table" style="font-size:0.8125rem;">
+                  <thead><tr><th>Categoría</th><th>Ejemplos</th><th>Nivel</th></tr></thead>
+                  <tbody>
+                    <tr><td>Financieros</td><td>Facturación por boutique, márgenes, EBITDA, cash position, objetivos de revenue</td><td style="color:#991B1B;font-weight:500;">Alto</td></tr>
+                    <tr><td>Pricing</td><td>Tarifas por servicio, rangos de precio, modelos de retainer</td><td style="color:#991B1B;font-weight:500;">Alto</td></tr>
+                    <tr><td>Estrategia</td><td>Roadmap de crecimiento, planes M&A, caso de adquisición Tailor Hub</td><td style="color:#991B1B;font-weight:500;">Alto</td></tr>
+                    <tr><td>Equipos</td><td>Estructura completa, headcount, costes de contratación, salarios de referencia</td><td style="color:#B45309;font-weight:500;">Medio-Alto</td></tr>
+                    <tr><td>Pipeline comercial</td><td>Revenue reservado, clientes en negociación, presupuesto de ads</td><td style="color:#B45309;font-weight:500;">Medio-Alto</td></tr>
+                    <tr><td>Clientes</td><td>Lista de cuentas clave, volumen de negocio por cliente</td><td style="color:#B45309;font-weight:500;">Medio</td></tr>
+                    <tr><td>Competitivo</td><td>Posicionamiento frente a competidores, debilidades internas</td><td style="color:#B45309;font-weight:500;">Medio</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h4 style="margin-top:2rem;margin-bottom:0.75rem;">Buenas prácticas con los archivos .md</h4>
+              <div class="repo-howto-grid">
+                <div class="repo-howto-card">
+                  <h4>Al usar con IAs (ChatGPT, Claude, etc.)</h4>
+                  <ul>
+                    <li>Usa la <strong>versión Lite o Team</strong> siempre que el contexto completo no sea necesario</li>
+                    <li>No subas archivos Full a GPTs públicos o compartidos con personas externas</li>
+                    <li>Prefiere <strong>Projects de Claude</strong> o <strong>GPTs privados</strong> sobre conversaciones sueltas — el contexto se mantiene aislado</li>
+                    <li>Revisa el output de la IA antes de compartirlo: puede incluir datos sensibles del contexto</li>
+                    <li>Desactiva el entrenamiento con tus datos cuando esté disponible (ChatGPT: Settings > Data Controls)</li>
+                  </ul>
+                </div>
+                <div class="repo-howto-card">
+                  <h4>Almacenamiento y distribución</h4>
+                  <ul>
+                    <li><strong>No almacenes</strong> los .md Full en carpetas compartidas públicas (Google Drive público, Dropbox links, etc.)</li>
+                    <li><strong>No reenvíes</strong> los archivos por email o mensajería a personas fuera del equipo de liderazgo</li>
+                    <li>Si necesitas compartir información con un cliente o partner, usa la versión Team (sin datos sensibles)</li>
+                    <li>Elimina copias locales cuando ya no las necesites</li>
+                  </ul>
+                </div>
+                <div class="repo-howto-card">
+                  <h4>En presentaciones y documentos</h4>
+                  <ul>
+                    <li>No copies datos financieros exactos en slides compartidas con externos</li>
+                    <li>Usa rangos en lugar de cifras exactas cuando sea posible ("varios millones" vs "EUR9M")</li>
+                    <li>El pricing es confidencial — no lo incluyas en propuestas genéricas ni en materiales de marketing</li>
+                    <li>Los casos de M&A (adquisición Tailor Hub) son información interna exclusivamente</li>
+                  </ul>
+                </div>
+                <div class="repo-howto-card">
+                  <h4>Criterio general</h4>
+                  <ul>
+                    <li>Pregúntate: "¿esta información daría ventaja a un competidor?" — si sí, no la compartas fuera</li>
+                    <li>El contenido Team/Redux está diseñado para ser seguro de compartir internamente con todo el grupo</li>
+                    <li>El contenido Full y Lite es exclusivo del equipo de liderazgo</li>
+                    <li>Ante la duda, consulta con un administrador antes de compartir</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="repo-block">
               <h3 class="repo-block-title">Log de cambios</h3>
               <div class="repo-changelog">${changelogHTML}</div>
             </div>
@@ -642,7 +711,7 @@
 
       try {
         const zip = new JSZip();
-        for (const ch of chapters) {
+        for (const ch of chapters.filter(c => c.id !== 'intro')) {
           const src = variant === 'lite' ? ch.liteFile : ch.file;
           const res = await fetch(`content/${src}`);
           const text = await res.text();
@@ -848,7 +917,7 @@
 
     function onHashChange() {
       if (!currentUser) return;
-      const id = window.location.hash.replace('#', '') || 'core';
+      const id = window.location.hash.replace('#', '') || 'intro';
       navigate(id);
     }
 

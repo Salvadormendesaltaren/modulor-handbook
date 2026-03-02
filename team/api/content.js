@@ -65,7 +65,7 @@ export default async function handler(req, res) {
 
   // Validate and serve the file
   const file = req.query.file;
-  if (!file || !/^redux\/[\w.-]+\.md$/.test(file)) {
+  if (!file || !/^redux\/[\w.-]+\.md$/.test(file) || file.includes('..')) {
     return res.status(400).send('Invalid file path');
   }
 

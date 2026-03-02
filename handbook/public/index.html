@@ -421,85 +421,68 @@
 
     // Central session handler — no longer rejects non-leadership users
     async function handleSession(session) {
-      if (!session) { console.log('[HS] No session'); return; }
-      if (session.user.id === lastValidatedId) { console.log('[HS] Already validated'); return; }
+      if (!session) return;
+      if (session.user.id === lastValidatedId) return;
 
-      console.log('[HS] Checking domain for', session.user.email);
       if (!isDomainApproved(session.user.email)) {
-        console.log('[HS] Domain rejected');
         clearAccessTokenCookie();
         showLoginError('Acceso restringido a dominios autorizados del grupo Modulor.');
         await sb.auth.signOut();
         return;
       }
 
-      console.log('[HS] Checking leadership_users...');
-      let invited = null;
-      try {
-        const lRes = await fetch(
-          `${SUPABASE_URL}/rest/v1/leadership_users?email=eq.${encodeURIComponent(session.user.email)}&select=email`,
-          {
-            headers: {
-              'apikey': SUPABASE_ANON_KEY,
-              'Authorization': `Bearer ${session.access_token}`,
-            },
-          }
-        );
-        const lData = await lRes.json();
-        invited = Array.isArray(lData) && lData.length > 0 ? lData[0] : null;
-      } catch (e) {
-        console.error('[HS] Leadership fetch error:', e);
-      }
-      console.log('[HS] Leadership check:', invited ? 'YES' : 'NO');
-
-      isLeadershipUser = !!invited;
-      viewMode = isLeadershipUser ? 'leadership' : 'team';
-
+      // Show app immediately with team defaults
       lastValidatedId = session.user.id;
       setAccessTokenCookie(session);
       currentUser = session.user;
-
-      console.log('[HS] Loading user role...');
-      await loadUserRole();
-      console.log('[HS] Role:', userRole, '| View:', viewMode);
-
+      viewMode = 'team';
+      isLeadershipUser = false;
+      userRole = 'team';
       updateViewUI();
       showApp();
-      upsertProfile(session.user);
-      console.log('[HS] Done — app visible. localStorage keys:', Object.keys(localStorage).filter(k => k.startsWith('sb-')));
+
+      // Check leadership + role in background, then update UI
+      checkLeadershipAndRole(session);
     }
 
-    async function loadUserRole() {
+    async function checkLeadershipAndRole(session) {
       try {
-        const { data: { session } } = await sb.auth.getSession();
-        const token = session?.access_token;
-        if (token) {
-          const rRes = await fetch(
+        const [lRes, rRes] = await Promise.all([
+          fetch(
+            `${SUPABASE_URL}/rest/v1/leadership_users?email=eq.${encodeURIComponent(session.user.email)}&select=email`,
+            { headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${session.access_token}` } }
+          ),
+          fetch(
             `${SUPABASE_URL}/rest/v1/user_profiles?id=eq.${currentUser.id}&select=role`,
-            {
-              headers: {
-                'apikey': SUPABASE_ANON_KEY,
-                'Authorization': `Bearer ${token}`,
-              },
-            }
-          );
-          const rData = await rRes.json();
-          userRole = (Array.isArray(rData) && rData.length > 0) ? rData[0].role : 'team';
+            { headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${session.access_token}` } }
+          )
+        ]);
+
+        const lData = await lRes.json();
+        const rData = await rRes.json();
+
+        isLeadershipUser = Array.isArray(lData) && lData.length > 0;
+        viewMode = isLeadershipUser ? 'leadership' : 'team';
+        userRole = (Array.isArray(rData) && rData.length > 0) ? rData[0].role : 'team';
+
+        updateViewUI();
+
+        // Re-navigate with correct view if changed to leadership
+        if (isLeadershipUser) {
+          const id = window.location.hash.replace('#', '') || 'intro';
+          navigate(id);
         }
       } catch (e) {
-        console.error('[HS] loadUserRole error:', e);
-        userRole = 'team';
+        console.error('Background check error:', e);
       }
 
-      // Admin nav visible only for admins in leadership view
-      if (userRole === 'admin') {
-        document.getElementById('adminNavLink').style.display = 'block';
-      }
+      // Upsert profile (fire and forget)
+      upsertProfile(session.user);
+    }
 
-      // View switcher visible for all leadership users
-      if (isLeadershipUser) {
-        document.getElementById('viewSwitcher').style.display = 'block';
-      }
+    function updateAccessUI() {
+      document.getElementById('adminNavLink').style.display = userRole === 'admin' ? 'block' : 'none';
+      document.getElementById('viewSwitcher').style.display = isLeadershipUser ? 'block' : 'none';
     }
 
     function updateViewUI() {
@@ -532,13 +515,7 @@
         optLeadership.classList.remove('current');
       }
 
-      // Admin link only visible for admins
-      const adminLink = document.getElementById('adminNavLink');
-      if (userRole === 'admin') {
-        adminLink.style.display = 'block';
-      } else {
-        adminLink.style.display = 'none';
-      }
+      updateAccessUI();
     }
 
     function switchViewMode(mode) {

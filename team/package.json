@@ -1,4 +1,5 @@
 {
   "name": "modulor-handbook-team",
-  "private": true
+  "private": true,
+  "type": "module"
 }

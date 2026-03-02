@@ -1,4 +1,5 @@
 {
   "name": "modulor-handbook-leadership",
-  "private": true
+  "private": true,
+  "type": "module"
 }

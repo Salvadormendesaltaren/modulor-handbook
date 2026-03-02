@@ -1,4 +1,5 @@
 {
+  "outputDirectory": "public",
   "functions": {
     "api/content.js": {
       "includeFiles": "_content/**"

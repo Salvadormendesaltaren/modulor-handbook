@@ -4,7 +4,7 @@
 
 ---
 
-## 1. Identidad y Estrategia
+## 01. Identidad y Estrategia
 
 ### Datos básicos
 
@@ -69,7 +69,7 @@
 
 ---
 
-## 2. Estructura y Equipo
+## 02. Estructura y Equipo
 
 ### Leadership Team
 
@@ -100,7 +100,7 @@
 
 ---
 
-## 3. Servicios
+## 03. Servicios
 
 ### FORMACIÓN (Academia)
 
@@ -200,7 +200,7 @@
 
 ---
 
-## 4. Cliente Ideal (ICP)
+## 04. Cliente Ideal (ICP)
 
 ### Formación - ICP
 
@@ -246,7 +246,7 @@
 
 ---
 
-## 5. Casos y Portfolio
+## 05. Casos y Portfolio
 
 ### Casos Agencia destacados
 
@@ -277,7 +277,7 @@
 
 ---
 
-## 6. Cross-selling y Sinergias
+## 06. Cross-selling y Sinergias
 
 ### Cuándo derivar A Nocodehackers
 
@@ -317,7 +317,7 @@ NCH como departamento de innovación del grupo:
 
 ---
 
-## 7. Ventas
+## 07. Ventas
 
 ### Mensajes clave
 
@@ -332,7 +332,7 @@ NCH como departamento de innovación del grupo:
 
 ---
 
-## 8. Conocimiento
+## 08. Conocimiento
 
 ### Contenido público
 
@@ -343,7 +343,7 @@ NCH como departamento de innovación del grupo:
 
 ---
 
-## 9. Riesgos y Mitigación
+## 09. Riesgos y Mitigación
 
 ### Riesgos a corto plazo
 

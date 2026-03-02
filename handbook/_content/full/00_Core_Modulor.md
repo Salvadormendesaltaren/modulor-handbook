@@ -1,39 +1,39 @@
 # Modulor Studios
 
-> Documentacion del grupo/holding y handbook operativo. Guia para alineacion, ventas, cross-selling y crecimiento.
+> Documentación del grupo/holding y handbook operativo. Guía para alineacion, ventas, cross-selling y crecimiento.
 
 ---
 
-## 1. Identidad del Grupo
+## 01. Identidad del Grupo
 
-### 1.1 Datos basicos
+### Datos básicos
 
 - **Nombre:** Modulor Studios
 - **Estructura:** Holding / Grupo de empresas
 - **Sede central:** Calle Hermanos Alvarez Quintero, 2, 28004 Madrid
 - **Web corporativa:** [https://www.modulorstudios.com](https://www.modulorstudios.com)
 
-### 1.2 Proposito del grupo
+### Propósito del grupo
 
-- **Vision:** Convertirnos en el nexo de diseno, tecnologia y marketing — un grupo de boutiques especializadas y productos propios de IA.
-- **Proposito:** Construir relaciones significativas que moldeen el futuro de las experiencias digitales.
+- **Visión:** Convertirnos en el nexo de diseño, tecnologia y marketing — un grupo de boutiques especializadas y productos propios de IA.
+- **Propósito:** Construir relaciones significativas que moldeen el futuro de las experiencias digitales.
 - **Como lo hacemos:**
-  - Servicios de alto valor (estudios creativos y tecnologicos)
+  - Servicios de alto valor (estudios creativos y tecnológicos)
   - Productos propios (SaaS, agentes conversacionales, sistemas conectivos)
-  - Aplicacion de IA tanto en clientes como en operaciones internas
-- **Filosofia:** Conectamos ideas, personas y plataformas para construir soluciones integradas que unen lo fisico y lo digital — armonizando innovacion con proposito.
+  - Aplicación de IA tanto en clientes como en operaciones internas
+- **Filosofía:** Conectamos ideas, personas y plataformas para construir soluciones integradas que unen lo fisico y lo digital — armonizando innovacion con propósito.
 
-### 1.3 Los Tres Pilares
+### Los Tres Pilares
 
 **STRATEGY <-> CREATIVITY <-> TECHNOLOGY**
 
 Todo lo que hacemos conecta estos tres elementos.
 
-### 1.4 Narrativa del grupo
+### Narrativa del grupo
 
-- **Elevator pitch (30 seg):** Modulor Studios es un grupo de boutiques especializadas en diseno, tecnologia, marketing y formacion digital. Ofrecemos soluciones integrales desde diseno de producto hasta desarrollo de software, e-commerce y marketing.
+- **Elevator pitch (30 seg):** Modulor Studios es un grupo de boutiques especializadas en diseño, tecnologia, marketing y formación digital. Ofrecemos soluciones integrales desde diseño de producto hasta desarrollo de software, e-commerce y marketing.
 
-### 1.5 Track Record (2020-2025)
+### Track Record (2020-2025)
 
 | Metrica | Dato |
 |---|---|
@@ -48,26 +48,26 @@ Todo lo que hacemos conecta estos tres elementos.
 
 ---
 
-## 2. Mapa de Boutiques
+## 02. Mapa de Boutiques
 
-### 2.1 Portfolio de empresas
+### Portfolio de empresas
 
 | Boutique | Especializacion | CEO | Headcount | Web |
 |---|---|---|---|---|
-| **mendesaltaren** | Diseno digital y branding | Sara Rivera | 52 | [mendesaltaren.com](http://mendesaltaren.com) |
+| **mendesaltaren** | Diseño digital y branding | Sara Rivera | 52 | [mendesaltaren.com](http://mendesaltaren.com) |
 | **Tailor Hub** | Desarrollo software, IA y Mobile Apps | Diego Mendez | 31 | [tailor-hub.com](http://tailor-hub.com) |
 | **FIK** | Desarrollo Shopify (Premier Partner) | Bill Murphy | 6 | [fik.life](http://fik.life) |
-| **SSTIL** | Marketing y comunicacion | Paula Rodriguez + Sandra Ramiro | 19 | [sstilagency.com](http://sstilagency.com) |
+| **SSTIL** | Marketing y comúnicación | Paula Rodriguez + Sandra Ramiro | 19 | [sstilagency.com](http://sstilagency.com) |
 | **Minimum** | Growth marketing (marca de SSTIL) | Paula Rodriguez + Sandra Ramiro | (incl. SSTIL) | [minimum.run](http://minimum.run) |
-| **Nocodehackers** | Formacion No-code/IA + Agencia | Alex Vaughtton | 10 | [nocodehackers.es](http://nocodehackers.es) |
+| **Nocodehackers** | Formación No-code/IA + Agencia | Alex Vaughtton | 10 | [nocodehackers.es](http://nocodehackers.es) |
 
 **Total Grupo:** 125 personas (+ 7 en Modulor central)
 
-### 2.2 Especializacion por boutique
+### Especializacion por boutique
 
 | Capacidad | Empresa(s) | Notas |
 |---|---|---|
-| Diseno de producto | mendesaltaren | Premium, enterprise |
+| Diseño de producto | mendesaltaren | Premium, enterprise |
 | Branding | mendesaltaren | Premium, estrategico |
 | Design Systems | mendesaltaren | |
 | Desarrollo software enterprise | Tailor Hub | Backend, apps complejas |
@@ -76,15 +76,15 @@ Todo lo que hacemos conecta estos tres elementos.
 | E-commerce Shopify | FIK | Premier Partner, Shopify Plus |
 | Marketing/Social | SSTIL | Marcas establecidas |
 | Growth/Webs rapidas | Minimum | Startups, Webflow |
-| Automatizaciones | Nocodehackers | Make, n8n, Zapier |
+| Automatizaciónes | Nocodehackers | Make, n8n, Zapier |
 | MVPs/Apps no-code | Nocodehackers | Bubble, FlutterFlow |
-| Formacion no-code/IA | Nocodehackers | +10k alumnos |
+| Formación no-code/IA | Nocodehackers | +10k alumnos |
 
 ---
 
-## 3. Governance y Liderazgo
+## 03. Governance y Liderazgo
 
-### 3.1 Leadership team
+### Leadership team
 
 | Persona | Rol | Area |
 |---|---|---|
@@ -99,12 +99,12 @@ Todo lo que hacemos conecta estos tres elementos.
 | Viviana Reyes | Finance Partner | Finanzas |
 | Alex Vaughton | Innovation Partner | Innovacion (Nocodehackers) |
 
-### 3.2 Roles corporativos (Modulor central)
+### Roles corporativos (Modulor central)
 
 | Rol | Persona | Funciones |
 |---|---|---|
-| CEO | Jorge Lana | Vision, direccion general |
-| COO | Salva Serrano | Operaciones, ventas grupo, colaboracion |
+| CEO | Jorge Lana | Visión, direccion general |
+| COO | Salva Serrano | Operaciones, ventas grupo, colaboración |
 | CCO | Andre Mendes | Creatividad, experiencia |
 | CFO | Viviana Reyes | Finanzas |
 | People | Carina Matyniak | HR, Office Management |
@@ -112,20 +112,20 @@ Todo lo que hacemos conecta estos tres elementos.
 
 ---
 
-## 4. Modelo Financiero del Grupo
+## 04. Modelo Financiero del Grupo
 
-### 4.1 Objetivos Financieros del Grupo
+### Objetivos Financieros del Grupo
 
-| Ano | Revenue | EBITDA | Notas |
+| Año | Revenue | EBITDA | Notas |
 |---|---|---|---|
-| 2025 | EUR9M (base) | 10-12% | Ano actual |
+| 2025 | EUR9M (base) | 10-12% | Año actual |
 | 2026 | EUR12M | 10-12% | +25% minimo por estudio |
-| 2027 | EUR16M | 10-12% | Nueva adquisicion |
+| 2027 | EUR16M | 10-12% | Nueva adquisición |
 | 2028 | EUR22M | 10-12% | Productos + M&A |
 
 **Meta 2028:** EUR22M revenue, 30% CAGR (2025-2028)
 
-### 4.2 Objetivos por Boutique 2026
+### Objetivos por Boutique 2026
 
 | Boutique | Revenue 2025 | Objetivo 2026 | Growth |
 |---|---|---|---|
@@ -135,49 +135,49 @@ Todo lo que hacemos conecta estos tres elementos.
 | FIK | EUR450k | EUR800k | +78% |
 | SSTIL/Minimum | EUR500k | EUR800k | +60% |
 
-### 4.3 Clientes del Grupo
+### Clientes del Grupo
 
 **Enterprise / Corporate:**
 McKinsey & Company, El Corte Ingles, Iberia, Cargill, Inditex, Zara, Mondelez, WIO, Naturgy, Dormakaba, Mediapro, Repsol, Loewe, On Running, Novo Nordisk, Bilbao Museoa, Santander, Caixa Geral de Depositos
 
 ---
 
-## 5. Operaciones de Grupo
+## 05. Operaciones de Grupo
 
-### 5.1 Iniciativas transversales activas
+### Iniciativas transversales activas
 
 | Iniciativa | Objetivo | Status |
 |---|---|---|
 | Modulor Ops Team | Eficiencia operativa | En curso |
 | CRM HubSpot | Ventas de grupo | En curso |
-| Playbook de operaciones | Colaboracion | En curso |
+| Playbook de operaciones | Colaboración | En curso |
 | Auditoria ciberseguridad | Seguridad | En curso |
-| IA en operaciones | Automatizacion | En curso |
+| IA en operaciones | Automatización | En curso |
 | FIK Onboarding | Integracion | En curso |
 
-### 5.2 Herramientas de grupo
+### Herramientas de grupo
 
 | Sistema | Para que | Quien lo usa |
 |---|---|---|
 | HubSpot | CRM, Ventas grupo | Todas |
-| Notion | Wiki, documentacion, colaboracion | Todas |
-| Slack | Comunicacion interna | Todas |
+| Notion | Wiki, documentación, colaboración | Todas |
+| Slack | Comunicación interna | Todas |
 | Google Workspace | Email, docs, calendar | Todas |
-| Figma | Diseno | mendesaltaren, SSTIL, Minimum |
+| Figma | Diseño | mendesaltaren, SSTIL, Minimum |
 
-### 5.3 Reporting
+### Reporting
 
 **Cadencia:** Mensual y anual (socios acuden a las operativas de las companias)
 
 ---
 
-## 6. Colaboracion entre Boutiques
+## 06. Colaboración entre Boutiques
 
-### 6.1 Matriz de derivacion de leads
+### Matriz de derivación de leads
 
 | Si el cliente necesita... | Derivar a... |
 |---|---|
-| Diseno de producto digital | **mendesaltaren** |
+| Diseño de producto digital | **mendesaltaren** |
 | Branding premium | **mendesaltaren** |
 | Design systems | **mendesaltaren** |
 | Desarrollo software enterprise | **Tailor Hub** |
@@ -185,123 +185,123 @@ McKinsey & Company, El Corte Ingles, Iberia, Cargill, Inditex, Zara, Mondelez, W
 | Mobile Apps (nativo/cross-platform) | **Tailor Hub** |
 | E-commerce Shopify | **FIK** |
 | Migracion a Shopify Plus | **FIK** |
-| Comunicacion de marca (establecidas) | **SSTIL** |
+| Comunicación de marca (establecidas) | **SSTIL** |
 | Activaciones y eventos | **SSTIL** |
 | Social media (marcas grandes) | **SSTIL** |
 | Growth marketing (startups) | **Minimum** |
 | Webs rapidas (Webflow) | **Minimum** |
 | SEO/SEM/Performance | **Minimum** |
-| Automatizaciones | **Nocodehackers** |
+| Automatizaciónes | **Nocodehackers** |
 | MVPs/Prototipos | **Nocodehackers** |
 | Apps no-code | **Nocodehackers** |
-| Formacion no-code/IA | **Nocodehackers** |
+| Formación no-code/IA | **Nocodehackers** |
 
-### 6.2 SSTIL vs Minimum — Cuando derivar a cada uno
+### SSTIL vs Minimum — Cuando derivar a cada uno
 
 | Tipo de cliente | Necesidad | Derivar a |
 |---|---|---|
-| Marca establecida | Comunicacion, posicionamiento | **SSTIL** |
+| Marca establecida | Comunicación, posicionamiento | **SSTIL** |
 | Marca establecida | Activacion, evento, campana | **SSTIL** |
 | Marca establecida | Social media strategy | **SSTIL** |
-| Startup / Scaleup | Growth, adquisicion | **Minimum** |
+| Startup / Scaleup | Growth, adquisición | **Minimum** |
 | Startup / Scaleup | Web rapida (Webflow) | **Minimum** |
 | Startup / Scaleup | SEO/SEM, paid media | **Minimum** |
 | Cualquiera | Landing page rapida | **Minimum** |
 | Cualquiera | Evento + Web + Growth | **SSTIL + Minimum** |
 
-### 6.3 Cross-Selling por Boutique
+### Cross-Selling por Boutique
 
 **Desde mendesaltaren derivar:**
 - Desarrollo software/backend -> Tailor Hub
 - E-commerce Shopify -> FIK
-- Comunicacion y activaciones -> SSTIL
+- Comunicación y activaciones -> SSTIL
 - Growth y performance -> Minimum
-- Automatizaciones/MVPs -> Nocodehackers
+- Automatizaciónes/MVPs -> Nocodehackers
 
 **Desde Tailor Hub derivar:**
 - UX/UI del producto -> mendesaltaren
 - E-commerce -> FIK
-- Comunicacion de marca -> SSTIL
+- Comunicación de marca -> SSTIL
 - Growth marketing -> Minimum
-- Automatizaciones sin codigo -> Nocodehackers
+- Automatizaciónes sin codigo -> Nocodehackers
 
 **Desde FIK derivar:**
 - Branding/UX premium -> mendesaltaren
 - Integraciones complejas (no Shopify) -> Tailor Hub
-- Comunicacion y social -> SSTIL
+- Comunicación y social -> SSTIL
 - Performance marketing -> Minimum
-- Automatizaciones operativas -> Nocodehackers
+- Automatizaciónes operativas -> Nocodehackers
 
 **Desde SSTIL derivar:**
-- Diseno de producto digital -> mendesaltaren
+- Diseño de producto digital -> mendesaltaren
 - Desarrollo software -> Tailor Hub
 - E-commerce Shopify -> FIK
 - Growth/Performance -> Minimum
-- Automatizaciones -> Nocodehackers
+- Automatizaciónes -> Nocodehackers
 
 **Desde Minimum derivar:**
-- Diseno premium/branding -> mendesaltaren
+- Diseño premium/branding -> mendesaltaren
 - Desarrollo software -> Tailor Hub
 - E-commerce -> FIK
-- Comunicacion marca grande -> SSTIL
-- Automatizaciones -> Nocodehackers
+- Comunicación marca grande -> SSTIL
+- Automatizaciónes -> Nocodehackers
 
 **Desde Nocodehackers derivar:**
-- Diseno premium -> mendesaltaren
+- Diseño premium -> mendesaltaren
 - Desarrollo complejo (codigo) -> Tailor Hub
 - E-commerce -> FIK
-- Comunicacion/Activaciones -> SSTIL
+- Comunicación/Activaciones -> SSTIL
 - Growth/Performance -> Minimum
 
-### 6.4 Combinaciones Ganadoras
+### Combinaciones Ganadoras
 
 #### Lab 226: Innovation + Strategy + Technical Audit
 
-1. **mendesaltaren** -> Vision estrategica, business design, co-creation labs
+1. **mendesaltaren** -> Visión estrategica, business design, co-creation labs
 2. **Tailor Hub** -> Technical audits (arquitectura, datos, sistemas), AI-readiness
-3. **Nocodehackers** -> Prototipado funcional, MVPs rapidos, interfaces agiles
-4. **Resultado** -> Roadmaps accionables para transformacion AI-driven
+3. **Nocodehackers** -> Prototipado funcional, MVPs rápidos, interfaces agiles
+4. **Resultado** -> Roadmaps accionables para transformación AI-driven
 
 *Nocodehackers como departamento de innovacion del grupo: prototipado funcional vs Figma.*
 
 #### Proyecto integral de producto digital
 
-1. mendesaltaren -> Estrategia, diseno de producto, branding
+1. mendesaltaren -> Estrategia, diseño de producto, branding
 2. Tailor Hub -> Desarrollo de software
 3. Minimum -> Lanzamiento y growth
 
 #### Proyecto e-commerce completo
 
-1. mendesaltaren -> Diseno de experiencia y branding
+1. mendesaltaren -> Diseño de experiencia y branding
 2. FIK -> Desarrollo Shopify Plus
-3. Nocodehackers -> Automatizaciones operativas
-4. SSTIL -> Comunicacion y social media
+3. Nocodehackers -> Automatizaciónes operativas
+4. SSTIL -> Comunicación y social media
 
-#### Startup / MVP rapido
+#### Startup / MVP rápido
 
-1. Nocodehackers -> MVP y validacion
-2. mendesaltaren -> Diseno cuando escale
+1. Nocodehackers -> MVP y validación
+2. mendesaltaren -> Diseño cuando escale
 3. Tailor Hub -> Desarrollo cuando necesite codigo
 4. Minimum -> Growth desde dia 1
 
-#### Transformacion digital corporativa
+#### Transformación digital corporativa
 
 1. mendesaltaren -> Design systems y producto
 2. Tailor Hub -> Desarrollo y arquitectura
-3. Nocodehackers -> Automatizaciones internas
-4. SSTIL -> Comunicacion del cambio
+3. Nocodehackers -> Automatizaciónes internas
+4. SSTIL -> Comunicación del cambio
 
 #### Lanzamiento de marca / Rebranding
 
-1. mendesaltaren -> Estrategia y diseno de marca
-2. SSTIL -> Activacion, comunicacion, eventos
+1. mendesaltaren -> Estrategia y diseño de marca
+2. SSTIL -> Activacion, comúnicación, eventos
 3. Minimum -> Web y performance
 
 ---
 
-## 7. Criterios de Cualificacion Compartidos
+## 07. Criterios de Cualificación Compartidos
 
-### 7.1 Senales de buen fit para Modulor
+### Señales de buen fit para Modulor
 
 #### Budget
 
@@ -317,27 +317,27 @@ McKinsey & Company, El Corte Ingles, Iberia, Cargill, Inditex, Zara, Mondelez, W
 #### Decisor
 
 - Acceso directo a C-level o responsable de presupuesto
-- Capacidad de tomar decisiones sin multiples capas de aprobacion
+- Capacidad de tomar decisiones sin múltiples capas de aprobacion
 
 #### Fit cultural
 
 - Empresas que valoran la calidad sobre la velocidad extrema
-- Organizaciones abiertas a recomendaciones estrategicas
-- Clientes que entienden el valor del diseno/tecnologia
+- Organizaciones abiertas a recomendaciones estratégicas
+- Clientes que entienden el valor del diseño/tecnologia
 
-### 7.2 Red Flags
+### Red Flags
 
 - Presupuesto <10k EUR para proyectos complejos
 - No hay acceso al decisor
 - Urgencia extrema sin flexibilidad de scope
 - Expectativa de "proveedor" en vez de "partner"
-- No valoran diseno/tecnologia como inversion
+- No valoran diseño/tecnologia como inversion
 
 ---
 
-## 8. Servicios End-to-End
+## 08. Servicios End-to-End
 
-### 8.1 Mapa de Capacidades
+### Mapa de Capacidades
 
 | Business Design & Innovation | Branding | Product Design | Development & AI | Marketing & Comms | Marketing & Growth |
 |---|---|---|---|---|---|
@@ -347,7 +347,7 @@ McKinsey & Company, El Corte Ingles, Iberia, Cargill, Inditex, Zara, Mondelez, W
 | Strategic Validation | Digital Experience | UX Research | Gen AI development | Social Media | Content Marketing |
 | [mendesaltaren] | [mendesaltaren] | [mendesaltaren] [FIK] | [Tailor Hub] [FIK] | [SSTIL] | [Minimum] [Nocodehackers] |
 
-### 8.2 Journey del Cliente en Modulor
+### Journey del Cliente en Modulor
 
 | DISCOVER | BUILD | LAUNCH | SCALE |
 |---|---|---|---|
@@ -356,24 +356,24 @@ McKinsey & Company, El Corte Ingles, Iberia, Cargill, Inditex, Zara, Mondelez, W
 
 ---
 
-## 9. Estrategia y Roadmap
+## 09. Estrategia y Roadmap
 
-### 9.1 Prioridades estrategicas del grupo
+### Prioridades estratégicas del grupo
 
 | Area | Objetivo |
 |---|---|
 | 01. Crecimiento y clientes | Sostenible, rentable y selectivo. Calidad sobre volumen. |
 | 02. Finance & M&A | Salud financiera, control y capacidad de inversion. |
-| 03. Posicionamiento y Comunicacion | De "proveedor" a partner de transformacion. |
+| 03. Posicionamiento y Comunicación | De "proveedor" a partner de transformación. |
 | 04. Sistema Operativo & mOS | Conocimiento, procesos e IA como ventaja estructural. |
 | 05. People & Culture | Pertenencia, sistema donde se quiera crecer. |
-| 06. Colaboracion & Operaciones | Eficiencias, escalar sin sobrecargar equipos. |
+| 06. Colaboración & Operaciones | Eficiencias, escalar sin sobrecargar equipos. |
 
-### 9.2 Los 4 Pilares de Crecimiento
+### Los 4 Pilares de Crecimiento
 
 **01. ORGANIC & INORGANIC GROWTH**
 - 5 estudios actuales
-- Adquisicion de nuevo estudio
+- Adquisición de nuevo estudio
 - Incubacion de ventures
 
 **02. PRODUCT & TECHNOLOGY**
@@ -395,14 +395,14 @@ McKinsey & Company, El Corte Ingles, Iberia, Cargill, Inditex, Zara, Mondelez, W
 - Professional development
 - Career paths
 
-### 9.3 Crecimiento Inorganico (M&A)
+### Crecimiento Inorganico (M&A)
 
 **Criterios para adquirir un estudio:**
 1. Innovacion
 2. Mejoras operacionales
 3. Refuerzo de servicios core
 4. Servicios complementarios
-5. Expansion geografica
+5. Expansión geografica
 6. Red de clientes
 7. Red de talento
 
@@ -410,7 +410,7 @@ McKinsey & Company, El Corte Ingles, Iberia, Cargill, Inditex, Zara, Mondelez, W
 
 ## 10. Productos Propios
 
-### 10.1 Tesis de Producto
+### Tesis de Producto
 
 **Por que productos:**
 - IA esta transformando el software, automatizando tareas y cambiando roles
@@ -424,20 +424,20 @@ McKinsey & Company, El Corte Ingles, Iberia, Cargill, Inditex, Zara, Mondelez, W
 4. Escalamos a MVP
 5. Monetizamos via SaaS o licensing
 
-### 10.2 Portfolio de Productos
+### Portfolio de Productos
 
 | Producto | Tipo | Descripcion | Estado |
 |---|---|---|---|
 | **Saga.ai** | Client-facing | Agente conversacional | En desarrollo |
 | **Easy Email** | Client-facing | Herramienta de email marketing | POC |
 | **Ways of Working** | Internal | Sistema de gestion de trabajo | En desarrollo |
-| **Design System for Marketing** | Client-facing | Sistema de diseno para equipos de marketing | MVP |
+| **Design System for Marketing** | Client-facing | Sistema de diseño para equipos de marketing | MVP |
 
 ---
 
-## 11. Internacionalizacion
+## 11. Internacionalización
 
-### 11.1 Presencia Actual
+### Presencia Actual
 
 | Pais | Revenue anual | Clientes clave |
 |---|---|---|
@@ -446,9 +446,9 @@ McKinsey & Company, El Corte Ingles, Iberia, Cargill, Inditex, Zara, Mondelez, W
 | Portugal | EUR300k+ | Caixa Geral, Santander |
 | Emirates | Explorando | -- |
 
-**Estrategia:** Arbitraje de costes competitivos desde Espana manteniendo estandares de calidad premium.
+**Estrategia:** Arbitraje de costes competitivos desde España manteniendo estandares de calidad premium.
 
-### 11.2 Mercados Target
+### Mercados Target
 
 | Pais | Foco | Sectores |
 |---|---|---|
@@ -456,9 +456,9 @@ McKinsey & Company, El Corte Ingles, Iberia, Cargill, Inditex, Zara, Mondelez, W
 | **Netherlands** | Innovation | Sustainability |
 | **UK** | Content, fashion | Applied AI |
 | **USA** | Tech | Startups, VC funds, B2B SaaS |
-| **Emirates** | Expansion | Energy, Luxury |
+| **Emirates** | Expansión | Energy, Luxury |
 
-### 11.3 Estrategias de Entrada
+### Estrategias de Entrada
 
 - Event visibility & strategic PR
 - Outbound business development
@@ -473,7 +473,7 @@ McKinsey & Company, El Corte Ingles, Iberia, Cargill, Inditex, Zara, Mondelez, W
 
 ## 12. KPIs de Grupo
 
-### 12.1 KPIs Financieros
+### KPIs Financieros
 
 | KPI | Target 2026 | Owner |
 |---|---|---|
@@ -482,12 +482,12 @@ McKinsey & Company, El Corte Ingles, Iberia, Cargill, Inditex, Zara, Mondelez, W
 | Revenue mendesaltaren | EUR5.5M-5.7M | Sara Rivera |
 | Revenue Tailor Hub | EUR3.8M | Diego Mendez |
 
-### 12.2 KPIs COO (Ventas Grupo)
+### KPIs COO (Ventas Grupo)
 
 | KPI | Target |
 |---|---|
-| Facturacion generada por COO | EUR1M anual |
-| Diseno (mendesaltaren) | EUR500k |
+| Facturación generada por COO | EUR1M anual |
+| Diseño (mendesaltaren) | EUR500k |
 | Tech (Tailor Hub) | EUR500k |
 
 ---
@@ -499,7 +499,7 @@ McKinsey & Company, El Corte Ingles, Iberia, Cargill, Inditex, Zara, Mondelez, W
 **Organic & Inorganic:**
 - Alcanzar EUR13M revenue
 - Minimo 25% crecimiento por estudio
-- Iniciar busqueda y conversaciones de adquisicion
+- Iniciar búsqueda y conversaciones de adquisición
 
 **Product & Technology:**
 - MVP validation de Design System for Marketing
@@ -528,7 +528,7 @@ McKinsey & Company, El Corte Ingles, Iberia, Cargill, Inditex, Zara, Mondelez, W
 ### 2028
 
 **Organic & Inorganic:**
-- Consolidar EUR22M entre estudios, nueva adquisicion y productos
+- Consolidar EUR22M entre estudios, nueva adquisición y productos
 - EUR1M en revenue de productos propios
 
 **Product & Technology:**
@@ -539,15 +539,15 @@ McKinsey & Company, El Corte Ingles, Iberia, Cargill, Inditex, Zara, Mondelez, W
 
 ---
 
-## Tags para Busqueda
+## Tags para Búsqueda
 
 **Por industria:** Tech, SaaS, E-commerce, Retail, Fashion, Finance, Health, Energy, Travel, Corporate, Startups, VC/Funds
 
-**Por servicio:** Product Design, Branding, Design Systems, Software Development, IA, Shopify, Marketing, Social Media, Automatizaciones, No-code, Growth
+**Por servicio:** Product Design, Branding, Design Systems, Software Development, IA, Shopify, Marketing, Social Media, Automatizaciónes, No-code, Growth
 
-**Por tamano de cliente:** Startup, Scale-up, SMB, Enterprise, Corporate
+**Por tamaño de cliente:** Startup, Scale-up, SMB, Enterprise, Corporate
 
-**Por tipo de proyecto:** MVP, Migracion, Redesign, Nuevo producto, Optimizacion, Consultoria, Formacion
+**Por tipo de proyecto:** MVP, Migracion, Redesign, Nuevo producto, Optimizacion, Consultoria, Formación
 
 ---
 

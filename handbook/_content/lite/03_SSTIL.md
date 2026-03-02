@@ -4,7 +4,7 @@
 
 ---
 
-## 1. Identidad y Estrategia
+## 01. Identidad y Estrategia
 
 ### Datos básicos
 
@@ -50,7 +50,7 @@
 
 ---
 
-## 2. Estructura y Equipo
+## 02. Estructura y Equipo
 
 ### Leadership Team
 
@@ -64,7 +64,7 @@
 
 ---
 
-## 3. Servicios
+## 03. Servicios
 
 ### Modelo Comercial
 
@@ -113,7 +113,7 @@
 
 ---
 
-## 4. Cliente Ideal (ICP)
+## 04. Cliente Ideal (ICP)
 
 ### SSTIL - ICP
 
@@ -150,7 +150,7 @@
 
 ---
 
-## 5. Modelo de Negocio
+## 05. Modelo de Negocio
 
 ### Pricing Resumen
 
@@ -175,7 +175,7 @@
 
 ---
 
-## 6. Casos y Portfolio
+## 06. Casos y Portfolio
 
 ### Casos Minimum destacados
 
@@ -210,7 +210,7 @@ Iberia, Mango, Factorial, PagoNxt, Kpler, Urban X, Therapy Side, Kfund, Diamond 
 
 ---
 
-## 7. Cross-selling y Sinergias
+## 07. Cross-selling y Sinergias
 
 ### Cuándo derivar A SSTIL/Minimum
 
@@ -241,7 +241,7 @@ Iberia, Mango, Factorial, PagoNxt, Kpler, Urban X, Therapy Side, Kfund, Diamond 
 
 ---
 
-## 8. Ventas
+## 08. Ventas
 
 ### Mensajes clave
 
@@ -250,7 +250,7 @@ Iberia, Mango, Factorial, PagoNxt, Kpler, Urban X, Therapy Side, Kfund, Diamond 
 
 ---
 
-## 9. Conocimiento
+## 09. Conocimiento
 
 - **Web SSTIL:** https://sstilagency.com
 - **Web Minimum:** https://minimum.run

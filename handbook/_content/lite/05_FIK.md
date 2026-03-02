@@ -4,7 +4,7 @@
 
 ---
 
-## 1. Identidad y Estrategia
+## 01. Identidad y Estrategia
 
 ### Datos básicos
 
@@ -57,7 +57,7 @@
 
 ---
 
-## 2. Estructura y Equipo
+## 02. Estructura y Equipo
 
 ### Leadership Team
 
@@ -92,7 +92,7 @@
 
 ---
 
-## 3. Servicios
+## 03. Servicios
 
 ### Prioridades 2026 (del Business Plan)
 
@@ -178,7 +178,7 @@
 
 ---
 
-## 4. Modelo de Negocio
+## 04. Modelo de Negocio
 
 ### Planes de Retainer (Modelo actual)
 
@@ -229,7 +229,7 @@
 
 ---
 
-## 5. Cliente Ideal (ICP)
+## 05. Cliente Ideal (ICP)
 
 ### Perfil de empresa
 
@@ -275,7 +275,7 @@
 
 ---
 
-## 6. Casos y Portfolio
+## 06. Casos y Portfolio
 
 ### Casos destacados
 
@@ -328,7 +328,7 @@ Klaviyo, Yotpo, Narvar, Sendcloud, ReturnGo, Moddo, Nosto, Klarna, Synerise, Rev
 
 ---
 
-## 7. Cross-selling y Sinergias
+## 07. Cross-selling y Sinergias
 
 ### Cuándo derivar A FIK
 
@@ -357,7 +357,7 @@ Klaviyo, Yotpo, Narvar, Sendcloud, ReturnGo, Moddo, Nosto, Klarna, Synerise, Rev
 
 ---
 
-## 8. Ventas
+## 08. Ventas
 
 ### Mensajes clave
 

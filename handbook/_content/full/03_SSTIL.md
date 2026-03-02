@@ -1,12 +1,12 @@
 # SSTIL
 
-> Agencia de marketing, comunicacion y creatividad
+> Agencia de marketing, comúnicación y creatividad
 
 ---
 
-## 1. Identidad y Estrategia
+## 01. Identidad y Estrategia
 
-### 1.1 Datos basicos
+### Datos básicos
 
 - **Nombre:** SSTIL
 - **Web:** [https://sstilagency.com](https://sstilagency.com)
@@ -16,43 +16,43 @@
 - **Sede:** Calle Hermanos Alvarez Quintero, 2, 28004 Madrid
 - **Empleados:** ~12 personas
 
-### 1.2 Proposito
+### Propósito
 
-- **Mision:** Construir marcas y experiencias que perduren
+- **Misión:** Construir marcas y experiencias que perduren
 - **Tagline:** "A commitment to build brands and experiences that endure"
 
-### 1.3 Posicionamiento
+### Posicionamiento
 
-- **Que somos?** Agencia creativa multi-servicio donde estrategia, diseno, tecnologia y storytelling convergen
+- **Qué somos?** Agencia creativa multi-servicio donde estrategia, diseño, tecnologia y storytelling convergen
 - **Para quien?** Marcas que buscan relevancia sostenida, decisiones inteligentes y creatividad que genera resultados
 - **Que nos hace diferentes?**
   - Enfoque en valor duradero vs campanas puntuales
   - Creatividad orientada a resultados
-  - Parte del grupo Modulor (sinergias con diseno, tech, e-commerce)
+  - Parte del grupo Modulor (sinergias con diseño, tech, e-commerce)
 
-### 1.4 SSTIL vs Minimum
+### SSTIL vs Minimum
 
 | Aspecto | SSTIL | Minimum |
 |---|---|---|
-| **Foco** | Marketing, comunicacion integral, creatividad | Growth marketing, webs rapidas, performance |
+| **Foco** | Marketing, comúnicación integral, creatividad | Growth marketing, webs rapidas, performance |
 | **Servicios** | Social media, activaciones, eventos, PR | Webs Webflow, SEO/SEM, paid media |
 | **Cliente tipico** | Marcas establecidas, corporaciones | Startups, scaleups, tech |
 | **Web** | [sstilagency.com](http://sstilagency.com) | [minimum.run](http://minimum.run) |
 
 *Nota: Minimum es la antigua marca de SSTIL. Sigue operando para captar leads que ejecutan SSTIL o Nocodehackers Solutions.*
 
-### 1.5 Que NO hacemos
+### Qué NO hacemos
 
-- Diseno de producto digital (derivamos a [mendesaltaren](#mendesaltaren))
+- Diseño de producto digital (derivamos a [mendesaltaren](#mendesaltaren))
 - Desarrollo de software (derivamos a [Tailor Hub](#tailorhub))
 - E-commerce Shopify (derivamos a [FIK](#fik))
-- Automatizaciones complejas (derivamos a [Nocodehackers](#nocodehackers))
+- Automatizaciónes complejas (derivamos a [Nocodehackers](#nocodehackers))
 
 ---
 
-## 2. Estructura y Equipo
+## 02. Estructura y Equipo
 
-### 2.1 Roles clave
+### Roles clave
 
 | Rol | Persona |
 |---|---|
@@ -64,20 +64,20 @@
 
 ---
 
-## 3. Servicios
+## 03. Servicios
 
-### 3.0 Modelo Comercial
+### Modelo Comercial
 
-- **NO paquetes fijos:** Ajustan entregables segun fee del cliente
-- **Proceso:** Cerrar primero el numero, luego ajustar entregables segun monto
-- **Ticket mas comun:** EUR2k inicial para comenzar y crecer mes a mes
-- **Squad liquido:** Equipo flexible (Lead Marketing, Disenador, Filmmaker, PM) que adapta recursos segun presupuesto
+- **NO paquetes fijos:** Ajustan entregables según fee del cliente
+- **Proceso:** Cerrar primero el numero, luego ajustar entregables según monto
+- **Ticket más común:** EUR2k inicial para comenzar y crecer mes a mes
+- **Squad líquido:** Equipo flexible (Lead Marketing, Disenador, Filmmaker, PM) que adapta recursos según presupuesto
 
 ---
 
 ### SSTIL - Servicios principales
 
-| Servicio | Ticket tipico | Duracion | Descripcion |
+| Servicio | Ticket típico | Duración | Descripcion |
 |---|---|---|---|
 | **Creative Direction** | EUR800/mes | Retainer mensual | Direccion creativa para campanas y marcas |
 | **Social Media Management** | EUR2,000-9,000/mes | Retainer mensual | Estrategia, contenido, community. Min EUR2k (seguimiento + paid pequeno), hasta EUR9k grandes clientes |
@@ -87,55 +87,55 @@
 | **Events** | Por definir | 4 semanas | Produccion y gestion de eventos |
 | **Branding** | EUR6,500 | 3-4 semanas | Identidad de marca (tactico). Para premium, derivar a mendesaltaren |
 
-**Entregables tipicos servicio mensual completo:**
+**Entregables típicos servicio mensual completo:**
 - Estrategia mensual de contenido
 - 1 sesion produccion/mes (grabacion + fotografia)
 - 8-10 piezas/mes: 2-3 videos + 5-7 piezas visuales
 - Plan operativo RRSS
-- Reunion mensual + comunicacion continua Slack
+- Reunion mensual + comúnicación continua Slack
 
 ---
 
 ### Minimum - Servicios principales
 
-| Servicio | Ticket tipico | Duracion | Descripcion |
+| Servicio | Ticket típico | Duración | Descripcion |
 |---|---|---|---|
 | **Growth Strategy** | EUR1,500 | 4 semanas (one-shot) | Estrategia de crecimiento digital: web, content, SEO/SEM, social |
-| **Web Design & Development** | EUR17,000-24,000 | 12-14 semanas | Webs Webflow segun complejidad (S/M/L/XL) |
+| **Web Design & Development** | EUR17,000-24,000 | 12-14 semanas | Webs Webflow según complejidad (S/M/L/XL) |
 | **SEO/SEM** | EUR1,200/mes | Retainer mensual | Optimizacion organica y campanas pagadas |
 | **Social Media Strategy** | EUR1,200/mes | Retainer mensual | Estrategia redes sociales |
 
-### Metricas Minimum
+### Métricas Minimum
 
 - **+300 proyectos** completados
 - **Official Webflow Partner**
 
 ---
 
-## 4. Cliente Ideal (ICP)
+## 04. Cliente Ideal (ICP)
 
-### 4.1 SSTIL - ICP
+### SSTIL - ICP
 
-- **Tamano:** Marcas establecidas, corporaciones
+- **Tamaño:** Marcas establecidas, corporaciones
 - **Sectores:** Lifestyle, fashion, food, hospitality, corporativo
 - **Presupuesto minimo:** >~EUR15k o retainers desde EUR2k/mes
 
-### 4.2 Minimum - ICP
+### Minimum - ICP
 
-- **Tamano:** Startups, scaleups
+- **Tamaño:** Startups, scaleups
 - **Sectores:** Tech, SaaS, Health, Energy, Finance, DTC
 - **Presupuesto minimo:** Webs desde EUR17k, retainers desde EUR1.2k/mes
 
-### 4.3 Triggers de compra
+### Triggers de compra
 
 - Lanzamiento de producto
 - Rebranding
-- Expansion a nuevo mercado
+- Expansión a nuevo mercado
 - Ronda de financiacion
 - Necesidad de presencia digital rapida
 - Campanas estacionales
 
-### 4.4 Senales de fit
+### Señales de fit
 
 **Green flags:**
 - Marca con producto/servicio claro
@@ -149,9 +149,9 @@
 
 ---
 
-## 5. Modelo de Negocio
+## 05. Modelo de Negocio
 
-### 5.1 Pricing Resumen
+### Pricing Resumen
 
 **SSTIL:**
 
@@ -174,13 +174,13 @@
 
 ---
 
-## 6. Casos y Portfolio
+## 06. Casos y Portfolio
 
-### 6.1 Casos Minimum destacados
+### Casos Minimum destacados
 
 #### Urban X
 - **Contexto:** Programa acelerador de MINI en EEUU
-- **Que hicimos:** Diseno y desarrollo web
+- **Que hicimos:** Diseño y desarrollo web
 - **Tecnologia:** Webflow
 
 #### Diamond Foundry
@@ -199,19 +199,19 @@
 - **Contexto:** Startup de cardiologia con IA
 - **Que hicimos:** Web corporativa
 
-### 6.2 Clientes Minimum destacados
+### Clientes Minimum destacados
 
 Iberia, Mango, Factorial, PagoNxt, Kpler, Urban X, Therapy Side, Kfund, Diamond Foundry, LifeX Ventures
 
-### 6.3 Testimoniales
+### Testimoniales
 
 > "I'm a huge fan of the Minimum team and everything they're doing! We've partnered with them for many years to build sites for large enterprises." - **Vlad Magdalin, Co-founder & CEO Webflow**
 
 ---
 
-## 7. Cross-selling y Sinergias
+## 07. Cross-selling y Sinergias
 
-### 7.1 Cuando derivar A SSTIL/Minimum
+### Cuándo derivar A SSTIL/Minimum
 
 | Senal | Desde | Derivar a |
 |---|---|---|
@@ -221,35 +221,35 @@ Iberia, Mango, Factorial, PagoNxt, Kpler, Urban X, Therapy Side, Kfund, Diamond 
 | Startup necesita growth | Tailor Hub, Nocodehackers | Minimum |
 | Marca necesita activaciones | FIK | SSTIL |
 
-### 7.2 Cuando derivar DESDE SSTIL/Minimum
+### Cuándo derivar DESDE SSTIL/Minimum
 
 | Senal | Hacia |
 |---|---|
 | Branding estrategico/premium | mendesaltaren |
-| Diseno de producto digital | mendesaltaren |
+| Diseño de producto digital | mendesaltaren |
 | E-commerce Shopify | FIK |
 | Desarrollo de software/app | Tailor Hub |
-| Automatizaciones | Nocodehackers |
+| Automatizaciónes | Nocodehackers |
 
-### 7.3 Proyectos conjuntos tipicos
+### Proyectos conjuntos típicos
 
 - **SSTIL + mendesaltaren:** Branding + lanzamiento y activacion
 - **SSTIL + FIK:** Marketing + tienda e-commerce
-- **Minimum + Nocodehackers:** Web + automatizaciones
-- **Minimum + mendesaltaren:** Web rapida + diseno de producto posterior
+- **Minimum + Nocodehackers:** Web + automatizaciónes
+- **Minimum + mendesaltaren:** Web rapida + diseño de producto posterior
 
 ---
 
-## 8. Ventas
+## 08. Ventas
 
-### 8.1 Mensajes clave
+### Mensajes clave
 
-- **Elevator pitch SSTIL:** Somos una agencia creativa que construye marcas y experiencias que perduran. Combinamos estrategia, diseno, tecnologia y storytelling para generar valor sostenido.
-- **Elevator pitch Minimum:** Somos un growth studio que combina diseno y marketing para ayudar a empresas ambiciosas a crecer mas rapido. +300 proyectos, Official Webflow Partner.
+- **Elevator pitch SSTIL:** Somos una agencia creativa que construye marcas y experiencias que perduran. Combinamos estrategia, diseño, tecnologia y storytelling para generar valor sostenido.
+- **Elevator pitch Minimum:** Somos un growth studio que combina diseño y marketing para ayudar a empresas ambiciosas a crecer más rápido. +300 proyectos, Official Webflow Partner.
 
 ---
 
-## 9. Conocimiento
+## 09. Conocimiento
 
 - **Web SSTIL:** [https://sstilagency.com](https://sstilagency.com)
 - **Web Minimum:** [https://minimum.run](https://minimum.run)

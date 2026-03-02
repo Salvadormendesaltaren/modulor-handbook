@@ -4,7 +4,7 @@
 
 ---
 
-## 1. Identidad y Estrategia
+## 01. Identidad y Estrategia
 
 ### Datos básicos
 
@@ -40,7 +40,7 @@
 
 ---
 
-## 2. Estructura y Equipo
+## 02. Estructura y Equipo
 
 ### Leadership Team
 
@@ -75,7 +75,7 @@
 
 ---
 
-## 3. Servicios
+## 03. Servicios
 
 ### Custom Software Development
 
@@ -130,7 +130,7 @@
 
 ---
 
-## 4. Lab 226 - Servicio Combinado con Modulor
+## 04. Lab 226 - Servicio Combinado con Modulor
 
 ### Innovation, Strategy & Technical Audit
 
@@ -145,7 +145,7 @@ Junto con **mendesaltaren**, diseñamos y activamos programas de innovación que
 
 ---
 
-## 5. Cliente Ideal (ICP)
+## 05. Cliente Ideal (ICP)
 
 ### Perfil de empresa
 
@@ -185,7 +185,7 @@ Junto con **mendesaltaren**, diseñamos y activamos programas de innovación que
 
 ---
 
-## 6. Objetivos Financieros 2026
+## 06. Objetivos Financieros 2026
 
 | Métrica | Objetivo 2026 |
 | --- | --- |
@@ -197,7 +197,7 @@ Junto con **mendesaltaren**, diseñamos y activamos programas de innovación que
 
 ---
 
-## 7. Cuentas y Portfolio
+## 07. Cuentas y Portfolio
 
 ### Key Accounts (Consolidadas)
 
@@ -227,7 +227,7 @@ Audi Iberia, El Corte Inglés, Mahou, Inditex, Kutxa Bank, EY, Samsung, Tranxfer
 
 ---
 
-## 8. Productos Propios
+## 08. Productos Propios
 
 | Producto | Descripción |
 | --- | --- |
@@ -237,7 +237,7 @@ Audi Iberia, El Corte Inglés, Mahou, Inditex, Kutxa Bank, EY, Samsung, Tranxfer
 
 ---
 
-## 9. Cross-selling y Sinergias
+## 09. Cross-selling y Sinergias
 
 ### Cuándo derivar A Tailor Hub
 

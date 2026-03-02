@@ -4,7 +4,7 @@
 
 ---
 
-## 1. Identidad del Grupo
+## 01. Identidad del Grupo
 
 ### Datos básicos
 
@@ -32,7 +32,7 @@ Modulor Studios es un grupo de boutiques especializadas en diseño, tecnología,
 
 ---
 
-## 2. Los 6 Pilares Estratégicos
+## 02. Los 6 Pilares Estratégicos
 
 | # | Pilar | Descripción |
 | --- | --- | --- |
@@ -45,7 +45,7 @@ Modulor Studios es un grupo de boutiques especializadas en diseño, tecnología,
 
 ---
 
-## 3. Mapa de Boutiques
+## 03. Mapa de Boutiques
 
 | Boutique | Especialización | CEO | Headcount | Web |
 | --- | --- | --- | --- | --- |
@@ -75,7 +75,7 @@ Modulor Studios es un grupo de boutiques especializadas en diseño, tecnología,
 
 ---
 
-## 4. Governance y Liderazgo
+## 04. Governance y Liderazgo
 
 ### Leadership de boutiques
 
@@ -116,7 +116,7 @@ Modulor Studios es un grupo de boutiques especializadas en diseño, tecnología,
 
 ---
 
-## 5. Departamentos Modulor
+## 05. Departamentos Modulor
 
 ### Ops (Operaciones)
 
@@ -233,7 +233,7 @@ Modulor Tech es la iniciativa para integrar IA de forma estructural en las opera
 
 ---
 
-## 6. Modelo Financiero del Grupo
+## 06. Modelo Financiero del Grupo
 
 ### Track Record (2020-2025)
 
@@ -266,7 +266,7 @@ Modulor Tech es la iniciativa para integrar IA de forma estructural en las opera
 
 ---
 
-## 7. Matriz de Derivación de Leads
+## 07. Matriz de Derivación de Leads
 
 | Si el lead necesita... | Derivar a... |
 | --- | --- |
@@ -289,7 +289,7 @@ Modulor Tech es la iniciativa para integrar IA de forma estructural en las opera
 
 ---
 
-## 8. Combinaciones Ganadoras
+## 08. Combinaciones Ganadoras
 
 ### Lab 226: Innovation + Strategy + Technical Audit
 
@@ -326,7 +326,7 @@ Modulor Tech es la iniciativa para integrar IA de forma estructural en las opera
 
 ---
 
-## 9. Criterios de Cualificación Compartidos
+## 09. Criterios de Cualificación Compartidos
 
 ### Budget
 

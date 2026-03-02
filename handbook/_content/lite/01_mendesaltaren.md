@@ -4,7 +4,7 @@
 
 ---
 
-## 1. Identidad y Estrategia
+## 01. Identidad y Estrategia
 
 ### Datos básicos
 
@@ -58,7 +58,7 @@
 
 ---
 
-## 2. Resultados y Objetivos Financieros
+## 02. Resultados y Objetivos Financieros
 
 ### Resultados 2025
 
@@ -81,7 +81,7 @@
 
 ---
 
-## 3. mendesaltaren Labs · 226
+## 03. mendesaltaren Labs · 226
 
 > "Nuestra práctica futura"
 
@@ -123,7 +123,7 @@ Junto con **Tailor Hub**, diseñamos y activamos programas de innovación que co
 
 ---
 
-## 4. Estructura y Equipo
+## 04. Estructura y Equipo
 
 ### Organigrama
 
@@ -153,7 +153,7 @@ Junto con **Tailor Hub**, diseñamos y activamos programas de innovación que co
 
 ---
 
-## 5. Servicios
+## 05. Servicios
 
 ### Modelo Comercial
 
@@ -216,7 +216,7 @@ Junto con **Tailor Hub**, diseñamos y activamos programas de innovación que co
 
 ---
 
-## 6. Cliente Ideal (ICP)
+## 06. Cliente Ideal (ICP)
 
 ### Perfil de empresa
 
@@ -257,7 +257,7 @@ Junto con **Tailor Hub**, diseñamos y activamos programas de innovación que co
 
 ---
 
-## 7. Metodología y Operaciones
+## 07. Metodología y Operaciones
 
 ### Design Handbook
 
@@ -285,7 +285,7 @@ mendesaltaren publica su metodología completa en https://designhandbook.com
 
 ---
 
-## 8. Casos y Portfolio
+## 08. Casos y Portfolio
 
 ### Casos destacados
 
@@ -306,7 +306,7 @@ Inditex, Repsol, Comunidad de Madrid, Movistar Prosegur, UEFA, Bankia, Línea Di
 
 ---
 
-## 9. Cross-selling y Sinergias
+## 09. Cross-selling y Sinergias
 
 ### Cuándo derivar A mendesaltaren
 

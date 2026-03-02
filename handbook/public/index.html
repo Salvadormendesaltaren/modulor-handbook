@@ -253,8 +253,13 @@
 </head>
 <body>
 
-  <!-- ── Login Screen ── -->
-  <div class="login-screen" id="loginScreen">
+  <!-- ── Global loading (shown while checking session) ── -->
+  <div class="login-screen" id="globalLoading">
+    <div style="font-size:0.75rem;font-weight:400;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em;">Cargando...</div>
+  </div>
+
+  <!-- ── Login Screen (hidden until we know there's no session) ── -->
+  <div class="login-screen" id="loginScreen" style="display:none;">
     <div class="login-card">
       <div class="login-logo"><img src="logos/Modulor.svg" alt="Modulor"></div>
       <h1 class="login-title">Handbook</h1>
@@ -569,7 +574,15 @@
 
     // Single auth listener
     sb.auth.onAuthStateChange(async (event, session) => {
-      if (event === 'INITIAL_SESSION' || event === 'SIGNED_IN') {
+      if (event === 'INITIAL_SESSION') {
+        document.getElementById('globalLoading').style.display = 'none';
+        if (session) {
+          await handleSession(session);
+        } else {
+          document.getElementById('loginScreen').style.display = 'flex';
+        }
+      }
+      if (event === 'SIGNED_IN') {
         await handleSession(session);
       }
       if (event === 'TOKEN_REFRESHED' && session) {

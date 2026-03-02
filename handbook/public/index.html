@@ -421,22 +421,25 @@
 
     // Central session handler — no longer rejects non-leadership users
     async function handleSession(session) {
-      if (!session) return;
-      if (session.user.id === lastValidatedId) return;
+      if (!session) { console.log('[HS] No session'); return; }
+      if (session.user.id === lastValidatedId) { console.log('[HS] Already validated'); return; }
 
+      console.log('[HS] Checking domain for', session.user.email);
       if (!isDomainApproved(session.user.email)) {
+        console.log('[HS] Domain rejected');
         clearAccessTokenCookie();
         showLoginError('Acceso restringido a dominios autorizados del grupo Modulor.');
         await sb.auth.signOut();
         return;
       }
 
-      // Check leadership invitation — non-blocking, just determines access level
-      const { data: invited } = await sb
+      console.log('[HS] Checking leadership_users...');
+      const { data: invited, error: invErr } = await sb
         .from('leadership_users')
         .select('email')
         .eq('email', session.user.email)
         .single();
+      console.log('[HS] Leadership check:', invited ? 'YES' : 'NO', invErr ? 'Error: ' + invErr.message : '');
 
       isLeadershipUser = !!invited;
       viewMode = isLeadershipUser ? 'leadership' : 'team';
@@ -444,10 +447,15 @@
       lastValidatedId = session.user.id;
       setAccessTokenCookie(session);
       currentUser = session.user;
+
+      console.log('[HS] Loading user role...');
       await loadUserRole();
+      console.log('[HS] Role:', userRole, '| View:', viewMode);
+
       updateViewUI();
       showApp();
       upsertProfile(session.user);
+      console.log('[HS] Done — app visible');
     }
 
     async function loadUserRole() {
@@ -581,7 +589,11 @@
     const authTimeout = setTimeout(showLogin, 4000);
 
     // Single auth listener
+    console.log('[AUTH] Registering listener. localStorage keys:', Object.keys(localStorage).filter(k => k.includes('supabase')));
+
     sb.auth.onAuthStateChange(async (event, session) => {
+      console.log('[AUTH] Event:', event, 'Session:', session ? 'YES (user: ' + session.user.email + ')' : 'NULL');
+
       if (event === 'INITIAL_SESSION') {
         clearTimeout(authTimeout);
         document.getElementById('globalLoading').style.display = 'none';
@@ -589,10 +601,11 @@
           try {
             await handleSession(session);
           } catch (e) {
-            console.error('Session error:', e);
+            console.error('[AUTH] handleSession error:', e);
             showLogin();
           }
         } else {
+          console.log('[AUTH] No session, showing login');
           showLogin();
         }
       }
@@ -600,13 +613,15 @@
         try {
           await handleSession(session);
         } catch (e) {
-          console.error('Session error:', e);
+          console.error('[AUTH] handleSession error:', e);
         }
       }
       if (event === 'TOKEN_REFRESHED' && session) {
+        console.log('[AUTH] Token refreshed');
         setAccessTokenCookie(session);
       }
       if (event === 'SIGNED_OUT') {
+        console.log('[AUTH] Signed out');
         clearAccessTokenCookie();
         currentUser = null;
         lastValidatedId = null;

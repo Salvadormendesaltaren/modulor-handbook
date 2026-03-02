@@ -438,7 +438,7 @@
         .from('leadership_users')
         .select('email')
         .eq('email', session.user.email)
-        .single();
+        .maybeSingle();
       console.log('[HS] Leadership check:', invited ? 'YES' : 'NO', invErr ? 'Error: ' + invErr.message : '');
 
       isLeadershipUser = !!invited;
@@ -455,7 +455,7 @@
       updateViewUI();
       showApp();
       upsertProfile(session.user);
-      console.log('[HS] Done — app visible');
+      console.log('[HS] Done — app visible. localStorage keys:', Object.keys(localStorage).filter(k => k.startsWith('sb-')));
     }
 
     async function loadUserRole() {
@@ -589,7 +589,7 @@
     const authTimeout = setTimeout(showLogin, 4000);
 
     // Single auth listener
-    console.log('[AUTH] Registering listener. localStorage keys:', Object.keys(localStorage).filter(k => k.includes('supabase')));
+    console.log('[AUTH] Registering listener. localStorage keys:', Object.keys(localStorage).filter(k => k.startsWith('sb-')));
 
     sb.auth.onAuthStateChange(async (event, session) => {
       console.log('[AUTH] Event:', event, 'Session:', session ? 'YES (user: ' + session.user.email + ')' : 'NULL');

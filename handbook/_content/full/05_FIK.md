@@ -10,24 +10,24 @@
 
 - **Nombre:** FIK
 - **Web:** [https://fik.life](https://fik.life)
-- **Fundacion:** 2014
+- **Fundación:** 2014
 - **CEO:** Bill Murphy
 - **Sede:** Madrid
 - **Empleados:** 6 personas
-- **Certificacion:** **Shopify Premier Partner** (certificacion más alta)
+- **Certificación:** **Shopify Premier Partner** (certificación más alta)
 
 ### Propósito
 
-- **Misión:** Ayudar a equipos de e-commerce a lanzar más rápido y con menos riesgo combinando expertise en plataforma, ejecucion omnicanal y disciplina de performance
+- **Misión:** Ayudar a equipos de e-commerce a lanzar más rápido y con menos riesgo combinando expertise en plataforma, ejecución omnicanal y disciplina de performance
 - **Visión:** Ser el Shopify Premier Partner de referencia en España para marcas de moda y gran consumo, conocido por delivery fiable, profundidad de plataforma y resultados medibles, mientras expandimos por Europa
-- **Especializacion:** 100% foco en Shopify con +10 anos de experiencia
+- **Especialización:** 100% foco en Shopify con +10 anos de experiencia
 
 ### Posicionamiento
 
-- **Qué somos?** Agencia especializada en Shopify Plus (top tier)
-- **Para quien?** Marcas D2C y retailers que quieren vender online con Shopify
-- **Que nos hace diferentes?**
-  - Premier Partner (certificacion más alta de Shopify)
+- **¿Qué somos?** Agencia especializada en Shopify Plus (top tier)
+- **¿Para quién?** Marcas D2C y retailers que quieren vender online con Shopify
+- **¿Qué nos hace diferentes?**
+  - Premier Partner (certificación más alta de Shopify)
   - +10 anos de experiencia exclusiva en Shopify
   - +42 proyectos Shopify Plus completados
   - Clientes que facturan +15M EUR de media
@@ -44,7 +44,7 @@
 | Metrica | Valor |
 |---|---|
 | Facturación media anual de clientes | 15M EUR |
-| Tiempo típico de migracion | 12 semanas |
+| Tiempo típico de migración | 12 semanas |
 | Proyectos Shopify Plus | 42+ |
 
 ### Qué NO hacemos
@@ -74,7 +74,7 @@
 - **Shopify Experts:** 2 (Brian, Pablo)
 - **Frontend Developers:** 2 (Jose Luis, Noemi)
 - **Backend Developer:** 1 (Enrique)
-- **Certificaciones equipo:** Shopify Partner certifications
+- **Certificaciónes equipo:** Shopify Partner certifications
 
 ### Contrataciones previstas 2026
 
@@ -100,75 +100,75 @@
 
 ### Retainer Squads (Roadmap Delivery) - PRIORIDAD
 
-- **Descripcion:** Bloques de capacidad mensual con cadencia de planning, demos y ownership de backlog
+- **Descripción:** Bloques de capacidad mensual con cadencia de planning, demos y ownership de backlog
 - **Incluye:** SLAs opcionales (tiempos de respuesta, monitoring, soporte de incidentes)
 - **Modelo:** Retainer mensual
 
 ### Performance & Analytics - PRIORIDAD (Nuevo 2026)
 
-- **Descripcion:** Fundamentos de medicion y programa de CRO
-- **Incluye:** Tracking, dashboards, attribution readiness, CRO + experimentacion
+- **Descripción:** Fundamentos de medicion y programa de CRO
+- **Incluye:** Tracking, dashboards, attribution readiness, CRO + experimentación
 
-### Replatforming / Migraciones
+### Replatforming / Migraciónes
 
-- **Descripcion:** Migracion completa de infraestructura e-commerce a Shopify
+- **Descripción:** Migración completa de infraestructura e-commerce a Shopify
 - **Desde:** Magento, WooCommerce, PrestaShop, Salesforce Commerce, etc.
-- **Incluye:** Analisis de negocio, planificacion, ejecucion, migracion de datos
-- **Duración tipica:** 12 semanas
+- **Incluye:** Analisis de negocio, planificacion, ejecución, migración de datos
+- **Duración típica:** 12 semanas
 
 ### Theme Development
 
-- **Descripcion:** Desarrollo de temas custom para Shopify
+- **Descripción:** Desarrollo de temas custom para Shopify
 - **Incluye:** E-commerce branded, herramientas para marketing, Themes 2.0
 
 ### UX/UI Design
 
-- **Descripcion:** Auditoria y diseño de experiencia e-commerce
-- **Incluye:** Auditoria, definicion de producto, concepto visual, diseño de interfaces
+- **Descripción:** Auditoría y diseño de experiencia e-commerce
+- **Incluye:** Auditoría, definición de producto, concepto visual, diseño de interfaces
 
 ### Payments & Checkout
 
-- **Descripcion:** Desarrollo de metodos de pago y personalizacion de checkout
-- **Certificacion:** Payment Provider Partner
-- **Incluye:** Checkout Extensibility, integracion de pasarelas
+- **Descripción:** Desarrollo de metodos de pago y personalizacion de checkout
+- **Certificación:** Payment Provider Partner
+- **Incluye:** Checkout Extensibility, integración de pasarelas
 
 ### E-commerce Consultancy
 
-- **Descripcion:** Optimizacion de operaciones y logistica e-commerce
+- **Descripción:** Optimización de operaciónes y logistica e-commerce
 - **Incluye:** Seleccion de stack tecnológico, colaboración con partners
 
 ### Platform Integrations
 
-- **Descripcion:** Conectores con sistemas empresariales
+- **Descripción:** Conectores con sistemas empresariales
 - **ERP:** SAP, Navisión, Business Central, NetSuite, Odoo
 - **CRM:** Salesforce
-- **Marketplaces:** Integraciones multi-canal
+- **Marketplaces:** Integraciónes multi-canal
 
 ### Analytics & Data
 
-- **Descripcion:** Tracking y analisis de datos e-commerce
+- **Descripción:** Tracking y análisis de datos e-commerce
 - **Incluye:** GA4, GTM, analytics personalizados, dashboards integrados
 
 ### Shopify POS
 
-- **Descripcion:** Estrategia omnicanal con punto de venta fisico
-- **Incluye:** Migraciones de POS, consultoria POS, estrategia omnicanal
+- **Descripción:** Estrategia omnicanal con punto de venta físico
+- **Incluye:** Migraciónes de POS, consultoria POS, estrategia omnicanal
 
 ### Shopify Plus Training
 
-- **Descripcion:** Formación para equipos internos
+- **Descripción:** Formación para equipos internos
 - **Incluye:** Documentación, videos, Shopify Flow, Launchpad, recruiting
 
 ### Fractional CDO (Nuevo 2026)
 
-- **Descripcion:** Commerce roadmap + governance + coordinacion de vendors
-- **Incluye:** KPI framework, priorizacion, oversight de delivery entre stakeholders
+- **Descripción:** Commerce roadmap + governance + coordinacion de vendors
+- **Incluye:** KPI framework, priorización, oversight de delivery entre stakeholders
 - **Modelo:** Servicio empaquetado
 
 ### Productos (Apps)
 
 - **Pickup Points** — App de puntos de recogida
-- **Store Credit Manager** — App de gestion de credito en tienda
+- **Store Credit Manager** — App de gestión de credito en tienda
 
 ---
 
@@ -178,25 +178,25 @@
 
 **Primary:** Fashion y grandes marcas de consumo con complejidad operativa:
 - Multi-mercado, alto SKU, picos estacionales, footprint retail, necesidades POS
-- Equipos que necesitan estabilidad + ejecucion de roadmap (no proyectos one-off)
+- Equipos que necesitan estabilidad + ejecución de roadmap (no proyectos one-off)
 
 **Secondary:** Marcas financiadas acercandose a escala que requieren disciplina de plataforma
 
 - **Sectores:** Fashion, Beauty, Lifestyle, DTC brands, Retail
-- **Geografia:** España, Europa (expansión Italia 2026)
-- **Facturación e-commerce minima:** >1M EUR
-- **Presupuesto minimo:** >30k EUR
+- **Geografía:** España, Europa (expansión Italia 2026)
+- **Facturación e-commerce mínima:** >1M EUR
+- **Presupuesto mínimo:** >30k EUR
 
 ### Perfil del decisor
 
-- **Cargo tipico:** CEO, CMO, E-commerce Manager, Director Digital
-- **Motivaciones:** Escalar ventas online, mejorar conversion, internacionalizar
-- **Frustraciones:** Plataforma actual limitante, operaciones manuales, falta de omnicanalidad
+- **Cargo típico:** CEO, CMO, E-commerce Manager, Director Digital
+- **Motivaciónes:** Escalar ventas online, mejorar conversion, internacionalizar
+- **Frustraciones:** Plataforma actual limitante, operaciónes manuales, falta de omnicanalidad
 
 ### Triggers de compra
 
 - Lanzamiento de marca D2C
-- Migracion desde Magento/WooCommerce/PrestaShop
+- Migración desde Magento/WooCommerce/PrestaShop
 - Crecimiento que requiere Shopify Plus
 - Rediseño/rebranding de tienda
 - Expansión internacional
@@ -241,7 +241,7 @@
 **Modelo de facturación:**
 - Fee mensual = acceso al servicio
 - Horas de trabajo = facturadas aparte según perfil y plan
-- Sprints de 2 semanas, gestion en Asana
+- Sprints de 2 semanas, gestión en Asana
 - Estimaciónes aprobadas por cliente antes de ejecutar
 
 **Propuesta de valor:** Complemento para equipos de digital/CDO/ecommerce manager — ampliar capacidades sin aumentar headcount
@@ -255,7 +255,7 @@
 
 ### Go-To-Market 2026
 
-| Canal | % | Descripcion |
+| Canal | % | Descripción |
 |---|---|---|
 | Shopify channel | 50% | Co-selling, ecosystem credibility, case-study driven trust |
 | Modulor cross-sell | 35% | Joint accounts, bundled pitches, shared pipeline |
@@ -275,20 +275,20 @@
 
 #### Ecoalf
 - **Contexto:** Marca de moda sostenible
-- **Reto:** Migracion desde Prestashop a Shopify Plus
-- **Que hicimos:** Migracion completa, integracion SAP, POS internacional
+- **Reto:** Migración desde Prestashop a Shopify Plus
+- **Que hicimos:** Migración completa, integración SAP, POS internacional
 - **Servicios:** Replatforming, Integrations, POS
 
 #### Cristina Oria
 - **Contexto:** Marca gastronomia premium
-- **Reto:** Migracion desde Magento
-- **Que hicimos:** Migracion a Shopify, automatización logistica
+- **Reto:** Migración desde Magento
+- **Que hicimos:** Migración a Shopify, automatización logistica
 - **Servicios:** Replatforming
 
 #### Bimani
 - **Contexto:** Marca de moda
-- **Reto:** Migracion completa en tiempo record
-- **Que hicimos:** Migracion a Shopify y Shopify POS en 14 semanas
+- **Reto:** Migración completa en tiempo record
+- **Que hicimos:** Migración a Shopify y Shopify POS en 14 semanas
 - **Servicios:** Replatforming, POS
 
 #### Polo Club
@@ -296,9 +296,9 @@
 - **Que hicimos:** Desarrollo de tema custom con Themes 2.0
 - **Servicios:** Theme Development
 
-#### Utopica Travel (El Corte Ingles)
+#### Utopica Travel (El Corte Inglés)
 - **Contexto:** E-commerce de viajes de lujo
-- **Que hicimos:** Desarrollo con integracion Salesforce CRM
+- **Que hicimos:** Desarrollo con integración Salesforce CRM
 - **Servicios:** Theme Development, Integrations
 
 #### Suot Studio (Marta Tous)
@@ -308,13 +308,13 @@
 
 ### Clientes destacados
 
-Telefonica, El Corte Ingles, Sony Music, Bimani, Milbby, Hoff, Mas'cob, Nanimarquina, Cristina Oria, TOUS (Suot Studio), La Agam, Ecoalf, Mietis, Polo Club, Singularu, Bobo Choses
+Telefonica, El Corte Inglés, Sony Music, Bimani, Milbby, Hoff, Mas'cob, Nanimarquina, Cristina Oria, TOUS (Suot Studio), La Agam, Ecoalf, Mietis, Polo Club, Singularu, Bobo Choses
 
 ### Métricas
 
 - **Tiendas lanzadas:** 150+
 - **Proyectos Shopify Plus:** 30+
-- **Revenue gestionado por clientes:** +300M EUR
+- **Revenue gestiónado por clientes:** +300M EUR
 
 ### Partners tecnológicos
 
@@ -326,19 +326,19 @@ Klaviyo, Yotpo, Narvar, Sendcloud, ReturnGo, Moddo, Nosto, Klarna, Synerise, Rev
 
 ### Cuándo derivar A FIK
 
-| Senal | Desde |
+| Señal | Desde |
 |---|---|
 | Cliente quiere e-commerce | Cualquiera |
 | Cliente menciona Shopify | Cualquiera |
 | Marca D2C necesita tienda | mendesaltaren, SSTIL |
-| Migracion desde otra plataforma | Cualquiera |
+| Migración desde otra plataforma | Cualquiera |
 
 ### Cuándo derivar DESDE FIK
 
-| Senal | Hacia |
+| Señal | Hacia |
 |---|---|
 | Cliente necesita branding/diseño UX | mendesaltaren |
-| Integraciones muy complejas | Tailor Hub |
+| Integraciónes muy complejas | Tailor Hub |
 | Cliente necesita marketing/social | SSTIL/Minimum |
 | Automatizaciónes operativas | Nocodehackers |
 
@@ -346,7 +346,7 @@ Klaviyo, Yotpo, Narvar, Sendcloud, ReturnGo, Moddo, Nosto, Klarna, Synerise, Rev
 
 - **FIK + mendesaltaren:** Tienda Shopify + branding/UX premium
 - **FIK + SSTIL:** Tienda + marketing de lanzamiento
-- **FIK + Nocodehackers:** Tienda + automatizaciónes/integraciones
+- **FIK + Nocodehackers:** Tienda + automatizaciones/integraciónes
 - **FIK + Tailor Hub:** Tienda + backend complejo
 
 ---
@@ -355,7 +355,7 @@ Klaviyo, Yotpo, Narvar, Sendcloud, ReturnGo, Moddo, Nosto, Klarna, Synerise, Rev
 
 ### Mensajes clave
 
-- **Elevator pitch:** Somos Shopify Premier Partner con +10 anos de experiencia exclusiva en Shopify. Hemos lanzado +150 tiendas que gestionan +300M EUR en revenue. Trabajamos con marcas como El Corte Ingles, Ecoalf y Singularu.
+- **Elevator pitch:** Somos Shopify Premier Partner con +10 anos de experiencia exclusiva en Shopify. Hemos lanzado +150 tiendas que gestiónan +300M EUR en revenue. Trabajamos con marcas como El Corte Inglés, Ecoalf y Singularu.
 - **Diferenciación:** Premier Partner (top tier), +42 proyectos Shopify Plus, clientes que facturan 15M EUR de media
 
 ---

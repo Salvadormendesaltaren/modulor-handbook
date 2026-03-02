@@ -13,7 +13,7 @@ Este Handbook nace para resolver un problema concreto: **que cualquier persona d
 - **Alineación interna.** Conocer la identidad, los servicios y el cliente ideal de cada boutique.
 - **Cross-selling.** Saber exactamente cuándo y cómo derivar oportunidades entre boutiques.
 - **Contexto para IAs.** Usar estos archivos como base de conocimiento en ChatGPT, Claude u otras herramientas de IA para generar propuestas, emails, presentaciones o análisis con contexto real del grupo.
-- **Onboarding.** Que las nuevas incorporaciones tengan una visión completa del ecosistema Modulor desde el primer día.
+- **Onboarding.** Que las nuevas incorporaciónes tengan una visión completa del ecosistema Modulor desde el primer día.
 
 ## Cómo usarlo
 

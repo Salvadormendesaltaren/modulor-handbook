@@ -4,7 +4,7 @@
 
 ---
 
-## 1. Identidad y Estrategia
+## 01. Identidad y Estrategia
 
 ### Datos básicos
 
@@ -47,7 +47,7 @@
 
 ---
 
-## 2. mendesaltaren Labs · 226
+## 02. mendesaltaren Labs · 226
 
 > "Nuestra práctica futura"
 
@@ -58,9 +58,9 @@
 - **Un blueprint del estudio**
 - **Una manera de trabajar** adaptada al nuevo contexto
 
-### Modelo 226 - Cómo funciona
+### Modelo 226 - Cómo funcióna
 
-Modelo de relación orientado a la innovación de negocio, que combina visión estratégica, arquitectura de negocio y funciona como piloto de experiencias.
+Modelo de relación orientado a la innovación de negocio, que combina visión estratégica, arquitectura de negocio y funcióna como piloto de experiencias.
 
 **Fase I — Estrategia** (1 semana a 1 trimestre)
 - Definición de visión, oportunidades y escenarios
@@ -80,7 +80,7 @@ Junto con **Tailor Hub**, diseñamos y activamos programas de innovación que co
 
 ---
 
-## 3. Servicios
+## 03. Servicios
 
 ### Business Design & Innovation
 
@@ -108,7 +108,7 @@ Junto con **Tailor Hub**, diseñamos y activamos programas de innovación que co
 
 ---
 
-## 4. Leadership Team
+## 04. Leadership Team
 
 | Rol | Persona |
 | --- | --- |
@@ -121,7 +121,7 @@ Junto con **Tailor Hub**, diseñamos y activamos programas de innovación que co
 
 ---
 
-## 5. Cliente Ideal
+## 05. Cliente Ideal
 
 ### Perfil de empresa
 
@@ -141,7 +141,7 @@ Junto con **Tailor Hub**, diseñamos y activamos programas de innovación que co
 
 ---
 
-## 6. Casos y Portfolio
+## 06. Casos y Portfolio
 
 ### Casos destacados
 
@@ -162,7 +162,7 @@ Inditex, Repsol, Comunidad de Madrid, Movistar Prosegur, UEFA, Bankia, Línea Di
 
 ---
 
-## 7. Cross-selling y Sinergias
+## 07. Cross-selling y Sinergias
 
 ### Cuándo derivar A mendesaltaren
 
@@ -193,7 +193,7 @@ Inditex, Repsol, Comunidad de Madrid, Movistar Prosegur, UEFA, Bankia, Línea Di
 
 ---
 
-## 8. Ventas y Comunicación
+## 08. Ventas y Comunicación
 
 ### Mensajes clave
 

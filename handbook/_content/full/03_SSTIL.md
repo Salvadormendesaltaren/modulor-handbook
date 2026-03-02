@@ -1,6 +1,6 @@
 # SSTIL
 
-> Agencia de marketing, comúnicación y creatividad
+> Agencia de marketing, comunicación y creatividad
 
 ---
 
@@ -11,8 +11,8 @@
 - **Nombre:** SSTIL
 - **Web:** [https://sstilagency.com](https://sstilagency.com)
 - **Submarca:** Minimum ([https://minimum.run](https://minimum.run)) - Growth studio
-- **Fundacion:** 2021
-- **Co-CEOs:** Paula Rodriguez y Sandra Ramiro
+- **Fundación:** 2021
+- **Co-CEOs:** Paula Rodríguez y Sandra Ramiro
 - **Sede:** Calle Hermanos Alvarez Quintero, 2, 28004 Madrid
 - **Empleados:** ~12 personas
 
@@ -23,10 +23,10 @@
 
 ### Posicionamiento
 
-- **Qué somos?** Agencia creativa multi-servicio donde estrategia, diseño, tecnologia y storytelling convergen
-- **Para quien?** Marcas que buscan relevancia sostenida, decisiones inteligentes y creatividad que genera resultados
-- **Que nos hace diferentes?**
-  - Enfoque en valor duradero vs campanas puntuales
+- **¿Qué somos?** Agencia creativa multi-servicio donde estrategia, diseño, tecnología y storytelling convergen
+- **¿Para quién?** Marcas que buscan relevancia sostenida, decisiones inteligentes y creatividad que genera resultados
+- **¿Qué nos hace diferentes?**
+  - Enfoque en valor duradero vs campañas puntuales
   - Creatividad orientada a resultados
   - Parte del grupo Modulor (sinergias con diseño, tech, e-commerce)
 
@@ -34,9 +34,9 @@
 
 | Aspecto | SSTIL | Minimum |
 |---|---|---|
-| **Foco** | Marketing, comúnicación integral, creatividad | Growth marketing, webs rapidas, performance |
-| **Servicios** | Social media, activaciones, eventos, PR | Webs Webflow, SEO/SEM, paid media |
-| **Cliente tipico** | Marcas establecidas, corporaciones | Startups, scaleups, tech |
+| **Foco** | Marketing, comunicación integral, creatividad | Growth marketing, webs rápidas, performance |
+| **Servicios** | Social media, activaciónes, eventos, PR | Webs Webflow, SEO/SEM, paid media |
+| **Cliente típico** | Marcas establecidas, corporaciones | Startups, scaleups, tech |
 | **Web** | [sstilagency.com](http://sstilagency.com) | [minimum.run](http://minimum.run) |
 
 *Nota: Minimum es la antigua marca de SSTIL. Sigue operando para captar leads que ejecutan SSTIL o Nocodehackers Solutions.*
@@ -56,11 +56,11 @@
 
 | Rol | Persona |
 |---|---|
-| Co-CEO | Paula Rodriguez |
+| Co-CEO | Paula Rodríguez |
 | Co-CEO | Sandra Ramiro |
 | Sales Manager | Emiliano Moretti |
 | Project Manager | Mia Escorihuela |
-| Lead Designer | Alba Rodriguez |
+| Lead Designer | Alba Rodríguez |
 
 ---
 
@@ -77,32 +77,32 @@
 
 ### SSTIL - Servicios principales
 
-| Servicio | Ticket típico | Duración | Descripcion |
+| Servicio | Ticket típico | Duración | Descripción |
 |---|---|---|---|
-| **Creative Direction** | EUR800/mes | Retainer mensual | Direccion creativa para campanas y marcas |
-| **Social Media Management** | EUR2,000-9,000/mes | Retainer mensual | Estrategia, contenido, community. Min EUR2k (seguimiento + paid pequeno), hasta EUR9k grandes clientes |
-| **Activations** | EUR1,000/mes | Retainer mensual | Activaciones de marca y experiencias |
-| **Content Creation** | EUR1,500/mes | Retainer mensual | Video, foto, graficas, animacion. 8-10 piezas/mes (2-3 videos + 5-7 visuales) |
+| **Creative Direction** | EUR800/mes | Retainer mensual | Dirección creativa para campañas y marcas |
+| **Social Media Management** | EUR2,000-9,000/mes | Retainer mensual | Estrategia, contenido, community. Min EUR2k (seguimiento + paid pequeño), hasta EUR9k grandes clientes |
+| **Activations** | EUR1,000/mes | Retainer mensual | Activaciónes de marca y experiencias |
+| **Content Creation** | EUR1,500/mes | Retainer mensual | Video, foto, gráficas, animación. 8-10 piezas/mes (2-3 videos + 5-7 visuales) |
 | **Digital Strategy** | EUR100/mes | Retainer mensual | Estrategia digital integral |
-| **Events** | Por definir | 4 semanas | Produccion y gestion de eventos |
+| **Events** | Por definir | 4 semanas | Producción y gestión de eventos |
 | **Branding** | EUR6,500 | 3-4 semanas | Identidad de marca (tactico). Para premium, derivar a mendesaltaren |
 
 **Entregables típicos servicio mensual completo:**
 - Estrategia mensual de contenido
-- 1 sesion produccion/mes (grabacion + fotografia)
+- 1 sesión producción/mes (grabación + fotografía)
 - 8-10 piezas/mes: 2-3 videos + 5-7 piezas visuales
 - Plan operativo RRSS
-- Reunion mensual + comúnicación continua Slack
+- Reunion mensual + comunicación continua Slack
 
 ---
 
 ### Minimum - Servicios principales
 
-| Servicio | Ticket típico | Duración | Descripcion |
+| Servicio | Ticket típico | Duración | Descripción |
 |---|---|---|---|
 | **Growth Strategy** | EUR1,500 | 4 semanas (one-shot) | Estrategia de crecimiento digital: web, content, SEO/SEM, social |
 | **Web Design & Development** | EUR17,000-24,000 | 12-14 semanas | Webs Webflow según complejidad (S/M/L/XL) |
-| **SEO/SEM** | EUR1,200/mes | Retainer mensual | Optimizacion organica y campanas pagadas |
+| **SEO/SEM** | EUR1,200/mes | Retainer mensual | Optimización organica y campañas pagadas |
 | **Social Media Strategy** | EUR1,200/mes | Retainer mensual | Estrategia redes sociales |
 
 ### Métricas Minimum
@@ -118,21 +118,21 @@
 
 - **Tamaño:** Marcas establecidas, corporaciones
 - **Sectores:** Lifestyle, fashion, food, hospitality, corporativo
-- **Presupuesto minimo:** >~EUR15k o retainers desde EUR2k/mes
+- **Presupuesto mínimo:** >~EUR15k o retainers desde EUR2k/mes
 
 ### Minimum - ICP
 
 - **Tamaño:** Startups, scaleups
 - **Sectores:** Tech, SaaS, Health, Energy, Finance, DTC
-- **Presupuesto minimo:** Webs desde EUR17k, retainers desde EUR1.2k/mes
+- **Presupuesto mínimo:** Webs desde EUR17k, retainers desde EUR1.2k/mes
 
 ### Triggers de compra
 
 - Lanzamiento de producto
 - Rebranding
 - Expansión a nuevo mercado
-- Ronda de financiacion
-- Necesidad de presencia digital rapida
+- Ronda de financiación
+- Necesidad de presencia digital rápida
 - Campanas estacionales
 
 ### Señales de fit
@@ -144,7 +144,7 @@
 
 **Red flags:**
 - Sin presupuesto definido
-- Expectativas de "viral organico"
+- Expectativas de "viral orgánico"
 - Sin producto/servicio claro
 
 ---
@@ -213,19 +213,19 @@ Iberia, Mango, Factorial, PagoNxt, Kpler, Urban X, Therapy Side, Kfund, Diamond 
 
 ### Cuándo derivar A SSTIL/Minimum
 
-| Senal | Desde | Derivar a |
+| Señal | Desde | Derivar a |
 |---|---|---|
 | Cliente necesita marketing/social | Cualquiera | SSTIL |
-| Cliente necesita web rapida | mendesaltaren, FIK | Minimum |
+| Cliente necesita web rápida | mendesaltaren, FIK | Minimum |
 | Cliente necesita paid media | Cualquiera | Minimum |
 | Startup necesita growth | Tailor Hub, Nocodehackers | Minimum |
-| Marca necesita activaciones | FIK | SSTIL |
+| Marca necesita activaciónes | FIK | SSTIL |
 
 ### Cuándo derivar DESDE SSTIL/Minimum
 
-| Senal | Hacia |
+| Señal | Hacia |
 |---|---|
-| Branding estrategico/premium | mendesaltaren |
+| Branding estratégico/premium | mendesaltaren |
 | Diseño de producto digital | mendesaltaren |
 | E-commerce Shopify | FIK |
 | Desarrollo de software/app | Tailor Hub |
@@ -233,10 +233,10 @@ Iberia, Mango, Factorial, PagoNxt, Kpler, Urban X, Therapy Side, Kfund, Diamond 
 
 ### Proyectos conjuntos típicos
 
-- **SSTIL + mendesaltaren:** Branding + lanzamiento y activacion
+- **SSTIL + mendesaltaren:** Branding + lanzamiento y activación
 - **SSTIL + FIK:** Marketing + tienda e-commerce
-- **Minimum + Nocodehackers:** Web + automatizaciónes
-- **Minimum + mendesaltaren:** Web rapida + diseño de producto posterior
+- **Minimum + Nocodehackers:** Web + automatizaciones
+- **Minimum + mendesaltaren:** Web rápida + diseño de producto posterior
 
 ---
 
@@ -244,7 +244,7 @@ Iberia, Mango, Factorial, PagoNxt, Kpler, Urban X, Therapy Side, Kfund, Diamond 
 
 ### Mensajes clave
 
-- **Elevator pitch SSTIL:** Somos una agencia creativa que construye marcas y experiencias que perduran. Combinamos estrategia, diseño, tecnologia y storytelling para generar valor sostenido.
+- **Elevator pitch SSTIL:** Somos una agencia creativa que construye marcas y experiencias que perduran. Combinamos estrategia, diseño, tecnología y storytelling para generar valor sostenido.
 - **Elevator pitch Minimum:** Somos un growth studio que combina diseño y marketing para ayudar a empresas ambiciosas a crecer más rápido. +300 proyectos, Official Webflow Partner.
 
 ---

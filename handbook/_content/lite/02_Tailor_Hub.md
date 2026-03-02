@@ -18,7 +18,7 @@
 
 - **Misión:** Construir sistemas que amplifiquen el impacto de las personas, impulsados por una cultura que nutre autonomía, innovación constante y excelencia sin atajos.
 - **Visión:** Un mundo donde la tecnología deja de ser un obstáculo y se convierte en un aliado invisible – claro, poderoso y profundamente humano.
-- **Tagline:** "An elite team of software engineers"
+- **Tagline:** "An élite team of software engineers"
 
 ### Posicionamiento
 
@@ -50,7 +50,7 @@
 | CCO | Simón G. Negrete |
 | Head of Engineering | Nikolaas Verlee |
 | Operations & Project Manager | Carolina Velo |
-| Senior Project Manager | Victor Rodriguez |
+| Senior Project Manager | Víctor Rodríguez |
 
 ### Sales Team
 
@@ -71,7 +71,6 @@
 ### Hiring 2026
 
 - **+9 billable people** objetivo de contratación
-- Coste estimado BDR Senior: ~€50k
 
 ---
 
@@ -114,7 +113,7 @@
 | **Desarrollo custom** | Desde €15k | A partir de €60/h |
 | **Desarrollo Mobile** | Desde €15k | A partir de €60/h |
 | **Proyectos IA/ML** | Desde €15k | A partir de €65/h |
-| **Staff augmentation** | - | 15% sobre bruto |
+| **Staff augmentation** | - | Consultar |
 | **Auditorías técnicas** | Desde €4k (1 semana) | - |
 
 ### Stack Tecnológico
@@ -141,7 +140,7 @@ Junto con **mendesaltaren**, diseñamos y activamos programas de innovación que
 - **Co-creation labs:** Alineamos perspectivas, identificamos oportunidades y damos forma a roadmaps accionables
 - **Technical audits:** Evaluamos arquitectura, datos y sistemas para asegurar escalabilidad y preparación para transformación AI-driven
 
-**Beneficio:** Este enfoque combinado ayuda a las organizaciones a pasar de la exploración a la ejecución con claridad, confianza e impacto medible.
+**Beneficio:** Este enfoque combinado ayuda a las organizaciónes a pasar de la exploración a la ejecución con claridad, confianza e impacto medible.
 
 ---
 
@@ -158,13 +157,13 @@ Junto con **mendesaltaren**, diseñamos y activamos programas de innovación que
 ### Perfil del decisor
 
 - **Cargo típico:** CTO, VP Engineering, CEO (startups), Director de IT
-- **Motivaciones:** Modernizar sistemas, integrar IA, escalar tecnología
+- **Motivaciónes:** Modernizar sistemas, integrar IA, escalar tecnología
 - **Frustraciones:** Equipos saturados, deuda técnica, falta de expertise en IA
 
 ### Triggers de compra
 
 - Necesidad de desarrollo de producto nuevo
-- Integración de IA en operaciones
+- Integración de IA en operaciónes
 - Modernización de sistemas legacy
 - Falta de capacidad en equipo interno
 - Auditoría técnica pre-inversión
@@ -193,7 +192,7 @@ Junto con **mendesaltaren**, diseñamos y activamos programas de innovación que
 | **Growth** | +40% |
 | **Profitability** | 10% |
 | **Revenue booked** | €1M expected |
-| **Nuevas contrataciones** | +9 billable people |
+| **Nuevas contrataciónes** | +9 billable people |
 
 ---
 
@@ -246,7 +245,7 @@ Audi Iberia, El Corte Inglés, Mahou, Inditex, Kutxa Bank, EY, Samsung, Tranxfer
 | Cliente necesita desarrollo custom enterprise | mendesaltaren, Nocodehackers |
 | Cliente necesita IA/ML avanzado | Cualquiera |
 | Proyecto demasiado complejo para no-code | Nocodehackers |
-| Integraciones complejas | FIK |
+| Integraciónes complejas | FIK |
 | Necesita apps móviles nativas | Cualquiera |
 
 ### Cuándo derivar DESDE Tailor Hub
@@ -279,7 +278,7 @@ Audi Iberia, El Corte Inglés, Mahou, Inditex, Kutxa Bank, EY, Samsung, Tranxfer
 
 - **Portfolio:** https://tailor-hub.com
 
-### Objeciones frecuentes
+### Objeciónes frecuentes
 
 | Objeción | Respuesta |
 | --- | --- |
@@ -296,7 +295,6 @@ Audi Iberia, El Corte Inglés, Mahou, Inditex, Kutxa Bank, EY, Samsung, Tranxfer
 | **Hiring & Talent Retention** | Escalar equipo manteniendo calidad |
 | **AI Impact** | Evolucionar capacidades de IA |
 | **Sales** | Abrir nuevas cuentas estratégicas |
-| **Salary Structure** | Estructura salarial competitiva |
 | **Growth & Culture** | Mantener cultura mientras se escala |
 
 ---

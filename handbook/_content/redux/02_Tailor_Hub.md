@@ -4,7 +4,7 @@
 
 ---
 
-## 1. Identidad y Estrategia
+## 01. Identidad y Estrategia
 
 ### Datos básicos
 
@@ -17,7 +17,7 @@
 
 - **Misión:** Construir sistemas que amplifiquen el impacto de las personas, impulsados por una cultura que nutre autonomía, innovación constante y excelencia sin atajos.
 - **Visión:** Un mundo donde la tecnología deja de ser un obstáculo y se convierte en un aliado invisible – claro, poderoso y profundamente humano.
-- **Tagline:** "An elite team of software engineers"
+- **Tagline:** "An élite team of software engineers"
 
 ### Posicionamiento
 
@@ -38,7 +38,7 @@
 
 ---
 
-## 2. Leadership Team
+## 02. Leadership Team
 
 | Rol | Persona |
 | --- | --- |
@@ -48,7 +48,7 @@
 
 ---
 
-## 3. Servicios
+## 03. Servicios
 
 ### Custom Software Development
 
@@ -83,7 +83,7 @@
 
 ---
 
-## 4. Lab 226 - Servicio Combinado con Modulor
+## 04. Lab 226 - Servicio Combinado con Modulor
 
 ### Innovation, Strategy & Technical Audit
 
@@ -96,7 +96,7 @@ Junto con **mendesaltaren**, diseñamos y activamos programas de innovación que
 
 ---
 
-## 5. Cliente Ideal
+## 05. Cliente Ideal
 
 ### Perfil de empresa
 
@@ -108,14 +108,14 @@ Junto con **mendesaltaren**, diseñamos y activamos programas de innovación que
 ### Triggers de compra
 
 - Necesidad de desarrollo de producto nuevo
-- Integración de IA en operaciones
+- Integración de IA en operaciónes
 - Modernización de sistemas legacy
 - Falta de capacidad en equipo interno
 - Auditoría técnica pre-inversión
 
 ---
 
-## 6. Cuentas y Portfolio
+## 06. Cuentas y Portfolio
 
 ### Key Accounts
 
@@ -140,7 +140,7 @@ Audi Iberia, El Corte Inglés, Mahou, Inditex, Kutxa Bank, EY, Samsung, Tranxfer
 
 ---
 
-## 7. Cross-selling y Sinergias
+## 07. Cross-selling y Sinergias
 
 ### Cuándo derivar A Tailor Hub
 
@@ -149,7 +149,7 @@ Audi Iberia, El Corte Inglés, Mahou, Inditex, Kutxa Bank, EY, Samsung, Tranxfer
 | Cliente necesita desarrollo custom enterprise | mendesaltaren, Nocodehackers |
 | Cliente necesita IA/ML avanzado | Cualquiera |
 | Proyecto demasiado complejo para no-code | Nocodehackers |
-| Integraciones complejas | FIK |
+| Integraciónes complejas | FIK |
 | Necesita apps móviles nativas | Cualquiera |
 
 ### Cuándo derivar DESDE Tailor Hub
@@ -171,7 +171,7 @@ Audi Iberia, El Corte Inglés, Mahou, Inditex, Kutxa Bank, EY, Samsung, Tranxfer
 
 ---
 
-## 8. Ventas
+## 08. Ventas
 
 ### Mensajes clave
 

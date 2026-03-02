@@ -4,7 +4,7 @@
 
 ---
 
-## 1. Identidad del Grupo
+## 01. Identidad del Grupo
 
 ### Datos básicos
 
@@ -15,11 +15,11 @@
 
 ### Visión
 
-Redefinir cómo las organizaciones más ambiciosas del mundo diseñan, construyen y crecen, liderando el progreso creativo y tecnológico.
+Redefinir cómo las organizaciónes más ambiciosas del mundo diseñan, construyen y crecen, liderando el progreso creativo y tecnológico.
 
 ### Misión
 
-Conectamos ideas, personas y tecnología a través de estudios especializados para construir soluciones que hacen avanzar a las organizaciones. Creemos que el mejor trabajo ocurre cuando estrategia, creatividad y tecnología se construyen juntas — no por separado. Trabajamos codo a codo con las organizaciones que están dando forma al mañana, convirtiendo innovación en producto, marca y experiencia.
+Conectamos ideas, personas y tecnología a través de estudios especializados para construir soluciones que hacen avanzar a las organizaciónes. Creemos que el mejor trabajo ocurre cuando estrategia, creatividad y tecnología se construyen juntas — no por separado. Trabajamos codo a codo con las organizaciónes que están dando forma al mañana, convirtiendo innovación en producto, marca y experiencia.
 
 ### Elevator pitch
 
@@ -27,15 +27,15 @@ Modulor Studios es un grupo de boutiques especializadas en diseño, tecnología,
 
 ---
 
-## 2. Mapa de Boutiques
+## 02. Mapa de Boutiques
 
 | Boutique | Especialización | CEO | Web |
 | --- | --- | --- | --- |
 | **mendesaltaren** | Diseño digital y branding | Sara Rivera | mendesaltaren.com |
 | **Tailor Hub** | Desarrollo software, IA y Mobile Apps | Diego Méndez | tailor-hub.com |
 | **FIK** | Desarrollo Shopify (Premier Partner) | Bill Murphy | fik.life |
-| **SSTIL** | Marketing y comunicación | Paula Rodriguez + Sandra Ramiro | sstilagency.com |
-| **Minimum** | Growth marketing (marca de SSTIL) | Paula Rodriguez + Sandra Ramiro | minimum.run |
+| **SSTIL** | Marketing y comunicación | Paula Rodríguez + Sandra Ramiro | sstilagency.com |
+| **Minimum** | Growth marketing (marca de SSTIL) | Paula Rodríguez + Sandra Ramiro | minimum.run |
 | **Nocodehackers** | Formación No-code/IA + Agencia | Alex Vaughtton | nocodehackers.es |
 
 ### Especialización por boutique
@@ -57,7 +57,7 @@ Modulor Studios es un grupo de boutiques especializadas en diseño, tecnología,
 
 ---
 
-## 3. Governance y Liderazgo
+## 03. Governance y Liderazgo
 
 ### Roles corporativos (Modulor central)
 
@@ -75,12 +75,12 @@ Modulor Studios es un grupo de boutiques especializadas en diseño, tecnología,
 | mendesaltaren | Sara Rivera |
 | Tailor Hub | Diego Méndez |
 | FIK | Bill Murphy |
-| SSTIL | Paula Rodriguez + Sandra Ramiro |
+| SSTIL | Paula Rodríguez + Sandra Ramiro |
 | Nocodehackers | Alex Vaughtton |
 
 ---
 
-## 4. Matriz de Derivación de Leads
+## 04. Matriz de Derivación de Leads
 
 | Si el lead necesita... | Derivar a... |
 | --- | --- |
@@ -93,7 +93,7 @@ Modulor Studios es un grupo de boutiques especializadas en diseño, tecnología,
 | E-commerce Shopify | **FIK** |
 | Migración a Shopify Plus | **FIK** |
 | Marketing/Social media | **SSTIL** |
-| Activaciones/Eventos | **SSTIL** |
+| Activaciónes/Eventos | **SSTIL** |
 | Growth marketing | **Minimum** |
 | Webs rápidas (Webflow) | **Minimum** |
 | Automatizaciones | **Nocodehackers** |
@@ -103,13 +103,13 @@ Modulor Studios es un grupo de boutiques especializadas en diseño, tecnología,
 
 ---
 
-## 5. Combinaciones Ganadoras
+## 05. Combinaciones Ganadoras
 
 ### Lab 226: Innovation + Strategy + Technical Audit
 
 1. **mendesaltaren** → Visión estratégica, business design, co-creation labs
 2. **Tailor Hub** → Technical audits (arquitectura, datos, sistemas), AI-readiness
-3. **Nocodehackers** → Prototipado funcional, MVPs rápidos, interfaces ágiles
+3. **Nocodehackers** → Prototipado funciónal, MVPs rápidos, interfaces ágiles
 4. **Resultado** → Roadmaps accionables para transformación AI-driven
 
 ### Proyecto integral de producto digital
@@ -140,7 +140,7 @@ Modulor Studios es un grupo de boutiques especializadas en diseño, tecnología,
 
 ---
 
-## 6. Herramientas de Grupo
+## 06. Herramientas de Grupo
 
 | Sistema | Para qué | Quién lo usa |
 | --- | --- | --- |
@@ -152,7 +152,7 @@ Modulor Studios es un grupo de boutiques especializadas en diseño, tecnología,
 
 ---
 
-## 7. Clientes del Grupo
+## 07. Clientes del Grupo
 
 ### Enterprise / Corporate
 

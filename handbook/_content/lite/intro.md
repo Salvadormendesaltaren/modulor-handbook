@@ -1,6 +1,6 @@
 # Handbook Modulor Studios
 
-> La base de conocimiento estratégica del grupo Modulor — identidad, operaciones, financieros y gobernanza de las seis boutiques.
+> La base de conocimiento estratégica del grupo Modulor — identidad, operaciónes, financieros y gobernanza de las seis boutiques.
 
 ## Por qué existe este Handbook
 
@@ -13,7 +13,7 @@ Este Handbook centraliza el conocimiento del grupo para facilitar la alineación
 - **Gobernanza y estrategia.** Visión consolidada de financieros, objetivos y roadmap del grupo.
 - **Cross-selling.** Matrices de derivación claras entre boutiques.
 - **Contexto para IAs.** Base de conocimiento descargable para ChatGPT, Claude y otras herramientas.
-- **Onboarding.** Contexto completo para nuevas incorporaciones al equipo directivo.
+- **Onboarding.** Contexto completo para nuevas incorporaciónes al equipo directivo.
 
 ## Versiones del contenido
 

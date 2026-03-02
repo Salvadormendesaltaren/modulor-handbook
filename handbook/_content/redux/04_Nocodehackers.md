@@ -4,7 +4,7 @@
 
 ---
 
-## 1. Identidad y Estrategia
+## 01. Identidad y Estrategia
 
 ### Datos básicos
 
@@ -57,7 +57,7 @@
 
 ---
 
-## 2. Leadership Team
+## 02. Leadership Team
 
 | Rol | Persona |
 | --- | --- |
@@ -66,7 +66,7 @@
 
 ---
 
-## 3. Servicios
+## 03. Servicios
 
 ### FORMACIÓN (Academia)
 
@@ -111,7 +111,7 @@
 
 #### Soluciones con IA
 
-- Implementación de IA en procesos con OpenAI, Claude, integraciones custom
+- Implementación de IA en procesos con OpenAI, Claude, integraciónes custom
 
 ### Stack Tecnológico
 
@@ -126,7 +126,7 @@
 
 ---
 
-## 4. Cliente Ideal
+## 04. Cliente Ideal
 
 ### Formación - ICP
 
@@ -149,7 +149,7 @@
 
 ---
 
-## 5. Casos y Portfolio
+## 05. Casos y Portfolio
 
 ### Casos Agencia destacados
 
@@ -160,7 +160,7 @@
 
 ---
 
-## 6. Cross-selling y Sinergias
+## 06. Cross-selling y Sinergias
 
 ### Cuándo derivar A Nocodehackers
 
@@ -191,7 +191,7 @@
 
 ---
 
-## 7. Ventas
+## 07. Ventas
 
 ### Mensajes clave
 

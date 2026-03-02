@@ -101,9 +101,9 @@
 | **Práctica** | Metodología y procesos |
 | **Cultura** | Valores y dinámicas de equipo |
 
-### Modelo 226 - Cómo funciona
+### Modelo 226 - Cómo funcióna
 
-Modelo de relación orientado a la innovación de negocio, que combina visión estratégica, arquitectura de negocio y funciona como piloto de experiencias.
+Modelo de relación orientado a la innovación de negocio, que combina visión estratégica, arquitectura de negocio y funcióna como piloto de experiencias.
 
 **Fase I — Estrategia** (1 semana a 1 trimestre)
 - Definición de visión, oportunidades y escenarios
@@ -229,7 +229,7 @@ Junto con **Tailor Hub**, diseñamos y activamos programas de innovación que co
 ### Perfil del decisor
 
 - **Cargo típico:** CPO, Head of Product, CEO (startups), Director de Innovación
-- **Motivaciones:** Diferenciarse, profesionalizar producto, escalar
+- **Motivaciónes:** Diferenciarse, profesionalizar producto, escalar
 - **Frustraciones:** Equipos internos saturados, falta de visión estratégica
 
 ### Triggers de compra

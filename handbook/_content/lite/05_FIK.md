@@ -80,7 +80,7 @@
 - **Shopify Experts:** 2 (Brian, Pablo)
 - **Frontend Developers:** 2 (Jose Luis, Noemi)
 - **Backend Developer:** 1 (Enrique)
-- **Certificaciones equipo:** Shopify Partner certifications
+- **Certificaciónes equipo:** Shopify Partner certifications
 
 ### Contrataciones previstas 2026
 
@@ -115,7 +115,7 @@
 - **Descripción:** Fundamentos de medición y programa de CRO
 - **Incluye:** Tracking, dashboards, attribution readiness, CRO + experimentación
 
-### Replatforming / Migraciones
+### Replatforming / Migraciónes
 
 - **Descripción:** Migración completa de infraestructura e-commerce a Shopify
 - **Desde:** Magento, WooCommerce, PrestaShop, Salesforce Commerce, etc.
@@ -140,7 +140,7 @@
 
 ### E-commerce Consultancy
 
-- **Descripción:** Optimización de operaciones y logística e-commerce
+- **Descripción:** Optimización de operaciónes y logística e-commerce
 - **Incluye:** Selección de stack tecnológico, colaboración con partners
 
 ### Platform Integrations
@@ -148,7 +148,7 @@
 - **Descripción:** Conectores con sistemas empresariales
 - **ERP:** SAP, Navision, Business Central, NetSuite, Odoo
 - **CRM:** Salesforce
-- **Marketplaces:** Integraciones multi-canal
+- **Marketplaces:** Integraciónes multi-canal
 
 ### Analytics & Data
 
@@ -158,7 +158,7 @@
 ### Shopify POS
 
 - **Descripción:** Estrategia omnicanal con punto de venta físico
-- **Incluye:** Migraciones de POS, consultoría POS, estrategia omnicanal
+- **Incluye:** Migraciónes de POS, consultoría POS, estrategia omnicanal
 
 ### Shopify Plus Training
 
@@ -247,8 +247,8 @@
 ### Perfil del decisor
 
 - **Cargo típico:** CEO, CMO, E-commerce Manager, Director Digital
-- **Motivaciones:** Escalar ventas online, mejorar conversión, internacionalizar
-- **Frustraciones:** Plataforma actual limitante, operaciones manuales, falta de omnicanalidad
+- **Motivaciónes:** Escalar ventas online, mejorar conversión, internacionalizar
+- **Frustraciones:** Plataforma actual limitante, operaciónes manuales, falta de omnicanalidad
 
 ### Triggers de compra
 
@@ -320,7 +320,7 @@ Telefónica, El Corte Inglés, Sony Music, Bimani, Milbby, Hoff, Mas'cob, Nanima
 
 - **Tiendas lanzadas:** 150+
 - **Proyectos Shopify Plus:** 30+
-- **Revenue gestionado por clientes:** +300M€
+- **Revenue gestiónado por clientes:** +300M€
 
 ### Partners tecnológicos
 
@@ -344,7 +344,7 @@ Klaviyo, Yotpo, Narvar, Sendcloud, ReturnGo, Moddo, Nosto, Klarna, Synerise, Rev
 | Señal | Hacia |
 | --- | --- |
 | Cliente necesita branding/diseño UX | mendesaltaren |
-| Integraciones muy complejas | Tailor Hub |
+| Integraciónes muy complejas | Tailor Hub |
 | Cliente necesita marketing/social | SSTIL/Minimum |
 | Automatizaciones operativas | Nocodehackers |
 
@@ -352,7 +352,7 @@ Klaviyo, Yotpo, Narvar, Sendcloud, ReturnGo, Moddo, Nosto, Klarna, Synerise, Rev
 
 - **FIK + mendesaltaren:** Tienda Shopify + branding/UX premium
 - **FIK + SSTIL:** Tienda + marketing de lanzamiento
-- **FIK + Nocodehackers:** Tienda + automatizaciones/integraciones
+- **FIK + Nocodehackers:** Tienda + automatizaciones/integraciónes
 - **FIK + Tailor Hub:** Tienda + backend complejo
 
 ---
@@ -361,7 +361,7 @@ Klaviyo, Yotpo, Narvar, Sendcloud, ReturnGo, Moddo, Nosto, Klarna, Synerise, Rev
 
 ### Mensajes clave
 
-- **Elevator pitch:** Somos Shopify Premier Partner con +10 años de experiencia exclusiva en Shopify. Hemos lanzado +150 tiendas que gestionan +300M€ en revenue. Trabajamos con marcas como El Corte Inglés, Ecoalf y Singularu.
+- **Elevator pitch:** Somos Shopify Premier Partner con +10 años de experiencia exclusiva en Shopify. Hemos lanzado +150 tiendas que gestiónan +300M€ en revenue. Trabajamos con marcas como El Corte Inglés, Ecoalf y Singularu.
 - **Diferenciación:** Premier Partner (top tier), +42 proyectos Shopify Plus, clientes que facturan 15M€ de media
 
 ---

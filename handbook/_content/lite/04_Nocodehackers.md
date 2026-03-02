@@ -95,7 +95,7 @@
 
 | Rol | Persona | Notas |
 | --- | --- | --- |
-| Designer/Developer | Nikita | Ucraniano, ~€40k. Para Framer, liberar a Alex de maquetación |
+| Designer/Developer | Nikita | Para Framer, liberar a Alex de maquetación |
 | Sales (part-time) | Emi | Compartido, traer más clientes MVP/Web |
 
 ---
@@ -166,7 +166,7 @@
 #### Soluciones con IA
 
 - **Descripción:** Implementación de IA en procesos
-- **Tecnologías:** OpenAI, Claude, integraciones custom
+- **Tecnologías:** OpenAI, Claude, integraciónes custom
 
 ### Stack Tecnológico
 
@@ -241,7 +241,7 @@
 
 - Proyecto requiere escalabilidad enterprise
 - Necesitan desarrollo custom complejo
-- Integraciones muy específicas con sistemas legacy
+- Integraciónes muy específicas con sistemas legacy
 - IA/ML avanzado (modelos custom)
 
 ---
@@ -271,7 +271,7 @@
 
 #### SpainFreeTours - Automatización
 - **Contexto:** Empresa de free tours
-- **Qué hicimos:** Automatización de operaciones
+- **Qué hicimos:** Automatización de operaciónes
 - **Resultado:** +200,000 free tours/año automatizados
 - **Tecnologías:** Make, Airtable
 
@@ -311,7 +311,7 @@
 ### Sinergia con Lab 226
 
 NCH como departamento de innovación del grupo:
-- Prototipado funcional (vs Figma de mendesaltaren)
+- Prototipado funciónal (vs Figma de mendesaltaren)
 - Colaboración con Tailor Hub: frontend ágil + backend complejo
 - Posicionamiento: soluciones completas desde prototipo hasta producción
 
@@ -324,7 +324,7 @@ NCH como departamento de innovación del grupo:
 - **Elevator pitch Formación:** Somos la comunidad más grande de no-code en español. +10,000 alumnos han aprendido a construir productos sin programar con nuestros cursos de IA, automatizaciones y desarrollo de apps.
 - **Elevator pitch Agencia:** Construimos MVPs, apps y automatizaciones sin código en semanas, no meses. Hemos trabajado con Iberia, Santalucía, y construido apps que llegaron al Top 7 de App Store.
 
-### Objeciones frecuentes
+### Objeciónes frecuentes
 
 | Objeción | Respuesta |
 | --- | --- |

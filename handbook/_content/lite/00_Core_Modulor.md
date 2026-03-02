@@ -16,11 +16,11 @@
 
 ### Visión
 
-Redefinir cómo las organizaciones más ambiciosas del mundo diseñan, construyen y crecen, liderando el progreso creativo y tecnológico.
+Redefinir cómo las organizaciónes más ambiciosas del mundo diseñan, construyen y crecen, liderando el progreso creativo y tecnológico.
 
 ### Misión
 
-Conectamos ideas, personas y tecnología a través de estudios especializados para construir soluciones que hacen avanzar a las organizaciones. Creemos que el mejor trabajo ocurre cuando estrategia, creatividad y tecnología se construyen juntas — no por separado. Trabajamos codo a codo con las organizaciones que están dando forma al mañana, convirtiendo innovación en producto, marca y experiencia.
+Conectamos ideas, personas y tecnología a través de estudios especializados para construir soluciones que hacen avanzar a las organizaciónes. Creemos que el mejor trabajo ocurre cuando estrategia, creatividad y tecnología se construyen juntas — no por separado. Trabajamos codo a codo con las organizaciónes que están dando forma al mañana, convirtiendo innovación en producto, marca y experiencia.
 
 ### Estrategia
 
@@ -52,8 +52,8 @@ Modulor Studios es un grupo de boutiques especializadas en diseño, tecnología,
 | **mendesaltaren** | Diseño digital y branding | Sara Rivera | 50 | mendesaltaren.com |
 | **Tailor Hub** | Desarrollo software, IA y Mobile Apps | Diego Méndez | 31 | tailor-hub.com |
 | **FIK** | Desarrollo Shopify (Premier Partner) | Bill Murphy | 6 | fik.life |
-| **SSTIL** | Marketing y comunicación | Paula Rodriguez + Sandra Ramiro | 19 | sstilagency.com |
-| **Minimum** | Growth marketing (marca de SSTIL) | Paula Rodriguez + Sandra Ramiro | (incl. SSTIL) | minimum.run |
+| **SSTIL** | Marketing y comunicación | Paula Rodríguez + Sandra Ramiro | 19 | sstilagency.com |
+| **Minimum** | Growth marketing (marca de SSTIL) | Paula Rodríguez + Sandra Ramiro | (incl. SSTIL) | minimum.run |
 | **Nocodehackers** | Formación No-code/IA + Agencia | Alex Vaughtton | 10 | nocodehackers.es |
 
 ### Especialización por boutique
@@ -91,14 +91,14 @@ Modulor Studios es un grupo de boutiques especializadas en diseño, tecnología,
 | Tailor Hub | CCO | Simón G. Negrete |
 | Tailor Hub | Head of Engineering | Nikolaas Verlee |
 | Tailor Hub | Operations & Project Manager | Carolina Velo |
-| Tailor Hub | Senior Project Manager | Victor Rodriguez |
+| Tailor Hub | Senior Project Manager | Víctor Rodríguez |
 | FIK | CEO | Bill Murphy |
 | FIK | COO | Brian Van Andel |
-| SSTIL | Co-CEO | Paula Rodriguez |
+| SSTIL | Co-CEO | Paula Rodríguez |
 | SSTIL | Co-CEO | Sandra Ramiro |
 | SSTIL | Sales Manager | Emiliano Moretti |
 | SSTIL | Project Manager | Mia Escorihuela |
-| SSTIL | Lead Designer | Alba Rodriguez |
+| SSTIL | Lead Designer | Alba Rodríguez |
 | Nocodehackers | CEO | Alex Vaughtton |
 | Nocodehackers | CMO | Tomás Alonso |
 | Nocodehackers | Ops | Stefano Becerra |
@@ -145,7 +145,7 @@ Modulor Studios es un grupo de boutiques especializadas en diseño, tecnología,
 
 ### Tech (Tecnología e IA)
 
-Modulor Tech es la iniciativa para integrar IA de forma estructural en las operaciones del grupo.
+Modulor Tech es la iniciativa para integrar IA de forma estructural en las operaciónes del grupo.
 
 **Logros:**
 - Diagnóstico claro y compartido: Problema no es tecnológico, es estructural
@@ -279,7 +279,7 @@ Modulor Tech es la iniciativa para integrar IA de forma estructural en las opera
 | E-commerce Shopify | **FIK** |
 | Migración a Shopify Plus | **FIK** |
 | Marketing/Social media | **SSTIL** |
-| Activaciones/Eventos | **SSTIL** |
+| Activaciónes/Eventos | **SSTIL** |
 | Growth marketing | **Minimum** |
 | Webs rápidas (Webflow) | **Minimum** |
 | Automatizaciones | **Nocodehackers** |
@@ -295,7 +295,7 @@ Modulor Tech es la iniciativa para integrar IA de forma estructural en las opera
 
 1. **mendesaltaren** → Visión estratégica, business design, co-creation labs
 2. **Tailor Hub** → Technical audits (arquitectura, datos, sistemas), AI-readiness
-3. **Nocodehackers** → Prototipado funcional, MVPs rápidos, interfaces ágiles
+3. **Nocodehackers** → Prototipado funciónal, MVPs rápidos, interfaces ágiles
 4. **Resultado** → Roadmaps accionables para transformación AI-driven
 
 ### Proyecto integral de producto digital

@@ -4,14 +4,14 @@
 
 ---
 
-## 1. Identidad y Estrategia
+## 01. Identidad y Estrategia
 
 ### Datos básicos
 
 - **Nombre:** SSTIL
 - **Web:** https://sstilagency.com
 - **Submarca:** Minimum (https://minimum.run) - Growth studio
-- **Co-CEOs:** Paula Rodriguez y Sandra Ramiro
+- **Co-CEOs:** Paula Rodríguez y Sandra Ramiro
 - **Sede:** Madrid
 
 ### Propósito
@@ -33,7 +33,7 @@
 | Aspecto | SSTIL | Minimum |
 | --- | --- | --- |
 | **Foco** | Marketing, comunicación integral, creatividad | Growth marketing, webs rápidas, performance |
-| **Servicios** | Social media, activaciones, eventos, PR | Webs Webflow, SEO/SEM, paid media |
+| **Servicios** | Social media, activaciónes, eventos, PR | Webs Webflow, SEO/SEM, paid media |
 | **Cliente típico** | Marcas establecidas, corporaciones | Startups, scaleups, tech |
 | **Web** | sstilagency.com | minimum.run |
 
@@ -46,16 +46,16 @@
 
 ---
 
-## 2. Leadership Team
+## 02. Leadership Team
 
 | Rol | Persona |
 | --- | --- |
-| Co-CEO | Paula Rodriguez |
+| Co-CEO | Paula Rodríguez |
 | Co-CEO | Sandra Ramiro |
 
 ---
 
-## 3. Servicios
+## 03. Servicios
 
 ### SSTIL - Servicios principales
 
@@ -63,7 +63,7 @@
 | --- | --- |
 | **Creative Direction** | Dirección creativa para campañas y marcas |
 | **Social Media Management** | Estrategia, contenido, community management |
-| **Activations** | Activaciones de marca y experiencias |
+| **Activations** | Activaciónes de marca y experiencias |
 | **Content Creation** | Vídeo, foto, gráficas, animación |
 | **Digital Strategy** | Estrategia digital integral |
 | **Events** | Producción y gestión de eventos |
@@ -85,7 +85,7 @@
 
 ---
 
-## 4. Cliente Ideal
+## 04. Cliente Ideal
 
 ### SSTIL - ICP
 
@@ -108,7 +108,7 @@
 
 ---
 
-## 5. Casos y Portfolio
+## 05. Casos y Portfolio
 
 ### Casos Minimum destacados
 
@@ -128,7 +128,7 @@ Iberia, Mango, Factorial, PagoNxt, Kpler, Urban X, Therapy Side, Kfund, Diamond 
 
 ---
 
-## 6. Cross-selling y Sinergias
+## 06. Cross-selling y Sinergias
 
 ### Cuándo derivar A SSTIL/Minimum
 
@@ -138,7 +138,7 @@ Iberia, Mango, Factorial, PagoNxt, Kpler, Urban X, Therapy Side, Kfund, Diamond 
 | Cliente necesita web rápida | mendesaltaren, FIK | Minimum |
 | Cliente necesita paid media | Cualquiera | Minimum |
 | Startup necesita growth | Tailor Hub, Nocodehackers | Minimum |
-| Marca necesita activaciones | FIK | SSTIL |
+| Marca necesita activaciónes | FIK | SSTIL |
 
 ### Cuándo derivar DESDE SSTIL/Minimum
 
@@ -159,7 +159,7 @@ Iberia, Mango, Factorial, PagoNxt, Kpler, Urban X, Therapy Side, Kfund, Diamond 
 
 ---
 
-## 7. Ventas
+## 07. Ventas
 
 ### Mensajes clave
 

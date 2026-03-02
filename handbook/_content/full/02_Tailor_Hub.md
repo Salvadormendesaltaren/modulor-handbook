@@ -11,23 +11,23 @@
 - **Nombre:** Tailor Hub
 - **Web:** [https://tailor-hub.com](https://tailor-hub.com)
 - **Sede:** Madrid
-- **CEO:** Diego Mendez
-- **CCO:** Simon G. Negrete
+- **CEO:** Diego Méndez
+- **CCO:** Simón G. Negrete
 
 ### Propósito
 
-- **Misión:** Construir sistemas que amplifiquen el impacto de las personas, impulsados por una cultura que nutre autonomia, innovacion constante y excelencia sin atajos.
-- **Visión:** Un mundo donde la tecnologia deja de ser un obstaculo y se convierte en un aliado invisible — claro, poderoso y profundamente humano.
-- **Tagline:** "An elite team of software engineers"
+- **Misión:** Construir sistemas que amplifiquen el impacto de las personas, impulsados por una cultura que nutre autonomía, innovación constante y excelencia sin atajos.
+- **Visión:** Un mundo donde la tecnología deja de ser un obstáculo y se convierte en un aliado invisible — claro, poderoso y profundamente humano.
+- **Tagline:** "An élite team of software engineers"
 
 ### Posicionamiento
 
-- **Qué somos?** Boutique de desarrollo de software e inteligencia artificial
-- **Para quien?** Corporaciones y startups que necesitan desarrollo enterprise o IA
-- **Evolución estrategica:** De ejecutores tecnicos -> A partners estrategicos (Strategy + Technology)
-- **Que nos hace diferentes?**
-  - Equipo senior de ingenieria de elite
-  - Especializacion en IA y LLMs
+- **¿Qué somos?** Boutique de desarrollo de software e inteligencia artificial
+- **¿Para quién?** Corporaciones y startups que necesitan desarrollo enterprise o IA
+- **Evolución estratégica:** De ejecutores técnicos -> A partners estratégicos (Strategy + Technology)
+- **¿Qué nos hace diferentes?**
+  - Equipo senior de ingeniería de élite
+  - Especialización en IA y LLMs
   - Clientes enterprise de primer nivel
   - Clean execution, strong communication, results that ship
 
@@ -35,7 +35,7 @@
 
 - Diseño UX/UI (derivamos a [mendesaltaren](#mendesaltaren))
 - E-commerce Shopify (derivamos a [FIK](#fik))
-- Proyectos pequenos/MVPs rápidos (derivamos a [Nocodehackers](#nocodehackers))
+- Proyectos pequeños/MVPs rápidos (derivamos a [Nocodehackers](#nocodehackers))
 - Marketing (derivamos a [SSTIL](#sstil))
 
 ---
@@ -46,19 +46,19 @@
 
 | Rol | Persona |
 |---|---|
-| CEO | Diego Mendez |
-| CCO | Simon G. Negrete |
+| CEO | Diego Méndez |
+| CCO | Simón G. Negrete |
 | Head of Engineering | Nikolaas Verlee |
 | Operations & Project Manager | Carolina Velo |
-| Senior Project Manager | Victor Rodriguez |
+| Senior Project Manager | Víctor Rodríguez |
 
 ### Sales Team
 
 | Area | Responsable |
 |---|---|
-| Nacional | Simon |
+| Nacional | Simón |
 | Internacional | Diego, Adrian B |
-| Transversal | BDR Senior (nueva incorporacion 2026) |
+| Transversal | BDR Senior (nueva incorporación 2026) |
 
 ### Comms Team
 
@@ -70,8 +70,7 @@
 
 ### Hiring 2026
 
-- **+9 billable people** objetivo de contratacion
-- Coste estimado BDR Senior: ~EUR50k
+- **+9 billable people** objetivo de contratación
 
 ---
 
@@ -79,28 +78,28 @@
 
 ### Custom Software Development
 
-- **Descripcion:** Plataformas web y sistemas digitales end-to-end construidos con arquitecturas escalables, codigo limpio y ejecucion respetuosa con el diseño.
+- **Descripción:** Plataformas web y sistemas digitales end-to-end construidos con arquitecturas escalables, código limpio y ejecución respetuosa con el diseño.
 - **Problema que resuelve:** Necesidad de software personalizado que no existe en el mercado
 - **Incluye:** Arquitectura, desarrollo backend/frontend, QA, deployment
 - **Partner externo:** KROMODEVS
 
 ### Mobile Apps Development
 
-- **Descripcion:** Aplicaciónes nativas y cross-platform disenadas para entregar experiencias de usuario fluidas, alto rendimiento y fiabilidad tecnica.
+- **Descripción:** Aplicaciones nativas y cross-platform diseñadas para entregar experiencias de usuario fluidas, alto rendimiento y fiabilidad técnica.
 - **Problema que resuelve:** Necesidad de apps móviles profesionales con UX excelente
 - **Incluye:** Desarrollo nativo, React Native, Flutter, QA mobile
 - **Partner externo:** RUDO APPS
 
 ### AI & Data Solutions
 
-- **Descripcion:** Implementacion segura de inteligencia artificial y analisis de datos avanzado para optimizar procesos y mejorar la toma de decisiones.
+- **Descripción:** Implementación segura de inteligencia artificial y análisis de datos avanzado para optimizar procesos y mejorar la toma de decisiones.
 - **Problema que resuelve:** Empresas que quieren aprovechar IA pero no saben como
-- **Incluye:** Integracion LLMs, data engineering, ML, automatización inteligente
+- **Incluye:** Integración LLMs, data engineering, ML, automatización inteligente
 
 ### B2B Training & Consulting
 
-- **Descripcion:** Code reviews, rescate de proyectos bloqueados, roadmaps tecnicos y alineacion de producto.
-- **Problema que resuelve:** Deuda tecnica, arquitectura obsoleta, equipos sin formación
+- **Descripción:** Code reviews, rescate de proyectos bloqueados, roadmaps técnicos y alineación de producto.
+- **Problema que resuelve:** Deuda técnica, arquitectura obsoleta, equipos sin formación
 - **Incluye:** Tech audits, formación adaptada, product strategy
 
 ### Partner para DevOps & Infra
@@ -114,12 +113,12 @@
 | **Desarrollo custom** | Desde EUR15k | A partir de EUR60/h |
 | **Desarrollo Mobile** | Desde EUR15k | A partir de EUR60/h |
 | **Proyectos IA/ML** | Desde EUR15k | A partir de EUR65/h |
-| **Staff augmentation** | - | 15% sobre bruto |
-| **Auditorias tecnicas** | Desde EUR4k (1 semana) | - |
+| **Staff augmentation** | - | Consultar |
+| **Auditorías técnicas** | Desde EUR4k (1 semana) | - |
 
 ### Stack Tecnológico
 
-| Categoria | Tecnologias |
+| Categoría | Tecnologias |
 |---|---|
 | **Front-end** | React JS, Next JS, Vue JS, Angular, Tailwind CSS, TypeScript |
 | **Mobile App** | React Native, Flutter, Expo, Ionic, Kotlin, Swift |
@@ -134,13 +133,13 @@
 
 ### Innovation, Strategy & Technical Audit
 
-Junto con **mendesaltaren**, disenamos y activamos programas de innovacion que conectan visión estrategica, diseño de negocio y tecnologia.
+Junto con **mendesaltaren**, diseñamos y activamos programas de innovación que conectan visión estratégica, diseño de negocio y tecnología.
 
 **Que incluye:**
 - **Co-creation labs:** Alineamos perspectivas, identificamos oportunidades y damos forma a roadmaps accionables
-- **Technical audits:** Evaluamos arquitectura, datos y sistemas para asegurar escalabilidad y preparacion para transformación AI-driven
+- **Technical audits:** Evaluamos arquitectura, datos y sistemas para asegurar escalabilidad y preparación para transformación AI-driven
 
-**Beneficio:** Este enfoque combinado ayuda a las organizaciones a pasar de la exploracion a la ejecucion con claridad, confianza e impacto medible.
+**Beneficio:** Este enfoque combinado ayuda a las organizaciónes a pasar de la exploración a la ejecución con claridad, confianza e impacto medible.
 
 ---
 
@@ -150,36 +149,36 @@ Junto con **mendesaltaren**, disenamos y activamos programas de innovacion que c
 
 - **Tamaño:** Corporaciones, scale-ups con necesidades enterprise
 - **Sectores:** Finance, Retail, Energy, Tech, Industrial, Media
-- **Geografia:** España, Europa, Internacional
+- **Geografía:** España, Europa, Internacional
 - **Madurez digital:** Media-alta
-- **Presupuesto minimo:** >EUR30k por proyecto
+- **Presupuesto mínimo:** >EUR30k por proyecto
 
 ### Perfil del decisor
 
-- **Cargo tipico:** CTO, VP Engineering, CEO (startups), Director de IT
-- **Motivaciones:** Modernizar sistemas, integrar IA, escalar tecnologia
-- **Frustraciones:** Equipos saturados, deuda tecnica, falta de expertise en IA
+- **Cargo típico:** CTO, VP Engineering, CEO (startups), Director de IT
+- **Motivaciónes:** Modernizar sistemas, integrar IA, escalar tecnología
+- **Frustraciones:** Equipos saturados, deuda técnica, falta de expertise en IA
 
 ### Triggers de compra
 
 - Necesidad de desarrollo de producto nuevo
-- Integracion de IA en operaciones
-- Modernizacion de sistemas legacy
+- Integración de IA en operaciónes
+- Modernización de sistemas legacy
 - Falta de capacidad en equipo interno
-- Auditoria tecnica pre-inversion
+- Auditoría técnica pre-inversion
 
 ### Señales de buen fit
 
 **Green flags:**
-- Proyecto con complejidad tecnica real
+- Proyecto con complejidad técnica real
 - Presupuesto adecuado (>EUR30k)
-- Acceso a decisores tecnicos
+- Acceso a decisores técnicos
 - Entienden el valor de equipo senior
 
 **Red flags:**
 - Buscan "manos" baratas
 - Proyecto simple que podria ser no-code
-- Comparacion con offshore barato
+- Comparación con offshore barato
 - Sin claridad en requisitos
 
 ---
@@ -192,7 +191,7 @@ Junto con **mendesaltaren**, disenamos y activamos programas de innovacion que c
 | **Growth** | +40% |
 | **Profitability** | 10% |
 | **Revenue booked** | EUR1M expected |
-| **Nuevas contrataciones** | +9 billable people |
+| **Nuevas contrataciónes** | +9 billable people |
 
 ---
 
@@ -222,15 +221,15 @@ Junto con **mendesaltaren**, disenamos y activamos programas de innovacion que c
 
 ### Otros clientes destacados
 
-Audi Iberia, El Corte Ingles, Mahou, Inditex, Kutxa Bank, EY, Samsung, Tranxfer
+Audi Iberia, El Corte Inglés, Mahou, Inditex, Kutxa Bank, EY, Samsung, Tranxfer
 
 ---
 
 ## 08. Productos Propios
 
-| Producto | Descripcion |
+| Producto | Descripción |
 |---|---|
-| **Easy Email** | Herramienta de gestion de email |
+| **Easy Email** | Herramienta de gestión de email |
 | **Ways of Working** | Framework de metodología de trabajo |
 | **Training Agent** | Agente de formación IA |
 
@@ -240,17 +239,17 @@ Audi Iberia, El Corte Ingles, Mahou, Inditex, Kutxa Bank, EY, Samsung, Tranxfer
 
 ### Cuándo derivar A Tailor Hub
 
-| Senal | Desde |
+| Señal | Desde |
 |---|---|
 | Cliente necesita desarrollo custom enterprise | mendesaltaren, Nocodehackers |
 | Cliente necesita IA/ML avanzado | Cualquiera |
 | Proyecto demasiado complejo para no-code | Nocodehackers |
-| Integraciones complejas | FIK |
+| Integraciónes complejas | FIK |
 | Necesita apps móviles nativas | Cualquiera |
 
 ### Cuándo derivar DESDE Tailor Hub
 
-| Senal | Hacia |
+| Señal | Hacia |
 |---|---|
 | Cliente necesita diseño UX/UI | mendesaltaren |
 | Cliente necesita e-commerce Shopify | FIK |
@@ -262,7 +261,7 @@ Audi Iberia, El Corte Ingles, Mahou, Inditex, Kutxa Bank, EY, Samsung, Tranxfer
 
 - **Tailor Hub + mendesaltaren:** Lab 226 (Innovation + Strategy + Technical Audit)
 - **Tailor Hub + mendesaltaren:** Desarrollo + diseño de producto completo
-- **Tailor Hub + Nocodehackers:** Core development + automatizaciónes
+- **Tailor Hub + Nocodehackers:** Core development + automatizaciones
 - **Tailor Hub + FIK:** Backend complejo + e-commerce Shopify
 
 ---
@@ -271,31 +270,30 @@ Audi Iberia, El Corte Ingles, Mahou, Inditex, Kutxa Bank, EY, Samsung, Tranxfer
 
 ### Mensajes clave
 
-- **Elevator pitch:** Somos un equipo de elite de ingenieros de software que construimos soluciones tecnológicas avanzadas e integramos IA para empresas como Dormakaba, Cargill, Mediapro e Inditex.
-- **Diferenciación:** Equipo 100% senior, especializacion en IA, clientes enterprise de referencia, clean execution
+- **Elevator pitch:** Somos un equipo de élite de ingenieros de software que construimos soluciones tecnológicas avanzadas e integramos IA para empresas como Dormakaba, Cargill, Mediapro e Inditex.
+- **Diferenciación:** Equipo 100% senior, especialización en IA, clientes enterprise de referencia, clean execution
 
 ### Materiales de venta
 
 - **Portfolio:** [https://tailor-hub.com](https://tailor-hub.com)
 
-### Objeciones frecuentes
+### Objeciónes frecuentes
 
-| Objecion | Respuesta |
+| Objeción | Respuesta |
 |---|---|
-| **"Es muy caro vs offshore"** | Lo que integramos en los equipos es experiencia en diferentes proyectos y problemas — es un aire fresco para el equipo. A nivel financiero, en el corto puede parecer más caro, pero en el largo es un equipo que esta al pie del canon, demostrando hitos conseguidos cada semana. |
-| **"Ya tenemos equipo interno"** | Podemos aportar valor desde la consultoria, atacar problemas concretos, ayudaros en un lanzamiento. Nuestro valor no esta en los equipos, sino en como ayudamos a las companias a solucionar problemas tecnológicos. |
-| **"Por que no usar no-code?"** | El no-code es un aliado dentro del desarrollo y en primeras fases de test. Pero si pensamos en escalar o en el uso eficiente de los productos, suele suponer una barrera. Para MVPs y validación rapida, derivamos a Nocodehackers. |
+| **"Es muy caro vs offshore"** | Lo que integramos en los equipos es experiencia en diferentes proyectos y problemas — es un aire fresco para el equipo. A nivel financiero, en el corto puede parecer más caro, pero en el largo es un equipo que esta al pie del cañón, demostrando hitos conseguidos cada semana. |
+| **"Ya tenemos equipo interno"** | Podemos aportar valor desde la consultoria, atacar problemas concretos, ayudaros en un lanzamiento. Nuestro valor no esta en los equipos, sino en como ayudamos a las compañías a solucionar problemas tecnológicos. |
+| **"¿Por qué no usar no-code?"** | El no-code es un aliado dentro del desarrollo y en primeras fases de test. Pero si pensamos en escalar o en el uso eficiente de los productos, suele suponer una barrera. Para MVPs y validación rápida, derivamos a Nocodehackers. |
 
 ---
 
 ## 11. Challenges 2026
 
-| Challenge | Descripcion |
+| Challenge | Descripción |
 |---|---|
 | **Hiring & Talent Retention** | Escalar equipo manteniendo calidad |
-| **AI Impact** | Evoluciónar capacidades de IA |
+| **AI Impact** | Evolucionar capacidades de IA |
 | **Sales** | Abrir nuevas cuentas estratégicas |
-| **Salary Structure** | Estructura salarial competitiva |
 | **Growth & Culture** | Mantener cultura mientras se escala |
 
 ---

@@ -4,7 +4,7 @@
 
 ---
 
-## 1. Identidad y Estrategia
+## 01. Identidad y Estrategia
 
 ### Datos básicos
 
@@ -46,7 +46,7 @@
 
 ---
 
-## 2. Leadership Team
+## 02. Leadership Team
 
 | Rol | Persona |
 | --- | --- |
@@ -55,9 +55,9 @@
 
 ---
 
-## 3. Servicios
+## 03. Servicios
 
-### Replatforming / Migraciones
+### Replatforming / Migraciónes
 
 - Migración completa de infraestructura e-commerce a Shopify desde Magento, WooCommerce, PrestaShop, Salesforce Commerce, etc.
 - Incluye análisis de negocio, planificación, ejecución, migración de datos
@@ -78,7 +78,7 @@
 
 ### E-commerce Consultancy
 
-- Optimización de operaciones y logística e-commerce
+- Optimización de operaciónes y logística e-commerce
 
 ### Platform Integrations
 
@@ -107,7 +107,7 @@
 
 ---
 
-## 4. Cliente Ideal
+## 04. Cliente Ideal
 
 ### Perfil de empresa
 
@@ -127,7 +127,7 @@
 
 ---
 
-## 5. Casos y Portfolio
+## 05. Casos y Portfolio
 
 ### Casos destacados
 
@@ -148,7 +148,7 @@ Klaviyo, Yotpo, Narvar, Sendcloud, ReturnGo, Moddo, Nosto, Klarna, Synerise, Rev
 
 ---
 
-## 6. Cross-selling y Sinergias
+## 06. Cross-selling y Sinergias
 
 ### Cuándo derivar A FIK
 
@@ -164,7 +164,7 @@ Klaviyo, Yotpo, Narvar, Sendcloud, ReturnGo, Moddo, Nosto, Klarna, Synerise, Rev
 | Señal | Hacia |
 | --- | --- |
 | Cliente necesita branding/diseño UX | mendesaltaren |
-| Integraciones muy complejas | Tailor Hub |
+| Integraciónes muy complejas | Tailor Hub |
 | Cliente necesita marketing/social | SSTIL/Minimum |
 | Automatizaciones operativas | Nocodehackers |
 
@@ -172,16 +172,16 @@ Klaviyo, Yotpo, Narvar, Sendcloud, ReturnGo, Moddo, Nosto, Klarna, Synerise, Rev
 
 - **FIK + mendesaltaren:** Tienda Shopify + branding/UX premium
 - **FIK + SSTIL:** Tienda + marketing de lanzamiento
-- **FIK + Nocodehackers:** Tienda + automatizaciones/integraciones
+- **FIK + Nocodehackers:** Tienda + automatizaciones/integraciónes
 - **FIK + Tailor Hub:** Tienda + backend complejo
 
 ---
 
-## 7. Ventas
+## 07. Ventas
 
 ### Mensajes clave
 
-- **Elevator pitch:** Somos Shopify Premier Partner con +10 años de experiencia exclusiva en Shopify. Hemos lanzado +150 tiendas que gestionan +300M€ en revenue. Trabajamos con marcas como El Corte Inglés, Ecoalf y Singularu.
+- **Elevator pitch:** Somos Shopify Premier Partner con +10 años de experiencia exclusiva en Shopify. Hemos lanzado +150 tiendas que gestiónan +300M€ en revenue. Trabajamos con marcas como El Corte Inglés, Ecoalf y Singularu.
 - **Diferenciación:** Premier Partner (top tier), +42 proyectos Shopify Plus
 
 ### Materiales

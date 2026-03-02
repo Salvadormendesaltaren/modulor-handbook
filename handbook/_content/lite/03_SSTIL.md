@@ -12,7 +12,7 @@
 - **Web:** https://sstilagency.com
 - **Submarca:** Minimum (https://minimum.run) - Growth studio
 - **Fundación:** 2021
-- **Co-CEOs:** Paula Rodriguez y Sandra Ramiro
+- **Co-CEOs:** Paula Rodríguez y Sandra Ramiro
 - **Sede:** Calle Hermanos Álvarez Quintero, 2, 28004 Madrid
 - **Empleados:** ~12 personas
 
@@ -35,7 +35,7 @@
 | Aspecto | SSTIL | Minimum |
 | --- | --- | --- |
 | **Foco** | Marketing, comunicación integral, creatividad | Growth marketing, webs rápidas, performance |
-| **Servicios** | Social media, activaciones, eventos, PR | Webs Webflow, SEO/SEM, paid media |
+| **Servicios** | Social media, activaciónes, eventos, PR | Webs Webflow, SEO/SEM, paid media |
 | **Cliente típico** | Marcas establecidas, corporaciones | Startups, scaleups, tech |
 | **Web** | sstilagency.com | minimum.run |
 
@@ -56,11 +56,11 @@
 
 | Rol | Persona |
 | --- | --- |
-| Co-CEO | Paula Rodriguez |
+| Co-CEO | Paula Rodríguez |
 | Co-CEO | Sandra Ramiro |
 | Sales Manager | Emiliano Moretti |
 | Project Manager | Mia Escorihuela |
-| Lead Designer | Alba Rodriguez |
+| Lead Designer | Alba Rodríguez |
 
 ---
 
@@ -81,7 +81,7 @@
 | --- | --- | --- | --- |
 | **Creative Direction** | €800/mes | Retainer mensual | Dirección creativa para campañas y marcas |
 | **Social Media Management** | €2,000-9,000/mes | Retainer mensual | Estrategia, contenido, community. Mín €2k (seguimiento + paid pequeño), hasta €9k grandes clientes |
-| **Activations** | €1,000/mes | Retainer mensual | Activaciones de marca y experiencias |
+| **Activations** | €1,000/mes | Retainer mensual | Activaciónes de marca y experiencias |
 | **Content Creation** | €1,500/mes | Retainer mensual | Vídeo, foto, gráficas, animación. 8-10 piezas/mes (2-3 vídeos + 5-7 visuales) |
 | **Digital Strategy** | €100/mes | Retainer mensual | Estrategia digital integral |
 | **Events** | Por definir | 4 semanas | Producción y gestión de eventos |
@@ -220,7 +220,7 @@ Iberia, Mango, Factorial, PagoNxt, Kpler, Urban X, Therapy Side, Kfund, Diamond 
 | Cliente necesita web rápida | mendesaltaren, FIK | Minimum |
 | Cliente necesita paid media | Cualquiera | Minimum |
 | Startup necesita growth | Tailor Hub, Nocodehackers | Minimum |
-| Marca necesita activaciones | FIK | SSTIL |
+| Marca necesita activaciónes | FIK | SSTIL |
 
 ### Cuándo derivar DESDE SSTIL/Minimum
 

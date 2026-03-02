@@ -10,7 +10,7 @@
 
 - **Nombre:** Nocodehackers
 - **Web:** [https://nocodehackers.es](https://nocodehackers.es)
-- **Fundacion:** 2019
+- **Fundación:** 2019
 - **CEO:** Alex Vaughtton
 - **Sede:** Madrid (+ remoto)
 - **Empleados:** 10 personas
@@ -19,19 +19,19 @@
 
 - **Misión:** Crear profesionales que transformen sus vidas y se conviertan en freelancers, trabajen en tech o sean AI champions en sus empresas
 - **Visión 2026:** The go-to ecosystem (academy/agency) to truly learn what you can do without learning to code, thanks to No-code and AI
-- **Tagline:** "Cursos de IA y NoCode en espanol"
+- **Tagline:** "Cursos de IA y NoCode en español"
 - **Rol en Modulor:** Exploradores de la frontera entre IA y desarrollo de producto. Entrada de clientes via educación para upsell a servicios.
 
 ### Posicionamiento
 
-- **Qué somos?** Academia de formación no-code/IA + Agencia de desarrollo
-- **Para quien?**
-  - **Educación:** Freelancers (especialmente disenadores), aspirantes a freelancers, makers
-  - **Agencia:** Webs rapidas (5-10k), MVPs (5-15k), enterprises (internal tools)
-- **Que nos hace diferentes?**
+- **¿Qué somos?** Academia de formación no-code/IA + Agencia de desarrollo
+- **¿Para quién?**
+  - **Educación:** Freelancers (especialmente diseñadores), aspirantes a freelancers, makers
+  - **Agencia:** Webs rápidas (5-10k), MVPs (5-15k), enterprises (internal tools)
+- **¿Qué nos hace diferentes?**
   - Exploradores de Lovable y Vibe Coding al limite
   - Únicos haciendo Vibe Coding para proyectos reales (ganando experiencia y prestigio)
-  - Comunidad más grande de no-code/VibeCode en espanol (+10,000 alumnos)
+  - Comunidad más grande de no-code/VibeCode en español (+10,000 alumnos)
   - Doble modelo: formación + servicios de agencia
   - Casos de exito con grandes empresas (Iberia, Santalucia)
 
@@ -62,7 +62,7 @@
 
 | Aspecto | Formación (Academia) | Agencia (Solutions) |
 |---|---|---|
-| Foco | Cursos, bootcamps, comúnidad | Proyectos para empresas |
+| Foco | Cursos, bootcamps, comunidad | Proyectos para empresas |
 | Cliente | Individuos, profesionales | Empresas, startups |
 | Revenue | Matriculas, suscripciones | Proyectos, retainers |
 | Web | [nocodehackers.es](http://nocodehackers.es) | [nocodehackers.es/solutions](http://nocodehackers.es/solutions) |
@@ -72,7 +72,7 @@
 - Desarrollo de software complejo/enterprise (derivamos a [Tailor Hub](#tailorhub))
 - Diseño UX/UI premium (derivamos a [mendesaltaren](#mendesaltaren))
 - E-commerce Shopify (derivamos a [FIK](#fik))
-- Marketing y comúnicación (derivamos a [SSTIL](#sstil))
+- Marketing y comunicación (derivamos a [SSTIL](#sstil))
 
 ---
 
@@ -90,7 +90,7 @@
 
 | Rol | Persona | Notas |
 |---|---|---|
-| Designer/Developer | Nikita | Ucraniano, ~EUR40k. Para Framer, liberar a Alex de maquetacion |
+| Designer/Developer | Nikita | Para Framer, liberar a Alex de maquetación |
 | Sales (part-time) | Emi | Compartido, traer más clientes MVP/Web |
 
 ### Capacidades
@@ -125,8 +125,8 @@
 
 #### Formación In-Company
 
-- **Descripcion:** Formación para equipos de empresas
-- **Temas:** No-code, IA, automatizaciónes
+- **Descripción:** Formación para equipos de empresas
+- **Temas:** No-code, IA, automatizaciones
 - **Formato:** Personalizado según necesidades
 
 ---
@@ -135,39 +135,39 @@
 
 #### Sistemas Operativos para Negocios
 
-- **Descripcion:** Sistemas de gestion internos
+- **Descripción:** Sistemas de gestión internos
 - **Tecnologias:** Airtable + Make
 - **Problema que resuelve:** Procesos manuales, hojas de calculo caoticas
 
 #### MVPs y Validación de Ideas
 
-- **Descripcion:** Desarrollo rápido de productos minimos viables
-- **Problema que resuelve:** Validar ideas sin gran inversion
+- **Descripción:** Desarrollo rápido de productos mínimos viables
+- **Problema que resuelve:** Validar ideas sin gran inversión
 - **Tecnologias:** Bubble, Webflow, Make, n8n
-- **Duración tipica:** 2-6 semanas
+- **Duración típica:** 2-6 semanas
 
 #### Desarrollo de Apps Móviles
 
-- **Descripcion:** Apps nativas sin codigo
+- **Descripción:** Apps nativas sin código
 - **Tecnologias:** FlutterFlow + Supabase
 - **Problema que resuelve:** Necesidad de app sin equipo de desarrollo
 
 #### Diseño y Desarrollo Web
 
-- **Descripcion:** Webs profesionales rapidas
+- **Descripción:** Webs profesionales rápidas
 - **Tecnologias:** Framer
-- **Duración tipica:** 2-4 semanas
+- **Duración típica:** 2-4 semanas
 
 #### Automatizaciónes
 
-- **Descripcion:** Automatización de procesos repetitivos
+- **Descripción:** Automatización de procesos repetitivos
 - **Tecnologias:** Make, Zapier, n8n
 - **Problema que resuelve:** Tareas manuales que consumen tiempo
 
 #### Soluciones con IA
 
-- **Descripcion:** Implementacion de IA en procesos
-- **Tecnologias:** OpenAI, Claude, integraciones custom
+- **Descripción:** Implementación de IA en procesos
+- **Tecnologias:** OpenAI, Claude, integraciónes custom
 
 ### Pricing Agencia
 
@@ -189,7 +189,7 @@
 
 ### Stack Tecnológico
 
-| Categoria | Herramientas |
+| Categoría | Herramientas |
 |---|---|
 | Apps | FlutterFlow, Bubble, Glide, Softr |
 | Webs | Framer, Webflow |
@@ -206,15 +206,15 @@
 ### Formación - ICP
 
 - **Perfil:** Profesionales, emprendedores, equipos de producto
-- **Motivacion:** Aprender a construir productos sin programar
-- **Geografia:** LATAM + España (espanol)
+- **Motivación:** Aprender a construir productos sin programar
+- **Geografía:** LATAM + España (español)
 
 ### Agencia - ICP
 
 - **Tamaño:** Startups, scaleups, PYMEs
-- **Sectores:** Cualquiera que necesite digitalizacion rapida
-- **Caso de uso tipico:** MVP, automatizaciónes, herramientas internas, apps
-- **Presupuesto minimo:** >10k EUR
+- **Sectores:** Cualquiera que necesite digitalización rápida
+- **Caso de uso típico:** MVP, automatizaciones, herramientas internas, apps
+- **Presupuesto mínimo:** >10k EUR
 
 ### Triggers de compra (Agencia)
 
@@ -242,7 +242,7 @@
 
 - Proyecto requiere escalabilidad enterprise
 - Necesitan desarrollo custom complejo
-- Integraciones muy especificas con sistemas legacy
+- Integraciónes muy especificas con sistemas legacy
 - IA/ML avanzado (modelos custom)
 
 ---
@@ -253,7 +253,7 @@
 
 #### Iberia - Sistema de Reservas
 - **Contexto:** Espacio Iberia en Mexico
-- **Que hicimos:** Sistema de gestion de reservas
+- **Que hicimos:** Sistema de gestión de reservas
 
 #### Santalucia - Programa MVPs
 - **Contexto:** Aseguradora necesitaba validar ideas rápido
@@ -261,14 +261,14 @@
 - **Resultado:** Múltiples MVPs validados
 
 #### Wend - App Top 7 App Store
-- **Contexto:** Startup necesitaba app rapida
+- **Contexto:** Startup necesitaba app rápida
 - **Que hicimos:** App construida en 18 dias
 - **Resultado:** Top 7 App Store, soporto 250k solicitudes/dia
 - **Tecnologias:** FlutterFlow
 
 #### SpainFreeTours - Automatización
 - **Contexto:** Empresa de free tours
-- **Que hicimos:** Automatización de operaciones
+- **Que hicimos:** Automatización de operaciónes
 - **Resultado:** +200,000 free tours/ano automatizados
 - **Tecnologias:** Make, Airtable
 
@@ -282,18 +282,18 @@
 
 ### Cuándo derivar A Nocodehackers
 
-| Senal | Desde |
+| Señal | Desde |
 |---|---|
 | Cliente necesita MVP rápido | Tailor Hub, mendesaltaren |
-| Cliente necesita automatizaciónes | Cualquiera |
+| Cliente necesita automatizaciones | Cualquiera |
 | Presupuesto limitado para desarrollo | Tailor Hub |
 | Equipo quiere aprender no-code | Cualquiera (formación) |
 | Cliente necesita app movil sencilla | Tailor Hub |
-| Web rapida con Framer | Minimum |
+| Web rápida con Framer | Minimum |
 
 ### Cuándo derivar DESDE Nocodehackers
 
-| Senal | Hacia |
+| Señal | Hacia |
 |---|---|
 | Proyecto demasiado complejo para no-code | Tailor Hub |
 | Cliente necesita diseño UX/UI profesional | mendesaltaren |
@@ -311,10 +311,10 @@
 
 ### Sinergia con Lab 226
 
-NCH como departamento de innovacion del grupo:
-- Prototipado funcional (vs Figma de mendesaltaren)
+NCH como departamento de innovación del grupo:
+- Prototipado funciónal (vs Figma de mendesaltaren)
 - Colaboración con Tailor Hub: frontend agil + backend complejo
-- Posicionamiento: soluciones completas desde prototipo hasta produccion
+- Posicionamiento: soluciones completas desde prototipo hasta producción
 
 ---
 
@@ -322,12 +322,12 @@ NCH como departamento de innovacion del grupo:
 
 ### Mensajes clave
 
-- **Elevator pitch Formación:** Somos la comúnidad más grande de no-code en espanol. +10,000 alumnos han aprendido a construir productos sin programar con nuestros cursos de IA, automatizaciónes y desarrollo de apps.
-- **Elevator pitch Agencia:** Construimos MVPs, apps y automatizaciónes sin codigo en semanas, no meses. Hemos trabajado con Iberia, Santalucia, y construido apps que llegaron al Top 7 de App Store.
+- **Elevator pitch Formación:** Somos la comunidad más grande de no-code en español. +10,000 alumnos han aprendido a construir productos sin programar con nuestros cursos de IA, automatizaciones y desarrollo de apps.
+- **Elevator pitch Agencia:** Construimos MVPs, apps y automatizaciones sin código en semanas, no meses. Hemos trabajado con Iberia, Santalucia, y construido apps que llegaron al Top 7 de App Store.
 
-### Objeciones frecuentes
+### Objeciónes frecuentes
 
-| Objecion | Respuesta |
+| Objeción | Respuesta |
 |---|---|
 | "No-code no escala" | Para el 80% de los casos, escala perfectamente. Y si creces, podemos derivarte a Tailor Hub para desarrollo custom. |
 
@@ -340,7 +340,7 @@ NCH como departamento de innovacion del grupo:
 | Canal | Inversion | Métricas |
 |---|---|---|
 | Organico | - | Free courses, blog, YouTube, SEO |
-| Paid (cursos) | EUR1-2k/launch | ROAS minimo 3 |
+| Paid (cursos) | EUR1-2k/launch | ROAS mínimo 3 |
 | Paid (specialist) | EUR4-5k/launch | ROAS ~10x |
 | Eventos | Variable | NCH Madrid, No-code Barcelona |
 
@@ -360,17 +360,17 @@ NCH como departamento de innovacion del grupo:
 
 ### Mitigación
 
-- **Experiencia real:** Somos los unicos con proyectos reales de clientes
-- **Comunidad:** La más grande en espanol
+- **Experiencia real:** Somos los únicos con proyectos reales de clientes
+- **Comunidad:** La más grande en español
 - **Doble modelo:** Academia + Agencia se retroalimentan
 
 ### Competidores
 
 | Competidor | Diferencia con NCH |
 |---|---|
-| **Platzi** | Mensaje similar, pero no tienen el mismo nivel de profundidad tecnica |
+| **Platzi** | Mensaje similar, pero no tienen el mismo nivel de profundidad técnica |
 | **Hero Camp** | Oferta similar, más orientada a producto, más cara que VibeCoding NCH |
-| **Built** | Solo automatizaciónes |
+| **Built** | Solo automatizaciones |
 | **Centeia, Racks Academy** | Mensaje similar pero sin experiencia real con productos reales |
 
 **Ventaja competitiva NCH:** Experiencia construyendo productos reales para clientes + capacidad de explicar y ensenar.

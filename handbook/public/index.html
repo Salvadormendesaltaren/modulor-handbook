@@ -572,18 +572,36 @@
       }, { onConflict: 'id', ignoreDuplicates: false });
     }
 
+    function showLogin() {
+      document.getElementById('globalLoading').style.display = 'none';
+      document.getElementById('loginScreen').style.display = 'flex';
+    }
+
+    // Safety: if auth takes too long, show login
+    const authTimeout = setTimeout(showLogin, 4000);
+
     // Single auth listener
     sb.auth.onAuthStateChange(async (event, session) => {
       if (event === 'INITIAL_SESSION') {
+        clearTimeout(authTimeout);
         document.getElementById('globalLoading').style.display = 'none';
         if (session) {
-          await handleSession(session);
+          try {
+            await handleSession(session);
+          } catch (e) {
+            console.error('Session error:', e);
+            showLogin();
+          }
         } else {
-          document.getElementById('loginScreen').style.display = 'flex';
+          showLogin();
         }
       }
       if (event === 'SIGNED_IN') {
-        await handleSession(session);
+        try {
+          await handleSession(session);
+        } catch (e) {
+          console.error('Session error:', e);
+        }
       }
       if (event === 'TOKEN_REFRESHED' && session) {
         setAccessTokenCookie(session);

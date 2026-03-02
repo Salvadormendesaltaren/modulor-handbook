@@ -343,6 +343,7 @@
     async function checkSession() {
       const { data: { session } } = await supabase.auth.getSession();
       if (session) {
+        setAccessTokenCookie(session);
         await validateAndShow(session.user);
       }
     }
@@ -396,6 +397,7 @@
     }
 
     async function signOut() {
+      clearAccessTokenCookie();
       await supabase.auth.signOut();
       currentUser = null;
       userRole = 'leadership';
@@ -430,9 +432,26 @@
       }, { onConflict: 'id', ignoreDuplicates: false });
     }
 
+    function setAccessTokenCookie(session) {
+      if (session?.access_token) {
+        document.cookie = `sb-access-token=${session.access_token}; path=/; secure; samesite=lax; max-age=${session.expires_in || 3600}`;
+      }
+    }
+
+    function clearAccessTokenCookie() {
+      document.cookie = 'sb-access-token=; path=/; secure; samesite=lax; max-age=0';
+    }
+
     supabase.auth.onAuthStateChange((event, session) => {
       if (event === 'SIGNED_IN' && session) {
+        setAccessTokenCookie(session);
         validateAndShow(session.user);
+      }
+      if (event === 'TOKEN_REFRESHED' && session) {
+        setAccessTokenCookie(session);
+      }
+      if (event === 'SIGNED_OUT') {
+        clearAccessTokenCookie();
       }
     });
 

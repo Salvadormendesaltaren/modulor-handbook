@@ -1,7 +1,4 @@
 {
   "name": "modulor-handbook-leadership",
-  "private": true,
-  "dependencies": {
-    "@supabase/ssr": "^0.6.1"
-  }
+  "private": true
 }

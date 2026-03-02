@@ -1,42 +1,47 @@
-import { createServerClient } from '@supabase/ssr';
-
 export const config = {
   matcher: '/content/:path*',
 };
 
 export default async function middleware(request) {
-  const supabase = createServerClient(
-    process.env.SUPABASE_URL,
-    process.env.SUPABASE_ANON_KEY,
+  // Read access token from cookie
+  const cookie = request.headers.get('cookie') || '';
+  const match = cookie.match(/sb-access-token=([^;]+)/);
+  if (!match) {
+    return new Response('Unauthorized', { status: 401 });
+  }
+
+  const token = match[1];
+  const SUPABASE_URL = process.env.SUPABASE_URL;
+  const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY;
+
+  // Verify JWT with Supabase Auth API (server-side, not forgeable)
+  const userRes = await fetch(`${SUPABASE_URL}/auth/v1/user`, {
+    headers: {
+      'Authorization': `Bearer ${token}`,
+      'apikey': SUPABASE_ANON_KEY,
+    },
+  });
+
+  if (!userRes.ok) {
+    return new Response('Unauthorized', { status: 401 });
+  }
+
+  const user = await userRes.json();
+
+  // Verify approved domain
+  const domain = user.email.split('@')[1];
+  const domainRes = await fetch(
+    `${SUPABASE_URL}/rest/v1/approved_domains?domain=eq.${encodeURIComponent(domain)}&select=domain`,
     {
-      cookies: {
-        getAll: () => {
-          const cookie = request.headers.get('cookie') || '';
-          return cookie.split(';').map(c => {
-            const [name, ...rest] = c.trim().split('=');
-            return { name, value: rest.join('=') };
-          }).filter(c => c.name);
-        },
-        setAll: () => {},
+      headers: {
+        'apikey': SUPABASE_ANON_KEY,
+        'Authorization': `Bearer ${token}`,
       },
     }
   );
 
-  // Verify JWT server-side (not forgeable)
-  const { data: { user }, error } = await supabase.auth.getUser();
-  if (!user || error) {
-    return new Response('Unauthorized', { status: 401 });
-  }
-
-  // Verify approved domain
-  const domain = user.email.split('@')[1];
-  const { data: approved } = await supabase
-    .from('approved_domains')
-    .select('domain')
-    .eq('domain', domain)
-    .single();
-
-  if (!approved) {
+  const domains = await domainRes.json();
+  if (!Array.isArray(domains) || domains.length === 0) {
     return new Response('Forbidden', { status: 403 });
   }
 

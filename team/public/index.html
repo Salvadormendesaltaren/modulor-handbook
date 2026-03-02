@@ -514,6 +514,7 @@
           await supabase.auth.signOut();
           return;
         }
+        setAccessTokenCookie(session);
         currentUser = session.user;
         showApp();
         upsertProfile(session.user);
@@ -531,6 +532,7 @@
     }
 
     async function signOut() {
+      clearAccessTokenCookie();
       await supabase.auth.signOut();
       currentUser = null;
       document.getElementById('app').classList.remove('visible');
@@ -568,6 +570,16 @@
       }, { onConflict: 'id', ignoreDuplicates: false });
     }
 
+    function setAccessTokenCookie(session) {
+      if (session?.access_token) {
+        document.cookie = `sb-access-token=${session.access_token}; path=/; secure; samesite=lax; max-age=${session.expires_in || 3600}`;
+      }
+    }
+
+    function clearAccessTokenCookie() {
+      document.cookie = 'sb-access-token=; path=/; secure; samesite=lax; max-age=0';
+    }
+
     // Listen for auth state changes (handles OAuth callback)
     supabase.auth.onAuthStateChange((event, session) => {
       if (event === 'SIGNED_IN' && session) {
@@ -577,9 +589,16 @@
           supabase.auth.signOut();
           return;
         }
+        setAccessTokenCookie(session);
         currentUser = session.user;
         showApp();
         upsertProfile(session.user);
+      }
+      if (event === 'TOKEN_REFRESHED' && session) {
+        setAccessTokenCookie(session);
+      }
+      if (event === 'SIGNED_OUT') {
+        clearAccessTokenCookie();
       }
     });
 

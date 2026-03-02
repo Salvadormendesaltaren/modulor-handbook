@@ -434,12 +434,23 @@
       }
 
       console.log('[HS] Checking leadership_users...');
-      const { data: invited, error: invErr } = await sb
-        .from('leadership_users')
-        .select('email')
-        .eq('email', session.user.email)
-        .maybeSingle();
-      console.log('[HS] Leadership check:', invited ? 'YES' : 'NO', invErr ? 'Error: ' + invErr.message : '');
+      let invited = null;
+      try {
+        const lRes = await fetch(
+          `${SUPABASE_URL}/rest/v1/leadership_users?email=eq.${encodeURIComponent(session.user.email)}&select=email`,
+          {
+            headers: {
+              'apikey': SUPABASE_ANON_KEY,
+              'Authorization': `Bearer ${session.access_token}`,
+            },
+          }
+        );
+        const lData = await lRes.json();
+        invited = Array.isArray(lData) && lData.length > 0 ? lData[0] : null;
+      } catch (e) {
+        console.error('[HS] Leadership fetch error:', e);
+      }
+      console.log('[HS] Leadership check:', invited ? 'YES' : 'NO');
 
       isLeadershipUser = !!invited;
       viewMode = isLeadershipUser ? 'leadership' : 'team';
@@ -459,12 +470,26 @@
     }
 
     async function loadUserRole() {
-      const { data } = await sb
-        .from('user_profiles')
-        .select('role')
-        .eq('id', currentUser.id)
-        .single();
-      userRole = data?.role || 'team';
+      try {
+        const { data: { session } } = await sb.auth.getSession();
+        const token = session?.access_token;
+        if (token) {
+          const rRes = await fetch(
+            `${SUPABASE_URL}/rest/v1/user_profiles?id=eq.${currentUser.id}&select=role`,
+            {
+              headers: {
+                'apikey': SUPABASE_ANON_KEY,
+                'Authorization': `Bearer ${token}`,
+              },
+            }
+          );
+          const rData = await rRes.json();
+          userRole = (Array.isArray(rData) && rData.length > 0) ? rData[0].role : 'team';
+        }
+      } catch (e) {
+        console.error('[HS] loadUserRole error:', e);
+        userRole = 'team';
+      }
 
       // Admin nav visible only for admins in leadership view
       if (userRole === 'admin') {

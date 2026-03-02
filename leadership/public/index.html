@@ -338,45 +338,59 @@
 
     let currentUser = null;
     let userRole = 'leadership';
+    let lastValidatedId = null;
 
-    // ── Auth ──
-    async function checkSession() {
-      const { data: { session } } = await sb.auth.getSession();
-      if (session) {
-        setAccessTokenCookie(session);
-        await validateAndShow(session.user);
+    // ── Auth helpers ──
+    function setAccessTokenCookie(session) {
+      if (session?.access_token) {
+        document.cookie = `sb-access-token=${session.access_token}; path=/; secure; samesite=lax; max-age=${session.expires_in || 3600}`;
       }
     }
 
-    async function validateAndShow(user) {
-      const domain = user.email.split('@')[1];
-      if (!APPROVED_DOMAINS.includes(domain)) {
+    function clearAccessTokenCookie() {
+      document.cookie = 'sb-access-token=; path=/; secure; samesite=lax; max-age=0';
+    }
+
+    function isDomainApproved(email) {
+      return APPROVED_DOMAINS.includes(email.split('@')[1]);
+    }
+
+    // Central session handler — called for INITIAL_SESSION and SIGNED_IN
+    async function handleSession(session) {
+      if (!session) return;
+      if (session.user.id === lastValidatedId) return;
+
+      if (!isDomainApproved(session.user.email)) {
+        clearAccessTokenCookie();
         showLoginError('Acceso restringido a dominios autorizados del grupo Modulor.');
         await sb.auth.signOut();
         return;
       }
 
       // Check leadership invitation
-      const { data: invited } = await supabase
+      const { data: invited } = await sb
         .from('leadership_users')
         .select('email')
-        .eq('email', user.email)
+        .eq('email', session.user.email)
         .single();
 
       if (!invited) {
+        clearAccessTokenCookie();
         showLoginError('Necesitas una invitación para acceder a Leadership. Contacta con un administrador.');
         await sb.auth.signOut();
         return;
       }
 
-      currentUser = user;
-      await upsertProfile(user);
+      lastValidatedId = session.user.id;
+      setAccessTokenCookie(session);
+      currentUser = session.user;
+      await upsertProfile(session.user);
       await loadUserRole();
       showApp();
     }
 
     async function loadUserRole() {
-      const { data } = await supabase
+      const { data } = await sb
         .from('user_profiles')
         .select('role')
         .eq('id', currentUser.id)
@@ -401,6 +415,7 @@
       await sb.auth.signOut();
       currentUser = null;
       userRole = 'leadership';
+      lastValidatedId = null;
       document.getElementById('app').classList.remove('visible');
       document.getElementById('loginScreen').style.display = 'flex';
       document.getElementById('adminNavLink').style.display = 'none';
@@ -432,26 +447,18 @@
       }, { onConflict: 'id', ignoreDuplicates: false });
     }
 
-    function setAccessTokenCookie(session) {
-      if (session?.access_token) {
-        document.cookie = `sb-access-token=${session.access_token}; path=/; secure; samesite=lax; max-age=${session.expires_in || 3600}`;
-      }
-    }
-
-    function clearAccessTokenCookie() {
-      document.cookie = 'sb-access-token=; path=/; secure; samesite=lax; max-age=0';
-    }
-
-    sb.auth.onAuthStateChange((event, session) => {
-      if (event === 'SIGNED_IN' && session) {
-        setAccessTokenCookie(session);
-        validateAndShow(session.user);
+    // Single auth listener — handles all events
+    sb.auth.onAuthStateChange(async (event, session) => {
+      if (event === 'INITIAL_SESSION' || event === 'SIGNED_IN') {
+        await handleSession(session);
       }
       if (event === 'TOKEN_REFRESHED' && session) {
         setAccessTokenCookie(session);
       }
       if (event === 'SIGNED_OUT') {
         clearAccessTokenCookie();
+        currentUser = null;
+        lastValidatedId = null;
       }
     });
 
@@ -846,7 +853,7 @@
     }
 
     window.addEventListener('hashchange', onHashChange);
-    checkSession();
+    // Auth handled by onAuthStateChange (INITIAL_SESSION event)
   </script>
 </body>
 </html>

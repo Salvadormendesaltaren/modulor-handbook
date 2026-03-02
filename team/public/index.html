@@ -503,30 +503,46 @@
     ];
 
     let currentUser = null;
+    let lastValidatedId = null;
 
-    // ── Auth ──
-    async function checkSession() {
-      const { data: { session } } = await sb.auth.getSession();
-      if (session) {
-        const domain = session.user.email.split('@')[1];
-        if (!APPROVED_DOMAINS.includes(domain)) {
-          showLoginError('Acceso restringido a dominios autorizados del grupo Modulor.');
-          await sb.auth.signOut();
-          return;
-        }
-        setAccessTokenCookie(session);
-        currentUser = session.user;
-        showApp();
-        upsertProfile(session.user);
+    // ── Auth helpers ──
+    function setAccessTokenCookie(session) {
+      if (session?.access_token) {
+        document.cookie = `sb-access-token=${session.access_token}; path=/; secure; samesite=lax; max-age=${session.expires_in || 3600}`;
       }
+    }
+
+    function clearAccessTokenCookie() {
+      document.cookie = 'sb-access-token=; path=/; secure; samesite=lax; max-age=0';
+    }
+
+    function isDomainApproved(email) {
+      return APPROVED_DOMAINS.includes(email.split('@')[1]);
+    }
+
+    // Central session handler — called for INITIAL_SESSION and SIGNED_IN
+    async function handleSession(session) {
+      if (!session) return;
+      if (session.user.id === lastValidatedId) return;
+
+      if (!isDomainApproved(session.user.email)) {
+        clearAccessTokenCookie();
+        showLoginError('Acceso restringido a dominios autorizados del grupo Modulor.');
+        await sb.auth.signOut();
+        return;
+      }
+
+      lastValidatedId = session.user.id;
+      setAccessTokenCookie(session);
+      currentUser = session.user;
+      showApp();
+      upsertProfile(session.user);
     }
 
     async function signIn() {
       const { error } = await sb.auth.signInWithOAuth({
         provider: 'google',
-        options: {
-          redirectTo: window.location.origin,
-        },
+        options: { redirectTo: window.location.origin },
       });
       if (error) showLoginError(error.message);
     }
@@ -535,6 +551,7 @@
       clearAccessTokenCookie();
       await sb.auth.signOut();
       currentUser = null;
+      lastValidatedId = null;
       document.getElementById('app').classList.remove('visible');
       document.getElementById('loginScreen').style.display = 'flex';
     }
@@ -546,16 +563,11 @@
     function showApp() {
       document.getElementById('loginScreen').style.display = 'none';
       document.getElementById('app').classList.add('visible');
-
-      // Set user info in sidebar
       const meta = currentUser.user_metadata;
       const avatarEl = document.getElementById('userAvatar');
       const nameEl = document.getElementById('userName');
-      if (meta.avatar_url) {
-        avatarEl.innerHTML = `<img src="${meta.avatar_url}" alt="">`;
-      }
+      if (meta.avatar_url) avatarEl.innerHTML = `<img src="${meta.avatar_url}" alt="">`;
       nameEl.textContent = meta.full_name || currentUser.email;
-
       onHashChange();
     }
 
@@ -570,35 +582,18 @@
       }, { onConflict: 'id', ignoreDuplicates: false });
     }
 
-    function setAccessTokenCookie(session) {
-      if (session?.access_token) {
-        document.cookie = `sb-access-token=${session.access_token}; path=/; secure; samesite=lax; max-age=${session.expires_in || 3600}`;
-      }
-    }
-
-    function clearAccessTokenCookie() {
-      document.cookie = 'sb-access-token=; path=/; secure; samesite=lax; max-age=0';
-    }
-
-    // Listen for auth state changes (handles OAuth callback)
-    sb.auth.onAuthStateChange((event, session) => {
-      if (event === 'SIGNED_IN' && session) {
-        const domain = session.user.email.split('@')[1];
-        if (!APPROVED_DOMAINS.includes(domain)) {
-          showLoginError('Acceso restringido a dominios autorizados del grupo Modulor.');
-          sb.auth.signOut();
-          return;
-        }
-        setAccessTokenCookie(session);
-        currentUser = session.user;
-        showApp();
-        upsertProfile(session.user);
+    // Single auth listener — handles all events
+    sb.auth.onAuthStateChange(async (event, session) => {
+      if (event === 'INITIAL_SESSION' || event === 'SIGNED_IN') {
+        await handleSession(session);
       }
       if (event === 'TOKEN_REFRESHED' && session) {
         setAccessTokenCookie(session);
       }
       if (event === 'SIGNED_OUT') {
         clearAccessTokenCookie();
+        currentUser = null;
+        lastValidatedId = null;
       }
     });
 
@@ -819,8 +814,7 @@
 
     window.addEventListener('hashchange', onHashChange);
 
-    // Init
-    checkSession();
+    // Init — auth handled by onAuthStateChange (INITIAL_SESSION event)
   </script>
 </body>
 </html>

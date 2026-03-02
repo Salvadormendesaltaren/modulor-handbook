@@ -1,20 +1,26 @@
-export const config = {
-  matcher: '/content/:path*',
-};
+import { readFileSync } from 'node:fs';
+import { join, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-export default async function middleware(request) {
-  // Read access token from cookie
-  const cookie = request.headers.get('cookie') || '';
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+export default async function handler(req, res) {
+  if (req.method !== 'GET') {
+    return res.status(405).send('Method not allowed');
+  }
+
+  // Check auth cookie
+  const cookie = req.headers.cookie || '';
   const match = cookie.match(/sb-access-token=([^;]+)/);
   if (!match) {
-    return new Response('Unauthorized', { status: 401 });
+    return res.status(401).send('Unauthorized');
   }
 
   const token = match[1];
   const SUPABASE_URL = process.env.SUPABASE_URL;
   const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY;
 
-  // Verify JWT with Supabase Auth API (server-side, not forgeable)
+  // Verify JWT with Supabase Auth API
   const userRes = await fetch(`${SUPABASE_URL}/auth/v1/user`, {
     headers: {
       'Authorization': `Bearer ${token}`,
@@ -23,7 +29,7 @@ export default async function middleware(request) {
   });
 
   if (!userRes.ok) {
-    return new Response('Unauthorized', { status: 401 });
+    return res.status(401).send('Unauthorized');
   }
 
   const user = await userRes.json();
@@ -42,7 +48,7 @@ export default async function middleware(request) {
 
   const domains = await domainRes.json();
   if (!Array.isArray(domains) || domains.length === 0) {
-    return new Response('Forbidden', { status: 403 });
+    return res.status(403).send('Forbidden');
   }
 
   // Verify Leadership invitation
@@ -58,8 +64,22 @@ export default async function middleware(request) {
 
   const invited = await invitedRes.json();
   if (!Array.isArray(invited) || invited.length === 0) {
-    return new Response('Forbidden – Leadership access required', { status: 403 });
+    return res.status(403).send('Forbidden – Leadership access required');
   }
 
-  // Allow request to continue
+  // Validate and serve the file
+  const file = req.query.file;
+  if (!file || !/^(full|lite)\/[\w.-]+\.md$/.test(file)) {
+    return res.status(400).send('Invalid file path');
+  }
+
+  try {
+    const fullPath = join(__dirname, '..', '_content', file);
+    const content = readFileSync(fullPath, 'utf-8');
+    res.setHeader('Content-Type', 'text/markdown; charset=utf-8');
+    res.setHeader('Cache-Control', 'private, max-age=300');
+    return res.send(content);
+  } catch {
+    return res.status(404).send('Not found');
+  }
 }

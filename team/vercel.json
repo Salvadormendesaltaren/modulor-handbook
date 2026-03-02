@@ -1,4 +1,12 @@
 {
+  "functions": {
+    "api/content.js": {
+      "includeFiles": "_content/**"
+    }
+  },
+  "rewrites": [
+    { "source": "/content/:path*", "destination": "/api/content?file=:path*" }
+  ],
   "headers": [
     {
       "source": "/(.*)",

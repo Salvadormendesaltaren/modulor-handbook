@@ -328,7 +328,7 @@
     // ── Supabase config ──
     const SUPABASE_URL = 'https://lltnuncagboweayhpjkt.supabase.co';
     const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxsdG51bmNhZ2Jvd2VheWhwamt0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI0MzAxMjEsImV4cCI6MjA4ODAwNjEyMX0.fkQ2W4xOY-IrrEtl6ExRXmON1hZu3alEDS_tA7v1MmE';
-    const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
     const APPROVED_DOMAINS = [
       'modulorstudios.com', 'modulor.ventures', 'mendesaltaren.com',
@@ -341,7 +341,7 @@
 
     // ── Auth ──
     async function checkSession() {
-      const { data: { session } } = await supabase.auth.getSession();
+      const { data: { session } } = await sb.auth.getSession();
       if (session) {
         setAccessTokenCookie(session);
         await validateAndShow(session.user);
@@ -352,7 +352,7 @@
       const domain = user.email.split('@')[1];
       if (!APPROVED_DOMAINS.includes(domain)) {
         showLoginError('Acceso restringido a dominios autorizados del grupo Modulor.');
-        await supabase.auth.signOut();
+        await sb.auth.signOut();
         return;
       }
 
@@ -365,7 +365,7 @@
 
       if (!invited) {
         showLoginError('Necesitas una invitación para acceder a Leadership. Contacta con un administrador.');
-        await supabase.auth.signOut();
+        await sb.auth.signOut();
         return;
       }
 
@@ -389,7 +389,7 @@
     }
 
     async function signIn() {
-      const { error } = await supabase.auth.signInWithOAuth({
+      const { error } = await sb.auth.signInWithOAuth({
         provider: 'google',
         options: { redirectTo: window.location.origin },
       });
@@ -398,7 +398,7 @@
 
     async function signOut() {
       clearAccessTokenCookie();
-      await supabase.auth.signOut();
+      await sb.auth.signOut();
       currentUser = null;
       userRole = 'leadership';
       document.getElementById('app').classList.remove('visible');
@@ -423,7 +423,7 @@
 
     async function upsertProfile(user) {
       const meta = user.user_metadata;
-      await supabase.from('user_profiles').upsert({
+      await sb.from('user_profiles').upsert({
         id: user.id,
         email: user.email,
         full_name: meta.full_name || null,
@@ -442,7 +442,7 @@
       document.cookie = 'sb-access-token=; path=/; secure; samesite=lax; max-age=0';
     }
 
-    supabase.auth.onAuthStateChange((event, session) => {
+    sb.auth.onAuthStateChange((event, session) => {
       if (event === 'SIGNED_IN' && session) {
         setAccessTokenCookie(session);
         validateAndShow(session.user);
@@ -697,7 +697,7 @@
       if (!container) return;
 
       if (adminTab === 'domains') {
-        const { data: domains } = await supabase.from('approved_domains').select('*').order('domain');
+        const { data: domains } = await sb.from('approved_domains').select('*').order('domain');
         container.innerHTML = `
           <h3>Dominios aprobados</h3>
           <p style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:1.5rem;">Dominios de email que pueden acceder al Handbook Team.</p>
@@ -724,7 +724,7 @@
       }
 
       if (adminTab === 'leadership') {
-        const { data: users } = await supabase.from('leadership_users').select('*').order('email');
+        const { data: users } = await sb.from('leadership_users').select('*').order('email');
         container.innerHTML = `
           <h3>Acceso Leadership</h3>
           <p style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:1.5rem;">Emails con acceso a esta web (Leadership). Solo usuarios invitados pueden entrar.</p>
@@ -752,7 +752,7 @@
       }
 
       if (adminTab === 'users') {
-        const { data: profiles } = await supabase.from('user_profiles').select('*').order('email');
+        const { data: profiles } = await sb.from('user_profiles').select('*').order('email');
         container.innerHTML = `
           <h3>Usuarios</h3>
           <p style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:1.5rem;">Usuarios que han iniciado sesión al menos una vez. Puedes cambiar su rol.</p>
@@ -786,14 +786,14 @@
       const input = document.getElementById('newDomain');
       const domain = input.value.trim().toLowerCase();
       if (!domain) return;
-      await supabase.from('approved_domains').insert({ domain });
+      await sb.from('approved_domains').insert({ domain });
       input.value = '';
       loadAdminTab();
     }
 
     async function removeDomain(id) {
       if (!confirm('¿Eliminar este dominio?')) return;
-      await supabase.from('approved_domains').delete().eq('id', id);
+      await sb.from('approved_domains').delete().eq('id', id);
       loadAdminTab();
     }
 
@@ -801,7 +801,7 @@
       const input = document.getElementById('newLeadershipEmail');
       const email = input.value.trim().toLowerCase();
       if (!email) return;
-      await supabase.from('leadership_users').insert({
+      await sb.from('leadership_users').insert({
         email,
         invited_by: currentUser.email,
       });
@@ -811,12 +811,12 @@
 
     async function removeLeadership(id) {
       if (!confirm('¿Eliminar esta invitación?')) return;
-      await supabase.from('leadership_users').delete().eq('id', id);
+      await sb.from('leadership_users').delete().eq('id', id);
       loadAdminTab();
     }
 
     async function changeRole(userId, newRole) {
-      await supabase.from('user_profiles').update({ role: newRole }).eq('id', userId);
+      await sb.from('user_profiles').update({ role: newRole }).eq('id', userId);
       loadAdminTab();
     }
 

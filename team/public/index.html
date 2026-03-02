@@ -494,7 +494,7 @@
     // These will be replaced with real values when deploying
     const SUPABASE_URL = 'https://lltnuncagboweayhpjkt.supabase.co';
     const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxsdG51bmNhZ2Jvd2VheWhwamt0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI0MzAxMjEsImV4cCI6MjA4ODAwNjEyMX0.fkQ2W4xOY-IrrEtl6ExRXmON1hZu3alEDS_tA7v1MmE';
-    const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
     const APPROVED_DOMAINS = [
       'modulorstudios.com', 'modulor.ventures', 'mendesaltaren.com',
@@ -506,12 +506,12 @@
 
     // ── Auth ──
     async function checkSession() {
-      const { data: { session } } = await supabase.auth.getSession();
+      const { data: { session } } = await sb.auth.getSession();
       if (session) {
         const domain = session.user.email.split('@')[1];
         if (!APPROVED_DOMAINS.includes(domain)) {
           showLoginError('Acceso restringido a dominios autorizados del grupo Modulor.');
-          await supabase.auth.signOut();
+          await sb.auth.signOut();
           return;
         }
         setAccessTokenCookie(session);
@@ -522,7 +522,7 @@
     }
 
     async function signIn() {
-      const { error } = await supabase.auth.signInWithOAuth({
+      const { error } = await sb.auth.signInWithOAuth({
         provider: 'google',
         options: {
           redirectTo: window.location.origin,
@@ -533,7 +533,7 @@
 
     async function signOut() {
       clearAccessTokenCookie();
-      await supabase.auth.signOut();
+      await sb.auth.signOut();
       currentUser = null;
       document.getElementById('app').classList.remove('visible');
       document.getElementById('loginScreen').style.display = 'flex';
@@ -561,7 +561,7 @@
 
     async function upsertProfile(user) {
       const meta = user.user_metadata;
-      await supabase.from('user_profiles').upsert({
+      await sb.from('user_profiles').upsert({
         id: user.id,
         email: user.email,
         full_name: meta.full_name || null,
@@ -581,12 +581,12 @@
     }
 
     // Listen for auth state changes (handles OAuth callback)
-    supabase.auth.onAuthStateChange((event, session) => {
+    sb.auth.onAuthStateChange((event, session) => {
       if (event === 'SIGNED_IN' && session) {
         const domain = session.user.email.split('@')[1];
         if (!APPROVED_DOMAINS.includes(domain)) {
           showLoginError('Acceso restringido a dominios autorizados del grupo Modulor.');
-          supabase.auth.signOut();
+          sb.auth.signOut();
           return;
         }
         setAccessTokenCookie(session);

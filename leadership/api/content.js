@@ -1,4 +1,4 @@
-import { readFileSync, existsSync, readdirSync } from 'node:fs';
+import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 
 export default async function handler(req, res) {
@@ -70,33 +70,13 @@ export default async function handler(req, res) {
     return res.status(400).send('Invalid file path');
   }
 
-  // Try multiple possible base paths
-  const candidates = [
-    join(process.cwd(), '_content', file),
-    join(process.cwd(), 'leadership', '_content', file),
-    join('/var/task', '_content', file),
-  ];
-
-  for (const fullPath of candidates) {
-    try {
-      if (existsSync(fullPath)) {
-        const content = readFileSync(fullPath, 'utf-8');
-        res.setHeader('Content-Type', 'text/markdown; charset=utf-8');
-        res.setHeader('Cache-Control', 'private, max-age=300');
-        return res.send(content);
-      }
-    } catch {}
+  const fullPath = join(process.cwd(), '_content', file);
+  if (!existsSync(fullPath)) {
+    return res.status(404).send('Not found');
   }
 
-  // Debug: list what's actually in cwd
-  let debug = '';
-  try {
-    const cwd = process.cwd();
-    const files = readdirSync(cwd);
-    debug = `cwd=${cwd}, files=[${files.join(',')}]`;
-  } catch (e) {
-    debug = `cwd error: ${e.message}`;
-  }
-
-  return res.status(404).send(`Not found. Debug: ${debug}`);
+  const content = readFileSync(fullPath, 'utf-8');
+  res.setHeader('Content-Type', 'text/markdown; charset=utf-8');
+  res.setHeader('Cache-Control', 'private, max-age=300');
+  return res.send(content);
 }

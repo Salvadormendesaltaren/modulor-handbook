@@ -78,13 +78,32 @@
 
 ## 02. Estructura y Equipo
 
-### Roles clave
+### Leadership
 
-| Rol | Persona |
-|---|---|
-| CEO | Alex Vaughtton |
-| CMO | Tomas Alonso |
-| Ops | Stefano Becerra |
+| Nombre | Puesto |
+|--------|--------|
+| Alejandro Bernardo Díaz | CEO |
+
+### Marketing
+
+| Nombre | Puesto |
+|--------|--------|
+| Tomás Alonso | CMO |
+| Elena André Romero | Marketing Maker |
+
+### Tecnología
+
+| Nombre | Puesto |
+|--------|--------|
+| Stefano Becerra | Responsable de Operaciones |
+| Elías Silva | Product Maker |
+| Adrià Sole | Applications Lead |
+| Luis Alfonso Rodríguez Calvo | Operations Lead |
+| Sergio Sánchez | App Maker |
+| Julia Barrueco | Web Development Maker |
+| Olga Martín | Operations Maker |
+
+**Total:** 10 personas
 
 ### Contrataciones previstas 2026
 
@@ -92,12 +111,6 @@
 |---|---|---|
 | Designer/Developer | Nikita | Para Framer, liberar a Alex de maquetación |
 | Sales (part-time) | Emi | Compartido, traer más clientes MVP/Web |
-
-### Capacidades
-
-- **Formadores:** 4+ expertos en diferentes areas
-- **Desarrolladores no-code:** 6
-- **Proyectos simultaneos (agencia):** A definir con Nikita
 
 ---
 

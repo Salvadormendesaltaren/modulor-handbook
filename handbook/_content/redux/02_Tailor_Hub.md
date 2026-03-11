@@ -38,13 +38,71 @@
 
 ---
 
-## 02. Leadership Team
+## 02. Equipo
 
-| Rol | Persona |
-| --- | --- |
-| CEO | Diego Méndez |
-| CCO | Simón G. Negrete |
-| Head of Engineering | Nikolaas Verlee |
+### Leadership
+
+| Nombre | Puesto |
+|--------|--------|
+| Diego Mendez | CEO |
+| Simón Negrete | COO |
+
+### Ventas
+
+| Nombre | Puesto |
+|--------|--------|
+| Alex Alegria | Business Development |
+
+### Operaciones
+
+| Nombre | Puesto |
+|--------|--------|
+| Carolina Velo Ruybal | Operations Manager |
+| Andrea Mancera | Project Manager |
+| Iván Urra | Project Manager |
+| Victor Rodríguez | Project Manager |
+| Victor Chamizo | Project Manager |
+
+### Marketing y Comunicación
+
+| Nombre | Puesto |
+|--------|--------|
+| Cristina San Juan | Comms & Marketing |
+| Adrián Beloki | Comms |
+
+### Finanzas
+
+| Nombre | Puesto |
+|--------|--------|
+| Lourdes Castro | Admin & Finance & Legal |
+
+### Tecnología
+
+| Nombre | Puesto |
+|--------|--------|
+| Nikolaas Verlee | Software Engineer |
+| Daniel Calvo | Software Engineer |
+| Gabriel Cebrian | Backend Engineer |
+| Giorgio Grassini | Software Engineer |
+| Pau Rodriguez | Software Engineer |
+| Lautaro German Zuñiga | Backend Engineer |
+| Luca Manfredi | Frontend Engineer |
+| Juan Nuñez | Software Engineer |
+| Ester Martínez | Software Engineer |
+| Daniela Quesada | Software Engineer |
+| Carlos Parada | Software Engineer |
+| Juan Antonio Gomez | Frontend Engineer |
+| Irene Fernandez | Backend Engineer |
+| Gaspar Sio | Frontend Engineer |
+| Clara Pardo | Software Engineer |
+| Javier López | Software Engineer |
+| David Díez | Software Engineer |
+| Fabian Miulescu | Data & AI |
+| Joaquín Gómez | Data & AI |
+| Laura Corbi | Software Engineer |
+| Álvaro Trancón | Software Engineer |
+
+**Total:** 31 personas
 
 ---
 

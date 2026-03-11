@@ -174,22 +174,84 @@ Junto con **Tailor Hub**, diseñamos y activamos programas de innovación que co
 - **Area Operativa:** Soporte y gestión
 - **Áreas Satelites:** Cultura, formación, comunidad (transversal)
 
-### Roles clave
+### Leadership
 
-| Rol | Persona |
-|---|---|
-| CEO | Sara Rivera |
-| Head of People | Patricia Perez |
-| Head of Product & Data Lead | Fani Perez |
-| Head of Operations | Carlos Sanchez |
-| Head of Communications | Paloma Garcia Almodovar |
-| Business Developer | Paula Lopez |
+| Nombre | Puesto |
+|--------|--------|
+| Sara Rivera | CEO |
+| Patricia Perez | Head of People |
+| Fani Sánchez Salmeron | Head of Product & Data Lead |
 
-### Capacidades del equipo
+### Operaciones
 
-- **Total:** 50 personas en servicio
-- **Empleados:** 46
-- **Freelance:** 3-4
+| Nombre | Puesto |
+|--------|--------|
+| Carlos Sánchez Luque | Head of Operations |
+| Clara Iglesias Saavedra | Project Manager |
+
+### Ventas
+
+| Nombre | Puesto |
+|--------|--------|
+| Paula Alejandra López Oneto | Business Development |
+
+### Marketing y Comunicación
+
+| Nombre | Puesto |
+|--------|--------|
+| Paloma Carmen García Almodóvar | Head of Communications |
+| Beatriz Marques Ferreira | Comms Trainee |
+
+### Diseño
+
+| Nombre | Puesto |
+|--------|--------|
+| Miguel Ángel Rodriguez Prieto | Lead Product Designer |
+| Daniel Ruiz Sánchez | Lead Product Designer |
+| Marta Vime | Lead Product Designer |
+| Beatriz Gonzalez Alonso | Lead Product Designer |
+| Antonio Cordero | Lead Product Designer |
+| Paula Montoto | Lead Visual Designer |
+| César Ávila | Lead Motion Designer |
+| Margarita Cobas | Product Designer |
+| Airas Diz | Product Designer |
+| Jaume Alemañ | Product Designer |
+| Victoria Serrano Mirabet | Product Designer |
+| Ander Juan Gonzalez | Product Designer |
+| Sergio Mínguez Gala | Product Designer |
+| Claudia Calderón Vázquez | Product Designer |
+| Laura Vendrell Aparisi | Product Designer |
+| Guadalupe Marín Samuelle | Product Designer |
+| Beatriz Lorenzo | Product Designer |
+| Edorta Ramirez Pascual | Product Designer |
+| Alberto Cazalla | Product Designer |
+| Ana Rodríguez Cámara | Product Designer |
+| Manuel Tejero | Product Designer |
+| Sara Rego Novoa | Product Designer |
+| David Sanz Soblechero | Product Designer |
+| Sara Luisa Freitas Santos | Product Designer |
+| Damián Flores Ortega | Product Designer |
+| Damián Rodríguez Méndez | Product Designer |
+| Iria Loira | Product Designer |
+| María Albillos | Product Designer |
+| Silvia Martín Vegas | Product Designer |
+| Franco Viviani | Product Designer |
+| Borja Conde Herrero | Product Designer |
+| Samuel Serrano Muñoz | Product Designer |
+| Dariel Vergel Miranda | Product Designer |
+| Alejandro Sánchez Valer | Product Designer |
+| Iratxe Gonzalez Tobajas | Product Designer |
+| Laura Virués García | Product Designer |
+| Izan Albujer Martin Zarco | Product Designer |
+| Paula Gomez Moreno | Product Designer |
+| Manuela Molina Orozco | Product Designer |
+| Miguel Cano Lobo | Product Designer |
+| Jordi Terribas Llopis | Product Designer |
+| Diana Jurado Ramirez | Product Designer |
+| Ignacio Rovira Caballero | Product Designer |
+| Sergio López Cañabate | Product Designer |
+
+**Total:** 53 personas
 
 ---
 

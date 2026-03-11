@@ -71,25 +71,32 @@
 
 ## 02. Estructura y Equipo
 
-### Leadership Team
+### Leadership
 
-| Rol | Persona |
-| --- | --- |
-| CEO | Alex Vaughtton |
-| CMO | Tomás Alonso |
-| Ops | Stefano Becerra |
+| Nombre | Puesto |
+|--------|--------|
+| Alejandro Bernardo Díaz | CEO |
 
-### Equipo clave
+### Marketing
 
-| Rol | Persona | Especialidad |
-| --- | --- | --- |
-| Social Media | Elena André | Content y redes |
-| Maker (Lovable/Automations) | Elías Silva | Agentes y asistentes conversacionales |
-| Apps Leader | Adrià Solé | FlutterFlow, 5+ años freelance |
-| FlutterFlow Dev | Sergio Sánchez | Apps móviles |
-| Airtable Lead | Luis Alfonso | Operaciones |
-| Maker (Airtable) | Olga Martín | Airtable, Make, Lovable |
-| Web Development | Julia Barrueco | Desarrollo web |
+| Nombre | Puesto |
+|--------|--------|
+| Tomás Alonso | CMO |
+| Elena André Romero | Marketing Maker |
+
+### Tecnología
+
+| Nombre | Puesto |
+|--------|--------|
+| Stefano Becerra | Responsable de Operaciones |
+| Elías Silva | Product Maker |
+| Adrià Sole | Applications Lead |
+| Luis Alfonso Rodríguez Calvo | Operations Lead |
+| Sergio Sánchez | App Maker |
+| Julia Barrueco | Web Development Maker |
+| Olga Martín | Operations Maker |
+
+**Total:** 10 personas
 
 ### Contrataciones previstas 2026
 

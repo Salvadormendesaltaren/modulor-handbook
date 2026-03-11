@@ -57,12 +57,34 @@
 
 ---
 
-## 02. Leadership Team
+## 02. Equipo
 
-| Rol | Persona |
-| --- | --- |
-| CEO | Alex Vaughtton |
-| CMO | Tomás Alonso |
+### Leadership
+
+| Nombre | Puesto |
+|--------|--------|
+| Alejandro Bernardo Díaz | CEO |
+
+### Marketing
+
+| Nombre | Puesto |
+|--------|--------|
+| Tomás Alonso | CMO |
+| Elena André Romero | Marketing Maker |
+
+### Tecnología
+
+| Nombre | Puesto |
+|--------|--------|
+| Stefano Becerra | Responsable de Operaciones |
+| Elías Silva | Product Maker |
+| Adrià Sole | Applications Lead |
+| Luis Alfonso Rodríguez Calvo | Operations Lead |
+| Sergio Sánchez | App Maker |
+| Julia Barrueco | Web Development Maker |
+| Olga Martín | Operations Maker |
+
+**Total:** 10 personas
 
 ---
 

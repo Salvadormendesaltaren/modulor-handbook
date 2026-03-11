@@ -58,23 +58,28 @@
 
 ## 02. Estructura y Equipo
 
-### Roles clave
+### Leadership
 
-| Rol | Persona | Equipo | Antigüedad |
-|---|---|---|---|
-| CEO | Bill Murphy | Leadership | - |
-| COO | Brian Van Andel | Leadership | 3 anos |
-| Shopify Expert | Pablo Pellico | E-commerce | 2 anos |
-| Frontend Developer | Jose Luis Cantalejo | Tecnologia | 9 anos |
-| Frontend Developer | Noemi Maronas | Tecnologia | 4 anos |
-| Backend Developer | Enrique Melero | Tecnologia | 3 anos |
+| Nombre | Puesto |
+|--------|--------|
+| Bill Murphy | CEO |
 
-### Capacidades
+### E-commerce
 
-- **Shopify Experts:** 2 (Brian, Pablo)
-- **Frontend Developers:** 2 (Jose Luis, Noemi)
-- **Backend Developer:** 1 (Enrique)
-- **Certificaciónes equipo:** Shopify Partner certifications
+| Nombre | Puesto |
+|--------|--------|
+| Brian Van Andel | Shopify Expert |
+| Pablo Pellico | Shopify Expert |
+
+### Tecnología
+
+| Nombre | Puesto |
+|--------|--------|
+| Jose Luis Cantalejo | Frontend Developer |
+| Noemi Maroñas | Frontend Developer |
+| Enrique Melero | Backend Developer |
+
+**Total:** 6 personas
 
 ### Contrataciones previstas 2026
 

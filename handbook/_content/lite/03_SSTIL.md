@@ -52,15 +52,56 @@
 
 ## 02. Estructura y Equipo
 
-### Leadership Team
+### Leadership
 
-| Rol | Persona |
-| --- | --- |
-| Co-CEO | Paula Rodríguez |
-| Co-CEO | Sandra Ramiro |
-| Sales Manager | Emiliano Moretti |
-| Project Manager | Mia Escorihuela |
-| Lead Designer | Alba Rodríguez |
+| Nombre | Puesto |
+|--------|--------|
+| Paula Rodriguez | co-CEO & CMO |
+| Sandra Ramiro | co-CEO & Creative Director |
+
+### Ventas
+
+| Nombre | Puesto |
+|--------|--------|
+| Emiliano Moretti | Business Development Manager |
+
+### Operaciones
+
+| Nombre | Puesto |
+|--------|--------|
+| María Escorihuela Hernández | People & Operations Manager |
+| Pilar Martínez de Arenaza | Culture Manager |
+| Mateo Martínez Sáchica | Project Manager |
+
+### Marketing
+
+| Nombre | Puesto |
+|--------|--------|
+| Paula Belmonte | Head of Marketing |
+| Agustina Puga Ruiz | Marketing Manager |
+| Hugo Rodriguez | Lead Content Manager |
+
+### Diseño
+
+| Nombre | Puesto |
+|--------|--------|
+| Sara Cladellas | Art Director |
+| Alba Rodriguez Terraza | Design Manager |
+| Luzía Carmona Martínez | Lead Product Designer |
+| Aitana Climent Pico | Product Designer |
+| Fabio Martín García | Product Designer |
+| Carla Portillo | Product Designer |
+| Inés Oliver Isabel | Graphic Designer |
+
+### Tecnología
+
+| Nombre | Puesto |
+|--------|--------|
+| Aurora Salcedo Trigo | Lead Developer |
+| David González Gallego | No-Code Developer |
+| Laura Santana Rodríguez | No-Code Developer |
+
+**Total:** 20 personas
 
 ---
 

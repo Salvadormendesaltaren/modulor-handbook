@@ -42,35 +42,69 @@
 
 ## 02. Estructura y Equipo
 
-### Leadership Team
+### Leadership
 
-| Rol | Persona |
-| --- | --- |
-| CEO | Diego Méndez |
-| CCO | Simón G. Negrete |
-| Head of Engineering | Nikolaas Verlee |
-| Operations & Project Manager | Carolina Velo |
-| Senior Project Manager | Víctor Rodríguez |
+| Nombre | Puesto |
+|--------|--------|
+| Diego Mendez | CEO |
+| Simón Negrete | COO |
 
-### Sales Team
+### Ventas
 
-| Área | Responsable |
-| --- | --- |
-| Nacional | Simón |
-| Internacional | Diego, Adrian B |
-| Transversal | BDR Senior (nueva incorporación 2026) |
+| Nombre | Puesto |
+|--------|--------|
+| Alex Alegria | Business Development |
 
-### Comms Team
+### Operaciones
 
-| Rol | Persona |
-| --- | --- |
-| Head of Comms | Adrian Beloki |
-| Intern Comms | Por contratar |
-| Intern Graphic Designer | Por contratar |
+| Nombre | Puesto |
+|--------|--------|
+| Carolina Velo Ruybal | Operations Manager |
+| Andrea Mancera | Project Manager |
+| Iván Urra | Project Manager |
+| Victor Rodríguez | Project Manager |
+| Victor Chamizo | Project Manager |
 
-### Hiring 2026
+### Marketing y Comunicación
 
-- **+9 billable people** objetivo de contratación
+| Nombre | Puesto |
+|--------|--------|
+| Cristina San Juan | Comms & Marketing |
+| Adrián Beloki | Comms |
+
+### Finanzas
+
+| Nombre | Puesto |
+|--------|--------|
+| Lourdes Castro | Admin & Finance & Legal |
+
+### Tecnología
+
+| Nombre | Puesto |
+|--------|--------|
+| Nikolaas Verlee | Software Engineer |
+| Daniel Calvo | Software Engineer |
+| Gabriel Cebrian | Backend Engineer |
+| Giorgio Grassini | Software Engineer |
+| Pau Rodriguez | Software Engineer |
+| Lautaro German Zuñiga | Backend Engineer |
+| Luca Manfredi | Frontend Engineer |
+| Juan Nuñez | Software Engineer |
+| Ester Martínez | Software Engineer |
+| Daniela Quesada | Software Engineer |
+| Carlos Parada | Software Engineer |
+| Juan Antonio Gomez | Frontend Engineer |
+| Irene Fernandez | Backend Engineer |
+| Gaspar Sio | Frontend Engineer |
+| Clara Pardo | Software Engineer |
+| Javier López | Software Engineer |
+| David Díez | Software Engineer |
+| Fabian Miulescu | Data & AI |
+| Joaquín Gómez | Data & AI |
+| Laura Corbi | Software Engineer |
+| Álvaro Trancón | Software Engineer |
+
+**Total:** 31 personas
 
 ---
 

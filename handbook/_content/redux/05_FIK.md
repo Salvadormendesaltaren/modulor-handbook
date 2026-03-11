@@ -46,12 +46,30 @@
 
 ---
 
-## 02. Leadership Team
+## 02. Equipo
 
-| Rol | Persona |
-| --- | --- |
-| CEO | Bill Murphy |
-| COO | Brian Van Andel |
+### Leadership
+
+| Nombre | Puesto |
+|--------|--------|
+| Bill Murphy | CEO |
+
+### E-commerce
+
+| Nombre | Puesto |
+|--------|--------|
+| Brian Van Andel | Shopify Expert |
+| Pablo Pellico | Shopify Expert |
+
+### Tecnología
+
+| Nombre | Puesto |
+|--------|--------|
+| Jose Luis Cantalejo | Frontend Developer |
+| Noemi Maroñas | Frontend Developer |
+| Enrique Melero | Backend Developer |
+
+**Total:** 6 personas
 
 ---
 

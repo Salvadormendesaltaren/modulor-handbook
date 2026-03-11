@@ -52,8 +52,7 @@ Modulor Studios es un grupo de boutiques especializadas en diseño, tecnología,
 | **mendesaltaren** | Diseño digital y branding | Sara Rivera | 50 | mendesaltaren.com |
 | **Tailor Hub** | Desarrollo software, IA y Mobile Apps | Diego Méndez | 31 | tailor-hub.com |
 | **FIK** | Desarrollo Shopify (Premier Partner) | Bill Murphy | 6 | fik.life |
-| **SSTIL** | Marketing y comunicación | Paula Rodríguez + Sandra Ramiro | 19 | sstilagency.com |
-| **Minimum** | Growth marketing (marca de SSTIL) | Paula Rodríguez + Sandra Ramiro | (incl. SSTIL) | minimum.run |
+| **SSTIL** | Marketing, comunicación y growth (submarca: Minimum) | Paula Rodríguez + Sandra Ramiro | 19 | sstilagency.com |
 | **Nocodehackers** | Formación No-code/IA + Agencia | Alex Vaughtton | 10 | nocodehackers.es |
 
 ### Especialización por boutique
@@ -68,7 +67,7 @@ Modulor Studios es un grupo de boutiques especializadas en diseño, tecnología,
 | Mobile Apps Development | Tailor Hub | Nativo y cross-platform |
 | E-commerce Shopify | FIK | Premier Partner, Shopify Plus |
 | Marketing/Social | SSTIL | Marcas establecidas |
-| Growth/Webs rápidas | Minimum | Startups, Webflow |
+| Growth/Webs rápidas | SSTIL (Minimum) | Startups, Webflow |
 | Automatizaciones | Nocodehackers | Make, n8n, Zapier |
 | MVPs/Apps no-code | Nocodehackers | Bubble, FlutterFlow |
 | Formación no-code/IA | Nocodehackers | +10k alumnos |
@@ -113,6 +112,25 @@ Modulor Studios es un grupo de boutiques especializadas en diseño, tecnología,
 | CFO | Viviana Reyes | Finanzas |
 | People | Carina Matyniak | HR, Office Management |
 | Legal | Legal Army (partner) | Asesoría legal |
+
+### Equipo Comercial del Grupo
+
+| Boutique | Persona | Rol | Foco |
+|----------|---------|-----|------|
+| **Modulor** | Jorge Lana | CEO | Dirección, relaciones estratégicas |
+| **Modulor** | André Mendes | Socio / CCO | Creatividad, relaciones |
+| **Modulor** | Salva Serrano | COO | Ventas grupo |
+| **mendesaltaren** | Sara Rivera | CEO | Clientes clave, estratégico |
+| **mendesaltaren** | Paula López | Business Developer | Captación y desarrollo |
+| **Tailor Hub** | Diego Méndez | CEO | Internacional |
+| **Tailor Hub** | Simón G. Negrete | CCO | Nacional |
+| **Tailor Hub** | Alex Alegria | Business Developer | Captación |
+| **SSTIL** | Paula Rodriguez | Co-CEO | Estrategia, desarrollo negocio |
+| **SSTIL** | Sandra Ramiro | Co-CEO | Creatividad, relaciones |
+| **SSTIL** | Emiliano Moretti | Sales Manager | Comercial |
+| **FIK** | Bill Murphy | CEO | Founder-led |
+| **FIK** | Brian Van Andel | COO | Comercial + delivery |
+| **Nocodehackers** | Alex Vaughtton | CEO | Founder-led |
 
 ---
 
@@ -280,8 +298,8 @@ Modulor Tech es la iniciativa para integrar IA de forma estructural en las opera
 | Migración a Shopify Plus | **FIK** |
 | Marketing/Social media | **SSTIL** |
 | Activaciónes/Eventos | **SSTIL** |
-| Growth marketing | **Minimum** |
-| Webs rápidas (Webflow) | **Minimum** |
+| Growth marketing | **SSTIL** (Minimum) |
+| Webs rápidas (Webflow) | **SSTIL** (Minimum) |
 | Automatizaciones | **Nocodehackers** |
 | MVPs/Prototipos | **Nocodehackers** |
 | Apps no-code | **Nocodehackers** |
@@ -302,7 +320,7 @@ Modulor Tech es la iniciativa para integrar IA de forma estructural en las opera
 
 1. **mendesaltaren** → Estrategia, diseño de producto, branding
 2. **Tailor Hub** → Desarrollo de software
-3. **SSTIL/Minimum** → Lanzamiento y growth
+3. **SSTIL** (Minimum) → Lanzamiento y growth
 
 ### Proyecto e-commerce completo
 
@@ -331,7 +349,7 @@ Modulor Tech es la iniciativa para integrar IA de forma estructural en las opera
 ### Budget
 
 - Proyectos >30k€ para mendesaltaren, Tailor Hub y FIK
-- Proyectos >10k€ para SSTIL, Minimum y Nocodehackers
+- Proyectos >10k€ para SSTIL y Nocodehackers
 - Retainers mensuales >3k€
 
 ### Timing
@@ -360,7 +378,7 @@ Modulor Tech es la iniciativa para integrar IA de forma estructural en las opera
 | Notion | Wiki, documentación, colaboración | Todas |
 | Slack | Comunicación interna | Todas |
 | Google Workspace | Email, docs, calendar | Todas |
-| Figma | Diseño | mendesaltaren, SSTIL, Minimum |
+| Figma | Diseño | mendesaltaren, SSTIL |
 
 ---
 

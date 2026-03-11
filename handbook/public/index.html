@@ -6,7 +6,7 @@
   <title>Modulor Studios — Handbook</title>
   <link rel="icon" type="image/svg+xml" href="logos/Modulor.svg">
   <script src="https://cdn.jsdelivr.net/npm/markdown-it/dist/markdown-it.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jszip/dist/jszip.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/jszip/dist/jszip.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
   <style>
     /* ── Fonts ── */
@@ -121,15 +121,15 @@
     .chapter-label { display: block; font-size: 0.6875rem; font-weight: 400; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); }
 
     /* ── Typography ── */
-    .section h1 { font-size: 2.75rem; font-weight: 400; line-height: 2.875rem; letter-spacing: -0.15rem; color: var(--text); margin-top: 0.25rem; margin-bottom: 0.25rem; }
-    .section h2 { font-size: 1.875rem; font-weight: 400; line-height: 2.125rem; letter-spacing: -0.1rem; color: var(--text); margin-top: 4rem; margin-bottom: 1.5rem; }
-    .section h3 { font-size: 1.5rem; font-weight: 400; line-height: 1.75rem; letter-spacing: -0.075rem; color: var(--text); margin-top: 2.5rem; margin-bottom: 1rem; }
-    .section h4 { font-size: 1rem; font-weight: 400; line-height: 1.5rem; letter-spacing: var(--tracking); color: var(--text); margin-top: 1.75rem; margin-bottom: 0.5rem; }
-    .section p { margin-bottom: 1.25rem; line-height: 1.625; color: var(--text-secondary); max-width: var(--content-max); }
+    .section h1 { font-size: 2.75rem; font-weight: 400; line-height: 2.875rem; letter-spacing: -0.15rem; color: var(--text); margin-top: 0.25rem; margin-bottom: 1rem; }
+    .section h2 { font-size: 1.875rem; font-weight: 400; line-height: 2.125rem; letter-spacing: -0.1rem; color: var(--text); margin-top: 5rem; margin-bottom: 1.5rem; }
+    .section h3 { font-size: 1.5rem; font-weight: 400; line-height: 1.75rem; letter-spacing: -0.075rem; color: var(--text); margin-top: 3rem; margin-bottom: 1rem; }
+    .section h4 { font-size: 1rem; font-weight: 400; line-height: 1.5rem; letter-spacing: var(--tracking); color: var(--text); margin-top: 1.75rem; margin-bottom: 0.75rem; }
+    .section p { margin-bottom: 1rem; line-height: 1.625; color: var(--text-secondary); max-width: var(--content-max); }
     .section > :first-child { margin-top: 0; }
-    .section blockquote { background: none; border-radius: 0; border-left: 2px solid var(--border); padding: 0 0 0 1.25rem; margin: 0 0 1.25rem; max-width: var(--content-max); }
+    .section blockquote { background: none; border-radius: 0; border-left: 2px solid var(--border); padding: 0 0 0 1.25rem; margin: 0 0 1rem; max-width: var(--content-max); }
     .section blockquote p { margin-bottom: 0; font-style: normal; font-weight: 400; color: var(--text-secondary); line-height: 1.625; }
-    .section ul, .section ol { margin: 1.25rem 0; padding-left: 1.25rem; max-width: var(--content-max); }
+    .section ul, .section ol { margin: 0 0 1rem; padding-left: 1.25rem; max-width: var(--content-max); }
     .section ul { list-style-type: disc; }
     .section li { margin-bottom: 0.5rem; line-height: 1.625; color: var(--text-secondary); }
     .section li ul, .section li ol { margin-top: 0.5rem; }
@@ -137,10 +137,10 @@
     .section em { font-style: italic; opacity: 0.55; }
     .section a { color: var(--text); text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; text-decoration-color: var(--text-faint); transition: text-decoration-color 1s var(--ease); }
     .section a:hover { text-decoration-color: var(--accent); }
-    .section hr { border: none; height: 0; margin: 4rem 0; }
+    .section hr { border: none; height: 0; margin: 3rem 0; }
 
     /* ── Tables ── */
-    .section table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.875rem; line-height: 1.375; }
+    .section table { width: 100%; border-collapse: collapse; margin: 0 0 1.25rem; font-size: 0.875rem; line-height: 1.375; }
     .section thead th { text-align: left; font-weight: 400; font-size: 0.875rem; letter-spacing: var(--tracking); color: var(--text-secondary); padding: 0.5rem 1rem 0.75rem 0; border-bottom: 1px solid var(--text-faint); }
     .section tbody td { padding: 0.75rem 1rem 0.75rem 0; border-bottom: 1px solid var(--border); vertical-align: top; transition: background 0.3s var(--ease); }
     .section tbody tr:hover td { background: var(--bg-secondary); }
@@ -369,17 +369,12 @@
     const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxsdG51bmNhZ2Jvd2VheWhwamt0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI0MzAxMjEsImV4cCI6MjA4ODAwNjEyMX0.fkQ2W4xOY-IrrEtl6ExRXmON1hZu3alEDS_tA7v1MmE';
     const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-    const APPROVED_DOMAINS = [
-      'modulorstudios.com', 'modulor.ventures', 'mendesaltaren.com',
-      'tailor-hub.com', 'fik.life', 'nocodehackers.es',
-      'sstilagency.com', 'minimum.run'
-    ];
-
     let currentUser = null;
     let userRole = 'team';
     let lastValidatedId = null;
     let isLeadershipUser = false;
     let viewMode = 'team';
+    const contentCache = new Map();
 
     // ── Chapter definitions ──
     const teamChapters = [
@@ -409,7 +404,7 @@
     // ── Auth helpers ──
     function setAccessTokenCookie(session) {
       if (session?.access_token) {
-        document.cookie = `sb-access-token=${session.access_token}; path=/; secure; samesite=lax; max-age=604800`;
+        document.cookie = `sb-access-token=${session.access_token}; path=/; secure; samesite=strict; max-age=3600`;
       }
     }
 
@@ -417,69 +412,42 @@
       document.cookie = 'sb-access-token=; path=/; secure; samesite=lax; max-age=0';
     }
 
-    function isDomainApproved(email) {
-      return APPROVED_DOMAINS.includes(email.split('@')[1]);
-    }
-
-    // Central session handler — no longer rejects non-leadership users
+    // Central session handler — verifies domain + role via server API
     async function handleSession(session) {
       if (!session) return;
       if (session.user.id === lastValidatedId) return;
 
-      if (!isDomainApproved(session.user.email)) {
-        clearAccessTokenCookie();
-        showLoginError('Acceso restringido a dominios autorizados del grupo Modulor.');
-        await sb.auth.signOut();
-        return;
-      }
-
-      // Show app immediately with team defaults
-      lastValidatedId = session.user.id;
       setAccessTokenCookie(session);
       currentUser = session.user;
-      viewMode = 'team';
-      isLeadershipUser = false;
-      userRole = 'team';
-      updateViewUI();
-      showApp();
 
-      // Check leadership + role in background, then update UI
-      checkLeadershipAndRole(session);
-    }
-
-    async function checkLeadershipAndRole(session) {
       try {
-        const [lRes, rRes] = await Promise.all([
-          fetch(
-            `${SUPABASE_URL}/rest/v1/leadership_users?email=eq.${encodeURIComponent(session.user.email)}&select=email`,
-            { headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${session.access_token}` } }
-          ),
-          fetch(
-            `${SUPABASE_URL}/rest/v1/user_profiles?id=eq.${currentUser.id}&select=role`,
-            { headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${session.access_token}` } }
-          )
-        ]);
+        const meRes = await fetch('/api/me');
+        if (!meRes.ok) throw new Error(`HTTP ${meRes.status}`);
+        const data = await meRes.json();
 
-        const lData = await lRes.json();
-        const rData = await rRes.json();
-
-        isLeadershipUser = Array.isArray(lData) && lData.length > 0;
-        viewMode = isLeadershipUser ? 'leadership' : 'team';
-        userRole = (Array.isArray(rData) && rData.length > 0) ? rData[0].role : 'team';
-
-        updateViewUI();
-
-        // Re-navigate with correct view if changed to leadership
-        if (isLeadershipUser) {
-          const id = window.location.hash.replace('#', '') || 'intro';
-          navigate(id);
+        if (!data.domainApproved) {
+          clearAccessTokenCookie();
+          showLoginError('Acceso restringido a dominios autorizados del grupo Modulor.');
+          showLogin();
+          currentUser = null;
+          await sb.auth.signOut();
+          return;
         }
-      } catch (e) {
-        console.error('Background check error:', e);
-      }
 
-      // Upsert profile (fire and forget)
-      upsertProfile(session.user);
+        lastValidatedId = session.user.id;
+        isLeadershipUser = data.isLeadership;
+        viewMode = isLeadershipUser ? 'leadership' : 'team';
+        userRole = data.role;
+        updateViewUI();
+        showApp();
+      } catch (e) {
+        console.error('Session check error:', e);
+        clearAccessTokenCookie();
+        showLoginError('Error al verificar el acceso. Intenta de nuevo.');
+        showLogin();
+        currentUser = null;
+        await sb.auth.signOut();
+      }
     }
 
     function updateAccessUI() {
@@ -493,7 +461,7 @@
       if (viewMode === 'leadership') {
         brandText.innerHTML = 'Modulor Studios <span class="sidebar-badge">Leadership</span>';
       } else {
-        brandText.textContent = 'Modulor Studios';
+        brandText.innerHTML = 'Modulor Studios <span class="sidebar-badge">Team</span>';
       }
 
       // Update view switcher state
@@ -552,6 +520,7 @@
       lastValidatedId = null;
       isLeadershipUser = false;
       viewMode = 'team';
+      contentCache.clear();
       document.getElementById('app').classList.remove('visible');
       document.getElementById('loginScreen').style.display = 'flex';
       document.getElementById('adminNavLink').style.display = 'none';
@@ -568,20 +537,15 @@
       const meta = currentUser.user_metadata;
       const avatarEl = document.getElementById('userAvatar');
       const nameEl = document.getElementById('userName');
-      if (meta.avatar_url) avatarEl.innerHTML = `<img src="${meta.avatar_url}" alt="">`;
+      if (meta.avatar_url) {
+        const img = document.createElement('img');
+        img.src = meta.avatar_url;
+        img.alt = '';
+        avatarEl.textContent = '';
+        avatarEl.appendChild(img);
+      }
       nameEl.textContent = meta.full_name || currentUser.email;
       onHashChange();
-    }
-
-    async function upsertProfile(user) {
-      const meta = user.user_metadata;
-      await sb.from('user_profiles').upsert({
-        id: user.id,
-        email: user.email,
-        full_name: meta.full_name || null,
-        avatar_url: meta.avatar_url || null,
-        last_login: new Date().toISOString(),
-      }, { onConflict: 'id', ignoreDuplicates: false });
     }
 
     function showLogin() {
@@ -646,6 +610,29 @@
       if (active) active.classList.add('active');
     }
 
+    async function fetchChapter(file) {
+      if (contentCache.has(file)) return contentCache.get(file);
+      const res = await fetch(`content/${file}`);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const md = await res.text();
+      contentCache.set(file, md);
+      return md;
+    }
+
+    function preloadAdjacentChapters(id) {
+      const chapters = getChapters();
+      const idx = chapters.findIndex(c => c.id === id);
+      if (idx < 0) return;
+      const toPreload = [chapters[idx - 1], chapters[idx + 1]].filter(Boolean);
+      toPreload.forEach(ch => {
+        if (!contentCache.has(ch.file)) {
+          fetch(`content/${ch.file}`).then(r => r.ok ? r.text() : null).then(md => {
+            if (md) contentCache.set(ch.file, md);
+          }).catch(() => {});
+        }
+      });
+    }
+
     async function navigate(id) {
       const content = document.getElementById('content');
       const chapters = getChapters();
@@ -670,9 +657,7 @@
       if (!ch) { navigate('repositorio'); return; }
 
       try {
-        const res = await fetch(`content/${ch.file}`);
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        const md = await res.text();
+        const md = await fetchChapter(ch.file);
         let html = md_renderer.render(md);
         html = html.replace(/<table>/g, '<div class="table-wrapper"><table>').replace(/<\/table>/g, '</table></div>');
         html = html.replace(
@@ -682,8 +667,10 @@
         content.innerHTML = `<div class="section" id="${ch.id}">${html}</div>` + buildFooter();
         updateSidebarActive(ch.id);
         window.scrollTo(0, 0);
+        preloadAdjacentChapters(id);
       } catch (e) {
         console.error(`Error loading ${ch.file}:`, e);
+        content.innerHTML = `<div class="section"><p style="color:var(--text-secondary);padding:2rem;">Error al cargar el contenido. Intenta recargar la página.</p></div>`;
       }
     }
 
@@ -1039,7 +1026,7 @@
                   <tr>
                     <td>${escapeHtml(d.domain)}</td>
                     <td style="color:var(--text-muted)">${new Date(d.created_at).toLocaleDateString('es-ES')}</td>
-                    <td><button class="admin-btn admin-btn-danger" onclick="removeDomain('${d.id}')">Eliminar</button></td>
+                    <td><button class="admin-btn admin-btn-danger" onclick="removeDomain('${escapeHtml(d.id)}')">Eliminar</button></td>
                   </tr>
                 `).join('')}
               </tbody>
@@ -1067,7 +1054,7 @@
                     <td>${escapeHtml(u.email)}</td>
                     <td style="color:var(--text-muted)">${escapeHtml(u.invited_by || '—')}</td>
                     <td style="color:var(--text-muted)">${new Date(u.created_at).toLocaleDateString('es-ES')}</td>
-                    <td><button class="admin-btn admin-btn-danger" onclick="removeLeadership('${u.id}')">Eliminar</button></td>
+                    <td><button class="admin-btn admin-btn-danger" onclick="removeLeadership('${escapeHtml(u.id)}')">Eliminar</button></td>
                   </tr>
                 `).join('')}
               </tbody>
@@ -1091,7 +1078,7 @@
                     <td>${escapeHtml(p.email)}</td>
                     <td>${escapeHtml(p.full_name || '—')}</td>
                     <td>
-                      <select class="admin-select" onchange="changeRole('${p.id}', this.value)" ${p.id === currentUser.id ? 'disabled' : ''}>
+                      <select class="admin-select" onchange="changeRole('${escapeHtml(p.id)}', this.value)" ${p.id === currentUser.id ? 'disabled' : ''}>
                         <option value="team" ${p.role === 'team' ? 'selected' : ''}>team</option>
                         <option value="leadership" ${p.role === 'leadership' ? 'selected' : ''}>leadership</option>
                         <option value="admin" ${p.role === 'admin' ? 'selected' : ''}>admin</option>
@@ -1111,7 +1098,10 @@
     async function addDomain() {
       const input = document.getElementById('newDomain');
       const domain = input.value.trim().toLowerCase();
-      if (!domain) return;
+      if (!domain || !/^[a-z0-9.-]+\.[a-z]{2,}$/.test(domain)) {
+        alert('Introduce un dominio válido (ej: empresa.com)');
+        return;
+      }
       await sb.from('approved_domains').insert({ domain });
       input.value = '';
       loadAdminTab();
@@ -1126,7 +1116,10 @@
     async function addLeadership() {
       const input = document.getElementById('newLeadershipEmail');
       const email = input.value.trim().toLowerCase();
-      if (!email) return;
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        alert('Introduce un email válido');
+        return;
+      }
       await sb.from('leadership_users').insert({
         email,
         invited_by: currentUser.email,

@@ -34,8 +34,7 @@ Modulor Studios es un grupo de boutiques especializadas en diseño, tecnología,
 | **mendesaltaren** | Diseño digital y branding | Sara Rivera | mendesaltaren.com |
 | **Tailor Hub** | Desarrollo software, IA y Mobile Apps | Diego Méndez | tailor-hub.com |
 | **FIK** | Desarrollo Shopify (Premier Partner) | Bill Murphy | fik.life |
-| **SSTIL** | Marketing y comunicación | Paula Rodríguez + Sandra Ramiro | sstilagency.com |
-| **Minimum** | Growth marketing (marca de SSTIL) | Paula Rodríguez + Sandra Ramiro | minimum.run |
+| **SSTIL** | Marketing, comunicación y growth (submarca: Minimum) | Paula Rodríguez + Sandra Ramiro | sstilagency.com |
 | **Nocodehackers** | Formación No-code/IA + Agencia | Alex Vaughtton | nocodehackers.es |
 
 ### Especialización por boutique
@@ -50,7 +49,7 @@ Modulor Studios es un grupo de boutiques especializadas en diseño, tecnología,
 | Mobile Apps Development | Tailor Hub |
 | E-commerce Shopify | FIK |
 | Marketing/Social | SSTIL |
-| Growth/Webs rápidas | Minimum |
+| Growth/Webs rápidas | SSTIL (Minimum) |
 | Automatizaciones | Nocodehackers |
 | MVPs/Apps no-code | Nocodehackers |
 | Formación no-code/IA | Nocodehackers |
@@ -78,6 +77,25 @@ Modulor Studios es un grupo de boutiques especializadas en diseño, tecnología,
 | SSTIL | Paula Rodríguez + Sandra Ramiro |
 | Nocodehackers | Alex Vaughtton |
 
+### Equipo Comercial del Grupo
+
+| Boutique | Persona | Rol | Foco |
+|----------|---------|-----|------|
+| **Modulor** | Jorge Lana | CEO | Dirección, relaciones estratégicas |
+| **Modulor** | André Mendes | Socio / CCO | Creatividad, relaciones |
+| **Modulor** | Salva Serrano | COO | Ventas grupo |
+| **mendesaltaren** | Sara Rivera | CEO | Clientes clave, estratégico |
+| **mendesaltaren** | Paula López | Business Developer | Captación y desarrollo |
+| **Tailor Hub** | Diego Méndez | CEO | Internacional |
+| **Tailor Hub** | Simón G. Negrete | CCO | Nacional |
+| **Tailor Hub** | Alex Alegria | Business Developer | Captación |
+| **SSTIL** | Paula Rodriguez | Co-CEO | Estrategia, desarrollo negocio |
+| **SSTIL** | Sandra Ramiro | Co-CEO | Creatividad, relaciones |
+| **SSTIL** | Emiliano Moretti | Sales Manager | Comercial |
+| **FIK** | Bill Murphy | CEO | Founder-led |
+| **FIK** | Brian Van Andel | COO | Comercial + delivery |
+| **Nocodehackers** | Alex Vaughtton | CEO | Founder-led |
+
 ---
 
 ## 04. Matriz de Derivación de Leads
@@ -94,8 +112,8 @@ Modulor Studios es un grupo de boutiques especializadas en diseño, tecnología,
 | Migración a Shopify Plus | **FIK** |
 | Marketing/Social media | **SSTIL** |
 | Activaciónes/Eventos | **SSTIL** |
-| Growth marketing | **Minimum** |
-| Webs rápidas (Webflow) | **Minimum** |
+| Growth marketing | **SSTIL** (Minimum) |
+| Webs rápidas (Webflow) | **SSTIL** (Minimum) |
 | Automatizaciones | **Nocodehackers** |
 | MVPs/Prototipos | **Nocodehackers** |
 | Apps no-code | **Nocodehackers** |
@@ -116,7 +134,7 @@ Modulor Studios es un grupo de boutiques especializadas en diseño, tecnología,
 
 1. **mendesaltaren** → Estrategia, diseño de producto, branding
 2. **Tailor Hub** → Desarrollo de software
-3. **SSTIL/Minimum** → Lanzamiento y growth
+3. **SSTIL** (Minimum) → Lanzamiento y growth
 
 ### Proyecto e-commerce completo
 
@@ -148,7 +166,7 @@ Modulor Studios es un grupo de boutiques especializadas en diseño, tecnología,
 | Notion | Wiki, documentación, colaboración | Todas |
 | Slack | Comunicación interna | Todas |
 | Google Workspace | Email, docs, calendar | Todas |
-| Figma | Diseño | mendesaltaren, SSTIL, Minimum |
+| Figma | Diseño | mendesaltaren, SSTIL |
 
 ---
 

@@ -1,14 +1,14 @@
 # Handbook Modulor Studios
 
-> La base de conocimiento estratégica del grupo Modulor — identidad, operaciónes, financieros y gobernanza de las seis boutiques.
+> La base de conocimiento estratégica del grupo Modulor — identidad, operaciónes, financieros y gobernanza de las cinco boutiques.
 
 ## Por qué existe este Handbook
 
-Modulor Studios es un grupo de seis boutiques especializadas que operan de forma coordinada: mendesaltaren, Tailor Hub, SSTIL, Minimum, Nocodehackers y FIK. Cada boutique tiene su propio posicionamiento, servicios e identidad, pero comparten clientes, sinergias y una visión común.
+Modulor Studios es un grupo de cinco boutiques especializadas que operan de forma coordinada: mendesaltaren, Tailor Hub, SSTIL, Nocodehackers y FIK. Cada boutique tiene su propio posicionamiento, servicios e identidad, pero comparten clientes, sinergias y una visión común. SSTIL opera además la submarca Minimum (minimum.run), orientada a growth marketing y startups.
 
 Este Handbook nace para resolver varios problemas simultáneos:
 
-1. **Fragmentación del conocimiento.** Con seis boutiques y más de 125 personas, la información sobre servicios, precios, equipos y estrategia estaba dispersa en decenas de documentos, Notions y conversaciones.
+1. **Fragmentación del conocimiento.** Con cinco boutiques y más de 125 personas, la información sobre servicios, precios, equipos y estrategia estaba dispersa en decenas de documentos, Notions y conversaciones.
 2. **Cross-selling ineficiente.** Las oportunidades de derivación entre boutiques se perdían por falta de contexto sobre qué hace cada una y a quién se dirige.
 3. **Dependencia de personas clave.** El conocimiento estratégico y operativo estaba concentrado en pocos líderes, creando cuellos de botella.
 4. **Necesidad de contexto para IAs.** Las herramientas de inteligencia artificial (ChatGPT, Claude, etc.) requieren contexto estructurado para generar resultados útiles. Sin un documento unificado, cada persona improvisaba su propio contexto.

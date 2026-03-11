@@ -4,7 +4,7 @@
 
 ## Por qué existe este Handbook
 
-Modulor Studios es un grupo de seis boutiques especializadas que operan de forma coordinada: mendesaltaren, Tailor Hub, SSTIL, Minimum, Nocodehackers y FIK. Cada boutique tiene su propio posicionamiento, servicios e identidad, pero comparten clientes, sinergias y una visión común.
+Modulor Studios es un grupo de cinco boutiques especializadas que operan de forma coordinada: mendesaltaren, Tailor Hub, SSTIL, Nocodehackers y FIK. Cada boutique tiene su propio posicionamiento, servicios e identidad, pero comparten clientes, sinergias y una visión común. SSTIL opera además la submarca Minimum (minimum.run), orientada a growth marketing y startups.
 
 Este Handbook nace para resolver un problema concreto: **que cualquier persona del grupo entienda qué hace cada boutique, a quién se dirige y cuándo derivar un cliente o una oportunidad.**
 

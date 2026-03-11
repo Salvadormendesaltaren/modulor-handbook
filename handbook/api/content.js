@@ -31,6 +31,18 @@ export default async function handler(req, res) {
   const token = match[1];
   const SUPABASE_URL = process.env.SUPABASE_URL;
   const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY;
+  const SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+  // Headers for DB queries: service key bypasses RLS; fallback to user token
+  const dbHeaders = SERVICE_KEY
+    ? { 'apikey': SERVICE_KEY, 'Authorization': `Bearer ${SERVICE_KEY}` }
+    : { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${token}` };
+
+  // Validate file path early (no network needed)
+  const file = req.query.file;
+  if (!file || !/^(redux|full|lite)\/[\w.-]+\.md$/.test(file) || file.includes('..')) {
+    return res.status(400).send('Invalid file path');
+  }
 
   // Verify JWT with Supabase Auth API
   const userRes = await fetch(`${SUPABASE_URL}/auth/v1/user`, {
@@ -46,42 +58,34 @@ export default async function handler(req, res) {
 
   const user = await userRes.json();
 
-  // Verify approved domain
+  // Check domain + leadership in parallel
   const domain = user.email.split('@')[1];
-  const domainRes = await fetch(
-    `${SUPABASE_URL}/rest/v1/approved_domains?domain=eq.${encodeURIComponent(domain)}&select=domain`,
-    {
-      headers: {
-        'apikey': SUPABASE_ANON_KEY,
-        'Authorization': `Bearer ${token}`,
-      },
-    }
-  );
+  const needsLeadership = file.startsWith('full/') || file.startsWith('lite/');
 
-  const domains = await domainRes.json();
+  const checks = [
+    fetch(
+      `${SUPABASE_URL}/rest/v1/approved_domains?domain=eq.${encodeURIComponent(domain)}&select=domain`,
+      { headers: dbHeaders }
+    ),
+  ];
+  if (needsLeadership) {
+    checks.push(
+      fetch(
+        `${SUPABASE_URL}/rest/v1/leadership_users?email=eq.${encodeURIComponent(user.email)}&select=email`,
+        { headers: dbHeaders }
+      )
+    );
+  }
+
+  const results = await Promise.all(checks);
+
+  const domains = await results[0].json();
   if (!Array.isArray(domains) || domains.length === 0) {
     return res.status(403).send('Forbidden');
   }
 
-  // Validate file path — accepts redux/, full/, lite/
-  const file = req.query.file;
-  if (!file || !/^(redux|full|lite)\/[\w.-]+\.md$/.test(file) || file.includes('..')) {
-    return res.status(400).send('Invalid file path');
-  }
-
-  // full/ and lite/ require leadership_users membership
-  if (file.startsWith('full/') || file.startsWith('lite/')) {
-    const invitedRes = await fetch(
-      `${SUPABASE_URL}/rest/v1/leadership_users?email=eq.${encodeURIComponent(user.email)}&select=email`,
-      {
-        headers: {
-          'apikey': SUPABASE_ANON_KEY,
-          'Authorization': `Bearer ${token}`,
-        },
-      }
-    );
-
-    const invited = await invitedRes.json();
+  if (needsLeadership) {
+    const invited = await results[1].json();
     if (!Array.isArray(invited) || invited.length === 0) {
       return res.status(403).send('Forbidden');
     }

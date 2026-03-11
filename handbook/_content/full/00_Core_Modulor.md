@@ -44,7 +44,7 @@ Todo lo que hacemos conecta estos tres elementos.
 | Presencia internacional | 10+ paises |
 | Relaciones corporativas long-term | 8+ |
 
-**Autofinanciados.** Hemos crecido sin inversión externa, incubando 2 estudios (mendesaltaren, Minimum) y adquiriendo 3 (Nocodehackers, Tailor Hub, FIK).
+**Autofinanciados.** Hemos crecido sin inversión externa, incubando mendesaltaren y adquiriendo 3 compañías (Nocodehackers, Tailor Hub, FIK).
 
 ---
 
@@ -57,8 +57,7 @@ Todo lo que hacemos conecta estos tres elementos.
 | **mendesaltaren** | Diseño digital y branding | Sara Rivera | 52 | [mendesaltaren.com](http://mendesaltaren.com) |
 | **Tailor Hub** | Desarrollo software, IA y Mobile Apps | Diego Méndez | 31 | [tailor-hub.com](http://tailor-hub.com) |
 | **FIK** | Desarrollo Shopify (Premier Partner) | Bill Murphy | 6 | [fik.life](http://fik.life) |
-| **SSTIL** | Marketing y comunicación | Paula Rodríguez + Sandra Ramiro | 19 | [sstilagency.com](http://sstilagency.com) |
-| **Minimum** | Growth marketing (marca de SSTIL) | Paula Rodríguez + Sandra Ramiro | (incl. SSTIL) | [minimum.run](http://minimum.run) |
+| **SSTIL** | Marketing, comunicación y growth (submarca: Minimum) | Paula Rodríguez + Sandra Ramiro | 19 | [sstilagency.com](http://sstilagency.com) |
 | **Nocodehackers** | Formación No-code/IA + Agencia | Alex Vaughtton | 10 | [nocodehackers.es](http://nocodehackers.es) |
 
 **Total Grupo:** 125 personas (+ 7 en Modulor central)
@@ -75,7 +74,7 @@ Todo lo que hacemos conecta estos tres elementos.
 | Mobile Apps Development | Tailor Hub | Nativo y cross-platform |
 | E-commerce Shopify | FIK | Premier Partner, Shopify Plus |
 | Marketing/Social | SSTIL | Marcas establecidas |
-| Growth/Webs rápidas | Minimum | Startups, Webflow |
+| Growth/Webs rápidas | SSTIL (Minimum) | Startups, Webflow |
 | Automatizaciónes | Nocodehackers | Make, n8n, Zapier |
 | MVPs/Apps no-code | Nocodehackers | Bubble, FlutterFlow |
 | Formación no-code/IA | Nocodehackers | +10k alumnos |
@@ -109,6 +108,25 @@ Todo lo que hacemos conecta estos tres elementos.
 | CFO | Viviana Reyes | Finanzas |
 | People | Carina Matyniak | HR, Office Management |
 | Legal | Legal Army (partner) | Asesoria legal |
+
+### Equipo Comercial del Grupo
+
+| Boutique | Persona | Rol | Foco |
+|----------|---------|-----|------|
+| **Modulor** | Jorge Lana | CEO | Dirección, relaciones estratégicas |
+| **Modulor** | André Mendes | Socio / CCO | Creatividad, relaciones |
+| **Modulor** | Salva Serrano | COO | Ventas grupo |
+| **mendesaltaren** | Sara Rivera | CEO | Clientes clave, estratégico |
+| **mendesaltaren** | Paula López | Business Developer | Captación y desarrollo |
+| **Tailor Hub** | Diego Méndez | CEO | Internacional |
+| **Tailor Hub** | Simón G. Negrete | CCO | Nacional |
+| **Tailor Hub** | Alex Alegria | Business Developer | Captación |
+| **SSTIL** | Paula Rodriguez | Co-CEO | Estrategia, desarrollo negocio |
+| **SSTIL** | Sandra Ramiro | Co-CEO | Creatividad, relaciones |
+| **SSTIL** | Emiliano Moretti | Sales Manager | Comercial |
+| **FIK** | Bill Murphy | CEO | Founder-led |
+| **FIK** | Brian Van Andel | COO | Comercial + delivery |
+| **Nocodehackers** | Alex Vaughtton | CEO | Founder-led |
 
 ---
 
@@ -163,7 +181,7 @@ McKinsey & Company, El Corte Inglés, Iberia, Cargill, Inditex, Zara, Mondelez, 
 | Notion | Wiki, documentación, colaboración | Todas |
 | Slack | Comunicación interna | Todas |
 | Google Workspace | Email, docs, calendar | Todas |
-| Figma | Diseño | mendesaltaren, SSTIL, Minimum |
+| Figma | Diseño | mendesaltaren, SSTIL |
 
 ### Reporting
 
@@ -188,20 +206,20 @@ McKinsey & Company, El Corte Inglés, Iberia, Cargill, Inditex, Zara, Mondelez, 
 | Comunicación de marca (establecidas) | **SSTIL** |
 | Activaciónes y eventos | **SSTIL** |
 | Social media (marcas grandes) | **SSTIL** |
-| Growth marketing (startups) | **Minimum** |
-| Webs rápidas (Webflow) | **Minimum** |
-| SEO/SEM/Performance | **Minimum** |
+| Growth marketing (startups) | **SSTIL** (Minimum) |
+| Webs rápidas (Webflow) | **SSTIL** (Minimum) |
+| SEO/SEM/Performance | **SSTIL** (Minimum) |
 | Automatizaciónes | **Nocodehackers** |
 | MVPs/Prototipos | **Nocodehackers** |
 | Apps no-code | **Nocodehackers** |
 | Formación no-code/IA | **Nocodehackers** |
 
-### SSTIL vs Minimum — Cuando derivar a cada uno
+### SSTIL vs Minimum — Cuando derivar a cada submarca
 
-| Tipo de cliente | Necesidad | Derivar a |
+| Tipo de cliente | Necesidad | Submarca |
 |---|---|---|
 | Marca establecida | Comunicación, posicionamiento | **SSTIL** |
-| Marca establecida | Activación, evento, campana | **SSTIL** |
+| Marca establecida | Activación, evento, campaña | **SSTIL** |
 | Marca establecida | Social media strategy | **SSTIL** |
 | Startup / Scaleup | Growth, adquisición | **Minimum** |
 | Startup / Scaleup | Web rápida (Webflow) | **Minimum** |
@@ -215,35 +233,27 @@ McKinsey & Company, El Corte Inglés, Iberia, Cargill, Inditex, Zara, Mondelez, 
 - Desarrollo software/backend -> Tailor Hub
 - E-commerce Shopify -> FIK
 - Comunicación y activaciónes -> SSTIL
-- Growth y performance -> Minimum
+- Growth y performance -> SSTIL (Minimum)
 - Automatizaciónes/MVPs -> Nocodehackers
 
 **Desde Tailor Hub derivar:**
 - UX/UI del producto -> mendesaltaren
 - E-commerce -> FIK
 - Comunicación de marca -> SSTIL
-- Growth marketing -> Minimum
+- Growth marketing -> SSTIL (Minimum)
 - Automatizaciónes sin código -> Nocodehackers
 
 **Desde FIK derivar:**
 - Branding/UX premium -> mendesaltaren
 - Integraciónes complejas (no Shopify) -> Tailor Hub
 - Comunicación y social -> SSTIL
-- Performance marketing -> Minimum
+- Performance marketing -> SSTIL (Minimum)
 - Automatizaciónes operativas -> Nocodehackers
 
-**Desde SSTIL derivar:**
+**Desde SSTIL/Minimum derivar:**
 - Diseño de producto digital -> mendesaltaren
 - Desarrollo software -> Tailor Hub
 - E-commerce Shopify -> FIK
-- Growth/Performance -> Minimum
-- Automatizaciónes -> Nocodehackers
-
-**Desde Minimum derivar:**
-- Diseño premium/branding -> mendesaltaren
-- Desarrollo software -> Tailor Hub
-- E-commerce -> FIK
-- Comunicación marca grande -> SSTIL
 - Automatizaciónes -> Nocodehackers
 
 **Desde Nocodehackers derivar:**
@@ -251,7 +261,7 @@ McKinsey & Company, El Corte Inglés, Iberia, Cargill, Inditex, Zara, Mondelez, 
 - Desarrollo complejo (código) -> Tailor Hub
 - E-commerce -> FIK
 - Comunicación/Activaciónes -> SSTIL
-- Growth/Performance -> Minimum
+- Growth/Performance -> SSTIL (Minimum)
 
 ### Combinaciones Ganadoras
 
@@ -268,7 +278,7 @@ McKinsey & Company, El Corte Inglés, Iberia, Cargill, Inditex, Zara, Mondelez, 
 
 1. mendesaltaren -> Estrategia, diseño de producto, branding
 2. Tailor Hub -> Desarrollo de software
-3. Minimum -> Lanzamiento y growth
+3. SSTIL (Minimum) -> Lanzamiento y growth
 
 #### Proyecto e-commerce completo
 
@@ -282,7 +292,7 @@ McKinsey & Company, El Corte Inglés, Iberia, Cargill, Inditex, Zara, Mondelez, 
 1. Nocodehackers -> MVP y validación
 2. mendesaltaren -> Diseño cuando escale
 3. Tailor Hub -> Desarrollo cuando necesite código
-4. Minimum -> Growth desde dia 1
+4. SSTIL (Minimum) -> Growth desde dia 1
 
 #### Transformación digital corporativa
 
@@ -295,7 +305,7 @@ McKinsey & Company, El Corte Inglés, Iberia, Cargill, Inditex, Zara, Mondelez, 
 
 1. mendesaltaren -> Estrategia y diseño de marca
 2. SSTIL -> Activación, comunicación, eventos
-3. Minimum -> Web y performance
+3. SSTIL (Minimum) -> Web y performance
 
 ---
 
@@ -345,14 +355,14 @@ McKinsey & Company, El Corte Inglés, Iberia, Cargill, Inditex, Zara, Mondelez, 
 | Service Design | Brand Strategy | Design System | Back-end | Activations | Web Development |
 | Business Modeling | Visual Identity | Product Management | Data Science | Events | SEO/SEM/GEO |
 | Strategic Validation | Digital Experience | UX Research | Gen AI development | Social Media | Content Marketing |
-| [mendesaltaren] | [mendesaltaren] | [mendesaltaren] [FIK] | [Tailor Hub] [FIK] | [SSTIL] | [Minimum] [Nocodehackers] |
+| [mendesaltaren] | [mendesaltaren] | [mendesaltaren] [FIK] | [Tailor Hub] [FIK] | [SSTIL] | [SSTIL (Minimum)] [Nocodehackers] |
 
 ### Journey del Cliente en Modulor
 
 | DISCOVER | BUILD | LAUNCH | SCALE |
 |---|---|---|---|
 | Strategy | Design + Dev | Marketing | Growth + Ops |
-| mendesaltaren | mendesaltaren, Tailor Hub, FIK, Nocodehackers | SSTIL, Minimum | Minimum, Nocodehackers |
+| mendesaltaren | mendesaltaren, Tailor Hub, FIK, Nocodehackers | SSTIL | SSTIL (Minimum), Nocodehackers |
 
 ---
 

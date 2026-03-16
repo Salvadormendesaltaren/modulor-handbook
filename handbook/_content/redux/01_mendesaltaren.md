@@ -90,7 +90,7 @@ Junto con **Tailor Hub**, diseñamos y activamos programas de innovación que co
 
 - Brand Strategy, Narrative, Visual Branding, Brand Situational Study & Diagnosis, Visual Identity
 
-### Product & Service Design
+### Product Design
 
 - Product Design UX/UI, Visual Design, Experience Design, User Research, User Testing, Data & CRO, E-commerce Design
 

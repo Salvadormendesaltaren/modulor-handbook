@@ -281,7 +281,7 @@ Junto con **Tailor Hub**, diseñamos y activamos programas de innovación que co
 - **Incluye:** Brand Strategy, Narrative, Visual Branding, Brand Situational Study & Diagnosis, Visual Identity
 - **Estandarizable:** Si (estructura clara)
 
-### Product & Service Design
+### Product Design
 
 - **Ticket One-shot:** mínimo objetivo EUR50,000
 - **Ticket Ongoing:** desde EUR60/h por perfil
@@ -321,7 +321,7 @@ Junto con **Tailor Hub**, diseñamos y activamos programas de innovación que co
 |---|---|---|---|
 | Business Design & Innovation | EUR12-40K | - | 1 sem - 3 meses |
 | Branding | desde EUR20K | EUR60/h | 6 semanas |
-| Product & Service Design | desde EUR50K | EUR60/h | 12 semanas |
+| Product Design | desde EUR50K | EUR60/h | 12 semanas |
 | Design Systems | desde EUR50K | EUR60/h | 12 semanas |
 | Motion Design | desde EUR15K | EUR60/h | 4 semanas |
 | Data & CRO | desde EUR50K | EUR60/h | 12 semanas |

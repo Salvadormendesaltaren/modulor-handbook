@@ -1,5 +1,8 @@
 {
   "name": "modulor-handbook",
   "private": true,
-  "type": "module"
+  "type": "module",
+  "scripts": {
+    "bump": "node scripts/bump-version.js"
+  }
 }

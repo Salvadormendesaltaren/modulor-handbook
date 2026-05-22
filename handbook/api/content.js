@@ -4,11 +4,27 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-function findContent(file) {
+function loadVersions() {
   const candidates = [
-    join(__dirname, '..', '_content', file),
-    join(process.cwd(), '_content', file),
-    join('/var/task', '_content', file),
+    join(__dirname, '..', '_content', 'versions.json'),
+    join(process.cwd(), '_content', 'versions.json'),
+    join('/var/task', '_content', 'versions.json'),
+  ];
+  for (const p of candidates) {
+    if (existsSync(p)) return JSON.parse(readFileSync(p, 'utf-8'));
+  }
+  return null;
+}
+
+function findContent(file, version) {
+  const versions = loadVersions();
+  const isCurrent = !version || !versions || version === versions.current;
+  const subdir = isCurrent ? 'current' : `archive/${version}`;
+
+  const candidates = [
+    join(__dirname, '..', '_content', subdir, file),
+    join(process.cwd(), '_content', subdir, file),
+    join('/var/task', '_content', subdir, file),
   ];
   for (const p of candidates) {
     if (existsSync(p)) return p;
@@ -91,7 +107,12 @@ export default async function handler(req, res) {
     }
   }
 
-  const fullPath = findContent(file);
+  const version = req.query.version;
+  if (version && !/^V\d+\.\d+\.\d+$/.test(version)) {
+    return res.status(400).send('Invalid version format');
+  }
+
+  const fullPath = findContent(file, version);
   if (!fullPath) {
     return res.status(404).send('Not found');
   }

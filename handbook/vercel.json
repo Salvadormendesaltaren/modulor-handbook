@@ -3,10 +3,14 @@
   "functions": {
     "api/content.js": {
       "includeFiles": "_content/**"
+    },
+    "api/versions.js": {
+      "includeFiles": "_content/versions.json"
     }
   },
   "rewrites": [
-    { "source": "/content/:path*", "destination": "/api/content?file=:path*" }
+    { "source": "/content/:path*", "destination": "/api/content?file=:path*" },
+    { "source": "/versions", "destination": "/api/versions" }
   ],
   "headers": [
     {

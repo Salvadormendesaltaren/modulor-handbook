@@ -11,10 +11,8 @@
 - **Nombre:** SSTIL
 - **Web:** https://sstilagency.com
 - **Submarca:** Minimum (https://minimum.run) - Growth studio
-- **Fundación:** 2021
 - **Co-CEOs:** Paula Rodríguez y Sandra Ramiro
-- **Sede:** Calle Hermanos Álvarez Quintero, 2, 28004 Madrid
-- **Empleados:** ~12 personas
+- **Sede:** Madrid
 
 ### Propósito
 
@@ -39,8 +37,6 @@
 | **Cliente típico** | Marcas establecidas, corporaciones | Startups, scaleups, tech |
 | **Web** | sstilagency.com | minimum.run |
 
-*Nota: Minimum es la antigua marca de SSTIL. Sigue operando para captar leads que ejecutan SSTIL o Nocodehackers Solutions.*
-
 ### Qué NO hacemos
 
 - Diseño de producto digital (derivamos a mendesaltaren)
@@ -50,24 +46,7 @@
 
 ---
 
-## 02. Resultados y Objetivos Financieros
-
-### Resultados 2025
-
-| Métrica | Resultado |
-| --- | --- |
-| **Revenue** | €1.3M |
-
-### Objetivos 2026
-
-| Métrica | Objetivo |
-| --- | --- |
-| **Revenue** | €1.7M |
-| **Growth** | +31% |
-
----
-
-## 03. Estructura y Equipo
+## 02. Equipo
 
 ### Leadership
 
@@ -122,47 +101,28 @@
 
 ---
 
-## 04. Servicios
-
-### Modelo Comercial
-
-- **NO paquetes fijos:** Ajustan entregables según fee del cliente
-- **Proceso:** Cerrar primero el número, luego ajustar entregables según monto
-- **Ticket más común:** €2k inicial para comenzar y crecer mes a mes
-- **Squad líquido:** Equipo flexible (Lead Marketing, Diseñador, Filmmaker, PM) que adapta recursos según presupuesto
-
----
+## 03. Servicios
 
 ### SSTIL - Servicios principales
 
-| Servicio | Ticket típico | Duración | Descripción |
-| --- | --- | --- | --- |
-| **Creative Direction** | €800/mes | Retainer mensual | Dirección creativa para campañas y marcas |
-| **Social Media Management** | €2,000-9,000/mes | Retainer mensual | Estrategia, contenido, community. Mín €2k (seguimiento + paid pequeño), hasta €9k grandes clientes |
-| **Activations** | €1,000/mes | Retainer mensual | Activaciónes de marca y experiencias |
-| **Content Creation** | €1,500/mes | Retainer mensual | Vídeo, foto, gráficas, animación. 8-10 piezas/mes (2-3 vídeos + 5-7 visuales) |
-| **Digital Strategy** | €100/mes | Retainer mensual | Estrategia digital integral |
-| **Events** | Por definir | 4 semanas | Producción y gestión de eventos |
-| **Branding** | €6,500 | 3-4 semanas | Identidad de marca orientada a comunicación y marketing. Para branding de producto o a gran escala, derivar a mendesaltaren |
-
-**Entregables típicos servicio mensual completo:**
-
-- Estrategia mensual de contenido
-- 1 sesión producción/mes (grabación + fotografía)
-- 8-10 piezas/mes: 2-3 vídeos + 5-7 piezas visuales
-- Plan operativo RRSS
-- Reunión mensual + comunicación continua Slack
-
----
+| Servicio | Descripción |
+| --- | --- |
+| **Creative Direction** | Dirección creativa para campañas y marcas |
+| **Social Media Management** | Estrategia, contenido, community management |
+| **Activations** | Activaciónes de marca y experiencias |
+| **Content Creation** | Vídeo, foto, gráficas, animación |
+| **Digital Strategy** | Estrategia digital integral |
+| **Events** | Producción y gestión de eventos |
+| **Branding** | Identidad de marca orientada a comunicación y marketing |
 
 ### Minimum - Servicios principales
 
-| Servicio | Ticket típico | Duración | Descripción |
-| --- | --- | --- | --- |
-| **Growth Strategy** | €1,500 | 4 semanas (one-shot) | Estrategia de crecimiento digital: web, content, SEO/SEM, social |
-| **Web Design & Development** | €17,000-24,000 | 12-14 semanas | Webs Webflow según complejidad (S/M/L/XL) |
-| **SEO/SEM** | €1,200/mes | Retainer mensual | Optimización orgánica y campañas pagadas |
-| **Social Media Strategy** | €1,200/mes | Retainer mensual | Estrategia redes sociales |
+| Servicio | Descripción |
+| --- | --- |
+| **Growth Strategy** | Estrategia de crecimiento digital: web, content, SEO/SEM, social |
+| **Web Design & Development** | Webs Webflow según complejidad |
+| **SEO/SEM** | Optimización orgánica y campañas pagadas |
+| **Social Media Strategy** | Estrategia redes sociales |
 
 ### Métricas Minimum
 
@@ -171,19 +131,17 @@
 
 ---
 
-## 05. Cliente Ideal (ICP)
+## 04. Cliente Ideal
 
 ### SSTIL - ICP
 
 - **Tamaño:** Marcas establecidas, corporaciones
 - **Sectores:** Lifestyle, fashion, food, hospitality, corporativo
-- **Presupuesto mínimo:** >~€15k o retainers desde €2k/mes
 
 ### Minimum - ICP
 
 - **Tamaño:** Startups, scaleups
 - **Sectores:** Tech, SaaS, Health, Energy, Finance, DTC
-- **Presupuesto mínimo:** Webs desde €17k, retainers desde €1.2k/mes
 
 ### Triggers de compra
 
@@ -194,69 +152,17 @@
 - Necesidad de presencia digital rápida
 - Campañas estacionales
 
-### Señales de fit
-
-**🟢 Green flags:**
-- Marca con producto/servicio claro
-- Presupuesto de marketing definido
-- Equipo interno con quien colaborar
-
-**🔴 Red flags:**
-- Sin presupuesto definido
-- Expectativas de "viral orgánico"
-- Sin producto/servicio claro
-
 ---
 
-## 06. Modelo de Negocio
-
-### Pricing Resumen
-
-**SSTIL:**
-
-| Servicio | Rango | Modelo |
-| --- | --- | --- |
-| Social Media Management | €2,000-9,000 | /mes |
-| Content Creation | €1,500 | /mes |
-| Creative Direction | €800 | /mes |
-| Activations | €1,000 | /mes |
-| Branding | €6,500 | Por proyecto |
-
-**Minimum:**
-
-| Servicio | Rango | Modelo |
-| --- | --- | --- |
-| Web Webflow | €17,000-24,000 | Por proyecto |
-| Growth Strategy | €1,500 | One-shot |
-| SEO/SEM | €1,200 | /mes |
-| Social Media Strategy | €1,200 | /mes |
-
----
-
-## 07. Casos y Portfolio
+## 05. Casos y Portfolio
 
 ### Casos Minimum destacados
 
-#### Urban X
-- **Contexto:** Programa acelerador de MINI en EEUU
-- **Qué hicimos:** Diseño y desarrollo web
-- **Tecnología:** Webflow
-
-#### Diamond Foundry
-- **Contexto:** Fabricante de diamantes de laboratorio
-- **Qué hicimos:** Web corporativa
-
-#### LifeX Ventures
-- **Contexto:** Venture Capital
-- **Qué hicimos:** Web institucional
-
-#### Therapyside
-- **Contexto:** Plataforma de psicología online
-- **Qué hicimos:** Web y marketing
-
-#### Idoven
-- **Contexto:** Startup de cardiología con IA
-- **Qué hicimos:** Web corporativa
+- **Urban X** — Programa acelerador de MINI en EEUU (diseño y desarrollo web)
+- **Diamond Foundry** — Fabricante de diamantes de laboratorio (web corporativa)
+- **LifeX Ventures** — Venture Capital (web institucional)
+- **Therapyside** — Plataforma de psicología online (web y marketing)
+- **Idoven** — Startup de cardiología con IA (web corporativa)
 
 ### Clientes Minimum destacados
 
@@ -268,7 +174,7 @@ Iberia, Mango, Factorial, PagoNxt, Kpler, Urban X, Therapy Side, Kfund, Diamond 
 
 ---
 
-## 08. Cross-selling y Sinergias
+## 06. Cross-selling y Sinergias
 
 ### Cuándo derivar A SSTIL/Minimum
 
@@ -299,20 +205,18 @@ Iberia, Mango, Factorial, PagoNxt, Kpler, Urban X, Therapy Side, Kfund, Diamond 
 
 ---
 
-## 09. Ventas
+## 07. Ventas
 
 ### Mensajes clave
 
 - **Elevator pitch SSTIL:** Somos una agencia creativa que construye marcas y experiencias que perduran. Combinamos estrategia, diseño, tecnología y storytelling para generar valor sostenido.
 - **Elevator pitch Minimum:** Somos un growth studio que combina diseño y marketing para ayudar a empresas ambiciosas a crecer más rápido. +300 proyectos, Official Webflow Partner.
 
----
-
-## 10. Conocimiento
+### Materiales
 
 - **Web SSTIL:** https://sstilagency.com
 - **Web Minimum:** https://minimum.run
 
 ---
 
-*Última actualización: Febrero 2026*
+*Última actualización: Marzo 2026*

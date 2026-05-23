@@ -1,6 +1,12 @@
 {
-  "current": "V1.1.0",
+  "current": "V1.2.0",
   "versions": [
+    {
+      "version": "V1.2.0",
+      "date": "2026-05-23",
+      "notes": "Spring Summit: correcciones financieras (SSTIL, FIK, NCH), resultados Q1 2026, nuevos clientes (Louis Vuitton, Orange, PayPal...), 15 casos intragrupo, equipo comms Modulor",
+      "type": "quarter"
+    },
     {
       "version": "V1.1.0",
       "date": "2026-05-23",

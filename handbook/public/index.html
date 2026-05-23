@@ -42,8 +42,8 @@
       --font: 'Untitled Sans', system-ui, sans-serif;
       --tracking: -0.04375rem;
       --ease: cubic-bezier(0.165, 0.84, 0.44, 1);
-      --sidebar-w: 260px;
-      --content-max: 46rem;
+      --sidebar-w: 280px;
+      --content-max: 800px;
     }
 
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -118,8 +118,8 @@
     .main { margin-left: var(--sidebar-w); min-height: 100vh; }
 
     /* ── Section ── */
-    .section { padding: 2.25rem clamp(2rem, 6vw, 6rem) 8rem; }
-    .section-content { max-width: var(--content-max); }
+    .section { padding: 2.25rem clamp(2rem, 6vw, 6rem) 8rem; max-width: calc(var(--content-max) + clamp(4rem, 12vw, 12rem)); margin: 0 auto; }
+    .section-content { max-width: var(--content-max); margin: 0 auto; }
 
     /* ── Chapter header ── */
     .chapter-header { display: flex; align-items: center; gap: 0.625rem; margin-bottom: 1rem; }

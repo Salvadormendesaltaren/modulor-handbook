@@ -476,7 +476,7 @@ Cada lead coordina especialistas de la boutique correspondiente (designers, engi
 - Workspace 2.0 y herramientas unificadas
 - Procesos operativos cross-boutique
 - IA integrada en operaciones
-- Ways of Working, Saga.ai, Easy Email, Design System for Marketing
+- Easy Email, Figmetrics
 
 **03. INTERNACIONALIZACION**
 - Switzerland
@@ -524,10 +524,8 @@ Cada lead coordina especialistas de la boutique correspondiente (designers, engi
 
 | Producto | Tipo | Descripción | Estado |
 |---|---|---|---|
-| **Saga.ai** | Client-facing | Agente conversacional | En desarrollo |
 | **Easy Email** | Client-facing | Herramienta de email marketing | POC |
-| **Ways of Working** | Internal | Sistema de gestión de trabajo | En desarrollo |
-| **Design System for Marketing** | Client-facing | Sistema de diseño para equipos de marketing | MVP |
+| **Figmetrics** | Client-facing | Plugin de Figma para medir el impacto económico del design system | En desarrollo |
 
 ---
 
@@ -578,14 +576,6 @@ Cada lead coordina especialistas de la boutique correspondiente (designers, engi
 | Revenue mendesaltaren | EUR5.5M-5.7M | Sara Rivera |
 | Revenue Tailor Hub | EUR3.8M | Diego Méndez |
 
-### KPIs COO (Ventas Grupo)
-
-| KPI | Target |
-|---|---|
-| Facturación generada por COO | EUR1M anual |
-| Diseño (mendesaltaren) | EUR500k |
-| Tech (Tailor Hub) | EUR500k |
-
 ---
 
 ## 13. Roadmap 2025-2028
@@ -597,8 +587,8 @@ Cada lead coordina especialistas de la boutique correspondiente (designers, engi
 - Minimo 25% crecimiento por estudio
 - Iniciar búsqueda y conversaciones de adquisición
 
-**Product & Technology:**
-- MVP validation de Design System for Marketing
+**Modulor OS:**
+- Figmetrics: MVP y validación con primeros usuarios
 
 **Internationalization:**
 - Nuevo BD para adquirir 5 cuentas internacionales (USA, UK)
@@ -613,9 +603,9 @@ Cada lead coordina especialistas de la boutique correspondiente (designers, engi
 - Alcanzar EUR16M revenue
 - Adquirir nuevo estudio complementario
 
-**Product & Technology:**
-- Design System for Marketing en licensing
+**Modulor OS:**
 - MVP validation de Easy Email
+- Figmetrics en licensing
 
 **Internationalization:**
 - Expandir BD a Abu Dhabi, Switzerland, Netherlands

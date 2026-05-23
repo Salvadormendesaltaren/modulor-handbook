@@ -615,20 +615,7 @@ Función transversal de comunicación del grupo, con perfiles de distintas bouti
 
 ---
 
-## 12. KPIs de Grupo
-
-### KPIs Financieros
-
-| KPI | Target 2026 | Owner |
-|---|---|---|
-| Revenue consolidado grupo | EUR12.3M-12.5M | CEOs |
-| EBITDA | 15% | CFO |
-| Revenue mendesaltaren | EUR5.5M-5.7M | Sara Rivera |
-| Revenue Tailor Hub | EUR3.8M | Diego Méndez |
-
----
-
-## 13. Roadmap 2025-2028
+## 12. Roadmap 2025-2028
 
 ### 2026
 

@@ -114,8 +114,8 @@ Todo lo que hacemos conecta estos tres elementos.
 
 | Boutique | Persona | Rol | Foco |
 |----------|---------|-----|------|
-| **Modulor** | Jorge Lana | CEO | Dirección, relaciones estratégicas |
-| **Modulor** | André Mendes | Socio / CCO | Creatividad, relaciones |
+| **Modulor** | Jorge Lana | CEO | Dirección estratégica del grupo, Business Plan, M&A, relaciones con partners estratégicos y clientes, representación institucional, ventas transversales, supervisión del leadership team |
+| **Modulor** | André Mendes | Socio / CCO | Posicionamiento estratégico del grupo, dirección creativa transversal, supervisión de las prácticas de diseño, cultura y experiencia del grupo y cliente, apoyo con Business Plan y supervisión leadership team |
 | **Modulor** | Salva Serrano | COO/CPO | Operaciones, producto, colaboración |
 | **mendesaltaren** | Sara Rivera | CEO | Clientes clave, estratégico |
 | **mendesaltaren** | Paula López | Business Developer | Captación y desarrollo |

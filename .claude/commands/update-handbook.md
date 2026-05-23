@@ -175,9 +175,11 @@ Confirma el bump o escribe una versión y notas diferentes.
 
 ---
 
-### Fase 9: Resumen
+### Fase 9: Resumen y changelog
 
-Presenta el resumen final:
+1. **Actualizar `versions.json`:** Si se hizo bump en Fase 8, las `notes` de la nueva versión deben describir los cambios aplicados de forma concisa. El log de cambios de la web se genera dinámicamente desde `versions.json`, así que este es el único lugar donde hay que actualizar el changelog.
+
+2. Presenta el resumen final:
 
 ```
 ## Resumen de actualización
@@ -210,3 +212,4 @@ Presenta el resumen final:
 - **Edits quirúrgicos.** Usa Edit (no Write) para modificar archivos existentes. Cambia solo lo necesario.
 - **Lee antes de editar.** Siempre lee el archivo completo antes de modificarlo.
 - **Sensibilidad ante todo.** Ante la duda sobre si algo es sensible, clasifícalo con sensibilidad más alta y consulta al usuario.
+- **Siempre actualizar el changelog.** Tras cada actualización, las notas en `versions.json` deben reflejar los cambios. El log de la web se genera desde ahí automáticamente.

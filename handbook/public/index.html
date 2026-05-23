@@ -828,7 +828,7 @@
               <div class="btn-download-group">
                 <button class="btn-download" onclick="downloadZip('redux')">
                   <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-                  Handbook Redux (.zip)
+                  Handbook Redux · ${selectedVersion || ''} (.zip)
                 </button>
               </div>
             </div>
@@ -908,11 +908,11 @@
               <div class="btn-download-group">
                 <button class="btn-download" onclick="downloadZip('full')">
                   <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-                  Handbook Full (.zip)
+                  Handbook Full · ${selectedVersion || ''} (.zip)
                 </button>
                 <button class="btn-download-secondary" onclick="downloadZip('lite')">
                   <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-                  Handbook Lite (.zip)
+                  Handbook Lite · ${selectedVersion || ''} (.zip)
                 </button>
               </div>
             </div>
@@ -1008,21 +1008,16 @@
     }
 
     function buildChangelog() {
-      const changelogEntries = [
-        { date: '2 mar 2026', text: 'Handbook unificado — una sola URL, auto-redirect según nivel de acceso' },
-        { date: '2 mar 2026', text: 'Capítulo de introducción, recomendaciones de ciberseguridad en Repositorio' },
-        { date: '2 mar 2026', text: 'Handbook v2 — Autenticación, contenido diferenciado Team/Leadership' },
-        { date: '1 mar 2026', text: 'Contenido full desde Notion, doble descarga (Full + Lite)' },
-        { date: '27 feb 2026', text: 'Sección Repositorio — archivos descargables y guía de uso con IAs' },
-        { date: '26 feb 2026', text: 'Primera versión del handbook con los 6 capítulos' },
-      ];
-
-      return changelogEntries.map(e => `
-        <div class="repo-changelog-entry">
-          <span class="repo-changelog-date">${e.date}</span>
-          <span class="repo-changelog-text">${e.text}</span>
-        </div>
-      `).join('');
+      if (!versionsData || !versionsData.versions) return '<p style="color:var(--text-muted);font-size:0.875rem;">No hay historial disponible.</p>';
+      return versionsData.versions.map(v => {
+        const d = new Date(v.date + 'T00:00:00');
+        const dateStr = d.toLocaleDateString('es-ES', { day: 'numeric', month: 'short', year: 'numeric' });
+        return `
+          <div class="repo-changelog-entry">
+            <span class="repo-changelog-date">${v.version} · ${dateStr}</span>
+            <span class="repo-changelog-text">${v.notes || ''}</span>
+          </div>`;
+      }).join('');
     }
 
     async function downloadZip(variant) {

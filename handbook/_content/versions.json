@@ -1,6 +1,18 @@
 {
-  "current": "V1.0.0",
+  "current": "V1.1.0",
   "versions": [
+    {
+      "version": "V1.1.0",
+      "date": "2026-05-23",
+      "notes": "Modulor OS: sistema operativo de grupo, Workspace 2.0, OS de proyectos, paradigma conectados-no-acoplados",
+      "type": "quarter"
+    },
+    {
+      "version": "V1.0.1",
+      "date": "2026-05-22",
+      "notes": "Bump de prueba para testear selector de versiones",
+      "type": "patch"
+    },
     {
       "version": "V1.0.0",
       "date": "2026-05-22",

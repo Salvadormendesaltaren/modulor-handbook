@@ -21,10 +21,6 @@ Redefinir cómo las organizaciónes más ambiciosas del mundo diseñan, construy
 
 Conectamos ideas, personas y tecnología a través de estudios especializados para construir soluciones que hacen avanzar a las organizaciónes. Creemos que el mejor trabajo ocurre cuando estrategia, creatividad y tecnología se construyen juntas — no por separado. Trabajamos codo a codo con las organizaciónes que están dando forma al mañana, convirtiendo innovación en producto, marca y experiencia.
 
-### Modelo de relación
-
-Conectados, no acoplados. Cada boutique mantiene su identidad, cultura y capacidad de innovación. Modulor proporciona la escala, la tecnología y los procesos que normalmente solo están al alcance de grandes consultoras.
-
 ### Elevator pitch
 
 Modulor Studios es un grupo de boutiques especializadas en diseño, tecnología, marketing y formación digital. Ofrecemos soluciones integrales desde diseño de producto hasta desarrollo de software, e-commerce y marketing.
@@ -102,13 +98,7 @@ Modulor Studios es un grupo de boutiques especializadas en diseño, tecnología,
 
 ---
 
-## 04. Colaboración entre Boutiques
-
-### Paradigma: Conectados, no acoplados
-
-Las boutiques operan como una red coordinada, no como divisiones de una misma empresa. Cada estudio mantiene su core, su equipo y su identidad — Modulor proporciona la infraestructura, los procesos y la tecnología para que la colaboración sea natural y escalable. Un paradigma pensado para la diversificación: cada boutique puede crecer en su disciplina mientras el grupo captura oportunidades que ninguna boutique podría abordar sola.
-
-### Matriz de Derivación de Leads
+## 04. Matriz de Derivación de Leads
 
 | Si el lead necesita... | Derivar a... |
 | --- | --- |
@@ -168,81 +158,15 @@ Las boutiques operan como una red coordinada, no como divisiones de una misma em
 
 ---
 
-## 06. Modulor OS
+## 06. Herramientas de Grupo
 
-Modulor OS es el sistema operativo del grupo: el marco que suma tecnología, procesos y automatizaciones para que cada boutique crezca de forma eficiente sin perder lo que la hace diferente.
-
-**Los 8 pilares de valor para los estudios:**
-
-| # | Qué pedimos | Qué consigues |
-|---|---|---|
-| 1 | Alineación con herramientas comunes | El mejor en tu disciplina |
-| 2 | Adopción de procesos unificados | Gobierno del dato y herramientas comunes |
-| 3 | Participación en dinámicas de grupo | Colaboración intragrupo |
-| 4 | Apertura a transformación IA interna | Transformación IA interna |
-| 5 | Contribución a la cultura compartida | Cultura única y diferenciadora |
-| 6 | Reporting y cadencias | Operaciones compartidas |
-| 7 | Derivación activa de leads | Cross-sell con impacto real |
-| 8 | Eficiencias en delivery | Eficiencia operativa y márgenes mayores |
-
-**Lo que vamos a cambiar:**
-- Unificar herramientas comunes (Workspace 2.0)
-- Unificar procesos operativos cross-boutique
-- Alinear liturgias, incentivos e impulsar cultura compartida
-
-**Lo que no podemos perder:**
-- Identidad por boutique
-- Capacidad de innovar en servicio
-- Cultura propia ligada a disciplina
-- Ownership por boutique
-
-### Herramientas de Grupo (Workspace 2.0)
-
-**Modulor Tools Unificadas** — Usadas por todas las boutiques bajo dominio común:
-
-| Sistema | Para qué |
-|---|---|
-| Google Workspace | Email, docs, calendar (dominio único con alias por boutique) |
-| Slack | Comunicación interna |
-| Notion | Wiki, documentación, colaboración |
-| HubSpot | CRM, ventas de grupo |
-| Granola | Notas de reuniones con IA |
-| Calendar | Planificación compartida |
-
-**Studio Shared Tools** — Herramientas compartidas entre estudios:
-
-| Sistema | Para qué |
-|---|---|
-| Figma | Diseño |
-| Adobe | Suite creativa |
-| Linear | Gestión de proyectos técnicos |
-| Dropbox | Almacenamiento de archivos |
-| Holded | Gestión administrativa/contable |
-| NordLayer | VPN y seguridad de red |
-
-**Studio Specific Tools** — Herramientas propias de cada boutique según su disciplina.
-
-### OS de Proyectos
-
-Estructura organizativa para proyectos multidisciplinares grandes que involucran a varias boutiques:
-
-**Dirección:**
-- Project Director — Visión y responsabilidad del proyecto
-- Account Manager — Relación con cliente y gestión comercial
-
-**Leads por disciplina:**
-
-| Rol | Foco |
-|---|---|
-| Strategy Lead | Estrategia y business design |
-| Digital Design / Digital Experience Lead | Diseño de producto y experiencia |
-| Tech Lead | Arquitectura, desarrollo, IA |
-| Project Manager | Gestión operativa del proyecto |
-| Product Owner | Backlog, priorización, roadmap |
-| MKT / Distribution Lead | Marketing, lanzamiento, growth |
-| Physical Experience / Strategist | Experiencia física, eventos |
-
-Cada lead coordina especialistas de la boutique correspondiente.
+| Sistema | Para qué | Quién lo usa |
+| --- | --- | --- |
+| HubSpot | CRM, Ventas grupo | Todas |
+| Notion | Wiki, documentación, colaboración | Todas |
+| Slack | Comunicación interna | Todas |
+| Google Workspace | Email, docs, calendar | Todas |
+| Figma | Diseño | mendesaltaren, SSTIL |
 
 ---
 
@@ -266,4 +190,4 @@ McKinsey & Company, El Corte Inglés, Iberia, Cargill, Inditex, Zara, Mondelez, 
 
 ---
 
-*Última actualización: Mayo 2026*
+*Última actualización: Marzo 2026*

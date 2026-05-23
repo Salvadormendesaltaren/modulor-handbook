@@ -15,14 +15,13 @@
 
 ### Propósito del grupo
 
-- **Visión:** Convertirnos en el nexo de diseño, tecnología y marketing — un grupo de boutiques especializadas y productos propios de IA. The AI Native Agency.
+- **Visión:** Convertirnos en el nexo de diseño, tecnología y marketing — un grupo de boutiques especializadas y productos propios de IA.
 - **Propósito:** Construir relaciónes significativas que moldeen el futuro de las experiencias digitales.
 - **Como lo hacemos:**
   - Servicios de alto valor (estudios creativos y tecnológicos)
   - Productos propios (SaaS, agentes conversacionales, sistemas conectivos)
   - Aplicación de IA tanto en clientes como en operaciónes internas
 - **Filosofía:** Conectamos ideas, personas y plataformas para construir soluciones integradas que unen lo físico y lo digital — armonizando innovación con propósito.
-- **Modelo de relación:** Conectados, no acoplados. Cada boutique mantiene su identidad, cultura y capacidad de innovación. Modulor proporciona la escala, la tecnología y los procesos que normalmente solo están al alcance de grandes consultoras.
 
 ### Los Tres Pilares
 
@@ -163,39 +162,10 @@ McKinsey & Company, El Corte Inglés, Iberia, Cargill, Inditex, Zara, Mondelez, 
 
 ## 05. Operaciones de Grupo
 
-### Modulor OS
-
-Modulor OS es el sistema operativo del grupo: el marco que suma tecnología, procesos y automatizaciones para que cada boutique crezca de forma eficiente sin perder lo que la hace diferente.
-
-**Los 8 pilares de valor para los estudios:**
-
-| # | Qué pedimos | Qué consigues |
-|---|---|---|
-| 1 | Alineación con herramientas comunes | El mejor en tu disciplina |
-| 2 | Adopción de procesos unificados | Gobierno del dato y herramientas comunes |
-| 3 | Participación en dinámicas de grupo | Colaboración intragrupo |
-| 4 | Apertura a transformación IA interna | Transformación IA interna |
-| 5 | Contribución a la cultura compartida | Cultura única y diferenciadora |
-| 6 | Reporting y cadencias | Operaciones compartidas |
-| 7 | Derivación activa de leads | Cross-sell con impacto real |
-| 8 | Eficiencias en delivery | Eficiencia operativa y márgenes mayores |
-
-**Lo que vamos a cambiar:**
-- Unificar herramientas comunes (Workspace 2.0)
-- Unificar procesos operativos cross-boutique
-- Alinear liturgias, incentivos e impulsar cultura compartida
-
-**Lo que no podemos perder:**
-- Identidad por boutique
-- Capacidad de innovar en servicio
-- Cultura propia ligada a disciplina
-- Ownership por boutique
-
 ### Iniciativas transversales activas
 
 | Iniciativa | Objetivo | Status |
 |---|---|---|
-| Modulor OS | Sistema operativo de grupo | En curso |
 | Modulor Ops Team | Eficiencia operativa | En curso |
 | CRM HubSpot | Ventas de grupo | En curso |
 | Playbook de operaciónes | Colaboración | En curso |
@@ -203,55 +173,15 @@ Modulor OS es el sistema operativo del grupo: el marco que suma tecnología, pro
 | IA en operaciónes | Automatización | En curso |
 | FIK Onboarding | Integración | En curso |
 
-### Herramientas de grupo (Workspace 2.0)
+### Herramientas de grupo
 
-**Modulor Tools Unificadas** — Usadas por todas las boutiques bajo dominio común:
-
-| Sistema | Para qué |
-|---|---|
-| Google Workspace | Email, docs, calendar (dominio único con alias por boutique) |
-| Slack | Comunicación interna |
-| Notion | Wiki, documentación, colaboración |
-| HubSpot | CRM, ventas de grupo |
-| Granola | Notas de reuniones con IA |
-| Calendar | Planificación compartida |
-
-**Studio Shared Tools** — Herramientas compartidas entre estudios:
-
-| Sistema | Para qué |
-|---|---|
-| Figma | Diseño |
-| Adobe | Suite creativa |
-| Linear | Gestión de proyectos técnicos |
-| Dropbox | Almacenamiento de archivos |
-| Holded | Gestión administrativa/contable |
-| NordLayer | VPN y seguridad de red |
-
-**Studio Specific Tools** — Herramientas propias de cada boutique según su disciplina.
-
-ISO27001 viable con esta configuración de workspace.
-
-### OS de Proyectos
-
-Estructura organizativa para proyectos multidisciplinares grandes (>2M€) que involucran a varias boutiques:
-
-**Dirección:**
-- Project Director — Visión y responsabilidad del proyecto
-- Account Manager — Relación con cliente y gestión comercial
-
-**Leads por disciplina:**
-
-| Rol | Foco |
-|---|---|
-| Strategy Lead | Estrategia y business design |
-| Digital Design / Digital Experience Lead | Diseño de producto y experiencia |
-| Tech Lead | Arquitectura, desarrollo, IA |
-| Project Manager | Gestión operativa del proyecto |
-| Product Owner | Backlog, priorización, roadmap |
-| MKT / Distribution Lead | Marketing, lanzamiento, growth |
-| Physical Experience / Strategist | Experiencia física, eventos |
-
-Cada lead coordina especialistas de la boutique correspondiente (designers, engineers, data/AI, marketing/performance, phygital specialists).
+| Sistema | Para que | Quien lo usa |
+|---|---|---|
+| HubSpot | CRM, Ventas grupo | Todas |
+| Notion | Wiki, documentación, colaboración | Todas |
+| Slack | Comunicación interna | Todas |
+| Google Workspace | Email, docs, calendar | Todas |
+| Figma | Diseño | mendesaltaren, SSTIL |
 
 ### Reporting
 
@@ -260,10 +190,6 @@ Cada lead coordina especialistas de la boutique correspondiente (designers, engi
 ---
 
 ## 06. Colaboración entre Boutiques
-
-### Paradigma: Conectados, no acoplados
-
-Las boutiques operan como una red coordinada, no como divisiones de una misma empresa. Cada estudio mantiene su core, su equipo y su identidad — Modulor proporciona la infraestructura, los procesos y la tecnología para que la colaboración sea natural y escalable. Un paradigma pensado para la diversificación: cada boutique puede crecer en su disciplina mientras el grupo captura oportunidades que ninguna boutique podría abordar sola.
 
 ### Matriz de derivación de leads
 
@@ -423,13 +349,12 @@ Las boutiques operan como una red coordinada, no como divisiones de una misma em
 
 ### Mapa de Capacidades
 
-| Business Design & Innovation | Branding | Product Design | Development, AI & Vibe Coding | Marketing & Comms | Marketing & Growth |
+| Business Design & Innovation | Branding | Product Design | Development & AI | Marketing & Comms | Marketing & Growth |
 |---|---|---|---|---|---|
 | Foresight | Situational Study | Product Design (UX/UI) | Front-end | Creative Direction | Growth Strategy |
 | Service Design | Brand Strategy | Design System | Back-end | Activations | Web Development |
 | Business Modeling | Visual Identity | Product Management | Data Science | Events | SEO/SEM/GEO |
 | Strategic Validation | Digital Experience | UX Research | Gen AI development | Social Media | Content Marketing |
-| | | | Vibe Coding | | |
 | [mendesaltaren] | [mendesaltaren] | [mendesaltaren] [FIK] | [Tailor Hub] [FIK] | [SSTIL] | [SSTIL (Minimum)] [Nocodehackers] |
 
 ### Journey del Cliente en Modulor
@@ -461,11 +386,11 @@ Las boutiques operan como una red coordinada, no como divisiones de una misma em
 - Adquisición de nuevo estudio
 - Incubación de ventures
 
-**02. MODULOR OS (Operating System)**
-- Workspace 2.0 y herramientas unificadas
-- Procesos operativos cross-boutique
-- IA integrada en operaciones
-- Ways of Working, Saga.ai, Easy Email, Design System for Marketing
+**02. PRODUCT & TECHNOLOGY**
+- Ways of Working
+- Saga.ai
+- Easy Email
+- Design System for Marketing
 
 **03. INTERNACIONALIZACION**
 - Switzerland
@@ -636,5 +561,5 @@ Las boutiques operan como una red coordinada, no como divisiones de una misma em
 
 ---
 
-*Documento actualizado: Mayo 2026*
+*Documento actualizado: Marzo 2026*
 *Version: 3.0 — Full (Holding + Handbook Operativo fusionados)*

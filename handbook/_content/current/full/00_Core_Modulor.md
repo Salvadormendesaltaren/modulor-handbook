@@ -95,7 +95,7 @@ Todo lo que hacemos conecta estos tres elementos.
 | Paula Rodríguez | Marketing Partner | Marketing (SSTIL/Minimum) |
 | Esther Blazquez | Strategy & People Partner | Estrategia y personas |
 | Diego Méndez | Technology & AI Partner | Tecnologia (Tailor Hub) |
-| Salvador Serrano | Operations Partner | Operaciones |
+| Salvador Serrano | Operations & Product Partner | Operaciones y producto |
 | Viviana Reyes | Finance Partner | Finanzas |
 | Alex Vaughton | Innovation Partner | Innovación (Nocodehackers) |
 
@@ -104,7 +104,7 @@ Todo lo que hacemos conecta estos tres elementos.
 | Rol | Persona | Funciones |
 |---|---|---|
 | CEO | Jorge Lana | Visión, dirección general |
-| COO | Salva Serrano | Operaciones, ventas grupo, colaboración |
+| COO/CPO | Salva Serrano | Operaciones del grupo, coordinación entre boutiques, procesos compartidos y colaboración intragrupo. Creación de producto interno, transformación IA, implementación de herramientas y nuevos procesos coordinando con CTO |
 | CCO | Andre Mendes | Creatividad, experiencia |
 | CFO | Viviana Reyes | Finanzas |
 | People | Carina Matyniak | HR, Office Management |
@@ -116,7 +116,7 @@ Todo lo que hacemos conecta estos tres elementos.
 |----------|---------|-----|------|
 | **Modulor** | Jorge Lana | CEO | Dirección, relaciones estratégicas |
 | **Modulor** | André Mendes | Socio / CCO | Creatividad, relaciones |
-| **Modulor** | Salva Serrano | COO | Ventas grupo |
+| **Modulor** | Salva Serrano | COO/CPO | Operaciones, producto, colaboración |
 | **mendesaltaren** | Sara Rivera | CEO | Clientes clave, estratégico |
 | **mendesaltaren** | Paula López | Business Developer | Captación y desarrollo |
 | **Tailor Hub** | Diego Méndez | CEO | Internacional |

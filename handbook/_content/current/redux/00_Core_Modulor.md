@@ -67,7 +67,7 @@ Modulor Studios es un grupo de boutiques especializadas en diseño, tecnología,
 | Rol | Persona |
 | --- | --- |
 | CEO | Jorge Lana |
-| COO | Salva Serrano |
+| COO/CPO | Salva Serrano |
 | CCO | André Mendes |
 | CFO | Viviana Reyes |
 
@@ -87,7 +87,7 @@ Modulor Studios es un grupo de boutiques especializadas en diseño, tecnología,
 |----------|---------|-----|------|
 | **Modulor** | Jorge Lana | CEO | Dirección, relaciones estratégicas |
 | **Modulor** | André Mendes | Socio / CCO | Creatividad, relaciones |
-| **Modulor** | Salva Serrano | COO | Ventas grupo |
+| **Modulor** | Salva Serrano | COO/CPO | Operaciones, producto, colaboración |
 | **mendesaltaren** | Sara Rivera | CEO | Clientes clave, estratégico |
 | **mendesaltaren** | Paula López | Business Developer | Captación y desarrollo |
 | **Tailor Hub** | Diego Méndez | CEO | Internacional |

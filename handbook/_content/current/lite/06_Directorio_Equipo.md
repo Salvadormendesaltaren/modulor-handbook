@@ -26,7 +26,7 @@
 |--------|--------|
 | Jorge Lana | CEO |
 | André Mendes | CCO |
-| Salvador Serrano | COO |
+| Salvador Serrano | COO/CPO |
 | Viviana Reyes | Head of Finance |
 
 ### Finanzas y Administración

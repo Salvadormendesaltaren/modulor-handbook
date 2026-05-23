@@ -1,28 +1,16 @@
 {
-  "current": "V1.2.0",
+  "current": "V1.1.0",
   "versions": [
-    {
-      "version": "V1.2.0",
-      "date": "2026-05-23",
-      "notes": "Spring Summit: correcciones financieras (SSTIL, FIK, NCH), resultados Q1 2026, nuevos clientes (Louis Vuitton, Orange, PayPal...), 15 casos intragrupo, equipo comms Modulor",
-      "type": "quarter"
-    },
     {
       "version": "V1.1.0",
       "date": "2026-05-23",
-      "notes": "Modulor OS: sistema operativo de grupo, Workspace 2.0, OS de proyectos, paradigma conectados-no-acoplados",
+      "notes": "Q2 2026: Modulor OS (8 pilares, Workspace 2.0, OS de Proyectos), paradigma AS-IS→TO-BE, proyectos estratégicos, Figmetrics, rol COO/CPO, correcciones financieras Spring Summit, resultados Q1 2026, nuevos clientes, 15 casos intragrupo, equipo comms Modulor, consistencia financiera cross-boutique",
       "type": "quarter"
-    },
-    {
-      "version": "V1.0.1",
-      "date": "2026-05-22",
-      "notes": "Bump de prueba para testear selector de versiones",
-      "type": "patch"
     },
     {
       "version": "V1.0.0",
       "date": "2026-05-22",
-      "notes": "Versión inicial del sistema de versionado",
+      "notes": "Versión inicial del handbook con sistema de versionado",
       "type": "initial"
     }
   ]

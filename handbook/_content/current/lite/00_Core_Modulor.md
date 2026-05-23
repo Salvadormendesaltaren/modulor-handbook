@@ -28,7 +28,7 @@ Construir un holding consolidado que dé a cada boutique las herramientas, la te
 
 ### Modelo de relación
 
-Conectados, no acoplados. Cada boutique mantiene su identidad, cultura y capacidad de innovación. Modulor proporciona la escala, la tecnología y los procesos que normalmente solo están al alcance de grandes consultoras.
+De "conectados, no acoplados" a "cohesionados y enérgicos". El grupo evoluciona de un modelo de coordinación ligera (pensado para diversificación) a un modelo de cohesión real que permita abordar grandes apuestas juntos — sin perder la identidad y autonomía de cada estudio.
 
 ### Elevator pitch
 
@@ -190,6 +190,15 @@ Estructura organizativa para proyectos multidisciplinares grandes (>2M€) que i
 
 Cada lead coordina especialistas de la boutique correspondiente.
 
+### Proyectos Estratégicos
+
+| Proyecto | Descripción | Status |
+|---|---|---|
+| **Agente de ventas / Content Factory** | Agente de IA que genera propuestas comerciales, presentaciones y contenido a partir del contexto del handbook y datos del grupo | En desarrollo |
+| **Deal Registry / Automatización de contratos, proyectos y colaboración** | Pipeline automatizado desde el registro de oportunidades hasta la generación de contratos y el kickoff de proyectos cross-boutique | En desarrollo |
+| **OS de Proyectos** | Estructura organizativa para proyectos multidisciplinares grandes (ver sección arriba) | Definido |
+| **Workspace 2.0** | Unificación del stack de herramientas bajo dominio común (ver Herramientas §10) | En curso |
+
 ---
 
 ### Ops (Operaciones)
@@ -342,9 +351,11 @@ Modulor Tech es la iniciativa para integrar IA de forma estructural en las opera
 
 ## 07. Colaboración entre Boutiques
 
-### Paradigma: Conectados, no acoplados
+### Evolución del paradigma de colaboración
 
-Las boutiques operan como una red coordinada, no como divisiones de una misma empresa. Cada estudio mantiene su core, su equipo y su identidad — Modulor proporciona la infraestructura, los procesos y la tecnología para que la colaboración sea natural y escalable. Un paradigma pensado para la diversificación: cada boutique puede crecer en su disciplina mientras el grupo captura oportunidades que ninguna boutique podría abordar sola.
+**AS-IS: Conectados, no acoplados.** Boutiques coordinadas pero independientes. Cada estudio mantiene su core, su equipo y su identidad. Modulor conecta pero no integra. Un paradigma pensado para la diversificación — pero que limita la capacidad del grupo para abordar grandes proyectos de forma conjunta.
+
+**TO-BE: Cohesionados y enérgicos.** Un grupo unido con capacidad real de abordar grandes apuestas que ninguna boutique podría asumir sola. Procesos, herramientas y cultura compartida que permiten movilizar talento multidisciplinar de forma ágil — sin perder la identidad y ownership de cada estudio.
 
 ### Matriz de Derivación de Leads
 

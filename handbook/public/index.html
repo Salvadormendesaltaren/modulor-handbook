@@ -1706,8 +1706,8 @@
       const steps = [
         { key: 'intro', title: 'Lee la introducción', desc: 'Visita la sección de intro y "Cómo usarlo con IA"', link: 'intro' },
         { key: 'repositorio', title: 'Descarga los archivos .md', desc: 'Visita el Repositorio y descarga el handbook', link: 'repositorio' },
-        { key: 'sections', title: 'Explora el handbook', desc: 'Visita al menos 5 secciones distintas', link: null },
-        { key: 'chat', title: 'Usa el chat del Handbook', desc: 'Envía al menos un mensaje en el chat', link: null },
+        { key: 'sections', title: 'Explora el handbook', desc: 'Visita al menos 5 secciones distintas', link: null, action: 'navigateNextSection' },
+        { key: 'chat', title: 'Usa el chat del Handbook', desc: 'Envía al menos un mensaje en el chat', link: null, action: 'openChat' },
       ];
       if (isAdmin) steps.push({ key: 'admin', title: 'Visita el panel de admin', desc: 'Accede al panel de administración', link: 'admin' });
       return steps;
@@ -1744,9 +1744,10 @@
       let html = '<div class="onboarding-popup-title">Primeros pasos</div>';
       steps.forEach(s => {
         const done = isStepDone(s.key);
-        const clickable = s.link && !done;
-        html += '<div class="onboarding-step' + (done ? ' done' : '') + (clickable ? ' clickable' : '') + '"'
-          + (clickable ? ' onclick="onboardingNavigate(\'' + s.link + '\')"' : '') + '>'
+        const hasAction = !done && (s.link || s.action);
+        html += '<div class="onboarding-step' + (done ? ' done' : '') + (hasAction ? ' clickable' : '') + '"'
+          + (hasAction && s.link ? ' onclick="onboardingNavigate(\'' + s.link + '\')"' : '')
+          + (hasAction && !s.link && s.action ? ' onclick="onboardingAction(\'' + s.action + '\')"' : '') + '>'
           + '<div class="onboarding-check">' + checkSvg + '</div>'
           + '<div class="onboarding-step-text">'
           + '<div class="onboarding-step-title">' + s.title + '</div>'
@@ -1768,6 +1769,21 @@
       window.location.hash = id;
       obPopupOpen = false;
       document.getElementById('onboardingPopup').classList.remove('open');
+    }
+
+    function onboardingAction(action) {
+      obPopupOpen = false;
+      document.getElementById('onboardingPopup').classList.remove('open');
+      if (action === 'openChat') {
+        const panel = document.getElementById('chatPanel');
+        if (!panel.classList.contains('open')) toggleChat();
+      } else if (action === 'navigateNextSection') {
+        const chapters = getChapters();
+        const visited = obState.completed.sections || [];
+        const next = chapters.find(c => c.id !== 'intro' && !visited.includes(c.id));
+        if (next) { window.location.hash = next.id; }
+        else { window.location.hash = chapters[1]?.id || 'core'; }
+      }
     }
 
     function completeOnboardingStep(key) {

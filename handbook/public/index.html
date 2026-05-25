@@ -336,6 +336,32 @@
     @media (max-width: 479px) {
       .chat-fab { bottom: 1.25rem; right: 1.25rem; }
     }
+
+    /* ── Onboarding ── */
+    .onboarding-fab { position: fixed; bottom: 1.5rem; left: 1.5rem; z-index: 500; width: 3rem; height: 3rem; border-radius: 999px; background: var(--accent); color: #fff; border: none; cursor: pointer; display: none; align-items: center; justify-content: center; box-shadow: 0 2px 12px rgba(19, 62, 236, 0.3); transition: opacity 0.3s var(--ease), transform 0.3s var(--ease); font-family: var(--font); font-size: 0.8125rem; font-weight: 500; letter-spacing: -0.02em; }
+    .onboarding-fab:hover { opacity: 0.85; transform: scale(1.05); }
+    .onboarding-fab.visible { display: flex; }
+    .onboarding-popup { position: fixed; bottom: 5rem; left: 1.5rem; z-index: 501; width: 320px; background: var(--bg); border: 1px solid var(--border); border-radius: 1rem; box-shadow: 0 8px 30px rgba(0,0,0,0.12); padding: 1.25rem; display: none; animation: onb-in 0.3s var(--ease); }
+    .onboarding-popup.open { display: block; }
+    @keyframes onb-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+    .onboarding-popup-title { font-size: 1rem; font-weight: 500; letter-spacing: -0.03em; margin-bottom: 0.75rem; }
+    .onboarding-step { display: flex; align-items: flex-start; gap: 0.625rem; padding: 0.5rem 0; cursor: default; border-radius: 0.5rem; transition: background 0.2s var(--ease); }
+    .onboarding-step.clickable { cursor: pointer; }
+    .onboarding-step.clickable:hover { background: var(--bg-hover); }
+    .onboarding-check { width: 1.25rem; height: 1.25rem; border-radius: 999px; border: 1.5px solid var(--border-subtle); flex-shrink: 0; display: flex; align-items: center; justify-content: center; margin-top: 0.1rem; transition: background 0.3s var(--ease), border-color 0.3s var(--ease); }
+    .onboarding-step.done .onboarding-check { background: #16a34a; border-color: #16a34a; }
+    .onboarding-check svg { width: 0.75rem; height: 0.75rem; fill: #fff; opacity: 0; transition: opacity 0.3s var(--ease); }
+    .onboarding-step.done .onboarding-check svg { opacity: 1; }
+    .onboarding-step-text { flex: 1; }
+    .onboarding-step-title { font-size: 0.8125rem; font-weight: 400; color: var(--text); line-height: 1.4; transition: color 0.3s var(--ease); }
+    .onboarding-step.done .onboarding-step-title { text-decoration: line-through; text-decoration-color: var(--text-muted); color: var(--text-secondary); }
+    .onboarding-step-desc { font-size: 0.6875rem; color: var(--text-secondary); line-height: 1.4; margin-top: 0.125rem; }
+    .onboarding-dismiss { display: block; width: 100%; margin-top: 0.75rem; padding: 0.375rem 0; background: none; border: none; font-family: var(--font); font-size: 0.6875rem; color: var(--text-muted); cursor: pointer; text-align: center; transition: color 0.3s var(--ease); letter-spacing: var(--tracking); }
+    .onboarding-dismiss:hover { color: var(--text-secondary); }
+    @media (max-width: 479px) {
+      .onboarding-fab { bottom: 1.25rem; left: 1.25rem; }
+      .onboarding-popup { bottom: 4.75rem; left: 1.25rem; width: calc(100vw - 2.5rem); }
+    }
   </style>
 </head>
 <body>
@@ -460,6 +486,10 @@
     <main class="main" id="content">
       <div class="loading">Cargando...</div>
     </main>
+
+    <!-- Onboarding -->
+    <button class="onboarding-fab" id="onboardingFab" onclick="toggleOnboardingPopup()" aria-label="Primeros pasos"></button>
+    <div class="onboarding-popup" id="onboardingPopup"></div>
 
     <!-- Chat FAB -->
     <button class="chat-fab" id="chatFab" onclick="toggleChat()" aria-label="Abrir chat">
@@ -706,6 +736,7 @@
       document.getElementById('chatFab').classList.remove('visible');
       document.getElementById('chatPanel').classList.remove('open');
       clearChat();
+      hideOnboarding();
     }
 
     function showLoginError(msg) {
@@ -727,6 +758,7 @@
       }
       nameEl.textContent = meta.full_name || currentUser.email;
       document.getElementById('chatFab').classList.add('visible');
+      initOnboarding();
       loadVersions();
       onHashChange();
     }
@@ -828,6 +860,7 @@
     }
 
     async function navigate(id) {
+      trackOnboardingNav(id);
       const content = document.getElementById('content');
       const chapters = getChapters();
 
@@ -1482,6 +1515,7 @@
       // Add user message
       addChatMessage('user', text);
       chatHistory.push({ role: 'user', content: text });
+      completeOnboardingStep('chat');
 
       // Disable input
       chatStreaming = true;
@@ -1552,6 +1586,141 @@
       chatStreaming = false;
       document.getElementById('chatSend').disabled = false;
       input.focus();
+    }
+
+    // ── Onboarding ──
+    const OB_KEY = 'handbook-onboarding';
+    let obState = null;
+    let obPopupOpen = false;
+
+    function getDefaultObState() {
+      return { dismissed: false, completed: { intro: false, repositorio: false, sections: [], chat: false, admin: false } };
+    }
+
+    function loadObState() {
+      try {
+        const raw = localStorage.getItem(OB_KEY);
+        if (raw) { obState = JSON.parse(raw); if (!obState.completed.sections) obState.completed.sections = []; return; }
+      } catch (e) {}
+      obState = getDefaultObState();
+      saveObState();
+    }
+
+    function saveObState() { localStorage.setItem(OB_KEY, JSON.stringify(obState)); }
+
+    function getObSteps() {
+      const isAdmin = userRole === 'admin';
+      const steps = [
+        { key: 'intro', title: 'Lee la introducción', desc: 'Visita la sección de intro y "Cómo usarlo con IA"', link: 'intro' },
+        { key: 'repositorio', title: 'Descarga los archivos .md', desc: 'Visita el Repositorio y descarga el handbook', link: 'repositorio' },
+        { key: 'sections', title: 'Explora el handbook', desc: 'Visita al menos 5 secciones distintas', link: null },
+        { key: 'chat', title: 'Usa el chat del Handbook', desc: 'Envía al menos un mensaje en el chat', link: null },
+      ];
+      if (isAdmin) steps.push({ key: 'admin', title: 'Visita el panel de admin', desc: 'Accede al panel de administración', link: 'admin' });
+      return steps;
+    }
+
+    function isStepDone(key) {
+      if (key === 'sections') return (obState.completed.sections || []).length >= 5;
+      return !!obState.completed[key];
+    }
+
+    function allStepsDone() { return getObSteps().every(s => isStepDone(s.key)); }
+
+    function getObProgress() {
+      const steps = getObSteps();
+      return { done: steps.filter(s => isStepDone(s.key)).length, total: steps.length };
+    }
+
+    function initOnboarding() {
+      loadObState();
+      if (obState.dismissed || allStepsDone()) { hideOnboarding(); return; }
+      renderOnboardingFab();
+      document.getElementById('onboardingFab').classList.add('visible');
+    }
+
+    function renderOnboardingFab() {
+      const { done, total } = getObProgress();
+      document.getElementById('onboardingFab').textContent = done + '/' + total;
+    }
+
+    function renderOnboardingPopup() {
+      const steps = getObSteps();
+      const checkSvg = '<svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>';
+      let html = '<div class="onboarding-popup-title">Primeros pasos</div>';
+      steps.forEach(s => {
+        const done = isStepDone(s.key);
+        const clickable = s.link && !done;
+        html += '<div class="onboarding-step' + (done ? ' done' : '') + (clickable ? ' clickable' : '') + '"'
+          + (clickable ? ' onclick="onboardingNavigate(\'' + s.link + '\')"' : '') + '>'
+          + '<div class="onboarding-check">' + checkSvg + '</div>'
+          + '<div class="onboarding-step-text">'
+          + '<div class="onboarding-step-title">' + s.title + '</div>'
+          + '<div class="onboarding-step-desc">' + s.desc + (s.key === 'sections' ? ' (' + Math.min((obState.completed.sections || []).length, 5) + '/5)' : '') + '</div>'
+          + '</div></div>';
+      });
+      html += '<button class="onboarding-dismiss" onclick="dismissOnboarding()">Cerrar para siempre</button>';
+      document.getElementById('onboardingPopup').innerHTML = html;
+    }
+
+    function toggleOnboardingPopup() {
+      obPopupOpen = !obPopupOpen;
+      const popup = document.getElementById('onboardingPopup');
+      if (obPopupOpen) { renderOnboardingPopup(); popup.classList.add('open'); }
+      else { popup.classList.remove('open'); }
+    }
+
+    function onboardingNavigate(id) {
+      window.location.hash = id;
+      obPopupOpen = false;
+      document.getElementById('onboardingPopup').classList.remove('open');
+    }
+
+    function completeOnboardingStep(key) {
+      if (!obState || obState.dismissed) return;
+      if (key === 'sections') return; // handled by trackOnboardingNav
+      if (obState.completed[key]) return;
+      obState.completed[key] = true;
+      saveObState();
+      updateOnboardingUI();
+    }
+
+    function trackOnboardingNav(id) {
+      if (!obState || obState.dismissed) return;
+      // Steps 1, 2, 5
+      if (id === 'intro') completeOnboardingStep('intro');
+      if (id === 'repositorio') completeOnboardingStep('repositorio');
+      if (id === 'admin' && userRole === 'admin') completeOnboardingStep('admin');
+      // Step 3: track unique sections
+      if (id && !obState.completed.sections.includes(id)) {
+        obState.completed.sections.push(id);
+        saveObState();
+        updateOnboardingUI();
+      }
+    }
+
+    function updateOnboardingUI() {
+      if (!obState || obState.dismissed) return;
+      if (allStepsDone()) {
+        renderOnboardingFab();
+        if (obPopupOpen) renderOnboardingPopup();
+        setTimeout(() => { obState.dismissed = true; saveObState(); hideOnboarding(); }, 1500);
+        return;
+      }
+      renderOnboardingFab();
+      if (obPopupOpen) renderOnboardingPopup();
+    }
+
+    function dismissOnboarding() {
+      obState.dismissed = true;
+      saveObState();
+      hideOnboarding();
+    }
+
+    function hideOnboarding() {
+      document.getElementById('onboardingFab').classList.remove('visible');
+      document.getElementById('onboardingPopup').classList.remove('open');
+      obPopupOpen = false;
     }
   </script>
 </body>

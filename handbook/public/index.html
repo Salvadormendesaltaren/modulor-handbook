@@ -272,6 +272,97 @@
     .admin-tab:hover { background: var(--bg-hover); color: var(--text); }
     .admin-tab.active { background: var(--bg-active); color: var(--text); }
     .admin-empty { font-size: 0.8125rem; color: var(--text-muted); padding: 2rem 0; }
+
+    /* ── Chat ── */
+    .chat-fab { position: fixed; bottom: 1.5rem; left: 50%; transform: translateX(-50%); z-index: 500; height: 2.75rem; border-radius: 999px; background: var(--bg-dark); color: var(--text-on-dark); border: none; cursor: pointer; display: none; align-items: center; gap: 0.5rem; padding: 0 1.25rem; box-shadow: 0 2px 12px rgba(0,0,0,0.15); transition: opacity 0.3s var(--ease); font-family: var(--font); font-size: 0.8125rem; font-weight: 400; letter-spacing: var(--tracking); white-space: nowrap; }
+    .chat-fab:hover { opacity: 0.8; }
+    .chat-fab svg { width: 1.125rem; height: 1.125rem; fill: currentColor; flex-shrink: 0; }
+    .chat-fab.visible { display: flex; }
+
+    .chat-panel { position: fixed; inset: 0; background: var(--bg); z-index: 600; display: flex; flex-direction: column; opacity: 0; pointer-events: none; transition: opacity 0.3s var(--ease); }
+    .chat-panel.open { opacity: 1; pointer-events: auto; }
+
+    .chat-close-bar { position: sticky; top: 0; z-index: 10; display: flex; justify-content: center; padding: 1rem 0; flex-shrink: 0; pointer-events: none; }
+    .chat-close-btn { display: inline-flex; align-items: center; gap: 0.375rem; background: var(--bg); border: 1px solid var(--border); border-radius: 999px; padding: 0.5rem 1.25rem; font-family: var(--font); font-size: 0.75rem; font-weight: 400; color: var(--text-secondary); letter-spacing: var(--tracking); cursor: pointer; pointer-events: auto; transition: background 0.3s var(--ease), color 0.3s var(--ease); box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+    .chat-close-btn:hover { background: var(--bg-secondary); color: var(--text); }
+    .chat-close-btn svg { width: 0.875rem; height: 0.875rem; fill: currentColor; }
+
+    .chat-messages { flex: 1; overflow-y: auto; padding: 0 clamp(2rem, 6vw, 6rem) 1.5rem; display: flex; flex-direction: column; gap: 1rem; max-width: calc(var(--content-max) + clamp(4rem, 12vw, 12rem)); width: 100%; margin: 0 auto; }
+    .chat-messages::-webkit-scrollbar { width: 0; }
+
+    .chat-welcome { text-align: center; padding: 4rem 1rem; color: var(--text-secondary); font-size: 0.875rem; line-height: 1.6; }
+    .chat-welcome-icon { width: 3rem; height: 3rem; margin: 0 auto 1.25rem; border-radius: 0.75rem; overflow: hidden; }
+    .chat-welcome-icon img { width: 100%; height: 100%; object-fit: cover; }
+    .chat-welcome-title { font-size: 1.25rem; font-weight: 400; color: var(--text); margin-bottom: 0.5rem; letter-spacing: -0.04rem; }
+
+    .chat-msg { width: 100%; font-size: 1rem; line-height: 1.5rem; }
+    .chat-msg-user { text-align: right; color: var(--text-secondary); font-size: 0.875rem; padding: 0.5rem 0; border-bottom: 1px solid var(--border); margin-bottom: 0.5rem; }
+    .chat-msg-assistant { color: var(--text); padding: 0.5rem 0 1.5rem; }
+    .chat-msg-assistant p { margin: 0 0 1rem; font-size: 1rem; line-height: 1.5rem; color: var(--text-body); }
+    .chat-msg-assistant p:last-child { margin-bottom: 0; }
+    .chat-msg-assistant strong { font-weight: 400; color: var(--text); }
+    .chat-msg-assistant h1 { font-size: 1.5rem; font-weight: 400; line-height: 1.75rem; letter-spacing: -0.06rem; margin: 0 0 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border); }
+    .chat-msg-assistant h2 { font-size: 1.25rem; font-weight: 400; line-height: 1.5rem; letter-spacing: -0.04rem; margin: 2rem 0 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border); }
+    .chat-msg-assistant h3 { font-size: 1.1rem; font-weight: 400; line-height: 1.375rem; letter-spacing: -0.03rem; margin: 1.5rem 0 0.75rem; }
+    .chat-msg-assistant h4 { font-size: 1rem; font-weight: 400; margin: 1rem 0 0.5rem; }
+    .chat-msg-assistant ul, .chat-msg-assistant ol { margin: 0 0 1rem; padding-left: 1.25rem; }
+    .chat-msg-assistant li { margin-bottom: 0.5rem; font-size: 1rem; line-height: 1.5rem; color: var(--text-body); }
+    .chat-msg-assistant code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.85em; background: var(--bg-secondary); padding: 0.15em 0.4em; border-radius: 0.25rem; }
+    .chat-msg-assistant blockquote { background: var(--accent-subtle); border-radius: 0.75rem; padding: 1rem 1.25rem; margin: 1rem 0; }
+    .chat-msg-assistant blockquote p { margin-bottom: 0; color: var(--text-body); }
+    .chat-msg-assistant table { width: 100%; border-collapse: collapse; margin: 0 0 1.25rem; font-size: 0.875rem; line-height: 1.375; }
+    .chat-msg-assistant thead th { text-align: left; font-weight: 400; color: var(--text-secondary); padding: 0.5rem 1rem 0.75rem 0; border-bottom: 1px solid var(--text-faint); }
+    .chat-msg-assistant tbody td { padding: 0.75rem 1rem 0.75rem 0; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .chat-msg-assistant tbody tr:last-child td { border-bottom: none; }
+    .chat-msg-assistant hr { border: none; height: 1px; background: var(--border); max-width: 3rem; margin: 2rem 0; }
+
+    .chat-msg-error { text-align: center; background: #FEF2F2; color: #991B1B; padding: 0.5rem 0.875rem; border-radius: 0.75rem; font-size: 0.8125rem; }
+
+    .chat-typing { display: flex; gap: 0.25rem; padding: 0.75rem 0; }
+    .chat-typing-dot { width: 0.375rem; height: 0.375rem; border-radius: 999px; background: var(--text-muted); animation: chatTyping 1.4s ease-in-out infinite; }
+    .chat-typing-dot:nth-child(2) { animation-delay: 0.2s; }
+    .chat-typing-dot:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes chatTyping { 0%, 60%, 100% { transform: translateY(0); opacity: 0.4; } 30% { transform: translateY(-4px); opacity: 1; } }
+
+    .chat-input-area { display: flex; align-items: flex-end; gap: 0.5rem; padding: 0.75rem clamp(2rem, 6vw, 6rem) 1.25rem; border-top: 1px solid var(--border); flex-shrink: 0; background: var(--bg); max-width: calc(var(--content-max) + clamp(4rem, 12vw, 12rem)); width: 100%; margin: 0 auto; }
+    .chat-input { flex: 1; font-family: var(--font); font-size: 0.875rem; line-height: 1.5; color: var(--text); background: var(--bg-secondary); border: 1px solid transparent; border-radius: 0.75rem; padding: 0.75rem 1rem; resize: none; outline: none; max-height: 120px; letter-spacing: var(--tracking); transition: border-color 0.2s var(--ease); }
+    .chat-input:focus { border-color: var(--border-subtle); }
+    .chat-input::placeholder { color: var(--text-muted); }
+    .chat-send { width: 2.5rem; height: 2.5rem; border-radius: 999px; background: var(--bg-dark); color: var(--text-on-dark); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: opacity 0.2s var(--ease); }
+    .chat-send:hover { opacity: 0.7; }
+    .chat-send:disabled { opacity: 0.3; cursor: not-allowed; }
+    .chat-send svg { width: 1rem; height: 1rem; fill: currentColor; }
+
+    @media (max-width: 479px) {
+      .chat-fab { bottom: 1.25rem; }
+    }
+
+    /* ── Onboarding ── */
+    .onboarding-fab { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 500; height: 2.5rem; border-radius: 999px; background: var(--accent); color: #fff; border: none; cursor: pointer; display: none; align-items: center; gap: 0.5rem; padding: 0 1rem; box-shadow: 0 2px 12px rgba(19, 62, 236, 0.3); transition: opacity 0.3s var(--ease), transform 0.3s var(--ease); font-family: var(--font); font-size: 0.75rem; font-weight: 400; letter-spacing: -0.02em; white-space: nowrap; }
+    .onboarding-fab svg { width: 1rem; height: 1rem; fill: currentColor; flex-shrink: 0; }
+    .onboarding-fab:hover { opacity: 0.85; transform: scale(1.03); }
+    .onboarding-fab.visible { display: flex; }
+    .onboarding-popup { position: fixed; bottom: 4.75rem; right: 1.5rem; z-index: 501; width: 320px; background: var(--bg); border: 1px solid var(--border); border-radius: 1rem; box-shadow: 0 8px 30px rgba(0,0,0,0.12); padding: 1.25rem; display: none; animation: onb-in 0.3s var(--ease); }
+    .onboarding-popup.open { display: block; }
+    @keyframes onb-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+    .onboarding-popup-title { font-size: 1rem; font-weight: 500; letter-spacing: -0.03em; margin-bottom: 0.75rem; }
+    .onboarding-step { display: flex; align-items: flex-start; gap: 0.625rem; padding: 0.5rem 0; cursor: default; border-radius: 0.5rem; transition: background 0.2s var(--ease); }
+    .onboarding-step.clickable { cursor: pointer; }
+    .onboarding-step.clickable:hover { background: var(--bg-hover); }
+    .onboarding-check { width: 1.25rem; height: 1.25rem; border-radius: 999px; border: 1.5px solid var(--border-subtle); flex-shrink: 0; display: flex; align-items: center; justify-content: center; margin-top: 0.1rem; transition: background 0.3s var(--ease), border-color 0.3s var(--ease); }
+    .onboarding-step.done .onboarding-check { background: #16a34a; border-color: #16a34a; }
+    .onboarding-check svg { width: 0.75rem; height: 0.75rem; fill: #fff; opacity: 0; transition: opacity 0.3s var(--ease); }
+    .onboarding-step.done .onboarding-check svg { opacity: 1; }
+    .onboarding-step-text { flex: 1; }
+    .onboarding-step-title { font-size: 0.8125rem; font-weight: 400; color: var(--text); line-height: 1.4; transition: color 0.3s var(--ease); }
+    .onboarding-step.done .onboarding-step-title { text-decoration: line-through; text-decoration-color: var(--text-muted); color: var(--text-secondary); }
+    .onboarding-step-desc { font-size: 0.6875rem; color: var(--text-secondary); line-height: 1.4; margin-top: 0.125rem; }
+    .onboarding-dismiss { display: block; width: 100%; margin-top: 0.75rem; padding: 0.375rem 0; background: none; border: none; font-family: var(--font); font-size: 0.6875rem; color: var(--text-muted); cursor: pointer; text-align: center; transition: color 0.3s var(--ease); letter-spacing: var(--tracking); }
+    .onboarding-dismiss:hover { color: var(--text-secondary); }
+    @media (max-width: 479px) {
+      .onboarding-fab { bottom: 1.25rem; right: 1.25rem; }
+      .onboarding-popup { bottom: 4.5rem; right: 1.25rem; width: calc(100vw - 2.5rem); }
+    }
   </style>
 </head>
 <body>
@@ -396,6 +487,39 @@
     <main class="main" id="content">
       <div class="loading">Cargando...</div>
     </main>
+
+    <!-- Onboarding -->
+    <button class="onboarding-fab" id="onboardingFab" onclick="toggleOnboardingPopup()" aria-label="Primeros pasos"></button>
+    <div class="onboarding-popup" id="onboardingPopup"></div>
+
+    <!-- Chat FAB -->
+    <button class="chat-fab" id="chatFab" onclick="toggleChat()" aria-label="Abrir chat">
+      <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z"/><path d="M7 9h10v2H7zm0-3h10v2H7zm0 6h7v2H7z"/></svg>
+      Pregunta al Handbook
+    </button>
+
+    <!-- Chat Panel -->
+    <div class="chat-panel" id="chatPanel">
+      <div class="chat-messages" id="chatMessages">
+        <div class="chat-close-bar">
+          <button class="chat-close-btn" onclick="toggleChat()">
+            <svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+            Cerrar chat
+          </button>
+        </div>
+        <div class="chat-welcome">
+          <div class="chat-welcome-icon"><img src="logos/Modulor.svg" alt=""></div>
+          <div class="chat-welcome-title">Pregunta sobre el Handbook</div>
+          Puedo ayudarte a encontrar información sobre las empresas del grupo, procesos, equipo y más.
+        </div>
+      </div>
+      <div class="chat-input-area">
+        <textarea class="chat-input" id="chatInput" placeholder="Escribe tu pregunta..." rows="1" onkeydown="handleChatKey(event)"></textarea>
+        <button class="chat-send" id="chatSend" onclick="sendChatMessage()">
+          <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+        </button>
+      </div>
+    </div>
   </div>
 
   <script>
@@ -611,6 +735,10 @@
       document.getElementById('loginScreen').style.display = 'flex';
       document.getElementById('adminNavLink').style.display = 'none';
       document.getElementById('viewSwitcher').style.display = 'none';
+      document.getElementById('chatFab').classList.remove('visible');
+      document.getElementById('chatPanel').classList.remove('open');
+      clearChat();
+      hideOnboarding();
     }
 
     function showLoginError(msg) {
@@ -631,6 +759,8 @@
         avatarEl.appendChild(img);
       }
       nameEl.textContent = meta.full_name || currentUser.email;
+      document.getElementById('chatFab').classList.add('visible');
+      initOnboarding();
       loadVersions();
       onHashChange();
     }
@@ -732,6 +862,7 @@
     }
 
     async function navigate(id) {
+      trackOnboardingNav(id);
       const content = document.getElementById('content');
       const chapters = getChapters();
 
@@ -1279,6 +1410,321 @@
     }, { passive: true });
 
     // Auth handled by onAuthStateChange (INITIAL_SESSION event)
+
+    // ── Chat ──
+    const chatHistory = [];
+    let chatStreaming = false;
+    const chat_md = window.markdownit({ html: false, linkify: true, breaks: true });
+
+    function toggleChat() {
+      const panel = document.getElementById('chatPanel');
+      const fab = document.getElementById('chatFab');
+      const isOpen = panel.classList.toggle('open');
+      fab.style.display = isOpen ? 'none' : 'flex';
+      if (isOpen) {
+        setTimeout(() => document.getElementById('chatInput').focus(), 400);
+      }
+    }
+
+    function clearChat() {
+      chatHistory.length = 0;
+      const msgs = document.getElementById('chatMessages');
+      msgs.innerHTML = `
+        <div class="chat-close-bar">
+          <button class="chat-close-btn" onclick="toggleChat()">
+            <svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+            Cerrar chat
+          </button>
+        </div>
+        <div class="chat-welcome">
+          <div class="chat-welcome-icon"><img src="logos/Modulor.svg" alt=""></div>
+          <div class="chat-welcome-title">Pregunta sobre el Handbook</div>
+          Puedo ayudarte a encontrar información sobre las empresas del grupo, procesos, equipo y más.
+        </div>`;
+    }
+
+    function handleChatKey(e) {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        sendChatMessage();
+      }
+    }
+
+    function autoResizeInput() {
+      const input = document.getElementById('chatInput');
+      input.style.height = 'auto';
+      input.style.height = Math.min(input.scrollHeight, 120) + 'px';
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const input = document.getElementById('chatInput');
+      if (input) input.addEventListener('input', autoResizeInput);
+    });
+
+    function scrollChatToBottom() {
+      const msgs = document.getElementById('chatMessages');
+      msgs.scrollTop = msgs.scrollHeight;
+    }
+
+    function addChatMessage(role, content) {
+      const msgs = document.getElementById('chatMessages');
+      // Remove welcome on first message
+      const welcome = msgs.querySelector('.chat-welcome');
+      if (welcome) welcome.remove();
+
+      const div = document.createElement('div');
+      div.className = `chat-msg chat-msg-${role}`;
+
+      if (role === 'user') {
+        div.textContent = content;
+      } else if (role === 'error') {
+        div.className = 'chat-msg chat-msg-error';
+        div.textContent = content;
+      } else {
+        div.innerHTML = chat_md.render(content);
+      }
+
+      msgs.appendChild(div);
+      scrollChatToBottom();
+      return div;
+    }
+
+    function showTypingIndicator() {
+      const msgs = document.getElementById('chatMessages');
+      const div = document.createElement('div');
+      div.className = 'chat-typing';
+      div.id = 'chatTyping';
+      div.innerHTML = '<span class="chat-typing-dot"></span><span class="chat-typing-dot"></span><span class="chat-typing-dot"></span>';
+      msgs.appendChild(div);
+      scrollChatToBottom();
+    }
+
+    function removeTypingIndicator() {
+      const el = document.getElementById('chatTyping');
+      if (el) el.remove();
+    }
+
+    async function sendChatMessage() {
+      if (chatStreaming) return;
+
+      const input = document.getElementById('chatInput');
+      const text = input.value.trim();
+      if (!text) return;
+
+      input.value = '';
+      input.style.height = 'auto';
+
+      // Add user message
+      addChatMessage('user', text);
+      chatHistory.push({ role: 'user', content: text });
+      completeOnboardingStep('chat');
+
+      // Disable input
+      chatStreaming = true;
+      document.getElementById('chatSend').disabled = true;
+      showTypingIndicator();
+
+      try {
+        const res = await fetch('/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ messages: chatHistory }),
+        });
+
+        removeTypingIndicator();
+
+        if (!res.ok) {
+          const err = await res.json().catch(() => ({ error: 'Error del servidor' }));
+          addChatMessage('error', err.error || 'Error al conectar con el chat');
+          chatStreaming = false;
+          document.getElementById('chatSend').disabled = false;
+          return;
+        }
+
+        // Stream the response
+        const reader = res.body.getReader();
+        const decoder = new TextDecoder();
+        let assistantText = '';
+        let assistantDiv = null;
+        let buffer = '';
+
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+
+          buffer += decoder.decode(value, { stream: true });
+          const lines = buffer.split('\n');
+          buffer = lines.pop() || '';
+
+          for (const line of lines) {
+            if (!line.startsWith('data: ')) continue;
+            const data = line.slice(6);
+            if (data === '[DONE]') continue;
+
+            try {
+              const parsed = JSON.parse(data);
+              if (parsed.text) {
+                assistantText += parsed.text;
+                if (!assistantDiv) {
+                  assistantDiv = addChatMessage('assistant', assistantText);
+                } else {
+                  assistantDiv.innerHTML = chat_md.render(assistantText);
+                  scrollChatToBottom();
+                }
+              }
+            } catch {}
+          }
+        }
+
+        if (assistantText) {
+          chatHistory.push({ role: 'assistant', content: assistantText });
+        }
+
+      } catch (err) {
+        removeTypingIndicator();
+        addChatMessage('error', 'Error de conexión. Intenta de nuevo.');
+      }
+
+      chatStreaming = false;
+      document.getElementById('chatSend').disabled = false;
+      input.focus();
+    }
+
+    // ── Onboarding ──
+    const OB_KEY = 'handbook-onboarding';
+    let obState = null;
+    let obPopupOpen = false;
+
+    function getDefaultObState() {
+      return { dismissed: false, completed: { intro: false, repositorio: false, sections: [], chat: false, admin: false } };
+    }
+
+    function loadObState() {
+      try {
+        const raw = localStorage.getItem(OB_KEY);
+        if (raw) { obState = JSON.parse(raw); if (!obState.completed.sections) obState.completed.sections = []; return; }
+      } catch (e) {}
+      obState = getDefaultObState();
+      saveObState();
+    }
+
+    function saveObState() { localStorage.setItem(OB_KEY, JSON.stringify(obState)); }
+
+    function getObSteps() {
+      const isAdmin = userRole === 'admin';
+      const steps = [
+        { key: 'intro', title: 'Lee la introducción', desc: 'Visita la sección de intro y "Cómo usarlo con IA"', link: 'intro' },
+        { key: 'repositorio', title: 'Descarga los archivos .md', desc: 'Visita el Repositorio y descarga el handbook', link: 'repositorio' },
+        { key: 'sections', title: 'Explora el handbook', desc: 'Visita al menos 5 secciones distintas', link: null },
+        { key: 'chat', title: 'Usa el chat del Handbook', desc: 'Envía al menos un mensaje en el chat', link: null },
+      ];
+      if (isAdmin) steps.push({ key: 'admin', title: 'Visita el panel de admin', desc: 'Accede al panel de administración', link: 'admin' });
+      return steps;
+    }
+
+    function isStepDone(key) {
+      if (key === 'sections') return (obState.completed.sections || []).length >= 5;
+      return !!obState.completed[key];
+    }
+
+    function allStepsDone() { return getObSteps().every(s => isStepDone(s.key)); }
+
+    function getObProgress() {
+      const steps = getObSteps();
+      return { done: steps.filter(s => isStepDone(s.key)).length, total: steps.length };
+    }
+
+    function initOnboarding() {
+      loadObState();
+      if (obState.dismissed || allStepsDone()) { hideOnboarding(); return; }
+      renderOnboardingFab();
+      document.getElementById('onboardingFab').classList.add('visible');
+    }
+
+    function renderOnboardingFab() {
+      const { done, total } = getObProgress();
+      const fab = document.getElementById('onboardingFab');
+      fab.innerHTML = '<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/></svg>Primeros pasos <span style="opacity:0.7">' + done + '/' + total + '</span>';
+    }
+
+    function renderOnboardingPopup() {
+      const steps = getObSteps();
+      const checkSvg = '<svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>';
+      let html = '<div class="onboarding-popup-title">Primeros pasos</div>';
+      steps.forEach(s => {
+        const done = isStepDone(s.key);
+        const clickable = s.link && !done;
+        html += '<div class="onboarding-step' + (done ? ' done' : '') + (clickable ? ' clickable' : '') + '"'
+          + (clickable ? ' onclick="onboardingNavigate(\'' + s.link + '\')"' : '') + '>'
+          + '<div class="onboarding-check">' + checkSvg + '</div>'
+          + '<div class="onboarding-step-text">'
+          + '<div class="onboarding-step-title">' + s.title + '</div>'
+          + '<div class="onboarding-step-desc">' + s.desc + (s.key === 'sections' ? ' (' + Math.min((obState.completed.sections || []).length, 5) + '/5)' : '') + '</div>'
+          + '</div></div>';
+      });
+      html += '<button class="onboarding-dismiss" onclick="dismissOnboarding()">Cerrar para siempre</button>';
+      document.getElementById('onboardingPopup').innerHTML = html;
+    }
+
+    function toggleOnboardingPopup() {
+      obPopupOpen = !obPopupOpen;
+      const popup = document.getElementById('onboardingPopup');
+      if (obPopupOpen) { renderOnboardingPopup(); popup.classList.add('open'); }
+      else { popup.classList.remove('open'); }
+    }
+
+    function onboardingNavigate(id) {
+      window.location.hash = id;
+      obPopupOpen = false;
+      document.getElementById('onboardingPopup').classList.remove('open');
+    }
+
+    function completeOnboardingStep(key) {
+      if (!obState || obState.dismissed) return;
+      if (key === 'sections') return; // handled by trackOnboardingNav
+      if (obState.completed[key]) return;
+      obState.completed[key] = true;
+      saveObState();
+      updateOnboardingUI();
+    }
+
+    function trackOnboardingNav(id) {
+      if (!obState || obState.dismissed) return;
+      // Steps 1, 2, 5
+      if (id === 'intro') completeOnboardingStep('intro');
+      if (id === 'repositorio') completeOnboardingStep('repositorio');
+      if (id === 'admin' && userRole === 'admin') completeOnboardingStep('admin');
+      // Step 3: track unique sections
+      if (id && !obState.completed.sections.includes(id)) {
+        obState.completed.sections.push(id);
+        saveObState();
+        updateOnboardingUI();
+      }
+    }
+
+    function updateOnboardingUI() {
+      if (!obState || obState.dismissed) return;
+      if (allStepsDone()) {
+        renderOnboardingFab();
+        if (obPopupOpen) renderOnboardingPopup();
+        setTimeout(() => { obState.dismissed = true; saveObState(); hideOnboarding(); }, 1500);
+        return;
+      }
+      renderOnboardingFab();
+      if (obPopupOpen) renderOnboardingPopup();
+    }
+
+    function dismissOnboarding() {
+      obState.dismissed = true;
+      saveObState();
+      hideOnboarding();
+    }
+
+    function hideOnboarding() {
+      document.getElementById('onboardingFab').classList.remove('visible');
+      document.getElementById('onboardingPopup').classList.remove('open');
+      obPopupOpen = false;
+    }
   </script>
 </body>
 </html>

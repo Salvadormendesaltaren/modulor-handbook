@@ -373,13 +373,7 @@ Junto con **Tailor Hub**, diseñamos y activamos programas de innovación que co
 
 ### Design Handbook
 
-mendesaltaren publica su metodología completa en [https://designhandbook.com](https://designhandbook.com)
-
-**Filosofía central:**
-
-> "Creemos en el buen trabajo y las cosas bien hechas. Creemos que la belleza atemporal proviene de la función. Creemos en teorías y objetos con sentido. Creemos en el valor de los conceptos y el arte, todo proyecto necesita un alma. Por encima de todo, creemos en la honestidad."
-
-**Empresas que usan el handbook como referencia:** ZARA, GOI, Chicfy, C14/SEAT, Packlink, Universidad Europea, Playtomic
+mendesaltaren publica su metodología de diseño en el [Design Handbook](https://www.designhandbook.com/es), un recurso público que documenta su forma de trabajar, filosofía y procesos de diseño.
 
 ### Proceso de Trabajo
 
@@ -391,8 +385,7 @@ mendesaltaren publica su metodología completa en [https://designhandbook.com](h
 |---|---|
 | Diseño | Figma |
 | Documentación | Notion |
-| Gestion tareas | Asana |
-| Handoff | Zeplin |
+| Gestión tareas | Asana |
 | Comunicación | Slack + Geekbot |
 
 ---
@@ -454,12 +447,12 @@ Inditex, Repsol, Comunidad de Madrid, Movistar Prosegur, UEFA, Bankia, Línea Di
 ### Mensajes clave
 
 - **Elevator pitch:** Somos un estudio de diseño digital que construye productos sólidos a través de estrategia, diseño y datos. Trabajamos con empresas como Inditex, Repsol y startups como Luzia.
-- **Diferenciación:** Metodología publica (Design Handbook), múltiples premios Laus, clientes de primer nivel
+- **Diferenciación:** Metodología pública (Design Handbook), múltiples premios Laus, clientes de primer nivel
 
 ### Materiales de venta
 
 - **Portfolio:** [https://mendesaltaren.com](https://mendesaltaren.com)
-- **Design Handbook:** [https://designhandbook.mendesaltaren.com](https://designhandbook.mendesaltaren.com)
+- **Design Handbook:** [https://www.designhandbook.com/es](https://www.designhandbook.com/es)
 
 ---
 

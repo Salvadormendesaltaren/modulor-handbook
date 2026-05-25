@@ -1,19 +1,19 @@
 # Handbook Modulor Studios
 
-> La base de conocimiento estratégica del grupo Modulor — identidad, operaciónes, financieros y gobernanza de las cinco boutiques.
+> La base de conocimiento estratégica del grupo Modulor — identidad, operaciones, financieros y gobernanza de las cinco boutiques.
 
-## Por qué existe este Handbook
+## Qué es esto
 
-Modulor Studios es un grupo de cinco boutiques especializadas que operan de forma coordinada: mendesaltaren, Tailor Hub, SSTIL, Nocodehackers y FIK. Cada boutique tiene su propio posicionamiento, servicios e identidad, pero comparten clientes, sinergias y una visión común. SSTIL opera además la submarca Minimum (minimum.run), orientada a growth marketing y startups.
+Modulor Studios es un grupo de cinco boutiques especializadas: **mendesaltaren** (diseño digital), **Tailor Hub** (desarrollo software e IA), **SSTIL** (marketing y comunicación, incluye Minimum), **Nocodehackers** (soluciones no-code) y **FIK** (e-commerce Shopify). Cada una tiene su posicionamiento, pero compartimos clientes, sinergias y visión.
 
-Este Handbook centraliza el conocimiento del grupo para facilitar la alineación del liderazgo, el cross-selling entre boutiques y el uso de inteligencia artificial con contexto real.
+Este Handbook es la fuente de verdad del grupo: servicios, financieros, equipos, estrategia y matrices de derivación.
 
 ## Para qué sirve
 
-- **Gobernanza y estrategia.** Visión consolidada de financieros, objetivos y roadmap del grupo.
-- **Cross-selling.** Matrices de derivación claras entre boutiques.
-- **Contexto para IAs.** Base de conocimiento descargable para ChatGPT, Claude y otras herramientas.
-- **Onboarding.** Contexto completo para nuevas incorporaciónes al equipo directivo.
+- **Gobernanza y estrategia.** Financieros, objetivos y roadmap consolidados.
+- **Cross-selling.** Matrices de derivación entre boutiques.
+- **Contexto para IA.** Descargable como contexto para ChatGPT, Claude y otras herramientas. También disponible via el chat integrado en esta web.
+- **Onboarding.** Contexto completo para nuevas incorporaciones al equipo directivo.
 
 ## Versiones del contenido
 
@@ -25,4 +25,4 @@ Este Handbook centraliza el conocimiento del grupo para facilitar la alineación
 
 ## Información sensible
 
-Este documento contiene información confidencial. Su difusión fuera del equipo de liderazgo no está autorizada. Consulta las recomendaciones de ciberseguridad en la sección Repositorio.
+Este documento contiene información confidencial. Su difusión fuera del equipo de liderazgo no está autorizada.

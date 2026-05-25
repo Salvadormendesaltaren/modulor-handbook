@@ -286,10 +286,7 @@
     .admin-empty { font-size: 0.8125rem; color: var(--text-muted); padding: 2rem 0; }
 
     /* ── Chat ── */
-    .chat-fab { position: fixed; bottom: 1.5rem; left: calc(50% + var(--sidebar-w) / 2); transform: translateX(-50%); z-index: 500; height: 44px; border-radius: 999px; background: rgba(0,0,0,0.06); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); color: var(--text); border: none; cursor: pointer; display: none; align-items: center; gap: 0.5rem; padding: 0 20px; transition: all 0.8s var(--ease); font-family: var(--font); font-size: 15px; font-weight: 400; letter-spacing: -0.6px; white-space: nowrap; }
-    .chat-fab:hover { background: rgba(0,0,0,0.10); }
-    .chat-fab svg { width: 1.125rem; height: 1.125rem; fill: currentColor; flex-shrink: 0; }
-    .chat-fab.visible { display: flex; }
+    .chat-fab svg { width: 1rem; height: 1rem; fill: currentColor; flex-shrink: 0; }
 
     .chat-panel { position: fixed; inset: 0; background: var(--bg); z-index: 600; display: flex; flex-direction: column; opacity: 0; pointer-events: none; transition: opacity 0.3s var(--ease); }
     .chat-panel.open { opacity: 1; pointer-events: auto; }
@@ -345,21 +342,12 @@
     .chat-send:disabled { opacity: 0.3; cursor: not-allowed; }
     .chat-send svg { width: 1rem; height: 1rem; fill: currentColor; }
 
-    @media (max-width: 991px) {
-      .chat-fab { left: 50%; }
-    }
-    @media (max-width: 479px) {
-      .chat-fab { bottom: 1.25rem; }
-    }
-
     /* ── Onboarding ── */
-    .onboarding-fab { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 500; height: 44px; border-radius: 999px; background: rgba(0,0,0,0.06); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); color: var(--text); border: none; cursor: pointer; display: none; align-items: center; gap: 0.5rem; padding: 0 20px; transition: all 0.8s var(--ease); font-family: var(--font); font-size: 15px; font-weight: 400; letter-spacing: -0.6px; white-space: nowrap; }
-    .onboarding-fab svg { width: 1rem; height: 1rem; fill: currentColor; flex-shrink: 0; }
-    .onboarding-fab:hover { background: rgba(0,0,0,0.10); }
-    .onboarding-fab.visible { display: flex; }
-    .onboarding-popup { position: fixed; bottom: 4.75rem; right: 1.5rem; z-index: 501; width: 320px; background: var(--bg); border: 0.5px solid var(--border); border-radius: 14px; box-shadow: 0 8px 30px rgba(0,0,0,0.12); padding: 1.25rem; display: none; animation: onb-in 0.3s var(--ease); }
+    .topbar-onboarding { display: none; }
+    .topbar-onboarding.visible { display: block; }
+    .onboarding-popup { position: absolute; top: calc(100% + 6px); right: 0; z-index: 501; width: 320px; background: var(--bg); border: 0.5px solid var(--border); border-radius: 14px; box-shadow: 0 8px 30px rgba(0,0,0,0.12); padding: 1.25rem; display: none; animation: onb-in 0.3s var(--ease); }
     .onboarding-popup.open { display: block; }
-    @keyframes onb-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes onb-in { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
     .onboarding-popup-title { font-size: 18px; font-weight: 400; letter-spacing: -0.9px; margin-bottom: 0.75rem; }
     .onboarding-step { display: flex; align-items: flex-start; gap: 0.625rem; padding: 0.5rem 0; cursor: default; border-radius: 0.5rem; transition: background 0.2s var(--ease); }
     .onboarding-step.clickable { cursor: pointer; }
@@ -374,10 +362,6 @@
     .onboarding-step-desc { font-size: 13px; color: var(--text-secondary); line-height: 1.4; margin-top: 0.125rem; letter-spacing: -0.4px; }
     .onboarding-dismiss { display: block; width: 100%; margin-top: 0.75rem; padding: 0.375rem 0; background: none; border: none; font-family: var(--font); font-size: 13px; color: var(--text-muted); cursor: pointer; text-align: center; transition: all 0.8s var(--ease); letter-spacing: -0.4px; }
     .onboarding-dismiss:hover { color: var(--text-secondary); }
-    @media (max-width: 479px) {
-      .onboarding-fab { bottom: 1.25rem; right: 1.25rem; }
-      .onboarding-popup { bottom: 4.5rem; right: 1.25rem; width: calc(100vw - 2.5rem); }
-    }
 
     /* ── Announcement modal ── */
     .announce-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); z-index: 700; display: flex; align-items: center; justify-content: center; padding: 1.5rem; opacity: 0; animation: announce-fade-in 0.4s var(--ease) forwards; }
@@ -515,6 +499,14 @@
           <button class="topbar-dropdown-item" id="viewOptLeadership" onclick="switchViewMode('leadership')">Leader</button>
         </div>
       </div>
+      <button class="topbar-pill" id="chatFab" onclick="toggleChat()" style="display:none;">
+        <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z"/><path d="M7 9h10v2H7zm0-3h10v2H7zm0 6h7v2H7z"/></svg>
+        Pregunta al Handbook
+      </button>
+      <div class="topbar-dropdown topbar-onboarding" id="onboardingWrapper" style="display:none;">
+        <button class="topbar-pill" id="onboardingFab" onclick="toggleOnboardingPopup()"></button>
+        <div class="onboarding-popup" id="onboardingPopup"></div>
+      </div>
       <div class="topbar-dropdown" id="userMenu">
         <button class="topbar-pill topbar-pill-user" onclick="toggleUserMenu()">
           <span class="topbar-avatar" id="userAvatar"></span>
@@ -532,16 +524,6 @@
 
     <!-- Announcement modal -->
     <div class="announce-overlay" id="announceModal" style="display:none;"></div>
-
-    <!-- Onboarding -->
-    <button class="onboarding-fab" id="onboardingFab" onclick="toggleOnboardingPopup()" aria-label="Primeros pasos"></button>
-    <div class="onboarding-popup" id="onboardingPopup"></div>
-
-    <!-- Chat FAB -->
-    <button class="chat-fab" id="chatFab" onclick="toggleChat()" aria-label="Abrir chat">
-      <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z"/><path d="M7 9h10v2H7zm0-3h10v2H7zm0 6h7v2H7z"/></svg>
-      Pregunta al Handbook
-    </button>
 
     <!-- Chat Panel -->
     <div class="chat-panel" id="chatPanel">
@@ -774,7 +756,7 @@
       document.getElementById('loginScreen').style.display = 'flex';
       document.getElementById('adminNavLink').style.display = 'none';
       document.getElementById('viewSwitcher').style.display = 'none';
-      document.getElementById('chatFab').classList.remove('visible');
+      document.getElementById('chatFab').style.display = 'none';
       document.getElementById('chatPanel').classList.remove('open');
       clearChat();
       hideOnboarding();
@@ -798,7 +780,7 @@
         avatarEl.appendChild(img);
       }
       nameEl.textContent = meta.full_name || currentUser.email;
-      document.getElementById('chatFab').classList.add('visible');
+      document.getElementById('chatFab').style.display = 'flex';
       showAnnouncement();
       initOnboarding();
       loadVersions();
@@ -1425,6 +1407,7 @@
       if (topbar && !topbar.contains(e.target)) {
         document.getElementById('viewSwitcher').classList.remove('open');
         document.getElementById('userMenu').classList.remove('open');
+        if (obPopupOpen) { obPopupOpen = false; document.getElementById('onboardingPopup').classList.remove('open'); }
       }
     });
 
@@ -1732,7 +1715,7 @@
       loadObState();
       if (obState.dismissed || allStepsDone()) { hideOnboarding(); return; }
       renderOnboardingFab();
-      document.getElementById('onboardingFab').classList.add('visible');
+      document.getElementById('onboardingWrapper').classList.add('visible');
     }
 
     function renderOnboardingFab() {
@@ -1831,7 +1814,7 @@
     }
 
     function hideOnboarding() {
-      document.getElementById('onboardingFab').classList.remove('visible');
+      document.getElementById('onboardingWrapper').classList.remove('visible');
       document.getElementById('onboardingPopup').classList.remove('open');
       obPopupOpen = false;
     }

@@ -101,14 +101,23 @@
     .sidebar-nav .nav-label-recursos { display: block; font-size: 0.625rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 0.125rem; transition: color 0.3s var(--ease); }
     .sidebar-nav a.active .nav-label-recursos { color: var(--text-secondary); }
 
-    /* ── Sidebar footer ── */
+    /* ── Sidebar footer (view switcher only) ── */
     .sidebar-footer { margin-top: 1rem; padding-top: 1rem; border-top: 0.5px solid var(--border); }
-    .sidebar-user { display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0.75rem; font-size: 0.75rem; color: var(--text-secondary); line-height: 1.3; }
-    .sidebar-user-avatar { width: 1.75rem; height: 1.75rem; border-radius: 999px; overflow: hidden; flex-shrink: 0; background: var(--bg-tertiary); }
-    .sidebar-user-avatar img { width: 100%; height: 100%; object-fit: cover; }
-    .sidebar-user-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-    .sidebar-logout { display: block; width: 100%; padding: 8px 12px; background: none; border: none; border-radius: 999px; font-family: var(--font); font-size: 14px; font-weight: 400; color: var(--text-secondary); letter-spacing: -0.5px; cursor: pointer; text-align: left; transition: all 0.8s var(--ease); }
-    .sidebar-logout:hover { background: var(--bg-hover); color: var(--text); }
+
+    /* ── User menu (top-right) ── */
+    .user-menu { position: fixed; top: 1.25rem; right: 1.5rem; z-index: 150; }
+    .user-menu-btn { display: flex; align-items: center; gap: 0.5rem; background: var(--bg); border: 0.5px solid var(--border); border-radius: 999px; padding: 6px 12px 6px 6px; cursor: pointer; font-family: var(--font); font-size: 13px; font-weight: 400; color: var(--text-secondary); letter-spacing: -0.4px; transition: all 0.8s var(--ease); }
+    .user-menu-btn:hover { background: var(--bg-secondary); color: var(--text); }
+    .user-menu-avatar { width: 1.5rem; height: 1.5rem; border-radius: 999px; overflow: hidden; flex-shrink: 0; background: var(--bg-tertiary); }
+    .user-menu-avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .user-menu-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 140px; }
+    .user-menu-dropdown { display: none; position: absolute; top: calc(100% + 6px); right: 0; min-width: 160px; background: var(--bg); border: 0.5px solid var(--border); border-radius: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); overflow: hidden; z-index: 151; }
+    .user-menu.open .user-menu-dropdown { display: block; }
+    .user-menu-item { display: block; width: 100%; padding: 10px 16px; background: none; border: none; font-family: var(--font); font-size: 14px; font-weight: 400; color: var(--text-secondary); letter-spacing: -0.5px; cursor: pointer; text-align: left; transition: all 0.8s var(--ease); }
+    .user-menu-item:hover { background: var(--bg-hover); color: var(--text); }
+    @media (max-width: 991px) {
+      .user-menu { top: 1.25rem; right: 1.25rem; }
+    }
 
     /* ── Reading progress ── */
     .reading-progress { position: fixed; top: 0; left: var(--sidebar-w); right: 0; height: 2px; z-index: 50; background: transparent; pointer-events: none; }
@@ -482,10 +491,6 @@
         </a>
       </div>
       <div class="sidebar-footer">
-        <div class="sidebar-user" id="sidebarUser">
-          <span class="sidebar-user-avatar" id="userAvatar"></span>
-          <span class="sidebar-user-name" id="userName"></span>
-        </div>
         <div class="view-switcher" id="viewSwitcher" style="display:none;">
           <button class="view-switcher-btn" onclick="toggleViewSwitcher()">
             <span id="viewSwitcherLabel">Team</span>
@@ -500,7 +505,6 @@
             </button>
           </div>
         </div>
-        <button class="sidebar-logout" onclick="signOut()">Cerrar sesión</button>
       </div>
     </nav>
 
@@ -510,6 +514,18 @@
     </div>
 
     <div class="reading-progress"><div class="reading-progress-bar" id="readingProgress"></div></div>
+
+    <!-- User menu -->
+    <div class="user-menu" id="userMenu">
+      <button class="user-menu-btn" onclick="toggleUserMenu()">
+        <span class="user-menu-avatar" id="userAvatar"></span>
+        <span class="user-menu-name" id="userName"></span>
+      </button>
+      <div class="user-menu-dropdown">
+        <button class="user-menu-item" onclick="signOut()">Cerrar sesión</button>
+      </div>
+    </div>
+
     <main class="main" id="content">
       <div class="loading">Cargando...</div>
     </main>
@@ -1619,6 +1635,15 @@
       document.getElementById('chatSend').disabled = false;
       input.focus();
     }
+
+    // ── User menu ──
+    function toggleUserMenu() {
+      document.getElementById('userMenu').classList.toggle('open');
+    }
+    document.addEventListener('click', function(e) {
+      const menu = document.getElementById('userMenu');
+      if (menu && !menu.contains(e.target)) menu.classList.remove('open');
+    });
 
     // ── Announcement modal ──
     const ANNOUNCE_KEY = 'handbook-announce';

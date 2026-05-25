@@ -509,7 +509,7 @@
         </button>
         <div class="topbar-dropdown-menu">
           <button class="topbar-dropdown-item" id="viewOptTeam" onclick="switchViewMode('team')">Team</button>
-          <button class="topbar-dropdown-item" id="viewOptLeadership" onclick="switchViewMode('leadership')">Leadership</button>
+          <button class="topbar-dropdown-item" id="viewOptLeadership" onclick="switchViewMode('leadership')">Leader</button>
         </div>
       </div>
       <div class="topbar-dropdown" id="userMenu">
@@ -664,7 +664,7 @@
       // Update sidebar badge
       const brandText = document.getElementById('sidebarBrandText');
       if (viewMode === 'leadership') {
-        brandText.innerHTML = 'Modulor Studios <span class="sidebar-badge">Leadership</span>';
+        brandText.innerHTML = 'Modulor Studios <span class="sidebar-badge">Leader</span>';
       } else {
         brandText.innerHTML = 'Modulor Studios <span class="sidebar-badge">Team</span>';
       }
@@ -675,7 +675,7 @@
       const optLeadership = document.getElementById('viewOptLeadership');
 
       if (viewMode === 'leadership') {
-        label.textContent = 'Leadership';
+        label.textContent = 'Leader';
         optLeadership.classList.add('current');
         optTeam.classList.remove('current');
       } else {

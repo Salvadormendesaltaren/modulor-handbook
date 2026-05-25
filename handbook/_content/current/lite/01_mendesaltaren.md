@@ -88,7 +88,7 @@ Modelo de Squads: 1 Lead + 2-3 diseñadores por proyecto. 53 personas total (46 
 
 ## 08. Metodología
 
-Design Handbook público en [designhandbook.com](https://designhandbook.com). Flujo: Preparación → Entendimiento → Definición → Producción → Entrega → Seguimiento. Herramientas: Figma, Notion, Asana, Slack.
+Metodología documentada en el [Design Handbook](https://www.designhandbook.com/es). Flujo: Preparación → Entendimiento → Definición → Producción → Entrega → Seguimiento. Herramientas: Figma, Notion, Asana, Slack.
 
 ---
 

@@ -273,7 +273,7 @@ Inditex, Repsol, Comunidad de Madrid, Movistar Prosegur, UEFA, Bankia, Línea Di
 ### Materiales
 
 - **Portfolio:** https://mendesaltaren.com
-- **Design Handbook:** https://designhandbook.mendesaltaren.com
+- **Design Handbook:** https://www.designhandbook.com/es
 
 ---
 

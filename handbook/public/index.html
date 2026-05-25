@@ -363,6 +363,30 @@
       .onboarding-fab { bottom: 1.25rem; right: 1.25rem; }
       .onboarding-popup { bottom: 4.5rem; right: 1.25rem; width: calc(100vw - 2.5rem); }
     }
+
+    /* ── Announcement modal ── */
+    .announce-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); z-index: 700; display: flex; align-items: center; justify-content: center; padding: 1.5rem; opacity: 0; animation: announce-fade-in 0.4s var(--ease) forwards; }
+    @keyframes announce-fade-in { to { opacity: 1; } }
+    .announce-card { background: var(--bg); border-radius: 1.25rem; max-width: 480px; width: 100%; padding: 2.5rem 2rem 2rem; position: relative; animation: announce-slide-up 0.5s var(--ease) forwards; transform: translateY(20px); overflow: hidden; }
+    @keyframes announce-slide-up { to { transform: translateY(0); } }
+    .announce-confetti { position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #133EEC, #8B5CF6, #EC4899, #F59E0B, #10B981, #133EEC); background-size: 200% 100%; animation: announce-shimmer 2s linear infinite; }
+    @keyframes announce-shimmer { to { background-position: -200% 0; } }
+    .announce-emoji { font-size: 2.5rem; text-align: center; margin-bottom: 1rem; line-height: 1; }
+    .announce-title { font-size: 1.5rem; font-weight: 400; letter-spacing: -0.06rem; text-align: center; margin-bottom: 0.375rem; }
+    .announce-version { font-size: 0.6875rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); text-align: center; margin-bottom: 1.25rem; }
+    .announce-body { font-size: 0.875rem; line-height: 1.6; color: var(--text-body); margin-bottom: 1.5rem; }
+    .announce-body p { margin-bottom: 0.75rem; }
+    .announce-body p:last-child { margin-bottom: 0; }
+    .announce-feature { display: flex; align-items: flex-start; gap: 0.625rem; padding: 0.625rem 0; }
+    .announce-feature-icon { font-size: 1.125rem; line-height: 1; flex-shrink: 0; margin-top: 0.125rem; }
+    .announce-feature-text { font-size: 0.8125rem; color: var(--text-body); line-height: 1.5; }
+    .announce-feature-text strong { font-weight: 500; color: var(--text); }
+    .announce-btn { display: block; width: 100%; padding: 0.875rem; background: var(--bg-dark); color: var(--text-on-dark); border: none; border-radius: 999px; font-family: var(--font); font-size: 0.875rem; font-weight: 400; letter-spacing: var(--tracking); cursor: pointer; transition: opacity 0.3s var(--ease); }
+    .announce-btn:hover { opacity: 0.7; }
+    @media (max-width: 479px) {
+      .announce-card { padding: 2rem 1.5rem 1.5rem; }
+      .announce-title { font-size: 1.25rem; }
+    }
   </style>
 </head>
 <body>
@@ -487,6 +511,9 @@
     <main class="main" id="content">
       <div class="loading">Cargando...</div>
     </main>
+
+    <!-- Announcement modal -->
+    <div class="announce-overlay" id="announceModal" style="display:none;"></div>
 
     <!-- Onboarding -->
     <button class="onboarding-fab" id="onboardingFab" onclick="toggleOnboardingPopup()" aria-label="Primeros pasos"></button>
@@ -760,6 +787,7 @@
       }
       nameEl.textContent = meta.full_name || currentUser.email;
       document.getElementById('chatFab').classList.add('visible');
+      showAnnouncement();
       initOnboarding();
       loadVersions();
       onHashChange();
@@ -1588,6 +1616,50 @@
       chatStreaming = false;
       document.getElementById('chatSend').disabled = false;
       input.focus();
+    }
+
+    // ── Announcement modal ──
+    const ANNOUNCE_KEY = 'handbook-announce';
+    const ANNOUNCE_VERSION = 'v2.0';
+
+    function showAnnouncement() {
+      const seen = localStorage.getItem(ANNOUNCE_KEY);
+      if (seen === ANNOUNCE_VERSION) return;
+      const modal = document.getElementById('announceModal');
+      modal.style.display = 'flex';
+      modal.innerHTML = `<div class="announce-card">
+        <div class="announce-confetti"></div>
+        <div class="announce-emoji">🎉</div>
+        <div class="announce-title">El Handbook se ha renovado</div>
+        <div class="announce-version">Nueva versión — ${selectedVersion || 'V2.0'}</div>
+        <div class="announce-body">
+          <div class="announce-feature">
+            <span class="announce-feature-icon">💬</span>
+            <div class="announce-feature-text"><strong>Chat con IA</strong> — Pregúntale lo que quieras sobre el handbook. Entiende contexto, cruza secciones y te responde al momento.</div>
+          </div>
+          <div class="announce-feature">
+            <span class="announce-feature-icon">🗂️</span>
+            <div class="announce-feature-text"><strong>Repositorio de archivos</strong> — Descarga los .md del handbook para usarlos directamente con Claude, ChatGPT o tu IA favorita.</div>
+          </div>
+          <div class="announce-feature">
+            <span class="announce-feature-icon">🧭</span>
+            <div class="announce-feature-text"><strong>Onboarding guiado</strong> — Primeros pasos para que le saques el máximo partido desde el primer día.</div>
+          </div>
+          <div class="announce-feature">
+            <span class="announce-feature-icon">📖</span>
+            <div class="announce-feature-text"><strong>Contenido actualizado</strong> — Modulor OS, proyectos estratégicos, resultados Q1 2026 y más.</div>
+          </div>
+        </div>
+        <button class="announce-btn" onclick="dismissAnnouncement()">Empezar a explorar</button>
+      </div>`;
+    }
+
+    function dismissAnnouncement() {
+      localStorage.setItem(ANNOUNCE_KEY, ANNOUNCE_VERSION);
+      const modal = document.getElementById('announceModal');
+      modal.style.opacity = '0';
+      modal.style.transition = 'opacity 0.3s var(--ease)';
+      setTimeout(() => { modal.style.display = 'none'; }, 300);
     }
 
     // ── Onboarding ──

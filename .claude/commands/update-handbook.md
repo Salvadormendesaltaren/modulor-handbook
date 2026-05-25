@@ -101,13 +101,20 @@ Muestra al usuario un diff resumido de cada archivo modificado.
 
 ### Fase 5: Cascada a lite/
 
+Lite es un **resumen ejecutivo** de Full (~40-50% del tamaño), diseñado para menor consumo de tokens en IAs. NO es una copia del Full.
+
 Para cada archivo full/ modificado en Fase 4:
 
 1. Lee el archivo `lite/{mismo_capítulo}.md` correspondiente.
-2. Aplica los mismos cambios de contenido, con estas diferencias:
-   - Footer usa formato: `*Última actualización: {Mes} {Año}*` (sin número de versión)
-   - El contenido es sustancialmente idéntico al full en datos y estructura
-3. Si el cambio afecta a `intro.md`: la versión lite es más corta (sin la lista numerada de "Por qué existe").
+2. Aplica los mismos cambios de **datos** (cifras, nombres, fechas, nuevos servicios, nuevos clientes).
+3. **Mantén el estilo condensado de Lite:**
+   - No copies narrativa extensa del Full. Resume en 1-2 frases.
+   - Tablas con mismos datos, sin filas explicativas.
+   - Casos de éxito: una línea (cliente + resultado), no párrafos.
+   - Elimina contexto explicativo que no aporta datos.
+4. Si se añade una sección nueva en Full, crea su versión condensada en Lite.
+5. Footer: `*Última actualización: {Mes} {Año}*` (sin número de versión).
+6. Moneda: usar € (no EUR).
 
 ---
 

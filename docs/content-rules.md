@@ -15,8 +15,9 @@ Documento de referencia para la cascada de contenido entre tiers. Usado por el c
 ### Lite
 - **Audiencia:** Leadership (partners, heads de boutique)
 - **Acceso:** Solo por invitación
-- **Contenido:** Sustancialmente idéntico a Full. Diferencias editoriales menores (ver sección de cascada).
-- **Propósito:** Versión con formato ligeramente simplificado para contexto de IA y consulta rápida.
+- **Contenido:** Resumen ejecutivo de Full. Mismos datos clave, menos desarrollo narrativo.
+- **Propósito:** Versión condensada para menor consumo de tokens en herramientas de IA. Permite cargar más capítulos en una sola conversación.
+- **Objetivo de tamaño:** ~40-50% del tamaño de Full por archivo. Si un archivo Full tiene 400 líneas, el Lite debería tener ~160-200.
 
 ### Redux (Team)
 - **Audiencia:** Todo el grupo Modulor (~125 personas)
@@ -44,22 +45,39 @@ Cada dato o sección del handbook se clasifica en uno de cuatro niveles. Esta cl
 
 ## 3. Reglas de cascada Full → Lite
 
-El tier Lite es **casi idéntico** al Full en contenido. Las diferencias son editoriales, no estructurales.
+El tier Lite es un **resumen ejecutivo** del Full. Contiene los mismos datos clave pero con menos desarrollo, menos narrativa y menos contexto. El objetivo es reducir el consumo de tokens al ~40-50% del Full.
 
-### Diferencias específicas
+### Qué se mantiene en Lite (datos clave)
+- Todas las cifras financieras (revenue, objetivos, márgenes, growth)
+- Nombres de personas y roles
+- Lista completa de servicios (con pricing)
+- Lista de clientes
+- ICP / buyer persona (condensado)
+- Cross-selling y criterios de derivación
+- Headcount
 
+### Qué se condensa o elimina en Lite
+- **Narrativa de identidad/visión:** De varios párrafos a 1-2 frases.
+- **Descripciones de servicios:** De párrafo descriptivo a una línea por servicio.
+- **Casos de éxito:** De caso detallado a línea resumen (cliente + resultado).
+- **Contexto explicativo:** Eliminar frases que no aportan datos (ej: "esto es importante porque...", "cabe destacar que...").
+- **Listas extensas:** Condensar bullets que elaboran el mismo punto.
+- **Secciones duplicadas:** Si un dato ya aparece en una tabla, no repetirlo en texto.
+
+### Formato Lite
 | Elemento | Full | Lite |
 |----------|------|------|
-| **Footer** | `*Documento actualizado: {Mes} {Año}*` + `*Version: X.0 — Full (...)*` | `*Última actualización: {Mes} {Año}*` (sin número de versión) |
-| **intro.md** | Versión completa con lista numerada de "Por qué existe este Handbook" (4 puntos) | Versión condensada: un párrafo resumen en lugar de la lista numerada |
-| **Contenido de capítulos** | Completo | Idéntico al Full |
-| **Tablas y datos** | Completos | Idénticos al Full |
+| **Footer** | `*Documento actualizado: {Mes} {Año}*` + `*Version: X.0 — Full*` | `*Última actualización: {Mes} {Año}*` |
+| **Secciones** | Misma numeración que Full | Misma numeración que Full (para correspondencia) |
+| **Tablas** | Completas | Mismos datos, mismas columnas |
+| **Moneda** | EUR o € | € |
 
 ### Proceso de cascada
 1. Para cada archivo modificado en `full/`, lee el correspondiente en `lite/`.
-2. Aplica exactamente los mismos cambios de datos y contenido.
-3. Ajusta el footer al formato Lite.
-4. No toques la estructura editorial que ya difiere (como intro.md).
+2. Aplica los mismos cambios de **datos** (cifras, nombres, fechas).
+3. Mantén el estilo condensado de Lite — no copies texto narrativo del Full.
+4. Si se añade una sección nueva en Full, crea su versión condensada en Lite.
+5. Ajusta el footer al formato Lite.
 
 ---
 

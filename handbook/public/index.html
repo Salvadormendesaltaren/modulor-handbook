@@ -196,12 +196,12 @@
 
     /* ── Responsive ── */
     @media (max-width: 991px) {
-      .sidebar { transform: translateX(-100%); z-index: 200; }
+      .sidebar { transform: translateX(-100%); z-index: 510; }
       .sidebar.open { transform: translateX(0); }
-      .overlay { z-index: 199; }
+      .overlay { z-index: 509; }
       .overlay.open { display: block; }
-      .main { margin-left: 0; }
-      .hamburger { display: block; }
+      .main { margin-left: 0; padding-top: 56px; }
+      .hamburger { display: block; z-index: 511; }
     }
 
     @media (max-width: 479px) {

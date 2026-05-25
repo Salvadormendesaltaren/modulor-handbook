@@ -107,10 +107,10 @@
     .topbar-pill { display: flex; align-items: center; gap: 0.5rem; height: 44px; background: rgba(0,0,0,0.06); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: none; border-radius: 999px; padding: 0 20px; cursor: pointer; font-family: var(--font); font-size: 15px; font-weight: 400; color: var(--text); letter-spacing: -0.6px; transition: all 0.8s var(--ease); white-space: nowrap; }
     .topbar-pill:hover { background: rgba(0,0,0,0.10); }
     .topbar-pill svg { width: 1rem; height: 1rem; fill: currentColor; }
-    .topbar-pill-user { width: 44px; height: 44px; padding: 0; background: none; backdrop-filter: none; -webkit-backdrop-filter: none; overflow: hidden; }
-    .topbar-pill-user:hover { background: none; opacity: 0.8; }
-    .topbar-avatar { width: 100%; height: 100%; }
-    .topbar-avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 999px; }
+    .topbar-pill-user { width: 44px; height: 44px; padding: 0; background: none !important; backdrop-filter: none; -webkit-backdrop-filter: none; }
+    .topbar-pill-user:hover { opacity: 0.8; }
+    .topbar-avatar { width: 44px; height: 44px; border-radius: 999px; overflow: hidden; flex-shrink: 0; }
+    .topbar-avatar img { display: block; width: 100%; height: 100%; object-fit: cover; }
     .topbar-dropdown { position: relative; }
     .topbar-dropdown-menu { display: none; position: absolute; top: calc(100% + 6px); right: 0; min-width: 160px; background: var(--bg); border: 0.5px solid var(--border); border-radius: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); overflow: hidden; z-index: 151; }
     .topbar-dropdown.open .topbar-dropdown-menu { display: block; }
@@ -127,6 +127,7 @@
       .topbar { gap: 3px; }
       .topbar-pill { height: 38px; font-size: 13px; padding: 0 14px; }
       .topbar-pill-user { width: 38px; height: 38px; }
+      .topbar-avatar { width: 38px; height: 38px; }
       .hamburger { width: 38px; height: 38px; }
     }
 

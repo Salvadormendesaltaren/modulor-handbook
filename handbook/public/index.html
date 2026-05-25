@@ -116,8 +116,17 @@
     .topbar-dropdown-item { display: block; width: 100%; padding: 10px 16px; background: none; border: none; font-family: var(--font); font-size: 14px; font-weight: 400; color: var(--text-secondary); letter-spacing: -0.5px; cursor: pointer; text-align: left; transition: all 0.8s var(--ease); }
     .topbar-dropdown-item:hover { background: var(--bg-hover); color: var(--text); }
     .topbar-dropdown-item.current { color: var(--text); }
+    .topbar-version-menu { min-width: 220px; padding: 4px 0; }
+    .topbar-dropdown-label { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: -0.2px; color: var(--text-muted); padding: 10px 16px 4px; }
+    .topbar-dropdown-divider { height: 0.5px; background: var(--border); margin: 4px 0; }
     @media (max-width: 991px) {
       .topbar { top: 1.25rem; right: 1.25rem; }
+    }
+    @media (max-width: 479px) {
+      .topbar { gap: 3px; }
+      .topbar-pill { height: 38px; font-size: 13px; padding: 0 14px; }
+      .topbar-pill-user .topbar-name { display: none; }
+      .topbar-pill-user { padding: 0 8px; }
     }
 
     /* ── Reading progress ── */
@@ -219,8 +228,6 @@
     .loading { display: flex; align-items: center; justify-content: center; height: 100vh; font-size: 0.75rem; font-weight: 400; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; }
 
     /* ── Version selector ── */
-    .version-selector { padding: 0 0.75rem; margin-bottom: 1rem; }
-    .version-selector select { width: 100%; padding: 0.375rem 0.5rem; font-family: var(--font); font-size: 0.6875rem; color: var(--text-secondary); background: var(--bg); border: 1px solid var(--border); border-radius: 0.5rem; cursor: pointer; letter-spacing: var(--tracking); appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z' fill='rgba(0,0,0,0.25)'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 0.375rem center; background-size: 0.875rem; padding-right: 1.5rem; }
 
     /* ── Version banner ── */
     .version-banner { margin-left: var(--sidebar-w); background: var(--bg-secondary); border-bottom: 0.5px solid var(--border); padding: 0.5rem var(--px); font-size: 13px; letter-spacing: -0.4px; color: var(--text-secondary); display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
@@ -343,11 +350,17 @@
     .chat-send svg { width: 1rem; height: 1rem; fill: currentColor; }
 
     /* ── Onboarding ── */
-    .topbar-onboarding { display: none; }
-    .topbar-onboarding.visible { display: block; }
-    .onboarding-popup { position: absolute; top: calc(100% + 6px); right: 0; z-index: 501; width: 320px; background: var(--bg); border: 0.5px solid var(--border); border-radius: 14px; box-shadow: 0 8px 30px rgba(0,0,0,0.12); padding: 1.25rem; display: none; animation: onb-in 0.3s var(--ease); }
+    .onboarding-fab { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 500; height: 44px; border-radius: 999px; background: rgba(0,0,0,0.06); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); color: var(--text); border: none; cursor: pointer; display: none; align-items: center; gap: 0.5rem; padding: 0 20px; transition: all 0.8s var(--ease); font-family: var(--font); font-size: 15px; font-weight: 400; letter-spacing: -0.6px; white-space: nowrap; }
+    .onboarding-fab svg { width: 1rem; height: 1rem; fill: currentColor; flex-shrink: 0; }
+    .onboarding-fab:hover { background: rgba(0,0,0,0.10); }
+    .onboarding-fab.visible { display: flex; }
+    .onboarding-popup { position: fixed; bottom: 4.75rem; right: 1.5rem; z-index: 501; width: 320px; background: var(--bg); border: 0.5px solid var(--border); border-radius: 14px; box-shadow: 0 8px 30px rgba(0,0,0,0.12); padding: 1.25rem; display: none; animation: onb-in 0.3s var(--ease); }
     .onboarding-popup.open { display: block; }
-    @keyframes onb-in { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes onb-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+    @media (max-width: 479px) {
+      .onboarding-fab { bottom: 1.25rem; right: 1.25rem; }
+      .onboarding-popup { bottom: 4.5rem; right: 1.25rem; width: calc(100vw - 2.5rem); }
+    }
     .onboarding-popup-title { font-size: 18px; font-weight: 400; letter-spacing: -0.9px; margin-bottom: 0.75rem; }
     .onboarding-step { display: flex; align-items: flex-start; gap: 0.625rem; padding: 0.5rem 0; cursor: default; border-radius: 0.5rem; transition: background 0.2s var(--ease); }
     .onboarding-step.clickable { cursor: pointer; }
@@ -423,9 +436,6 @@
           <span id="sidebarBrandText">Modulor Studios</span>
         </a>
       </div>
-      <div class="version-selector" id="versionSelector" style="display:none;">
-        <select id="versionSelect" onchange="switchVersion(this.value)"></select>
-      </div>
       <div class="sidebar-nav" id="nav">
         <a href="#intro" data-section="intro">
           <span class="nav-label">Intro</span>
@@ -489,23 +499,16 @@
 
     <!-- Top bar -->
     <div class="topbar" id="topbar">
-      <div class="topbar-dropdown" id="viewSwitcher" style="display:none;">
-        <button class="topbar-pill" onclick="toggleViewSwitcher()">
-          <span id="viewSwitcherLabel">Team</span>
-          <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
-        </button>
-        <div class="topbar-dropdown-menu">
-          <button class="topbar-dropdown-item" id="viewOptTeam" onclick="switchViewMode('team')">Team</button>
-          <button class="topbar-dropdown-item" id="viewOptLeadership" onclick="switchViewMode('leadership')">Leader</button>
-        </div>
-      </div>
       <button class="topbar-pill" id="chatFab" onclick="toggleChat()" style="display:none;">
         <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z"/><path d="M7 9h10v2H7zm0-3h10v2H7zm0 6h7v2H7z"/></svg>
-        Pregunta al Handbook
+        AI Handbook
       </button>
-      <div class="topbar-dropdown topbar-onboarding" id="onboardingWrapper">
-        <button class="topbar-pill" id="onboardingFab" onclick="toggleOnboardingPopup()"></button>
-        <div class="onboarding-popup" id="onboardingPopup"></div>
+      <div class="topbar-dropdown" id="versionDropdown" style="display:none;">
+        <button class="topbar-pill" onclick="toggleVersionDropdown()">
+          <span id="versionPillLabel">Versión</span>
+          <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+        </button>
+        <div class="topbar-dropdown-menu topbar-version-menu" id="versionDropdownMenu"></div>
       </div>
       <div class="topbar-dropdown" id="userMenu">
         <button class="topbar-pill topbar-pill-user" onclick="toggleUserMenu()">
@@ -517,6 +520,10 @@
         </div>
       </div>
     </div>
+
+    <!-- Onboarding -->
+    <button class="onboarding-fab" id="onboardingFab" onclick="toggleOnboardingPopup()"></button>
+    <div class="onboarding-popup" id="onboardingPopup"></div>
 
     <main class="main" id="content">
       <div class="loading">Cargando...</div>
@@ -642,7 +649,6 @@
 
     function updateAccessUI() {
       document.getElementById('adminNavLink').style.display = userRole === 'admin' ? 'block' : 'none';
-      document.getElementById('viewSwitcher').style.display = isLeadershipUser ? 'block' : 'none';
     }
 
     function updateViewUI() {
@@ -653,22 +659,6 @@
       } else {
         brandText.innerHTML = 'Modulor Studios <span class="sidebar-badge">Team</span>';
       }
-
-      // Update view switcher state
-      const label = document.getElementById('viewSwitcherLabel');
-      const optTeam = document.getElementById('viewOptTeam');
-      const optLeadership = document.getElementById('viewOptLeadership');
-
-      if (viewMode === 'leadership') {
-        label.textContent = 'Leader';
-        optLeadership.classList.add('current');
-        optTeam.classList.remove('current');
-      } else {
-        label.textContent = 'Team';
-        optTeam.classList.add('current');
-        optLeadership.classList.remove('current');
-      }
-
       updateAccessUI();
     }
 
@@ -686,16 +676,25 @@
     }
 
     function renderVersionSelector() {
-      const selector = document.getElementById('versionSelector');
-      const select = document.getElementById('versionSelect');
-      if (!versionsData || versionsData.versions.length <= 1) {
-        selector.style.display = 'none';
-        return;
+      const dropdown = document.getElementById('versionDropdown');
+      if (!versionsData) { dropdown.style.display = 'none'; return; }
+      dropdown.style.display = 'block';
+      // Update pill label
+      document.getElementById('versionPillLabel').textContent = selectedVersion || 'Versión';
+      // Build menu
+      const menu = document.getElementById('versionDropdownMenu');
+      let html = '<div class="topbar-dropdown-label">Versión del handbook</div>';
+      versionsData.versions.forEach(v => {
+        const isCurrent = v.version === selectedVersion;
+        html += `<button class="topbar-dropdown-item${isCurrent ? ' current' : ''}" onclick="switchVersion('${v.version}')">${v.version}${v.version === versionsData.current ? ' (actual)' : ''}</button>`;
+      });
+      if (isLeadershipUser) {
+        html += '<div class="topbar-dropdown-divider"></div>';
+        html += '<div class="topbar-dropdown-label">Vista de contenido</div>';
+        html += `<button class="topbar-dropdown-item${viewMode === 'team' ? ' current' : ''}" onclick="switchViewMode('team')">Team</button>`;
+        html += `<button class="topbar-dropdown-item${viewMode === 'leadership' ? ' current' : ''}" onclick="switchViewMode('leadership')">Leader</button>`;
       }
-      selector.style.display = 'block';
-      select.innerHTML = versionsData.versions.map(v =>
-        `<option value="${v.version}" ${v.version === selectedVersion ? 'selected' : ''}>${v.version}${v.version === versionsData.current ? ' (actual)' : ''} — ${v.date}</option>`
-      ).join('');
+      menu.innerHTML = html;
     }
 
     function switchVersion(version) {
@@ -704,6 +703,7 @@
       contentCache.clear();
       updateVersionBanner();
       renderVersionSelector();
+      document.getElementById('versionDropdown').classList.remove('open');
       const id = window.location.hash.replace('#', '') || 'intro';
       navigate(id);
     }
@@ -723,8 +723,9 @@
       if (mode === viewMode) return;
       viewMode = mode;
       updateViewUI();
-      // Close the switcher dropdown
-      document.getElementById('viewSwitcher').classList.remove('open');
+      renderVersionSelector();
+      // Close the dropdown
+      document.getElementById('versionDropdown').classList.remove('open');
       // Re-navigate to current section with new content
       const id = window.location.hash.replace('#', '') || 'intro';
       // If switching to team and currently on admin, redirect to intro
@@ -755,7 +756,7 @@
       document.getElementById('app').classList.remove('visible');
       document.getElementById('loginScreen').style.display = 'flex';
       document.getElementById('adminNavLink').style.display = 'none';
-      document.getElementById('viewSwitcher').style.display = 'none';
+      document.getElementById('versionDropdown').style.display = 'none';
       document.getElementById('chatFab').style.display = 'none';
       document.getElementById('chatPanel').classList.remove('open');
       clearChat();
@@ -1398,16 +1399,23 @@
       document.querySelector('.overlay').classList.toggle('open');
     }
 
-    function toggleViewSwitcher() {
-      document.getElementById('viewSwitcher').classList.toggle('open');
+    function toggleVersionDropdown() {
+      document.getElementById('versionDropdown').classList.toggle('open');
       document.getElementById('userMenu').classList.remove('open');
     }
     document.addEventListener('click', (e) => {
       const topbar = document.getElementById('topbar');
       if (topbar && !topbar.contains(e.target)) {
-        document.getElementById('viewSwitcher').classList.remove('open');
+        document.getElementById('versionDropdown').classList.remove('open');
         document.getElementById('userMenu').classList.remove('open');
-        if (obPopupOpen) { obPopupOpen = false; document.getElementById('onboardingPopup').classList.remove('open'); }
+      }
+      // Close onboarding popup on click outside
+      if (obPopupOpen) {
+        const fab = document.getElementById('onboardingFab');
+        const popup = document.getElementById('onboardingPopup');
+        if (!fab.contains(e.target) && !popup.contains(e.target)) {
+          obPopupOpen = false; popup.classList.remove('open');
+        }
       }
     });
 
@@ -1620,7 +1628,7 @@
     // ── User menu ──
     function toggleUserMenu() {
       document.getElementById('userMenu').classList.toggle('open');
-      document.getElementById('viewSwitcher').classList.remove('open');
+      document.getElementById('versionDropdown').classList.remove('open');
     }
 
     // ── Announcement modal ──
@@ -1715,7 +1723,7 @@
       loadObState();
       if (obState.dismissed || allStepsDone()) { hideOnboarding(); return; }
       renderOnboardingFab();
-      document.getElementById('onboardingWrapper').classList.add('visible');
+      document.getElementById('onboardingFab').classList.add('visible');
     }
 
     function renderOnboardingFab() {
@@ -1814,7 +1822,7 @@
     }
 
     function hideOnboarding() {
-      document.getElementById('onboardingWrapper').classList.remove('visible');
+      document.getElementById('onboardingFab').classList.remove('visible');
       document.getElementById('onboardingPopup').classList.remove('open');
       obPopupOpen = false;
     }

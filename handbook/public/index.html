@@ -102,7 +102,8 @@
     .sidebar-nav a.active .nav-label-recursos { color: var(--text-secondary); }
 
     /* ── Top bar (right) ── */
-    .topbar { position: fixed; top: 1.25rem; right: 1.5rem; z-index: 150; display: flex; align-items: center; gap: 4px; }
+    .topbar { position: fixed; top: 1.25rem; right: 1.5rem; z-index: 150; display: flex; align-items: center; gap: 4px; transition: top 0.8s var(--ease); }
+    .topbar.banner-offset { top: calc(1.25rem + 37px); }
     .topbar-pill { display: flex; align-items: center; gap: 0.5rem; height: 44px; background: rgba(0,0,0,0.06); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: none; border-radius: 999px; padding: 0 20px; cursor: pointer; font-family: var(--font); font-size: 15px; font-weight: 400; color: var(--text); letter-spacing: -0.6px; transition: all 0.8s var(--ease); white-space: nowrap; }
     .topbar-pill:hover { background: rgba(0,0,0,0.10); }
     .topbar-pill svg { width: 1rem; height: 1rem; fill: currentColor; }
@@ -710,11 +711,14 @@
 
     function updateVersionBanner() {
       const banner = document.getElementById('versionBanner');
+      const topbar = document.getElementById('topbar');
       if (!versionsData || selectedVersion === versionsData.current) {
         banner.style.display = 'none';
+        topbar.classList.remove('banner-offset');
         return;
       }
       banner.style.display = 'flex';
+      topbar.classList.add('banner-offset');
       document.getElementById('versionBannerText').textContent =
         `Estás viendo la versión ${selectedVersion}`;
     }

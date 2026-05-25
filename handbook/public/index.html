@@ -101,22 +101,23 @@
     .sidebar-nav .nav-label-recursos { display: block; font-size: 0.625rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 0.125rem; transition: color 0.3s var(--ease); }
     .sidebar-nav a.active .nav-label-recursos { color: var(--text-secondary); }
 
-    /* ── Sidebar footer (view switcher only) ── */
-    .sidebar-footer { margin-top: 1rem; padding-top: 1rem; border-top: 0.5px solid var(--border); }
-
-    /* ── User menu (top-right) ── */
-    .user-menu { position: fixed; top: 1.25rem; right: 1.5rem; z-index: 150; }
-    .user-menu-btn { display: flex; align-items: center; gap: 0.5rem; background: var(--bg); border: 0.5px solid var(--border); border-radius: 999px; padding: 6px 12px 6px 6px; cursor: pointer; font-family: var(--font); font-size: 13px; font-weight: 400; color: var(--text-secondary); letter-spacing: -0.4px; transition: all 0.8s var(--ease); }
-    .user-menu-btn:hover { background: var(--bg-secondary); color: var(--text); }
-    .user-menu-avatar { width: 1.5rem; height: 1.5rem; border-radius: 999px; overflow: hidden; flex-shrink: 0; background: var(--bg-tertiary); }
-    .user-menu-avatar img { width: 100%; height: 100%; object-fit: cover; }
-    .user-menu-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 140px; }
-    .user-menu-dropdown { display: none; position: absolute; top: calc(100% + 6px); right: 0; min-width: 160px; background: var(--bg); border: 0.5px solid var(--border); border-radius: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); overflow: hidden; z-index: 151; }
-    .user-menu.open .user-menu-dropdown { display: block; }
-    .user-menu-item { display: block; width: 100%; padding: 10px 16px; background: none; border: none; font-family: var(--font); font-size: 14px; font-weight: 400; color: var(--text-secondary); letter-spacing: -0.5px; cursor: pointer; text-align: left; transition: all 0.8s var(--ease); }
-    .user-menu-item:hover { background: var(--bg-hover); color: var(--text); }
+    /* ── Top bar (right) ── */
+    .topbar { position: fixed; top: 1.25rem; right: 1.5rem; z-index: 150; display: flex; align-items: center; gap: 4px; }
+    .topbar-pill { display: flex; align-items: center; gap: 0.5rem; background: rgba(0,0,0,0.06); border: none; border-radius: 999px; padding: 8px 14px; cursor: pointer; font-family: var(--font); font-size: 14px; font-weight: 400; color: var(--text-secondary); letter-spacing: -0.5px; transition: all 0.8s var(--ease); white-space: nowrap; }
+    .topbar-pill:hover { background: rgba(0,0,0,0.10); color: var(--text); }
+    .topbar-pill svg { width: 0.75rem; height: 0.75rem; fill: currentColor; }
+    .topbar-pill-user { padding: 6px 12px 6px 6px; }
+    .topbar-avatar { width: 1.5rem; height: 1.5rem; border-radius: 999px; overflow: hidden; flex-shrink: 0; background: var(--bg-tertiary); }
+    .topbar-avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .topbar-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 120px; }
+    .topbar-dropdown { position: relative; }
+    .topbar-dropdown-menu { display: none; position: absolute; top: calc(100% + 6px); right: 0; min-width: 160px; background: var(--bg); border: 0.5px solid var(--border); border-radius: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); overflow: hidden; z-index: 151; }
+    .topbar-dropdown.open .topbar-dropdown-menu { display: block; }
+    .topbar-dropdown-item { display: block; width: 100%; padding: 10px 16px; background: none; border: none; font-family: var(--font); font-size: 14px; font-weight: 400; color: var(--text-secondary); letter-spacing: -0.5px; cursor: pointer; text-align: left; transition: all 0.8s var(--ease); }
+    .topbar-dropdown-item:hover { background: var(--bg-hover); color: var(--text); }
+    .topbar-dropdown-item.current { color: var(--text); }
     @media (max-width: 991px) {
-      .user-menu { top: 1.25rem; right: 1.25rem; }
+      .topbar { top: 1.25rem; right: 1.25rem; }
     }
 
     /* ── Reading progress ── */
@@ -285,8 +286,8 @@
     .admin-empty { font-size: 0.8125rem; color: var(--text-muted); padding: 2rem 0; }
 
     /* ── Chat ── */
-    .chat-fab { position: fixed; bottom: 1.5rem; left: 50%; transform: translateX(-50%); z-index: 500; height: 44px; border-radius: 999px; background: var(--bg-dark); color: var(--text-on-dark); border: none; cursor: pointer; display: none; align-items: center; gap: 0.5rem; padding: 0 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.15); transition: all 0.8s var(--ease); font-family: var(--font); font-size: 15px; font-weight: 400; letter-spacing: -0.6px; white-space: nowrap; }
-    .chat-fab:hover { opacity: 0.8; }
+    .chat-fab { position: fixed; bottom: 1.5rem; left: 50%; transform: translateX(-50%); z-index: 500; height: 44px; border-radius: 999px; background: rgba(0,0,0,0.06); color: var(--text); border: none; cursor: pointer; display: none; align-items: center; gap: 0.5rem; padding: 0 20px; transition: all 0.8s var(--ease); font-family: var(--font); font-size: 15px; font-weight: 400; letter-spacing: -0.6px; white-space: nowrap; }
+    .chat-fab:hover { background: rgba(0,0,0,0.10); }
     .chat-fab svg { width: 1.125rem; height: 1.125rem; fill: currentColor; flex-shrink: 0; }
     .chat-fab.visible { display: flex; }
 
@@ -349,9 +350,9 @@
     }
 
     /* ── Onboarding ── */
-    .onboarding-fab { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 500; height: 44px; border-radius: 999px; background: var(--bg-dark); color: var(--text-on-dark); border: none; cursor: pointer; display: none; align-items: center; gap: 0.5rem; padding: 0 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.15); transition: all 0.8s var(--ease); font-family: var(--font); font-size: 14px; font-weight: 400; letter-spacing: -0.5px; white-space: nowrap; }
+    .onboarding-fab { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 500; height: 44px; border-radius: 999px; background: rgba(0,0,0,0.06); color: var(--text); border: none; cursor: pointer; display: none; align-items: center; gap: 0.5rem; padding: 0 16px; transition: all 0.8s var(--ease); font-family: var(--font); font-size: 14px; font-weight: 400; letter-spacing: -0.5px; white-space: nowrap; }
     .onboarding-fab svg { width: 1rem; height: 1rem; fill: currentColor; flex-shrink: 0; }
-    .onboarding-fab:hover { opacity: 0.7; }
+    .onboarding-fab:hover { background: rgba(0,0,0,0.10); }
     .onboarding-fab.visible { display: flex; }
     .onboarding-popup { position: fixed; bottom: 4.75rem; right: 1.5rem; z-index: 501; width: 320px; background: var(--bg); border: 0.5px solid var(--border); border-radius: 14px; box-shadow: 0 8px 30px rgba(0,0,0,0.12); padding: 1.25rem; display: none; animation: onb-in 0.3s var(--ease); }
     .onboarding-popup.open { display: block; }
@@ -490,22 +491,6 @@
           <span class="nav-subtitle">Dominios, accesos, usuarios</span>
         </a>
       </div>
-      <div class="sidebar-footer">
-        <div class="view-switcher" id="viewSwitcher" style="display:none;">
-          <button class="view-switcher-btn" onclick="toggleViewSwitcher()">
-            <span id="viewSwitcherLabel">Team</span>
-            <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
-          </button>
-          <div class="view-switcher-menu">
-            <button class="view-switcher-option" id="viewOptTeam" onclick="switchViewMode('team')">
-              <span class="view-switcher-dot" id="viewDotTeam"></span> Team
-            </button>
-            <button class="view-switcher-option" id="viewOptLeadership" onclick="switchViewMode('leadership')">
-              <span class="view-switcher-dot" id="viewDotLeadership"></span> Leadership
-            </button>
-          </div>
-        </div>
-      </div>
     </nav>
 
     <div class="version-banner" id="versionBanner" style="display:none;">
@@ -515,14 +500,26 @@
 
     <div class="reading-progress"><div class="reading-progress-bar" id="readingProgress"></div></div>
 
-    <!-- User menu -->
-    <div class="user-menu" id="userMenu">
-      <button class="user-menu-btn" onclick="toggleUserMenu()">
-        <span class="user-menu-avatar" id="userAvatar"></span>
-        <span class="user-menu-name" id="userName"></span>
-      </button>
-      <div class="user-menu-dropdown">
-        <button class="user-menu-item" onclick="signOut()">Cerrar sesión</button>
+    <!-- Top bar -->
+    <div class="topbar" id="topbar">
+      <div class="topbar-dropdown" id="viewSwitcher" style="display:none;">
+        <button class="topbar-pill" onclick="toggleViewSwitcher()">
+          <span id="viewSwitcherLabel">Team</span>
+          <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+        </button>
+        <div class="topbar-dropdown-menu">
+          <button class="topbar-dropdown-item" id="viewOptTeam" onclick="switchViewMode('team')">Team</button>
+          <button class="topbar-dropdown-item" id="viewOptLeadership" onclick="switchViewMode('leadership')">Leadership</button>
+        </div>
+      </div>
+      <div class="topbar-dropdown" id="userMenu">
+        <button class="topbar-pill topbar-pill-user" onclick="toggleUserMenu()">
+          <span class="topbar-avatar" id="userAvatar"></span>
+          <span class="topbar-name" id="userName"></span>
+        </button>
+        <div class="topbar-dropdown-menu">
+          <button class="topbar-dropdown-item" onclick="signOut()">Cerrar sesión</button>
+        </div>
       </div>
     </div>
 
@@ -674,21 +671,15 @@
 
       // Update view switcher state
       const label = document.getElementById('viewSwitcherLabel');
-      const dotTeam = document.getElementById('viewDotTeam');
-      const dotLeadership = document.getElementById('viewDotLeadership');
       const optTeam = document.getElementById('viewOptTeam');
       const optLeadership = document.getElementById('viewOptLeadership');
 
       if (viewMode === 'leadership') {
         label.textContent = 'Leadership';
-        dotLeadership.className = 'view-switcher-dot green';
-        dotTeam.className = 'view-switcher-dot gray';
         optLeadership.classList.add('current');
         optTeam.classList.remove('current');
       } else {
         label.textContent = 'Team';
-        dotTeam.className = 'view-switcher-dot green';
-        dotLeadership.className = 'view-switcher-dot gray';
         optTeam.classList.add('current');
         optLeadership.classList.remove('current');
       }
@@ -1424,10 +1415,14 @@
 
     function toggleViewSwitcher() {
       document.getElementById('viewSwitcher').classList.toggle('open');
+      document.getElementById('userMenu').classList.remove('open');
     }
     document.addEventListener('click', (e) => {
-      const sw = document.getElementById('viewSwitcher');
-      if (sw && !sw.contains(e.target)) sw.classList.remove('open');
+      const topbar = document.getElementById('topbar');
+      if (topbar && !topbar.contains(e.target)) {
+        document.getElementById('viewSwitcher').classList.remove('open');
+        document.getElementById('userMenu').classList.remove('open');
+      }
     });
 
     document.querySelectorAll('.sidebar-nav a').forEach(link => {
@@ -1639,11 +1634,8 @@
     // ── User menu ──
     function toggleUserMenu() {
       document.getElementById('userMenu').classList.toggle('open');
+      document.getElementById('viewSwitcher').classList.remove('open');
     }
-    document.addEventListener('click', function(e) {
-      const menu = document.getElementById('userMenu');
-      if (menu && !menu.contains(e.target)) menu.classList.remove('open');
-    });
 
     // ── Announcement modal ──
     const ANNOUNCE_KEY = 'handbook-announce';

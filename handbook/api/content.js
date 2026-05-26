@@ -55,8 +55,9 @@ export default async function handler(req, res) {
     : { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${token}` };
 
   // Validate file path early (no network needed)
-  const file = req.query.file;
-  if (!file || !/^(redux|full|lite)\/[\w.-]+\.md$/.test(file) || file.includes('..')) {
+  const lang = req.query.lang;
+  let file = req.query.file;
+  if (!file || !/^(redux|full|lite)\/(en\/)?[\w.-]+\.md$/.test(file) || file.includes('..')) {
     return res.status(400).send('Invalid file path');
   }
 
@@ -110,6 +111,17 @@ export default async function handler(req, res) {
   const version = req.query.version;
   if (version && !/^V\d+\.\d+\.\d+$/.test(version)) {
     return res.status(400).send('Invalid version format');
+  }
+
+  // If lang=en, try the /en/ subdirectory version first
+  if (lang === 'en' && !file.includes('/en/')) {
+    const parts = file.split('/');
+    const enFile = `${parts[0]}/en/${parts.slice(1).join('/')}`;
+    const enPath = findContent(enFile, version);
+    if (enPath) {
+      file = enFile;
+    }
+    // If EN not found, fall through to serve ES version
   }
 
   const fullPath = findContent(file, version);

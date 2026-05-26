@@ -4,20 +4,23 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-function findContentDir(tier) {
+function findContentDir(tier, lang) {
+  const subpath = lang === 'en' ? join(tier, 'en') : tier;
   const candidates = [
-    join(__dirname, '..', '_content', 'current', tier),
-    join(process.cwd(), '_content', 'current', tier),
-    join('/var/task', '_content', 'current', tier),
+    join(__dirname, '..', '_content', 'current', subpath),
+    join(process.cwd(), '_content', 'current', subpath),
+    join('/var/task', '_content', 'current', subpath),
   ];
   for (const p of candidates) {
     if (existsSync(p)) return p;
   }
+  // Fallback: if EN dir not found, return ES dir
+  if (lang === 'en') return findContentDir(tier, 'es');
   return null;
 }
 
-function loadTierContent(tier) {
-  const dir = findContentDir(tier);
+function loadTierContent(tier, lang) {
+  const dir = findContentDir(tier, lang);
   if (!dir) return '';
 
   const files = readdirSync(dir).filter(f => f.endsWith('.md')).sort();
@@ -91,19 +94,13 @@ export default async function handler(req, res) {
   const leadershipData = await leadershipRes.json();
   const isLeadership = Array.isArray(leadershipData) && leadershipData.length > 0;
 
-  // ── Tier enforcement: leadership → full/, team → redux/ ──
-  const tier = isLeadership ? 'full' : 'redux';
-  const handbookContent = loadTierContent(tier);
-
-  if (!handbookContent) {
-    return res.status(500).json({ error: 'Content not available' });
-  }
-
   // ── Parse request body ──
   let messages;
+  let lang = 'es';
   try {
     const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
     messages = body.messages;
+    if (body.lang === 'en') lang = 'en';
     if (!Array.isArray(messages) || messages.length === 0) {
       return res.status(400).json({ error: 'Messages required' });
     }
@@ -115,8 +112,29 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: 'Invalid request body' });
   }
 
+  // ── Tier enforcement: leadership → full/, team → redux/ ──
+  const tier = isLeadership ? 'full' : 'redux';
+  const handbookContent = loadTierContent(tier, lang);
+
+  if (!handbookContent) {
+    return res.status(500).json({ error: 'Content not available' });
+  }
+
   // ── Build system prompt ──
-  const systemPrompt = `Eres el asistente del Handbook de Modulor Studios. Conoces en profundidad el contenido del handbook y ayudas al equipo a entenderlo, navegarlo y aplicarlo.
+  const systemPrompt = lang === 'en'
+    ? `You are the Modulor Studios Handbook assistant. You have deep knowledge of the handbook content and help the team understand, navigate and apply it.
+
+HOW TO RESPOND:
+- Base your answers on the handbook content provided below. When a question requires connecting information from different sections (e.g., comparing boutiques, analyzing synergies, or explaining how different parts of the group fit together), synthesize and elaborate a coherent, natural response rather than just copying isolated fragments.
+- If the question is ambiguous or too broad, ask clarifying questions before answering. For example: "Are you referring to the team structure or the services they offer?" or "Would you like me to compare both boutiques on a specific aspect?"
+- Respond in English, with a professional but approachable tone, like a knowledgeable teammate.
+- Use markdown formatting when it improves readability (lists, bold, etc.), but don't force it for brief answers.
+- Do not invent data, figures, or information not present in the content. If you don't have the information, clearly state it doesn't appear in the handbook. Never speculate or make assumptions about data you don't have.
+
+HANDBOOK CONTENT (tier: ${tier}):
+
+${handbookContent}`
+    : `Eres el asistente del Handbook de Modulor Studios. Conoces en profundidad el contenido del handbook y ayudas al equipo a entenderlo, navegarlo y aplicarlo.
 
 CÓMO RESPONDER:
 - Basa tus respuestas en el contenido del handbook proporcionado abajo. Cuando la pregunta requiera conectar información de distintas secciones (por ejemplo, comparar boutiques, analizar sinergias o explicar cómo encajan distintas piezas del grupo), sintetiza y elabora una respuesta coherente y natural en lugar de limitarte a copiar fragmentos sueltos.

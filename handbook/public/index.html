@@ -571,6 +571,245 @@
     let versionsData = null;
     let selectedVersion = null;
 
+    // ── i18n ──
+    let currentLang = 'es';
+    const LANG_KEY = 'handbook-lang';
+
+    const STRINGS = {
+      es: {
+        loading: 'Cargando...',
+        loginTitle: 'Handbook',
+        loginSubtitle: 'Accede con tu cuenta de Google corporativa para consultar el handbook del grupo.',
+        loginBtn: 'Iniciar sesión con Google',
+        loginErrorDomain: 'Acceso restringido a dominios autorizados del grupo Modulor.',
+        loginErrorGeneric: 'Error al verificar el acceso. Intenta de nuevo.',
+        signOut: 'Cerrar sesión',
+        navIntro: 'Introducción', navIntroSub: 'Por qué y para qué',
+        navCore: 'Core Modulor', navCoreSub: 'Identidad y visión del grupo',
+        navMendes: 'mendesaltaren', navMendesSub: 'Diseño digital y branding',
+        navTailor: 'Tailor Hub', navTailorSub: 'Desarrollo a medida',
+        navSSTIL: 'SSTIL', navSSTILSub: 'Marketing y comunicación',
+        navNCH: 'Nocodehackers', navNCHSub: 'Soluciones no-code',
+        navFIK: 'FIK', navFIKSub: 'E-commerce Shopify',
+        navDir: 'Directorio', navDirSub: 'Equipo del grupo',
+        navRepo: 'Repositorio', navRepoSub: 'Archivos y recursos',
+        navAdmin: 'Panel de gestión', navAdminSub: 'Dominios, accesos, usuarios',
+        versionLabel: 'Versión',
+        versionDropdownLabel: 'Versión del handbook',
+        viewContentLabel: 'Vista de contenido',
+        versionCurrent: 'actual',
+        versionBannerText: 'Estás viendo la versión',
+        versionBannerBack: 'Volver a la versión actual',
+        chatFab: 'AI Handbook',
+        chatClose: 'Cerrar chat',
+        chatWelcomeTitle: 'Pregunta sobre el Handbook',
+        chatWelcomeText: 'Puedo ayudarte a encontrar información sobre las empresas del grupo, procesos, equipo y más.',
+        chatPlaceholder: 'Escribe tu pregunta...',
+        chatErrorServer: 'Error del servidor',
+        chatErrorConnect: 'Error al conectar con el chat',
+        chatErrorNetwork: 'Error de conexión. Intenta de nuevo.',
+        footerBrand: 'Modulor Studios',
+        footerSub: 'Handbook es una iniciativa de Modulor Studios.<br>Madrid, 2026.',
+        contentError: 'Error al cargar el contenido. Intenta recargar la página.',
+        repoTitle: 'Repositorio',
+        repoPurposeTitle: 'Para qué sirve esta documentación',
+        repoPurposeP1: 'Estos archivos contienen el contexto de Modulor Studios y sus boutiques: identidad, servicios, criterios de derivación, tono de comunicación y más.',
+        repoPurposeP2: 'Su objetivo principal es servir como <strong>contexto para IAs</strong> (ChatGPT, Claude, etc.) en cualquier acción que implique conocimiento de una o varias boutiques. Carga los archivos en tu herramienta de IA favorita y tendrá todo lo necesario para responder con criterio sobre el grupo.',
+        repoPurposeP2Leader: 'Su objetivo principal es servir como <strong>contexto para IAs</strong> (ChatGPT, Claude, etc.) en cualquier acción que implique conocimiento de una o varias boutiques.',
+        repoFilesTitle: 'Archivos descargables',
+        repoReduxNote: 'Versión <strong>Redux</strong> — resumen ejecutivo por boutique, sin información financiera ni estratégica sensible.',
+        repoFullLiteNote: 'Dos versiones disponibles: <strong>Full</strong> (contenido completo con pricing, equipos, financieros y cross-selling) y <strong>Lite</strong> (resumen ejecutivo por boutique).',
+        repoHowtoTitle: 'Cómo usar en ChatGPT y Claude',
+        repoChangelogTitle: 'Log de cambios',
+        repoChangelogEmpty: 'No hay historial disponible.',
+        repoSecurityTitle: 'Ciberseguridad y tratamiento de información',
+        repoSecurityIntro: 'El Handbook contiene información confidencial del grupo. A continuación se detallan los tipos de información sensible y las mejores prácticas para su manejo.',
+        zipGenerating: 'Generando...',
+        zipError: 'Error al generar el archivo. Inténtalo de nuevo.',
+        obTitle: 'Primeros pasos',
+        obDismiss: 'Cerrar para siempre',
+        obIntro: 'Lee la introducción', obIntroDesc: 'Visita la sección de intro y "Cómo usarlo con IA"',
+        obRepo: 'Descarga los archivos .md', obRepoDesc: 'Visita el Repositorio y descarga el handbook',
+        obSections: 'Explora el handbook', obSectionsDesc: 'Visita al menos 5 secciones distintas',
+        obChat: 'Usa el chat del Handbook', obChatDesc: 'Envía al menos un mensaje en el chat',
+        obAdmin: 'Visita el panel de admin', obAdminDesc: 'Accede al panel de administración',
+        announceTitle: 'El Handbook se ha renovado',
+        announceBtn: 'Empezar a explorar',
+        announceChat: '<strong>Chat con IA</strong> — Pregúntale lo que quieras sobre el handbook. Entiende contexto, cruza secciones y te responde al momento.',
+        announceRepo: '<strong>Repositorio de archivos</strong> — Descarga los .md del handbook para usarlos directamente con Claude, ChatGPT o tu IA favorita.',
+        announceOnb: '<strong>Onboarding guiado</strong> — Primeros pasos para que le saques el máximo partido desde el primer día.',
+        announceContent: '<strong>Contenido actualizado</strong> — Modulor OS, proyectos estratégicos, resultados Q1 2026 y más.',
+        langLabel: 'Idioma',
+        langEs: 'Español',
+        langEn: 'English',
+        fileDesc00: 'Identidad, estructura y operaciones del grupo',
+        fileDesc01: 'Boutique de diseño digital y branding premium',
+        fileDesc02: 'Boutique de desarrollo software e IA',
+        fileDesc03: 'Agencia de marketing, comunicación y growth (incluye Minimum)',
+        fileDesc04: 'Academia no-code/IA y agencia de soluciones',
+        fileDesc05: 'Shopify Premier Partner, e-commerce',
+        fileDesc00Leader: 'Identidad, estructura, financieros y operaciones del grupo',
+        chatgptHowto1: 'Sube los archivos .md como adjuntos en cualquier conversación',
+        chatgptHowto2: 'O crea un <strong>GPT personalizado</strong> y añade los archivos en la sección "Knowledge" para tenerlos siempre disponibles',
+        chatgptHowto2Leader: 'O crea un <strong>GPT personalizado</strong> y añade los archivos en "Knowledge"',
+        claudeHowto1: 'Sube los archivos .md como adjuntos en cualquier conversación',
+        claudeHowto2: 'O crea un <strong>Project</strong> y añade los archivos como contexto del proyecto para que estén disponibles en cada chat',
+        claudeHowto2Leader: 'O crea un <strong>Project</strong> y añade los archivos como contexto',
+      },
+      en: {
+        loading: 'Loading...',
+        loginTitle: 'Handbook',
+        loginSubtitle: 'Sign in with your corporate Google account to access the group handbook.',
+        loginBtn: 'Sign in with Google',
+        loginErrorDomain: 'Access restricted to authorized Modulor group domains.',
+        loginErrorGeneric: 'Error verifying access. Please try again.',
+        signOut: 'Sign out',
+        navIntro: 'Introduction', navIntroSub: 'Why and what for',
+        navCore: 'Core Modulor', navCoreSub: 'Group identity and vision',
+        navMendes: 'mendesaltaren', navMendesSub: 'Digital design and branding',
+        navTailor: 'Tailor Hub', navTailorSub: 'Custom development',
+        navSSTIL: 'SSTIL', navSSTILSub: 'Marketing and communication',
+        navNCH: 'Nocodehackers', navNCHSub: 'No-code solutions',
+        navFIK: 'FIK', navFIKSub: 'E-commerce Shopify',
+        navDir: 'Directory', navDirSub: 'Group team',
+        navRepo: 'Repository', navRepoSub: 'Files and resources',
+        navAdmin: 'Management panel', navAdminSub: 'Domains, access, users',
+        versionLabel: 'Version',
+        versionDropdownLabel: 'Handbook version',
+        viewContentLabel: 'Content view',
+        versionCurrent: 'current',
+        versionBannerText: 'You are viewing version',
+        versionBannerBack: 'Back to current version',
+        chatFab: 'AI Handbook',
+        chatClose: 'Close chat',
+        chatWelcomeTitle: 'Ask about the Handbook',
+        chatWelcomeText: 'I can help you find information about the group companies, processes, team and more.',
+        chatPlaceholder: 'Type your question...',
+        chatErrorServer: 'Server error',
+        chatErrorConnect: 'Error connecting to chat',
+        chatErrorNetwork: 'Connection error. Please try again.',
+        footerBrand: 'Modulor Studios',
+        footerSub: 'Handbook is a Modulor Studios initiative.<br>Madrid, 2026.',
+        contentError: 'Error loading content. Please reload the page.',
+        repoTitle: 'Repository',
+        repoPurposeTitle: 'What this documentation is for',
+        repoPurposeP1: 'These files contain the context of Modulor Studios and its boutiques: identity, services, referral criteria, communication tone and more.',
+        repoPurposeP2: 'Their main purpose is to serve as <strong>context for AIs</strong> (ChatGPT, Claude, etc.) in any action involving knowledge of one or more boutiques. Load the files into your favorite AI tool and it will have everything it needs to respond knowledgeably about the group.',
+        repoPurposeP2Leader: 'Their main purpose is to serve as <strong>context for AIs</strong> (ChatGPT, Claude, etc.) in any action involving knowledge of one or more boutiques.',
+        repoFilesTitle: 'Downloadable files',
+        repoReduxNote: '<strong>Redux</strong> version — executive summary per boutique, without sensitive financial or strategic information.',
+        repoFullLiteNote: 'Two versions available: <strong>Full</strong> (complete content with pricing, teams, financials and cross-selling) and <strong>Lite</strong> (executive summary per boutique).',
+        repoHowtoTitle: 'How to use with ChatGPT and Claude',
+        repoChangelogTitle: 'Changelog',
+        repoChangelogEmpty: 'No history available.',
+        repoSecurityTitle: 'Cybersecurity and information handling',
+        repoSecurityIntro: 'The Handbook contains confidential group information. Below are the types of sensitive information and best practices for handling them.',
+        zipGenerating: 'Generating...',
+        zipError: 'Error generating file. Please try again.',
+        obTitle: 'Getting started',
+        obDismiss: 'Dismiss permanently',
+        obIntro: 'Read the introduction', obIntroDesc: 'Visit the intro section and "How to use with AI"',
+        obRepo: 'Download the .md files', obRepoDesc: 'Visit the Repository and download the handbook',
+        obSections: 'Explore the handbook', obSectionsDesc: 'Visit at least 5 different sections',
+        obChat: 'Use the Handbook chat', obChatDesc: 'Send at least one message in the chat',
+        obAdmin: 'Visit the admin panel', obAdminDesc: 'Access the administration panel',
+        announceTitle: 'The Handbook has been redesigned',
+        announceBtn: 'Start exploring',
+        announceChat: '<strong>AI Chat</strong> — Ask anything about the handbook. It understands context, cross-references sections and responds instantly.',
+        announceRepo: '<strong>File Repository</strong> — Download the handbook .md files to use directly with Claude, ChatGPT or your favorite AI.',
+        announceOnb: '<strong>Guided onboarding</strong> — First steps to get the most out of it from day one.',
+        announceContent: '<strong>Updated content</strong> — Modulor OS, strategic projects, Q1 2026 results and more.',
+        langLabel: 'Language',
+        langEs: 'Español',
+        langEn: 'English',
+        fileDesc00: 'Group identity, structure and operations',
+        fileDesc01: 'Digital design and premium branding boutique',
+        fileDesc02: 'Software development and AI boutique',
+        fileDesc03: 'Marketing, communication and growth agency (includes Minimum)',
+        fileDesc04: 'No-code/AI academy and solutions agency',
+        fileDesc05: 'Shopify Premier Partner, e-commerce',
+        fileDesc00Leader: 'Group identity, structure, financials and operations',
+        chatgptHowto1: 'Upload the .md files as attachments in any conversation',
+        chatgptHowto2: 'Or create a <strong>custom GPT</strong> and add the files in the "Knowledge" section to have them always available',
+        chatgptHowto2Leader: 'Or create a <strong>custom GPT</strong> and add the files in "Knowledge"',
+        claudeHowto1: 'Upload the .md files as attachments in any conversation',
+        claudeHowto2: 'Or create a <strong>Project</strong> and add the files as project context to have them available in every chat',
+        claudeHowto2Leader: 'Or create a <strong>Project</strong> and add the files as context',
+      }
+    };
+
+    function t(key) { return STRINGS[currentLang][key] || STRINGS.es[key] || key; }
+
+    function detectLanguage() {
+      const stored = localStorage.getItem(LANG_KEY);
+      if (stored === 'en' || stored === 'es') return stored;
+      const nav = (navigator.language || '').slice(0, 2);
+      return nav === 'en' ? 'en' : 'es';
+    }
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem(LANG_KEY, lang);
+      contentCache.clear();
+      applyLanguageToUI();
+      // Re-navigate to reload content in new language
+      const id = window.location.hash.replace('#', '') || 'intro';
+      navigate(id);
+    }
+
+    function applyLanguageToUI() {
+      // Login screen
+      document.querySelector('.login-title').textContent = t('loginTitle');
+      document.querySelector('.login-subtitle').textContent = t('loginSubtitle');
+      document.querySelector('.login-btn').innerHTML = `<svg viewBox="0 0 24 24" fill="white"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg> ${t('loginBtn')}`;
+
+      // Sidebar nav subtitles
+      const navMap = {
+        intro: ['navIntro', 'navIntroSub'],
+        core: ['navCore', 'navCoreSub'],
+        mendesaltaren: ['navMendes', 'navMendesSub'],
+        tailorhub: ['navTailor', 'navTailorSub'],
+        sstil: ['navSSTIL', 'navSSTILSub'],
+        nocodehackers: ['navNCH', 'navNCHSub'],
+        fik: ['navFIK', 'navFIKSub'],
+        directorio: ['navDir', 'navDirSub'],
+        repositorio: ['navRepo', 'navRepoSub'],
+        admin: ['navAdmin', 'navAdminSub'],
+      };
+      document.querySelectorAll('.sidebar-nav a[data-section]').forEach(a => {
+        const section = a.dataset.section;
+        const keys = navMap[section];
+        if (!keys) return;
+        const titleEl = a.querySelector('.nav-title');
+        const subEl = a.querySelector('.nav-subtitle');
+        if (titleEl) titleEl.textContent = t(keys[0]);
+        if (subEl) subEl.textContent = t(keys[1]);
+      });
+
+      // Signout button
+      document.querySelector('#userMenu .topbar-dropdown-item').textContent = t('signOut');
+
+      // Chat UI
+      document.getElementById('chatInput').placeholder = t('chatPlaceholder');
+      const chatCloseBtn = document.querySelector('.chat-close-btn');
+      if (chatCloseBtn) chatCloseBtn.innerHTML = `<svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg> ${t('chatClose')}`;
+      const chatFab = document.getElementById('chatFab');
+      if (chatFab) chatFab.innerHTML = `<svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z"/><path d="M7 9h10v2H7zm0-3h10v2H7zm0 6h7v2H7z"/></svg> ${t('chatFab')}`;
+
+      // Version banner
+      const bannerLink = document.getElementById('versionBannerLink');
+      if (bannerLink) bannerLink.textContent = t('versionBannerBack');
+
+      // Version selector
+      if (versionsData) renderVersionSelector();
+
+      // Re-render onboarding if visible
+      if (obState && !obState.dismissed) {
+        renderOnboardingFab();
+        if (obPopupOpen) renderOnboardingPopup();
+      }
+    }
+
     // ── Chapter definitions ──
     const teamChapters = [
       { id: 'intro', num: 'Intro', file: 'redux/intro.md', logo: 'logos/Modulor.svg' },
@@ -624,7 +863,7 @@
 
         if (!data.domainApproved) {
           clearAccessTokenCookie();
-          showLoginError('Acceso restringido a dominios autorizados del grupo Modulor.');
+          showLoginError(t('loginErrorDomain'));
           showLogin();
           currentUser = null;
           await sb.auth.signOut();
@@ -640,7 +879,7 @@
       } catch (e) {
         console.error('Session check error:', e);
         clearAccessTokenCookie();
-        showLoginError('Error al verificar el acceso. Intenta de nuevo.');
+        showLoginError(t('loginErrorGeneric'));
         showLogin();
         currentUser = null;
         await sb.auth.signOut();
@@ -680,21 +919,32 @@
       if (!versionsData) { dropdown.style.display = 'none'; return; }
       dropdown.style.display = 'block';
       // Update pill label
-      document.getElementById('versionPillLabel').textContent = selectedVersion || 'Versión';
+      document.getElementById('versionPillLabel').textContent = selectedVersion || t('versionLabel');
       // Build menu
       const menu = document.getElementById('versionDropdownMenu');
-      let html = '<div class="topbar-dropdown-label">Versión del handbook</div>';
+      let html = `<div class="topbar-dropdown-label">${t('versionDropdownLabel')}</div>`;
       versionsData.versions.forEach(v => {
         const isCurrent = v.version === selectedVersion;
-        html += `<button class="topbar-dropdown-item${isCurrent ? ' current' : ''}" onclick="switchVersion('${v.version}')">${v.version}${v.version === versionsData.current ? ' (actual)' : ''}</button>`;
+        html += `<button class="topbar-dropdown-item${isCurrent ? ' current' : ''}" onclick="switchVersion('${v.version}')">${v.version}${v.version === versionsData.current ? ` (${t('versionCurrent')})` : ''}</button>`;
       });
       if (isLeadershipUser) {
         html += '<div class="topbar-dropdown-divider"></div>';
-        html += '<div class="topbar-dropdown-label">Vista de contenido</div>';
+        html += `<div class="topbar-dropdown-label">${t('viewContentLabel')}</div>`;
         html += `<button class="topbar-dropdown-item${viewMode === 'team' ? ' current' : ''}" onclick="switchViewMode('team')">Team</button>`;
         html += `<button class="topbar-dropdown-item${viewMode === 'leadership' ? ' current' : ''}" onclick="switchViewMode('leadership')">Leader</button>`;
       }
+      // Language selector
+      html += '<div class="topbar-dropdown-divider"></div>';
+      html += `<div class="topbar-dropdown-label">${t('langLabel')}</div>`;
+      html += `<button class="topbar-dropdown-item${currentLang === 'es' ? ' current' : ''}" onclick="switchLang('es')">${t('langEs')}</button>`;
+      html += `<button class="topbar-dropdown-item${currentLang === 'en' ? ' current' : ''}" onclick="switchLang('en')">${t('langEn')}</button>`;
       menu.innerHTML = html;
+    }
+
+    function switchLang(lang) {
+      if (lang === currentLang) return;
+      document.getElementById('versionDropdown').classList.remove('open');
+      setLanguage(lang);
     }
 
     function switchVersion(version) {
@@ -719,7 +969,7 @@
       banner.style.display = 'flex';
       topbar.classList.add('banner-offset');
       document.getElementById('versionBannerText').textContent =
-        `Estás viendo la versión ${selectedVersion}`;
+        `${t('versionBannerText')} ${selectedVersion}`;
     }
 
     function switchViewMode(mode) {
@@ -771,6 +1021,10 @@
     }
 
     function showApp() {
+      // Detect language before rendering anything
+      currentLang = detectLanguage();
+      applyLanguageToUI();
+
       document.getElementById('loginScreen').style.display = 'none';
       document.getElementById('app').classList.add('visible');
       const meta = currentUser.user_metadata;
@@ -838,8 +1092,8 @@
           <div class="footer-card">
             <div class="footer-inner">
               <div class="footer-logos">${logoRow}</div>
-              <p class="footer-brand">Modulor Studios</p>
-              <p class="footer-sub">Handbook es una iniciativa de Modulor Studios.<br>Madrid, 2026.</p>
+              <p class="footer-brand">${t('footerBrand')}</p>
+              <p class="footer-sub">${t('footerSub')}</p>
               <span class="footer-version">${selectedVersion || ''}</span>
             </div>
           </div>
@@ -853,12 +1107,17 @@
     }
 
     async function fetchChapter(file) {
-      const cacheKey = selectedVersion ? `${selectedVersion}:${file}` : file;
+      const cacheKey = `${currentLang}:${selectedVersion || ''}:${file}`;
       if (contentCache.has(cacheKey)) return contentCache.get(cacheKey);
       let url = `content/${file}`;
+      const params = [];
       if (selectedVersion && versionsData && selectedVersion !== versionsData.current) {
-        url += `?version=${encodeURIComponent(selectedVersion)}`;
+        params.push(`version=${encodeURIComponent(selectedVersion)}`);
       }
+      if (currentLang === 'en') {
+        params.push('lang=en');
+      }
+      if (params.length) url += '?' + params.join('&');
       const res = await fetch(url);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const md = await res.text();
@@ -872,12 +1131,17 @@
       if (idx < 0) return;
       const toPreload = [chapters[idx - 1], chapters[idx + 1]].filter(Boolean);
       toPreload.forEach(ch => {
-        const cacheKey = selectedVersion ? `${selectedVersion}:${ch.file}` : ch.file;
+        const cacheKey = `${currentLang}:${selectedVersion || ''}:${ch.file}`;
         if (!contentCache.has(cacheKey)) {
           let url = `content/${ch.file}`;
+          const params = [];
           if (selectedVersion && versionsData && selectedVersion !== versionsData.current) {
-            url += `?version=${encodeURIComponent(selectedVersion)}`;
+            params.push(`version=${encodeURIComponent(selectedVersion)}`);
           }
+          if (currentLang === 'en') {
+            params.push('lang=en');
+          }
+          if (params.length) url += '?' + params.join('&');
           fetch(url).then(r => r.ok ? r.text() : null).then(md => {
             if (md) contentCache.set(cacheKey, md);
           }).catch(() => {});
@@ -923,7 +1187,7 @@
         preloadAdjacentChapters(id);
       } catch (e) {
         console.error(`Error loading ${ch.file}:`, e);
-        content.innerHTML = `<div class="section"><p style="color:var(--text-secondary);padding:2rem;">Error al cargar el contenido. Intenta recargar la página.</p></div>`;
+        content.innerHTML = `<div class="section"><p style="color:var(--text-secondary);padding:2rem;">${t('contentError')}</p></div>`;
       }
     }
 
@@ -938,12 +1202,12 @@
 
     function buildRepositorioTeam(chapters) {
       const fileDescriptions = {
-        '00_Core_Modulor.md': 'Identidad, estructura y operaciones del grupo',
-        '01_mendesaltaren.md': 'Boutique de diseño digital y branding premium',
-        '02_Tailor_Hub.md': 'Boutique de desarrollo software e IA',
-        '03_SSTIL.md': 'Agencia de marketing, comunicación y growth (incluye Minimum)',
-        '04_Nocodehackers.md': 'Academia no-code/IA y agencia de soluciones',
-        '05_FIK.md': 'Shopify Premier Partner, e-commerce',
+        '00_Core_Modulor.md': t('fileDesc00'),
+        '01_mendesaltaren.md': t('fileDesc01'),
+        '02_Tailor_Hub.md': t('fileDesc02'),
+        '03_SSTIL.md': t('fileDesc03'),
+        '04_Nocodehackers.md': t('fileDesc04'),
+        '05_FIK.md': t('fileDesc05'),
       };
 
       const fileCards = chapters.filter(ch => ch.id !== 'intro').map(ch => {
@@ -968,18 +1232,18 @@
             <div class="chapter-header">
               <span class="chapter-logo"><img src="logos/Modulor.svg" alt=""></span>
             </div>
-            <h1>Repositorio</h1>
+            <h1>${t('repoTitle')}</h1>
 
             <div class="repo-block">
-              <h3 class="repo-block-title">Para qué sirve esta documentación</h3>
-              <p>Estos archivos contienen el contexto de Modulor Studios y sus boutiques: identidad, servicios, criterios de derivación, tono de comunicación y más.</p>
-              <p>Su objetivo principal es servir como <strong>contexto para IAs</strong> (ChatGPT, Claude, etc.) en cualquier acción que implique conocimiento de una o varias boutiques. Carga los archivos en tu herramienta de IA favorita y tendrá todo lo necesario para responder con criterio sobre el grupo.</p>
+              <h3 class="repo-block-title">${t('repoPurposeTitle')}</h3>
+              <p>${t('repoPurposeP1')}</p>
+              <p>${t('repoPurposeP2')}</p>
             </div>
 
             <div class="repo-block">
-              <h3 class="repo-block-title">Archivos descargables</h3>
+              <h3 class="repo-block-title">${t('repoFilesTitle')}</h3>
               <div class="repo-files">${fileCards}</div>
-              <p style="font-size:0.875rem;color:var(--text-secondary);margin-bottom:1.25rem;">Versión <strong>Redux</strong> — resumen ejecutivo por boutique, sin información financiera ni estratégica sensible.</p>
+              <p style="font-size:0.875rem;color:var(--text-secondary);margin-bottom:1.25rem;">${t('repoReduxNote')}</p>
               <div class="btn-download-group">
                 <button class="btn-download" onclick="downloadZip('redux')">
                   <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
@@ -989,27 +1253,27 @@
             </div>
 
             <div class="repo-block">
-              <h3 class="repo-block-title">Cómo usar en ChatGPT y Claude</h3>
+              <h3 class="repo-block-title">${t('repoHowtoTitle')}</h3>
               <div class="repo-howto-grid">
                 <div class="repo-howto-card">
                   <h4>ChatGPT</h4>
                   <ul>
-                    <li>Sube los archivos .md como adjuntos en cualquier conversación</li>
-                    <li>O crea un <strong>GPT personalizado</strong> y añade los archivos en la sección "Knowledge" para tenerlos siempre disponibles</li>
+                    <li>${t('chatgptHowto1')}</li>
+                    <li>${t('chatgptHowto2')}</li>
                   </ul>
                 </div>
                 <div class="repo-howto-card">
                   <h4>Claude</h4>
                   <ul>
-                    <li>Sube los archivos .md como adjuntos en cualquier conversación</li>
-                    <li>O crea un <strong>Project</strong> y añade los archivos como contexto del proyecto para que estén disponibles en cada chat</li>
+                    <li>${t('claudeHowto1')}</li>
+                    <li>${t('claudeHowto2')}</li>
                   </ul>
                 </div>
               </div>
             </div>
 
             <div class="repo-block">
-              <h3 class="repo-block-title">Log de cambios</h3>
+              <h3 class="repo-block-title">${t('repoChangelogTitle')}</h3>
               <div class="repo-changelog">${changelogHTML}</div>
             </div>
           </div>
@@ -1018,12 +1282,12 @@
 
     function buildRepositorioLeadership(chapters) {
       const fileDescriptions = {
-        '00_Core_Modulor.md': 'Identidad, estructura, financieros y operaciones del grupo',
-        '01_mendesaltaren.md': 'Boutique de diseño digital y branding premium',
-        '02_Tailor_Hub.md': 'Boutique de desarrollo software e IA',
-        '03_SSTIL.md': 'Agencia de marketing, comunicación y growth (incluye Minimum)',
-        '04_Nocodehackers.md': 'Academia no-code/IA y agencia de soluciones',
-        '05_FIK.md': 'Shopify Premier Partner, e-commerce',
+        '00_Core_Modulor.md': t('fileDesc00Leader'),
+        '01_mendesaltaren.md': t('fileDesc01'),
+        '02_Tailor_Hub.md': t('fileDesc02'),
+        '03_SSTIL.md': t('fileDesc03'),
+        '04_Nocodehackers.md': t('fileDesc04'),
+        '05_FIK.md': t('fileDesc05'),
       };
 
       const fileCards = chapters.filter(ch => ch.id !== 'intro').map(ch => {
@@ -1048,18 +1312,18 @@
             <div class="chapter-header">
               <span class="chapter-logo"><img src="logos/Modulor.svg" alt=""></span>
             </div>
-            <h1>Repositorio</h1>
+            <h1>${t('repoTitle')}</h1>
 
             <div class="repo-block">
-              <h3 class="repo-block-title">Para qué sirve esta documentación</h3>
-              <p>Estos archivos contienen el contexto completo de Modulor Studios y sus boutiques: identidad, servicios, criterios de derivación, tono de comunicación y más.</p>
-              <p>Su objetivo principal es servir como <strong>contexto para IAs</strong> (ChatGPT, Claude, etc.) en cualquier acción que implique conocimiento de una o varias boutiques.</p>
+              <h3 class="repo-block-title">${t('repoPurposeTitle')}</h3>
+              <p>${t('repoPurposeP1')}</p>
+              <p>${t('repoPurposeP2Leader')}</p>
             </div>
 
             <div class="repo-block">
-              <h3 class="repo-block-title">Archivos descargables</h3>
+              <h3 class="repo-block-title">${t('repoFilesTitle')}</h3>
               <div class="repo-files">${fileCards}</div>
-              <p style="font-size:0.875rem;color:var(--text-secondary);margin-bottom:1.25rem;">Dos versiones disponibles: <strong>Full</strong> (contenido completo con pricing, equipos, financieros y cross-selling) y <strong>Lite</strong> (resumen ejecutivo por boutique).</p>
+              <p style="font-size:0.875rem;color:var(--text-secondary);margin-bottom:1.25rem;">${t('repoFullLiteNote')}</p>
               <div class="btn-download-group">
                 <button class="btn-download" onclick="downloadZip('full')">
                   <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
@@ -1073,28 +1337,28 @@
             </div>
 
             <div class="repo-block">
-              <h3 class="repo-block-title">Cómo usar en ChatGPT y Claude</h3>
+              <h3 class="repo-block-title">${t('repoHowtoTitle')}</h3>
               <div class="repo-howto-grid">
                 <div class="repo-howto-card">
                   <h4>ChatGPT</h4>
                   <ul>
-                    <li>Sube los archivos .md como adjuntos en cualquier conversación</li>
-                    <li>O crea un <strong>GPT personalizado</strong> y añade los archivos en "Knowledge"</li>
+                    <li>${t('chatgptHowto1')}</li>
+                    <li>${t('chatgptHowto2Leader')}</li>
                   </ul>
                 </div>
                 <div class="repo-howto-card">
                   <h4>Claude</h4>
                   <ul>
-                    <li>Sube los archivos .md como adjuntos en cualquier conversación</li>
-                    <li>O crea un <strong>Project</strong> y añade los archivos como contexto</li>
+                    <li>${t('claudeHowto1')}</li>
+                    <li>${t('claudeHowto2Leader')}</li>
                   </ul>
                 </div>
               </div>
             </div>
 
             <div class="repo-block">
-              <h3 class="repo-block-title">Ciberseguridad y tratamiento de información</h3>
-              <p>El Handbook contiene información confidencial del grupo. A continuación se detallan los tipos de información sensible y las mejores prácticas para su manejo.</p>
+              <h3 class="repo-block-title">${t('repoSecurityTitle')}</h3>
+              <p>${t('repoSecurityIntro')}</p>
 
               <h4 style="margin-top:1.5rem;margin-bottom:0.75rem;">Qué información sensible contiene</h4>
               <div class="admin-table-wrap">
@@ -1155,7 +1419,7 @@
             </div>
 
             <div class="repo-block">
-              <h3 class="repo-block-title">Log de cambios</h3>
+              <h3 class="repo-block-title">${t('repoChangelogTitle')}</h3>
               <div class="repo-changelog">${changelogHTML}</div>
             </div>
           </div>
@@ -1163,7 +1427,7 @@
     }
 
     function buildChangelog() {
-      if (!versionsData || !versionsData.versions) return '<p style="color:var(--text-muted);font-size:0.875rem;">No hay historial disponible.</p>';
+      if (!versionsData || !versionsData.versions) return `<p style="color:var(--text-muted);font-size:0.875rem;">${t('repoChangelogEmpty')}</p>`;
       return versionsData.versions.map(v => {
         const d = new Date(v.date + 'T00:00:00');
         const dateStr = d.toLocaleDateString('es-ES', { day: 'numeric', month: 'short', year: 'numeric' });
@@ -1182,7 +1446,7 @@
       const btn = document.querySelector(btnSelector);
       if (!btn) return;
       const originalText = btn.innerHTML;
-      btn.innerHTML = `<svg viewBox="0 0 24 24" style="width:1rem;height:1rem;fill:currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg> Generando...`;
+      btn.innerHTML = `<svg viewBox="0 0 24 24" style="width:1rem;height:1rem;fill:currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg> ${t('zipGenerating')}`;
       btn.disabled = true;
 
       try {
@@ -1197,9 +1461,14 @@
             src = ch.file;
           }
           let fetchUrl = `content/${src}`;
+          const fetchParams = [];
           if (selectedVersion && versionsData && selectedVersion !== versionsData.current) {
-            fetchUrl += `?version=${encodeURIComponent(selectedVersion)}`;
+            fetchParams.push(`version=${encodeURIComponent(selectedVersion)}`);
           }
+          if (currentLang === 'en') {
+            fetchParams.push('lang=en');
+          }
+          if (fetchParams.length) fetchUrl += '?' + fetchParams.join('&');
           const res = await fetch(fetchUrl);
           const text = await res.text();
           const fname = src.replace(/^(redux|full|lite)\//, '');
@@ -1209,14 +1478,15 @@
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        a.download = `modulor-handbook-${variant}-${selectedVersion || 'latest'}.zip`;
+        const langSuffix = currentLang === 'en' ? '-en' : '';
+        a.download = `modulor-handbook-${variant}-${selectedVersion || 'latest'}${langSuffix}.zip`;
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
         URL.revokeObjectURL(url);
       } catch (e) {
         console.error('Error generating zip:', e);
-        alert('Error al generar el archivo. Inténtalo de nuevo.');
+        alert(t('zipError'));
       }
 
       btn.innerHTML = originalText;
@@ -1469,13 +1739,13 @@
         <div class="chat-close-bar">
           <button class="chat-close-btn" onclick="toggleChat()">
             <svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-            Cerrar chat
+            ${t('chatClose')}
           </button>
         </div>
         <div class="chat-welcome">
           <div class="chat-welcome-icon"><img src="logos/Modulor.svg" alt=""></div>
-          <div class="chat-welcome-title">Pregunta sobre el Handbook</div>
-          Puedo ayudarte a encontrar información sobre las empresas del grupo, procesos, equipo y más.
+          <div class="chat-welcome-title">${t('chatWelcomeTitle')}</div>
+          ${t('chatWelcomeText')}
         </div>`;
     }
 
@@ -1564,14 +1834,14 @@
         const res = await fetch('/chat', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ messages: chatHistory }),
+          body: JSON.stringify({ messages: chatHistory, lang: currentLang }),
         });
 
         removeTypingIndicator();
 
         if (!res.ok) {
-          const err = await res.json().catch(() => ({ error: 'Error del servidor' }));
-          addChatMessage('error', err.error || 'Error al conectar con el chat');
+          const err = await res.json().catch(() => ({ error: t('chatErrorServer') }));
+          addChatMessage('error', err.error || t('chatErrorConnect'));
           chatStreaming = false;
           document.getElementById('chatSend').disabled = false;
           return;
@@ -1618,7 +1888,7 @@
 
       } catch (err) {
         removeTypingIndicator();
-        addChatMessage('error', 'Error de conexión. Intenta de nuevo.');
+        addChatMessage('error', t('chatErrorNetwork'));
       }
 
       chatStreaming = false;
@@ -1644,27 +1914,27 @@
       modal.innerHTML = `<div class="announce-card">
         <div class="announce-confetti"></div>
         <div class="announce-emoji">🎉</div>
-        <div class="announce-title">El Handbook se ha renovado</div>
-        <div class="announce-version">Nueva versión — ${selectedVersion || 'V2.0'}</div>
+        <div class="announce-title">${t('announceTitle')}</div>
+        <div class="announce-version">${selectedVersion || 'V2.0'}</div>
         <div class="announce-body">
           <div class="announce-feature">
             <span class="announce-feature-icon">💬</span>
-            <div class="announce-feature-text"><strong>Chat con IA</strong> — Pregúntale lo que quieras sobre el handbook. Entiende contexto, cruza secciones y te responde al momento.</div>
+            <div class="announce-feature-text">${t('announceChat')}</div>
           </div>
           <div class="announce-feature">
             <span class="announce-feature-icon">🗂️</span>
-            <div class="announce-feature-text"><strong>Repositorio de archivos</strong> — Descarga los .md del handbook para usarlos directamente con Claude, ChatGPT o tu IA favorita.</div>
+            <div class="announce-feature-text">${t('announceRepo')}</div>
           </div>
           <div class="announce-feature">
             <span class="announce-feature-icon">🧭</span>
-            <div class="announce-feature-text"><strong>Onboarding guiado</strong> — Primeros pasos para que le saques el máximo partido desde el primer día.</div>
+            <div class="announce-feature-text">${t('announceOnb')}</div>
           </div>
           <div class="announce-feature">
             <span class="announce-feature-icon">📖</span>
-            <div class="announce-feature-text"><strong>Contenido actualizado</strong> — Modulor OS, proyectos estratégicos, resultados Q1 2026 y más.</div>
+            <div class="announce-feature-text">${t('announceContent')}</div>
           </div>
         </div>
-        <button class="announce-btn" onclick="dismissAnnouncement()">Empezar a explorar</button>
+        <button class="announce-btn" onclick="dismissAnnouncement()">${t('announceBtn')}</button>
       </div>`;
     }
 
@@ -1699,12 +1969,12 @@
     function getObSteps() {
       const isAdmin = userRole === 'admin';
       const steps = [
-        { key: 'intro', title: 'Lee la introducción', desc: 'Visita la sección de intro y "Cómo usarlo con IA"', link: 'intro' },
-        { key: 'repositorio', title: 'Descarga los archivos .md', desc: 'Visita el Repositorio y descarga el handbook', link: 'repositorio' },
-        { key: 'sections', title: 'Explora el handbook', desc: 'Visita al menos 5 secciones distintas', link: null, action: 'navigateNextSection' },
-        { key: 'chat', title: 'Usa el chat del Handbook', desc: 'Envía al menos un mensaje en el chat', link: null, action: 'openChat' },
+        { key: 'intro', title: t('obIntro'), desc: t('obIntroDesc'), link: 'intro' },
+        { key: 'repositorio', title: t('obRepo'), desc: t('obRepoDesc'), link: 'repositorio' },
+        { key: 'sections', title: t('obSections'), desc: t('obSectionsDesc'), link: null, action: 'navigateNextSection' },
+        { key: 'chat', title: t('obChat'), desc: t('obChatDesc'), link: null, action: 'openChat' },
       ];
-      if (isAdmin) steps.push({ key: 'admin', title: 'Visita el panel de admin', desc: 'Accede al panel de administración', link: 'admin' });
+      if (isAdmin) steps.push({ key: 'admin', title: t('obAdmin'), desc: t('obAdminDesc'), link: 'admin' });
       return steps;
     }
 
@@ -1730,13 +2000,13 @@
     function renderOnboardingFab() {
       const { done, total } = getObProgress();
       const fab = document.getElementById('onboardingFab');
-      fab.innerHTML = '<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/></svg>Primeros pasos <span style="opacity:0.7">' + done + '/' + total + '</span>';
+      fab.innerHTML = '<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/></svg>' + t('obTitle') + ' <span style="opacity:0.7">' + done + '/' + total + '</span>';
     }
 
     function renderOnboardingPopup() {
       const steps = getObSteps();
       const checkSvg = '<svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>';
-      let html = '<div class="onboarding-popup-title">Primeros pasos</div>';
+      let html = '<div class="onboarding-popup-title">' + t('obTitle') + '</div>';
       steps.forEach(s => {
         const done = isStepDone(s.key);
         const hasAction = !done && (s.link || s.action);
@@ -1749,7 +2019,7 @@
           + '<div class="onboarding-step-desc">' + s.desc + (s.key === 'sections' ? ' (' + Math.min((obState.completed.sections || []).length, 5) + '/5)' : '') + '</div>'
           + '</div></div>';
       });
-      html += '<button class="onboarding-dismiss" onclick="dismissOnboarding()">Cerrar para siempre</button>';
+      html += '<button class="onboarding-dismiss" onclick="dismissOnboarding()">' + t('obDismiss') + '</button>';
       document.getElementById('onboardingPopup').innerHTML = html;
     }
 

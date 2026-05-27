@@ -4,5 +4,8 @@
   "type": "module",
   "scripts": {
     "bump": "node scripts/bump-version.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.98.0"
   }
 }

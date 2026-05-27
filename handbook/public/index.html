@@ -105,10 +105,11 @@
     .topbar { position: fixed; top: 1.25rem; right: 1.5rem; z-index: 150; display: flex; align-items: center; gap: 4px; transition: top 0.8s var(--ease); }
     .topbar.banner-offset { top: calc(1.25rem + 37px); }
     .topbar-pill { display: flex; align-items: center; gap: 0.5rem; height: 44px; background: rgba(0,0,0,0.06); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: none; border-radius: 999px; padding: 0 20px; cursor: pointer; font-family: var(--font); font-size: 15px; font-weight: 400; color: var(--text); letter-spacing: -0.6px; transition: all 0.8s var(--ease); white-space: nowrap; }
-    .lang-switch { display: flex; align-items: center; height: 44px; background: rgba(0,0,0,0.06); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: none; border-radius: 999px; padding: 0 6px; gap: 0; font-family: var(--font); font-size: 14px; font-weight: 400; letter-spacing: -0.5px; }
-    .lang-switch button { background: none; border: none; font-family: var(--font); font-size: 14px; font-weight: 400; letter-spacing: -0.5px; color: var(--text-muted); cursor: pointer; padding: 6px 10px; border-radius: 999px; transition: all 0.4s var(--ease); line-height: 1; }
+    .lang-switch { display: flex; align-items: center; height: 44px; background: rgba(0,0,0,0.06); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: none; border-radius: 999px; padding: 0 14px; gap: 0; font-family: var(--font); font-size: 14px; letter-spacing: -0.5px; }
+    .lang-switch button { background: none; border: none; font-family: var(--font); font-size: 14px; font-weight: 400; letter-spacing: -0.5px; color: var(--text-muted); cursor: pointer; padding: 0; border-radius: 0; transition: color 0.8s var(--ease); line-height: 1; }
     .lang-switch button:hover { color: var(--text-secondary); }
-    .lang-switch button.active { background: var(--bg-dark); color: var(--text-on-dark); font-weight: 500; }
+    .lang-switch button.active { color: var(--text); font-weight: 500; }
+    .lang-switch-sep { color: var(--text-muted); margin: 0 6px; font-size: 14px; font-weight: 400; pointer-events: none; line-height: 1; }
     .topbar-pill:hover { background: rgba(0,0,0,0.10); }
     .topbar-pill svg { width: 1rem; height: 1rem; fill: currentColor; }
     .topbar-pill-user { width: 44px; height: 44px; padding: 0; background: none !important; backdrop-filter: none; -webkit-backdrop-filter: none; }
@@ -127,8 +128,9 @@
     @media (max-width: 991px) {
       .topbar { top: 1.25rem; right: 1.25rem; }
       .topbar-pill { height: 38px; font-size: 13px; padding: 0 14px; }
-      .lang-switch { height: 38px; padding: 0 4px; }
-      .lang-switch button { font-size: 13px; padding: 5px 8px; }
+      .lang-switch { height: 38px; padding: 0 10px; }
+      .lang-switch button { font-size: 13px; }
+      .lang-switch-sep { font-size: 13px; margin: 0 4px; }
       .topbar-pill-user { width: 38px; height: 38px; padding: 0; }
       .topbar-avatar { width: 38px; height: 38px; }
       .hamburger { width: 38px; height: 38px; }
@@ -519,6 +521,7 @@
       </div>
       <div class="lang-switch" id="langSwitch" style="display:none;">
         <button onclick="switchLang('en')" id="langBtnEn">EN</button>
+        <span class="lang-switch-sep">/</span>
         <button onclick="switchLang('es')" id="langBtnEs" class="active">ES</button>
       </div>
       <div class="topbar-dropdown" id="userMenu">

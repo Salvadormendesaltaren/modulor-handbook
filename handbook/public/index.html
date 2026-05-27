@@ -105,6 +105,10 @@
     .topbar { position: fixed; top: 1.25rem; right: 1.5rem; z-index: 150; display: flex; align-items: center; gap: 4px; transition: top 0.8s var(--ease); }
     .topbar.banner-offset { top: calc(1.25rem + 37px); }
     .topbar-pill { display: flex; align-items: center; gap: 0.5rem; height: 44px; background: rgba(0,0,0,0.06); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: none; border-radius: 999px; padding: 0 20px; cursor: pointer; font-family: var(--font); font-size: 15px; font-weight: 400; color: var(--text); letter-spacing: -0.6px; transition: all 0.8s var(--ease); white-space: nowrap; }
+    .lang-switch { display: flex; align-items: center; height: 44px; background: rgba(0,0,0,0.06); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: none; border-radius: 999px; padding: 0 6px; gap: 0; font-family: var(--font); font-size: 14px; font-weight: 400; letter-spacing: -0.5px; }
+    .lang-switch button { background: none; border: none; font-family: var(--font); font-size: 14px; font-weight: 400; letter-spacing: -0.5px; color: var(--text-muted); cursor: pointer; padding: 6px 10px; border-radius: 999px; transition: all 0.4s var(--ease); line-height: 1; }
+    .lang-switch button:hover { color: var(--text-secondary); }
+    .lang-switch button.active { background: var(--bg-dark); color: var(--text-on-dark); font-weight: 500; }
     .topbar-pill:hover { background: rgba(0,0,0,0.10); }
     .topbar-pill svg { width: 1rem; height: 1rem; fill: currentColor; }
     .topbar-pill-user { width: 44px; height: 44px; padding: 0; background: none !important; backdrop-filter: none; -webkit-backdrop-filter: none; }
@@ -123,6 +127,8 @@
     @media (max-width: 991px) {
       .topbar { top: 1.25rem; right: 1.25rem; }
       .topbar-pill { height: 38px; font-size: 13px; padding: 0 14px; }
+      .lang-switch { height: 38px; padding: 0 4px; }
+      .lang-switch button { font-size: 13px; padding: 5px 8px; }
       .topbar-pill-user { width: 38px; height: 38px; padding: 0; }
       .topbar-avatar { width: 38px; height: 38px; }
       .hamburger { width: 38px; height: 38px; }
@@ -511,6 +517,10 @@
         </button>
         <div class="topbar-dropdown-menu topbar-version-menu" id="versionDropdownMenu"></div>
       </div>
+      <div class="lang-switch" id="langSwitch" style="display:none;">
+        <button onclick="switchLang('en')" id="langBtnEn">EN</button>
+        <button onclick="switchLang('es')" id="langBtnEs" class="active">ES</button>
+      </div>
       <div class="topbar-dropdown" id="userMenu">
         <button class="topbar-pill topbar-pill-user" onclick="toggleUserMenu()">
           <span class="topbar-avatar" id="userAvatar"></span>
@@ -796,6 +806,9 @@
       const chatFab = document.getElementById('chatFab');
       if (chatFab) chatFab.innerHTML = `<svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z"/><path d="M7 9h10v2H7zm0-3h10v2H7zm0 6h7v2H7z"/></svg> ${t('chatFab')}`;
 
+      // Lang switch
+      updateLangSwitch();
+
       // Version banner
       const bannerLink = document.getElementById('versionBannerLink');
       if (bannerLink) bannerLink.textContent = t('versionBannerBack');
@@ -933,18 +946,20 @@
         html += `<button class="topbar-dropdown-item${viewMode === 'team' ? ' current' : ''}" onclick="switchViewMode('team')">Team</button>`;
         html += `<button class="topbar-dropdown-item${viewMode === 'leadership' ? ' current' : ''}" onclick="switchViewMode('leadership')">Leader</button>`;
       }
-      // Language selector
-      html += '<div class="topbar-dropdown-divider"></div>';
-      html += `<div class="topbar-dropdown-label">${t('langLabel')}</div>`;
-      html += `<button class="topbar-dropdown-item${currentLang === 'es' ? ' current' : ''}" onclick="switchLang('es')">${t('langEs')}</button>`;
-      html += `<button class="topbar-dropdown-item${currentLang === 'en' ? ' current' : ''}" onclick="switchLang('en')">${t('langEn')}</button>`;
       menu.innerHTML = html;
     }
 
     function switchLang(lang) {
       if (lang === currentLang) return;
-      document.getElementById('versionDropdown').classList.remove('open');
       setLanguage(lang);
+      updateLangSwitch();
+    }
+
+    function updateLangSwitch() {
+      const btnEn = document.getElementById('langBtnEn');
+      const btnEs = document.getElementById('langBtnEs');
+      if (btnEn) btnEn.className = currentLang === 'en' ? 'active' : '';
+      if (btnEs) btnEs.className = currentLang === 'es' ? 'active' : '';
     }
 
     function switchVersion(version) {
@@ -1011,6 +1026,7 @@
       document.getElementById('adminNavLink').style.display = 'none';
       document.getElementById('versionDropdown').style.display = 'none';
       document.getElementById('chatFab').style.display = 'none';
+      document.getElementById('langSwitch').style.display = 'none';
       document.getElementById('chatPanel').classList.remove('open');
       clearChat();
       hideOnboarding();
@@ -1037,6 +1053,8 @@
         avatarEl.appendChild(img);
       }
       document.getElementById('chatFab').style.display = 'flex';
+      document.getElementById('langSwitch').style.display = 'flex';
+      updateLangSwitch();
       showAnnouncement();
       initOnboarding();
       loadVersions();

@@ -280,6 +280,15 @@
     .repo-changelog-entry:last-child { border-bottom: none; }
     .repo-changelog-date { flex-shrink: 0; width: 6.5rem; color: var(--text-muted); font-size: 0.8125rem; }
     .repo-changelog-text { color: var(--text-secondary); }
+    .mcp-config-block { position: relative; background: var(--bg-secondary); border-radius: 12px; padding: 1rem 1.25rem; margin-bottom: 0.75rem; max-width: var(--content-max); }
+    .mcp-config-block pre { margin: 0; font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace; font-size: 0.8125rem; line-height: 1.6; color: var(--text-secondary); white-space: pre-wrap; word-break: break-all; }
+    .mcp-config-block h5 { font-size: 0.875rem; font-weight: 400; color: var(--text); margin-bottom: 0.5rem; }
+    .mcp-copy-btn { position: absolute; top: 0.75rem; right: 0.75rem; background: var(--bg-tertiary); color: var(--text-secondary); border: none; border-radius: 8px; padding: 4px 12px; font-family: var(--font); font-size: 0.75rem; cursor: pointer; transition: all 0.3s var(--ease); }
+    .mcp-copy-btn:hover { color: var(--text); background: var(--bg-hover); }
+    .mcp-steps { max-width: var(--content-max); margin-bottom: 1.5rem; }
+    .mcp-steps li { font-size: 0.875rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 0.5rem; letter-spacing: -0.5px; }
+    .mcp-steps code { background: var(--bg-secondary); padding: 2px 6px; border-radius: 4px; font-size: 0.8125rem; }
+    .mcp-security-note { background: var(--bg-secondary); border-left: 3px solid #B45309; border-radius: 0 12px 12px 0; padding: 1rem 1.25rem; font-size: 0.875rem; color: var(--text-secondary); line-height: 1.5; max-width: var(--content-max); margin-top: 1rem; }
 
     /* ── Admin panel ── */
     .admin-section { max-width: var(--content-max); }
@@ -672,6 +681,16 @@
         claudeHowto1: 'Sube los archivos .md como adjuntos en cualquier conversación',
         claudeHowto2: 'O crea un <strong>Project</strong> y añade los archivos como contexto del proyecto para que estén disponibles en cada chat',
         claudeHowto2Leader: 'O crea un <strong>Project</strong> y añade los archivos como contexto',
+        mcpTitle: 'Conectar con herramientas MCP',
+        mcpIntro: 'MCP (Model Context Protocol) permite que herramientas de IA como Claude Desktop o Claude Code consulten el handbook directamente, sin subir archivos manualmente.',
+        mcpStep1: 'Clona el repositorio:',
+        mcpStep2: 'Instala dependencias:',
+        mcpStep3: 'Añade esta configuración a tu herramienta:',
+        mcpClaudeDesktop: 'Claude Desktop',
+        mcpClaudeCode: 'Claude Code',
+        mcpCopy: 'Copiar',
+        mcpCopied: 'Copiado',
+        mcpSecurityNote: 'El tier <strong>full</strong> incluye información financiera, estratégica y de pricing. No compartas esta configuración con personas fuera del equipo de liderazgo.',
       },
       en: {
         loading: 'Loading...',
@@ -752,6 +771,16 @@
         claudeHowto1: 'Upload the .md files as attachments in any conversation',
         claudeHowto2: 'Or create a <strong>Project</strong> and add the files as project context to have them available in every chat',
         claudeHowto2Leader: 'Or create a <strong>Project</strong> and add the files as context',
+        mcpTitle: 'Connect with MCP tools',
+        mcpIntro: 'MCP (Model Context Protocol) allows AI tools like Claude Desktop or Claude Code to query the handbook directly, without uploading files manually.',
+        mcpStep1: 'Clone the repository:',
+        mcpStep2: 'Install dependencies:',
+        mcpStep3: 'Add this configuration to your tool:',
+        mcpClaudeDesktop: 'Claude Desktop',
+        mcpClaudeCode: 'Claude Code',
+        mcpCopy: 'Copy',
+        mcpCopied: 'Copied',
+        mcpSecurityNote: 'The <strong>full</strong> tier includes financial, strategic and pricing information. Do not share this configuration with people outside the leadership team.',
       }
     };
 
@@ -1298,6 +1327,33 @@
             </div>
 
             <div class="repo-block">
+              <h3 class="repo-block-title">${t('mcpTitle')}</h3>
+              <p>${t('mcpIntro')}</p>
+              <ol class="mcp-steps">
+                <li>${t('mcpStep1')} <code>git clone https://github.com/Salvadormendesaltaren/modulor-handbook.git</code></li>
+                <li>${t('mcpStep2')} <code>cd modulor-handbook/handbook/mcp-server && npm install</code></li>
+                <li>${t('mcpStep3')}</li>
+              </ol>
+              <div class="mcp-config-block">
+                <h5>${t('mcpClaudeDesktop')}</h5>
+                <button class="mcp-copy-btn" onclick="copyMcpConfig(this)">${t('mcpCopy')}</button>
+                <pre>{
+  "mcpServers": {
+    "modulor-handbook": {
+      "command": "node",
+      "args": ["/ruta/al/modulor-handbook/handbook/mcp-server/index.js", "--tier=redux"]
+    }
+  }
+}</pre>
+              </div>
+              <div class="mcp-config-block">
+                <h5>${t('mcpClaudeCode')}</h5>
+                <button class="mcp-copy-btn" onclick="copyMcpConfig(this)">${t('mcpCopy')}</button>
+                <pre>claude mcp add modulor-handbook node /ruta/al/modulor-handbook/handbook/mcp-server/index.js --tier=redux</pre>
+              </div>
+            </div>
+
+            <div class="repo-block">
               <h3 class="repo-block-title">${t('repoChangelogTitle')}</h3>
               <div class="repo-changelog">${changelogHTML}</div>
             </div>
@@ -1382,6 +1438,34 @@
             </div>
 
             <div class="repo-block">
+              <h3 class="repo-block-title">${t('mcpTitle')}</h3>
+              <p>${t('mcpIntro')}</p>
+              <ol class="mcp-steps">
+                <li>${t('mcpStep1')} <code>git clone https://github.com/Salvadormendesaltaren/modulor-handbook.git</code></li>
+                <li>${t('mcpStep2')} <code>cd modulor-handbook/handbook/mcp-server && npm install</code></li>
+                <li>${t('mcpStep3')}</li>
+              </ol>
+              <div class="mcp-config-block">
+                <h5>${t('mcpClaudeDesktop')}</h5>
+                <button class="mcp-copy-btn" onclick="copyMcpConfig(this)">${t('mcpCopy')}</button>
+                <pre>{
+  "mcpServers": {
+    "modulor-handbook": {
+      "command": "node",
+      "args": ["/ruta/al/modulor-handbook/handbook/mcp-server/index.js", "--tier=full"]
+    }
+  }
+}</pre>
+              </div>
+              <div class="mcp-config-block">
+                <h5>${t('mcpClaudeCode')}</h5>
+                <button class="mcp-copy-btn" onclick="copyMcpConfig(this)">${t('mcpCopy')}</button>
+                <pre>claude mcp add modulor-handbook node /ruta/al/modulor-handbook/handbook/mcp-server/index.js --tier=full</pre>
+              </div>
+              <div class="mcp-security-note">${t('mcpSecurityNote')}</div>
+            </div>
+
+            <div class="repo-block">
               <h3 class="repo-block-title">${t('repoSecurityTitle')}</h3>
               <p>${t('repoSecurityIntro')}</p>
 
@@ -1449,6 +1533,15 @@
             </div>
           </div>
         </div>`;
+    }
+
+    function copyMcpConfig(btn) {
+      const pre = btn.parentElement.querySelector('pre');
+      navigator.clipboard.writeText(pre.textContent).then(() => {
+        const original = btn.textContent;
+        btn.textContent = t('mcpCopied');
+        setTimeout(() => { btn.textContent = original; }, 2000);
+      });
     }
 
     function buildChangelog() {
